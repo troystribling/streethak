@@ -10,7 +10,7 @@
 #import "StreethakViewController.h"
 #import "RMCloudMadeMapSource.h"
 #import "RMMarkerManager.h"
-#import "RMMapView.h"
+#import "OverlayRMMapView.h"
 #import "MessageModel.h"
 #import "AccountModel.h"
 #import "GeoLocManager.h"
@@ -80,6 +80,21 @@
 - (void)mapView:(RMMapView*)map didDragMarker:(RMMarker*)marker withEvent:(UIEvent*)event {
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)afterMapMove:(RMMapView*)map {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)beforeMapMove:(RMMapView*)map {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void) beforeMapZoom:(RMMapView*)map byFactor:(float)zoomFactor near:(CGPoint)center {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void) afterMapZoom:(RMMapView*)map byFactor:(float)zoomFactor near:(CGPoint)center {
+}
 
 //===================================================================================================================================
 #pragma mark UIViewController
@@ -94,6 +109,7 @@
     self.mapGeoLocUpdateDelegate = [[MapGeoLocUpdateDelegate alloc] init:self];
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
+    self.mapView.delegate = self;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

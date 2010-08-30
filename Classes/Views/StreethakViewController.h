@@ -13,11 +13,11 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class RMMapView;
 @class MapGeoLocUpdateDelegate;
-@class RMMarker;
+@class OverlayRMMapView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface StreethakViewController : UIViewController<RMMapViewDelegate> {
-	IBOutlet RMMapView* mapView;
+@interface StreethakViewController : UIViewController <RMMapViewDelegate> {
+	IBOutlet OverlayRMMapView* mapView;
     MapGeoLocUpdateDelegate* mapGeoLocUpdateDelegate;
     RMMarker* userMarker;
 }
