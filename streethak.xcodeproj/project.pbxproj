@@ -1049,7 +1049,6 @@
 					"-lMapView",
 					"-lProj4",
 					"-lCloudMadeApi",
-					"-all_load",
 					"-ObjC",
 				);
 				PREBINDING = NO;
@@ -1085,7 +1084,6 @@
 					"-lMapView",
 					"-lProj4",
 					"-lCloudMadeApi",
-					"-all_load",
 					"-ObjC",
 				);
 				PREBINDING = NO;
