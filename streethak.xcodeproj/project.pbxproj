@@ -10,6 +10,7 @@
 		0500D9F81225FE7F00E58FF5 /* ViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */; };
 		0503296C12273C2A00ABB494 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
+		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		050ACCF6122B53AF00A9AEB8 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */; };
 		050C155812296ABA00D05937 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155412296ABA00D05937 /* CreateAccountViewController.xib */; };
 		050C155912296ABA00D05937 /* EditAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155512296ABA00D05937 /* EditAccountViewController.xib */; };
@@ -127,12 +128,37 @@
 		CE739128113D74BA007C3B11 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE739127113D74BA007C3B11 /* libstdc++.6.dylib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		05066464122DCE8F00444709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0506645D122DCE8F00444709 /* MapView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B8C974590E8A19B2007D16AD;
+			remoteInfo = MapView;
+		};
+		05066466122DCE8F00444709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0506645D122DCE8F00444709 /* MapView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2BF3078F0F8AC5C0007014EE;
+			remoteInfo = "Unit Tests";
+		};
+		05066469122DD03000444709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0506645D122DCE8F00444709 /* MapView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C974130E8A19B2007D16AD;
+			remoteInfo = MapView;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerManager.h; sourceTree = "<group>"; };
 		0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerManager.m; sourceTree = "<group>"; };
 		0503296A12273C2A00ABB494 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
 		0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
+		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050ACCF4122B53AF00A9AEB8 /* OverlayRMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayRMMapView.h; sourceTree = "<group>"; };
 		050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayRMMapView.m; sourceTree = "<group>"; };
 		050C155412296ABA00D05937 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
@@ -363,6 +389,7 @@
 				0510D99712223191001FE510 /* libxml2.2.dylib in Frameworks */,
 				0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */,
 				0510DA20122232FC001FE510 /* CoreLocation.framework in Frameworks */,
+				05066468122DCF3800444709 /* libMapView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +403,15 @@
 				8D1107310486CEB800E47090 /* streethak-Info.plist */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		0506645E122DCE8F00444709 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05066465122DCE8F00444709 /* libMapView.a */,
+				05066467122DCE8F00444709 /* RM Unit Tests.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		050C155312296ABA00D05937 /* Views */ = {
@@ -759,6 +795,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				0506645D122DCE8F00444709 /* MapView.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -818,6 +855,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0506646A122DD03000444709 /* PBXTargetDependency */,
 			);
 			name = streethak;
 			productName = streethak;
@@ -843,12 +881,35 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0506645E122DCE8F00444709 /* Products */;
+					ProjectRef = 0506645D122DCE8F00444709 /* MapView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* streethak */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		05066465122DCE8F00444709 /* libMapView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMapView.a;
+			remoteRef = 05066464122DCE8F00444709 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		05066467122DCE8F00444709 /* RM Unit Tests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "RM Unit Tests.app";
+			remoteRef = 05066466122DCE8F00444709 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -979,6 +1040,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0506646A122DD03000444709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapView;
+			targetProxy = 05066469122DD03000444709 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -993,13 +1062,17 @@
 				HEADER_SEARCH_PATHS = (
 					"\"/usr/include/libxml2\"",
 					"\"$(SRCROOT)/inc/CloudMade\"",
-					"\"$(SRCROOT)/inc/Proj4\"",
-					"\"$(SRCROOT)/inc/route-me\"",
+					"\"$(SRCROOT)/../route-me/MapView\"/**",
 				);
 				INFOPLIST_FILE = "streethak-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lCloudMadeApi",
+					"-ObjC",
 				);
 				PRODUCT_NAME = streethak;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8C74BA1-5C22-4A81-AFF9-313A204C4CDD";
@@ -1014,10 +1087,20 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = streethak_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"\"/usr/include/libxml2\"",
+					"\"$(SRCROOT)/inc/CloudMade\"",
+					"\"$(SRCROOT)/../route-me/MapView\"/**",
+				);
 				INFOPLIST_FILE = "streethak-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lCloudMadeApi",
+					"-ObjC",
 				);
 				PRODUCT_NAME = streethak;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "721E6981-725C-4418-94ED-8A25C586288C";
@@ -1035,19 +1118,11 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)/inc/CloudMade\"",
-					"\"$(SRCROOT)/inc/Proj4\"",
-					"\"$(SRCROOT)/inc/route-me\"",
 				);
 				INFOPLIST_FILE = "streethak-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/libs/Proj4\"",
-					"\"$(SRCROOT)/libs/CloudMade\"",
-					"\"$(SRCROOT)/libs/route-me\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libs/CloudMade\"";
 				OTHER_LDFLAGS = (
 					"-lxml2",
-					"-lMapView",
-					"-lProj4",
 					"-lCloudMadeApi",
 					"-ObjC",
 				);
