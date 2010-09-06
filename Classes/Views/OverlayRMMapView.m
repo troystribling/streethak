@@ -33,8 +33,15 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)drawRect:(CGRect)rect {
-	[super drawRect:rect];
+- (void)drawTileLayer:(CALayer*)aLayer inContext:(CGContextRef)aContext {
+    UIImage* overlayImage = [UIImage imageNamed:@"parchment.png"];
+    UIImage* layerImage = [aLayer valueForKey:@"image"];
+    CGRect boundBox = CGContextGetClipBoundingBox(aContext);
+    CGContextScaleCTM(aContext, 1.0, -1.0);
+    CGContextTranslateCTM(aContext, 0.0, -boundBox.size.height);
+    CGContextDrawImage(aContext, boundBox, overlayImage.CGImage);
+    CGContextSetBlendMode(aContext, kCGBlendModeOverlay);
+    CGContextDrawImage(aContext, boundBox, layerImage.CGImage);
 }
 
 @end
