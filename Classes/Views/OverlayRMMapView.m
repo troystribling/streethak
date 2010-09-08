@@ -13,7 +13,7 @@
 @interface OverlayRMMapView (PrivateAPI)
 
 -(CGImageRef)maskTile:(UIImage*)img;
--(CGImageRef)removeAlpha:(UIImage*)img;
+-(CGImageRef)createBitmap:(UIImage*)img;
 
 @end
 
@@ -49,27 +49,26 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 -(CGImageRef)maskTile:(UIImage*)img {
-    CGImageRef ref1 = [self removeAlpha:img];
-    const float colorMasking[6] = {50, 255, 50, 255, 50, 255};
+    CGImageRef ref1 = [self createBitmap:img];
+    const float colorMasking[6] = {0xBA, 0xBA, 0xBA, 0xBA, 0xBA, 0xBA};
     return CGImageCreateWithMaskingColors(ref1, colorMasking);
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
--(CGImageRef)removeAlpha:(UIImage*)img {
+-(CGImageRef)createBitmap:(UIImage*)img {
     CGImageRef imgRef = img.CGImage;
     int imgWidth = CGImageGetWidth(imgRef);
     int imgHeight = CGImageGetHeight(imgRef);
     int bytes = imgWidth*imgHeight*4;
     void* bufferData = malloc(bytes);    
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
-    CGContextRef cgctx = CGBitmapContextCreate (bufferData, imgWidth, imgHeight, 8, imgWidth*4, colorSpaceRef, kCGImageAlphaPremultipliedFirst);     
+    CGContextRef bitmapCtx = CGBitmapContextCreate(bufferData, imgWidth, imgHeight, 8, imgWidth*4, colorSpaceRef, kCGImageAlphaPremultipliedFirst);     
     CGRect rect = CGRectMake(0.0, 0.0, imgWidth, imgHeight);    
-    CGContextDrawImage(cgctx, rect, imgRef); 
-    bufferData = CGBitmapContextGetData(cgctx);    
-    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, bufferData, imgWidth*imgHeight*4, NULL);
-    CGImageRef noAlphaImgRef = CGImageCreate(imgWidth, imgHeight, 8, 32, imgWidth*4, colorSpaceRef, kCGBitmapByteOrderDefault ,provider , NULL, NO, kCGRenderingIntentDefault);
+    CGContextDrawImage(bitmapCtx, rect, imgRef); 
+    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, CGBitmapContextGetData(bitmapCtx), imgWidth*imgHeight*4, NULL);
+    CGImageRef bitmapImgRef = CGImageCreate(imgWidth, imgHeight, 8, 32, imgWidth*4, colorSpaceRef, kCGBitmapByteOrder32Little, provider , NULL, NO, kCGRenderingIntentDefault);
     CFRelease(colorSpaceRef);
-    return noAlphaImgRef;
+    return bitmapImgRef;
 }
 
 @end
