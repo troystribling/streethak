@@ -51,6 +51,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #define kCLOUDMADE_API_KEY                      @"0d818a57c14b4c91807d00bb0826fdb7"
 #define kCLOUDMADE_MAP_ID                       23377
-#define kCLOUDMADE_MAP_DEFAULT_ZOOM             16
+#define kCLOUDMADE_MAP_DEFAULT_ZOOM             17
 #define kCLOUDMADE_DEAFULT_LAT                  36.202654
 #define kCLOUDMADE_DEFAULT_LON                  -86.513583

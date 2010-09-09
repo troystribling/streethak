@@ -21,6 +21,7 @@
 @implementation OverlayRMMapView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize mapTileBackgroundImage;
 
 //===================================================================================================================================
 #pragma mark OverlayRMMapView
@@ -29,20 +30,20 @@
 #pragma mark UIView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)frame {
-    if ((self = [super initWithFrame:frame])) {
-    }
-    return self;
-}
+- (id)initWithCoder:(NSCoder *)coder { 
+	if (self = [super initWithCoder:coder]) { 
+        self.mapTileBackgroundImage = [UIImage imageNamed:@"tile-background.png"];
+	} 
+	return self; 
+} 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)drawTileLayer:(CALayer*)aLayer inContext:(CGContextRef)aContext {
-    UIImage* overlayImage = [UIImage imageNamed:@"parchment.png"];
     UIImage* layerImage = [aLayer valueForKey:@"image"];
     CGRect boundBox = CGContextGetClipBoundingBox(aContext);
     CGContextTranslateCTM(aContext, 0.0, boundBox.size.height);
     CGContextScaleCTM(aContext, 1.0, -1.0);
-    CGContextDrawImage(aContext, boundBox, overlayImage.CGImage);
+    CGContextDrawImage(aContext, boundBox, self.mapTileBackgroundImage.CGImage);
     CGContextSetBlendMode(aContext, kCGBlendModeOverlay);
     CGContextDrawImage(aContext, boundBox, [self maskTile:layerImage]);
 }

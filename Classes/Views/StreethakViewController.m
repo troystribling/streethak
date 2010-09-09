@@ -106,6 +106,7 @@
 	[[[RMMapContents alloc] initWithView:mapView tilesource: cmTilesource] autorelease];
 	[self.mapView.contents setZoom:kCLOUDMADE_MAP_DEFAULT_ZOOM];
     self.mapView.delegate = self;
+    self.mapView.backgroundColor = [UIColor blackColor];
     self.mapGeoLocUpdateDelegate = [[MapGeoLocUpdateDelegate alloc] init:self];
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
