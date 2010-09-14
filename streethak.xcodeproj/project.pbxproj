@@ -162,6 +162,7 @@
 		050C155512296ABA00D05937 /* EditAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAccountViewController.xib; sourceTree = "<group>"; };
 		050C155612296ABA00D05937 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		050C155712296ABA00D05937 /* StreethakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreethakViewController.xib; sourceTree = "<group>"; };
+		050C9533123F1F3F003C4777 /* streethak-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "streethak-Info copy.plist"; sourceTree = "<group>"; };
 		050CEBEC12237DAC00A36ECE /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		050CEBED12237DAC00A36ECE /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		050CEBF012237EAB00A36ECE /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
@@ -393,6 +394,7 @@
 			children = (
 				05044CC512249C0400818381 /* streethak.db */,
 				8D1107310486CEB800E47090 /* streethak-Info.plist */,
+				050C9533123F1F3F003C4777 /* streethak-Info copy.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1131,18 +1133,10 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)/inc/CloudMade\"",
-					"\"$(SRCROOT)/inc/Proj4\"",
-					"\"$(SRCROOT)/inc/route-me\"",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/libs/Proj4\"",
-					"\"$(SRCROOT)/libs/CloudMade\"",
-					"\"$(SRCROOT)/libs/route-me\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libs/CloudMade\"";
 				OTHER_LDFLAGS = (
 					"-lxml2",
-					"-lMapView",
-					"-lProj4",
 					"-lCloudMadeApi",
 					"-ObjC",
 				);

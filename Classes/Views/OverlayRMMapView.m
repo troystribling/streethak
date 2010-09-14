@@ -110,8 +110,10 @@
 - (void)createImageForTile:(UIImage*)tile inContext:(CGContextRef)ctx {
     CGRect boundBox = CGContextGetClipBoundingBox(ctx);
     CGContextDrawImage(ctx, boundBox, self.mapTileBackgroundImage.CGImage);
+    CGImageRef maskedTileOverlay = [self maskTile:tile];
     CGContextSetBlendMode(ctx, kCGBlendModeOverlay);
-    CGContextDrawImage(ctx, boundBox, [self maskTile:tile]);
+    CGContextDrawImage(ctx, boundBox, maskedTileOverlay);
+    CFRelease(maskedTileOverlay);
 }
 
 
