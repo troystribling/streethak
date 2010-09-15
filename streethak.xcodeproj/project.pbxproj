@@ -113,6 +113,7 @@
 		0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6212223361001FE510 /* XMPPTimestamp.m */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
 		052553C01222B40A00203185 /* StreethakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BF1222B40A00203185 /* StreethakViewController.m */; };
+		05F9A3631240546900E8B979 /* libisimulate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9A3621240546900E8B979 /* libisimulate.a */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -354,6 +355,7 @@
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
 		052553BE1222B40A00203185 /* StreethakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakViewController.h; sourceTree = "<group>"; };
 		052553BF1222B40A00203185 /* StreethakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakViewController.m; sourceTree = "<group>"; };
+		05F9A3621240546900E8B979 /* libisimulate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libisimulate.a; path = "../iSimulate/libisimulate-4.x-1.5-20100709/libisimulate.a"; sourceTree = SOURCE_ROOT; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		05FC68F2122B2B6F00878B07 /* user-location-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-location-marker.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -383,6 +385,7 @@
 				0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */,
 				0510DA20122232FC001FE510 /* CoreLocation.framework in Frameworks */,
 				05066468122DCF3800444709 /* libMapView.a in Frameworks */,
+				05F9A3631240546900E8B979 /* libisimulate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +821,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05F9A3621240546900E8B979 /* libisimulate.a */,
 				CE739127113D74BA007C3B11 /* libstdc++.6.dylib */,
 				CE5A38AC10A974FC00D6CA67 /* libsqlite3.dylib */,
 				0510D99612223191001FE510 /* libxml2.2.dylib */,
@@ -1055,6 +1059,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../iSimulate/libisimulate-4.x-1.5-20100709\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -1083,6 +1088,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../iSimulate/libisimulate-4.x-1.5-20100709\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
