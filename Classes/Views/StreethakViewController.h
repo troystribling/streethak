@@ -8,15 +8,15 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
-#import "RMMapViewDelegate.h" 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class RMMapView;
+@class RMMarker;
 @class MapGeoLocUpdateDelegate;
 @class OverlayRMMapView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface StreethakViewController : UIViewController <RMMapViewDelegate> {
+@interface StreethakViewController : UIViewController {
 	IBOutlet OverlayRMMapView* mapView;
     MapGeoLocUpdateDelegate* mapGeoLocUpdateDelegate;
     RMMarker* userMarker;

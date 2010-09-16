@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "StreethakViewController.h"
 #import "RMCloudMadeMapSource.h"
+#import "RMMarker.h"
 #import "RMMarkerManager.h"
 #import "OverlayRMMapView.h"
 #import "MessageModel.h"
@@ -65,38 +66,6 @@
 #pragma mark StreethakViewController
 
 //===================================================================================================================================
-#pragma mark RMMapViewDelegate
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)tapOnMarker:(RMMarker*)marker onMap:(RMMapView*)map {
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (BOOL)mapView:(RMMapView*)map shouldDragMarker:(RMMarker*)marker withEvent:(UIEvent*)event {
-    return NO;
-} 
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)mapView:(RMMapView*)map didDragMarker:(RMMarker*)marker withEvent:(UIEvent*)event {
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)afterMapMove:(RMMapView*)map {
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)beforeMapMove:(RMMapView*)map {
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void) beforeMapZoom:(RMMapView*)map byFactor:(float)zoomFactor near:(CGPoint)center {
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void) afterMapZoom:(RMMapView*)map byFactor:(float)zoomFactor near:(CGPoint)center {
-}
-
-//===================================================================================================================================
 #pragma mark UIViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -105,12 +74,10 @@
 	id cmTilesource = [[[RMCloudMadeMapSource alloc] initWithAccessKey:kCLOUDMADE_API_KEY styleNumber:kCLOUDMADE_MAP_ID] autorelease];
 	[[[RMMapContents alloc] initWithView:mapView tilesource: cmTilesource] autorelease];
 	[self.mapView.contents setZoom:kCLOUDMADE_MAP_DEFAULT_ZOOM];
-    self.mapView.delegate = self;
     self.mapView.backgroundColor = [UIColor blackColor];
     self.mapGeoLocUpdateDelegate = [[MapGeoLocUpdateDelegate alloc] init:self];
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
-    self.mapView.delegate = self;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

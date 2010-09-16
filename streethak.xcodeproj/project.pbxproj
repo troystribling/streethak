@@ -10,6 +10,7 @@
 		0500D9F81225FE7F00E58FF5 /* ViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */; };
 		0503296C12273C2A00ABB494 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
+		0505DD511241837700936CD0 /* TouchAndLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0505DD501241837700936CD0 /* TouchAndLaunchView.m */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		050ACCF6122B53AF00A9AEB8 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
@@ -113,7 +114,6 @@
 		0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6212223361001FE510 /* XMPPTimestamp.m */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
 		052553C01222B40A00203185 /* StreethakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BF1222B40A00203185 /* StreethakViewController.m */; };
-		05F9A3631240546900E8B979 /* libisimulate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9A3621240546900E8B979 /* libisimulate.a */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -155,6 +155,8 @@
 		0503296A12273C2A00ABB494 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
 		0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
+		0505DD4F1241837700936CD0 /* TouchAndLaunchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAndLaunchView.h; sourceTree = "<group>"; };
+		0505DD501241837700936CD0 /* TouchAndLaunchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAndLaunchView.m; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050ACCF4122B53AF00A9AEB8 /* OverlayRMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayRMMapView.h; sourceTree = "<group>"; };
 		050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayRMMapView.m; sourceTree = "<group>"; };
@@ -355,7 +357,6 @@
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
 		052553BE1222B40A00203185 /* StreethakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakViewController.h; sourceTree = "<group>"; };
 		052553BF1222B40A00203185 /* StreethakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakViewController.m; sourceTree = "<group>"; };
-		05F9A3621240546900E8B979 /* libisimulate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libisimulate.a; path = "../iSimulate/libisimulate-4.x-1.5-20100709/libisimulate.a"; sourceTree = SOURCE_ROOT; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		05FC68F2122B2B6F00878B07 /* user-location-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-location-marker.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -385,7 +386,6 @@
 				0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */,
 				0510DA20122232FC001FE510 /* CoreLocation.framework in Frameworks */,
 				05066468122DCF3800444709 /* libMapView.a in Frameworks */,
-				05F9A3631240546900E8B979 /* libisimulate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +752,8 @@
 				052553BF1222B40A00203185 /* StreethakViewController.m */,
 				0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */,
 				0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */,
+				0505DD4F1241837700936CD0 /* TouchAndLaunchView.h */,
+				0505DD501241837700936CD0 /* TouchAndLaunchView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -821,7 +823,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				05F9A3621240546900E8B979 /* libisimulate.a */,
 				CE739127113D74BA007C3B11 /* libstdc++.6.dylib */,
 				CE5A38AC10A974FC00D6CA67 /* libsqlite3.dylib */,
 				0510D99612223191001FE510 /* libxml2.2.dylib */,
@@ -1026,6 +1027,7 @@
 				0503296C12273C2A00ABB494 /* AcceptBuddyRequestView.m in Sources */,
 				050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */,
 				050ACCF6122B53AF00A9AEB8 /* OverlayRMMapView.m in Sources */,
+				0505DD511241837700936CD0 /* TouchAndLaunchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

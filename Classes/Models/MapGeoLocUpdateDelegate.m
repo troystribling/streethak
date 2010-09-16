@@ -37,12 +37,12 @@
     double bnelon = bounds.northeast.longitude;
     double bswlat = bounds.southwest.latitude;
     double bswlon = bounds.southwest.longitude;
-    double deltaLat = 0.1*(bnelat-bswlat);
-    double deltaLon = 0.1*(bswlon-bnelon);
+    double deltaLat = 0.15*(bnelat-bswlat);
+    double deltaLon = 0.15*(bswlon-bnelon);
     if ((bnelat-deltaLat)< loc.latitude || (bswlat+deltaLat) > loc.latitude) {
         [mapView moveToLatLong:loc];
     }
-    if ((bnelon+deltaLon) < loc.longitude || (bswlon+deltaLon) > loc.longitude) {
+    if ((bnelon+deltaLon) < loc.longitude || (bswlon-deltaLon) > loc.longitude) {
         [mapView moveToLatLong:loc];
     }
 }
