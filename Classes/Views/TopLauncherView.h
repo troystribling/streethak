@@ -1,5 +1,5 @@
 //
-//  TouchAndLaunchView.h
+//  TopLauncherView.h
 //  streethak
 //
 //  Created by Troy Stribling on 9/15/10.
@@ -12,21 +12,11 @@
 @class TouchImageView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TouchAndLaunchView : UIView {
-    TouchImageView* launchImageView;
-    UIImage* launchImage;
-    UIView* launchView;
+@interface TopLauncherView : UIView {
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) TouchImageView* itemImage;
-@property (nonatomic, retain) UIImage* launchImage;
-@property (nonatomic, retain) UIView* launchView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)frame launchImage:(UIImage*)_launchImage andLaunchView:(UIView*)_launchView;
-
-@end
-
 
 @end

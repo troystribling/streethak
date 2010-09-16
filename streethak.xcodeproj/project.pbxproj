@@ -10,7 +10,7 @@
 		0500D9F81225FE7F00E58FF5 /* ViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */; };
 		0503296C12273C2A00ABB494 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
-		0505DD511241837700936CD0 /* TouchAndLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0505DD501241837700936CD0 /* TouchAndLaunchView.m */; };
+		0505DD511241837700936CD0 /* TopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0505DD501241837700936CD0 /* TopLauncherView.m */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		050ACCF6122B53AF00A9AEB8 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
@@ -155,8 +155,8 @@
 		0503296A12273C2A00ABB494 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
 		0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
-		0505DD4F1241837700936CD0 /* TouchAndLaunchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAndLaunchView.h; sourceTree = "<group>"; };
-		0505DD501241837700936CD0 /* TouchAndLaunchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAndLaunchView.m; sourceTree = "<group>"; };
+		0505DD4F1241837700936CD0 /* TopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLauncherView.h; sourceTree = "<group>"; };
+		0505DD501241837700936CD0 /* TopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLauncherView.m; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050ACCF4122B53AF00A9AEB8 /* OverlayRMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayRMMapView.h; sourceTree = "<group>"; };
 		050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayRMMapView.m; sourceTree = "<group>"; };
@@ -752,8 +752,8 @@
 				052553BF1222B40A00203185 /* StreethakViewController.m */,
 				0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */,
 				0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */,
-				0505DD4F1241837700936CD0 /* TouchAndLaunchView.h */,
-				0505DD501241837700936CD0 /* TouchAndLaunchView.m */,
+				0505DD4F1241837700936CD0 /* TopLauncherView.h */,
+				0505DD501241837700936CD0 /* TopLauncherView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1027,7 +1027,7 @@
 				0503296C12273C2A00ABB494 /* AcceptBuddyRequestView.m in Sources */,
 				050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */,
 				050ACCF6122B53AF00A9AEB8 /* OverlayRMMapView.m in Sources */,
-				0505DD511241837700936CD0 /* TouchAndLaunchView.m in Sources */,
+				0505DD511241837700936CD0 /* TopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

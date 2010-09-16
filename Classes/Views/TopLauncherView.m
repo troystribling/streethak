@@ -1,5 +1,5 @@
 //
-//  TouchAndLaunchView.m
+//  TopLauncherView.m
 //  streethak
 //
 //  Created by Troy Stribling on 9/15/10.
@@ -7,32 +7,25 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "TouchAndLaunchView.h"
+#import "TopLauncherView.h"
 #import "TouchImageView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TouchAndLaunchView (PrivateAPI)
+@interface TopLauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation TouchAndLaunchView
+@implementation TopLauncherView
 
 //===================================================================================================================================
-#pragma mark TouchAndLaunchView PrivateAPI
+#pragma mark TopLauncherView PrivateAPI
 
 //===================================================================================================================================
-#pragma mark TouchAndLaunchView
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)frame launchImage:(UIImage*)_launchImage andLaunchView:(UIView*)_launchView {
-    if ((self = [super initWithFrame:frame])) {
-    }
-    return self;
-}
+#pragma mark TopLauncherView
 
 //===================================================================================================================================
-#pragma mark TouchImageView Delegate
+#pragma mark TopLauncherView Delegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)imageTouched:(TouchImageView*)_laucnhImageView {
@@ -42,8 +35,14 @@
 #pragma mark UIView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithFrame:(CGRect)frame {
+    if ((self = [super initWithFrame:frame])) {
+    }
+    return self;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 - (void)drawRect:(CGRect)rect {
-    [self addSubview:self.itemImage];
 }
 
 @end
