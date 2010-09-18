@@ -1,38 +1,38 @@
 //
-//  TopLauncherView.m
+//  BottomLauncherView.m
 //  streethak
 //
-//  Created by Troy Stribling on 9/15/10.
+//  Created by Troy Stribling on 9/17/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "TopLauncherView.h"
+#import "BottomLauncherView.h"
 #import "TouchImageView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TopLauncherView (PrivateAPI)
+@interface BottomLauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation TopLauncherView
+@implementation BottomLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 
 //===================================================================================================================================
-#pragma mark TopLauncherView
+#pragma mark BottomLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view {
-    return [[[TopLauncherView alloc] initInView:_view] autorelease];
+    return [[[BottomLauncherView alloc] initInView:_view] autorelease];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (id)initInView:(UIView*)_view {
-    CGRect viewFrame = CGRectMake(0.0, 0.0, _view.frame.size.width, 0.1042*_view.frame.size.height);
+    CGRect viewFrame = CGRectMake(0.0, 0.8958*_view.frame.size.height, _view.frame.size.width, 0.1042*_view.frame.size.height);
     if ((self = [self initWithFrame:viewFrame])) {
-        self.image = [UIImage imageNamed:@"top-launcher.png"];
+        self.image = [UIImage imageNamed:@"bottom-launcher.png"];
         [_view addSubview:self];
     }
     return self;

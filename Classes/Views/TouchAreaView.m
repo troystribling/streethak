@@ -1,61 +1,65 @@
 //
-//  TopLauncherView.m
+//  TouchAreaView.m
 //  streethak
 //
-//  Created by Troy Stribling on 9/15/10.
+//  Created by Troy Stribling on 9/16/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "TopLauncherView.h"
-#import "TouchImageView.h"
+#import "TouchAreaView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TopLauncherView (PrivateAPI)
+@interface TouchAreaView (PrivateAPI)
+
+- (void)delegateViewTouched;
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation TopLauncherView
+@implementation TouchAreaView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize delegate;
 
 //===================================================================================================================================
-#pragma mark TopLauncherView
+#pragma mark TouchAreaView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view {
-    return [[[TopLauncherView alloc] initInView:_view] autorelease];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initInView:(UIView*)_view {
-    CGRect viewFrame = CGRectMake(0.0, 0.0, _view.frame.size.width, 0.1042*_view.frame.size.height);
-    if ((self = [self initWithFrame:viewFrame])) {
-        self.image = [UIImage imageNamed:@"top-launcher.png"];
-        [_view addSubview:self];
+- (id)initWithFrame:(CGRect)frame andDelegate:(id)initDelegate {
+    if (self = [self initWithFrame:frame]) {
+        self.delegate = initDelegate;
     }
     return self;
 }
 
 //===================================================================================================================================
-#pragma mark TopLauncherView PrivateAPI
-
-//===================================================================================================================================
-#pragma mark TopLauncherView Delegate
+#pragma mark TouchAreaView PrivateAPI
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)imageTouched:(TouchImageView*)_laucnhImageView {
-}
+- (void)delegateViewTouched {
+    if ([self.delegate respondsToSelector:@selector(viewTouched:)]) {
+        [self.delegate viewTouched:self];
+    }
+} 
 
 //===================================================================================================================================
 #pragma mark UIView
 
-//-----------------------------------------------------------------------------------------------------------------------------------
+//===================================================================================================================================
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
+        // Initialization code
     }
     return self;
+}
+
+//===================================================================================================================================
+#pragma mark UIResponder
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
+    [self delegateViewTouched];
 }
 
 @end

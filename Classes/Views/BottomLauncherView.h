@@ -1,8 +1,8 @@
 //
-//  TopLauncherView.h
+//  BottomLauncherView.h
 //  streethak
 //
-//  Created by Troy Stribling on 9/15/10.
+//  Created by Troy Stribling on 9/17/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
@@ -13,7 +13,8 @@
 @class TouchImageView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TopLauncherView : UIImageView {
+@interface BottomLauncherView : UIImageView {
+
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

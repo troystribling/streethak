@@ -8,6 +8,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "StreethakViewController.h"
+#import "TopLauncherView.h"
+#import "BottomLauncherView.h"
 #import "RMCloudMadeMapSource.h"
 #import "RMMarker.h"
 #import "RMMarkerManager.h"
@@ -78,6 +80,8 @@
     self.mapGeoLocUpdateDelegate = [[MapGeoLocUpdateDelegate alloc] init:self];
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
+    [BottomLauncherView inView:self.mapView];
+    [TopLauncherView inView:self.mapView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

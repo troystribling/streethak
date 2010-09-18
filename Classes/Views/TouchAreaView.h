@@ -1,8 +1,8 @@
 //
-//  TopLauncherView.h
+//  TouchAreaView.h
 //  streethak
 //
-//  Created by Troy Stribling on 9/15/10.
+//  Created by Troy Stribling on 9/16/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
@@ -10,16 +10,23 @@
 #import <UIKit/UIKit.h>
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@class TouchImageView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TopLauncherView : UIImageView {
+@interface TouchAreaView : UIView {
+    id delegate;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@property (nonatomic, retain) id delegate;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view;
-- (id)initInView:(UIView*)_view;
+- (id)initWithFrame:(CGRect)frame andDelegate:(id)initDelegate;
+
+@end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@interface NSObject (TouchAreaView)
+
+- (void)viewTouched:(TouchAreaView*)touchedView;
 
 @end
