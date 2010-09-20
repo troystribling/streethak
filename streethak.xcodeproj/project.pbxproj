@@ -11,10 +11,6 @@
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
-		050C155812296ABA00D05937 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155412296ABA00D05937 /* CreateAccountViewController.xib */; };
-		050C155912296ABA00D05937 /* EditAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155512296ABA00D05937 /* EditAccountViewController.xib */; };
-		050C155A12296ABA00D05937 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155612296ABA00D05937 /* MainWindow.xib */; };
-		050C155B12296ABA00D05937 /* StreethakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155712296ABA00D05937 /* StreethakViewController.xib */; };
 		050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */; };
 		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
 		050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* EditAccountViewController.m */; };
@@ -22,6 +18,12 @@
 		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
 		050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A18124704B800D9ED40 /* StreethakViewController.m */; };
 		050F7A1E124704B800D9ED40 /* TopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A1A124704B800D9ED40 /* TopLauncherView.m */; };
+		050F7A4D1247073E00D9ED40 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A4C1247073E00D9ED40 /* InventoryViewController.m */; };
+		050F7A551247078500D9ED40 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A501247078500D9ED40 /* CreateAccountViewController.xib */; };
+		050F7A561247078500D9ED40 /* EditAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A511247078500D9ED40 /* EditAccountViewController.xib */; };
+		050F7A571247078500D9ED40 /* InventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A521247078500D9ED40 /* InventoryViewController.xib */; };
+		050F7A581247078500D9ED40 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A531247078500D9ED40 /* MainWindow.xib */; };
+		050F7A591247078500D9ED40 /* StreethakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A541247078500D9ED40 /* StreethakViewController.xib */; };
 		050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050FE4611228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m */; };
 		0510D99712223191001FE510 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D99612223191001FE510 /* libxml2.2.dylib */; };
 		0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D9A9122232B8001FE510 /* CFNetwork.framework */; };
@@ -159,10 +161,6 @@
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
-		050C155412296ABA00D05937 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
-		050C155512296ABA00D05937 /* EditAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAccountViewController.xib; sourceTree = "<group>"; };
-		050C155612296ABA00D05937 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		050C155712296ABA00D05937 /* StreethakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreethakViewController.xib; sourceTree = "<group>"; };
 		050C9533123F1F3F003C4777 /* streethak-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "streethak-Info copy.plist"; sourceTree = "<group>"; };
 		050F7A081247049D00D9ED40 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
 		050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
@@ -178,6 +176,13 @@
 		050F7A18124704B800D9ED40 /* StreethakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakViewController.m; sourceTree = "<group>"; };
 		050F7A19124704B800D9ED40 /* TopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLauncherView.h; sourceTree = "<group>"; };
 		050F7A1A124704B800D9ED40 /* TopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLauncherView.m; sourceTree = "<group>"; };
+		050F7A4B1247073E00D9ED40 /* InventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
+		050F7A4C1247073E00D9ED40 /* InventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
+		050F7A501247078500D9ED40 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CreateAccountViewController.xib; path = Resources/Views/CreateAccountViewController.xib; sourceTree = SOURCE_ROOT; };
+		050F7A511247078500D9ED40 /* EditAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditAccountViewController.xib; path = Resources/Views/EditAccountViewController.xib; sourceTree = SOURCE_ROOT; };
+		050F7A521247078500D9ED40 /* InventoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InventoryViewController.xib; path = Resources/Views/InventoryViewController.xib; sourceTree = SOURCE_ROOT; };
+		050F7A531247078500D9ED40 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/Views/MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		050F7A541247078500D9ED40 /* StreethakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StreethakViewController.xib; path = Resources/Views/StreethakViewController.xib; sourceTree = SOURCE_ROOT; };
 		050FE4601228AF3B00D20D34 /* MapGeoLocUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGeoLocUpdateDelegate.h; sourceTree = "<group>"; };
 		050FE4611228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGeoLocUpdateDelegate.m; sourceTree = "<group>"; };
 		0510D99612223191001FE510 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
@@ -424,10 +429,11 @@
 		050C155312296ABA00D05937 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				050C155412296ABA00D05937 /* CreateAccountViewController.xib */,
-				050C155512296ABA00D05937 /* EditAccountViewController.xib */,
-				050C155612296ABA00D05937 /* MainWindow.xib */,
-				050C155712296ABA00D05937 /* StreethakViewController.xib */,
+				050F7A501247078500D9ED40 /* CreateAccountViewController.xib */,
+				050F7A511247078500D9ED40 /* EditAccountViewController.xib */,
+				050F7A521247078500D9ED40 /* InventoryViewController.xib */,
+				050F7A531247078500D9ED40 /* MainWindow.xib */,
+				050F7A541247078500D9ED40 /* StreethakViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -465,6 +471,15 @@
 				050F7A1A124704B800D9ED40 /* TopLauncherView.m */,
 			);
 			path = MapView;
+			sourceTree = "<group>";
+		};
+		050F7A4A1247073E00D9ED40 /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				050F7A4B1247073E00D9ED40 /* InventoryViewController.h */,
+				050F7A4C1247073E00D9ED40 /* InventoryViewController.m */,
+			);
+			path = Inventory;
 			sourceTree = "<group>";
 		};
 		050FE45F1228AF3B00D20D34 /* Models */ = {
@@ -785,6 +800,7 @@
 		052553BD1222B40A00203185 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				050F7A4A1247073E00D9ED40 /* Inventory */,
 				050F7A12124704B800D9ED40 /* MapView */,
 				050F7A0B124704A800D9ED40 /* Configuration */,
 				050F7A071247049D00D9ED40 /* Chat */,
@@ -953,15 +969,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				05044CC612249C0400818381 /* streethak.db in Resources */,
-				050C155812296ABA00D05937 /* CreateAccountViewController.xib in Resources */,
-				050C155912296ABA00D05937 /* EditAccountViewController.xib in Resources */,
-				050C155A12296ABA00D05937 /* MainWindow.xib in Resources */,
-				050C155B12296ABA00D05937 /* StreethakViewController.xib in Resources */,
 				05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */,
 				05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */,
 				050BE2241234585800CB5CC6 /* tile-background.png in Resources */,
 				05700D1012442E310059964F /* bottom-launcher.png in Resources */,
 				05700D1212442E410059964F /* top-launcher.png in Resources */,
+				050F7A551247078500D9ED40 /* CreateAccountViewController.xib in Resources */,
+				050F7A561247078500D9ED40 /* EditAccountViewController.xib in Resources */,
+				050F7A571247078500D9ED40 /* InventoryViewController.xib in Resources */,
+				050F7A581247078500D9ED40 /* MainWindow.xib in Resources */,
+				050F7A591247078500D9ED40 /* StreethakViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,6 +1089,7 @@
 				050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */,
 				050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */,
 				050F7A1E124704B800D9ED40 /* TopLauncherView.m in Sources */,
+				050F7A4D1247073E00D9ED40 /* InventoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
