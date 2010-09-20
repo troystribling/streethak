@@ -21,14 +21,22 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize delegate;
+@synthesize viewName;
 
 //===================================================================================================================================
 #pragma mark TouchAreaView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)frame andDelegate:(id)initDelegate {
-    if (self = [self initWithFrame:frame]) {
-        self.delegate = initDelegate;
++ (id)createWithFrame:(CGRect)_frame name:(NSString*)_viewName andDelegate:(id)_delegate {
+    return [[[TouchAreaView alloc] initWithFrame:_frame name:_viewName andDelegate:_delegate] autorelease];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithFrame:(CGRect)_frame name:(NSString*)_viewName andDelegate:(id)_delegate {
+    if (self = [self initWithFrame:_frame]) {
+        self.delegate = _delegate;
+        self.viewName = _viewName;
+        self.userInteractionEnabled = YES;
     }
     return self;
 }
@@ -47,8 +55,8 @@
 #pragma mark UIView
 
 //===================================================================================================================================
-- (id)initWithFrame:(CGRect)frame {
-    if ((self = [super initWithFrame:frame])) {
+- (id)initWithFrame:(CGRect)_frame {
+    if ((self = [super initWithFrame:_frame])) {
         // Initialization code
     }
     return self;

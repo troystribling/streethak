@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0500D9F81225FE7F00E58FF5 /* ViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */; };
-		0503296C12273C2A00ABB494 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
-		0505DD511241837700936CD0 /* TopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0505DD501241837700936CD0 /* TopLauncherView.m */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
-		050ACCF6122B53AF00A9AEB8 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
 		050C155812296ABA00D05937 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155412296ABA00D05937 /* CreateAccountViewController.xib */; };
 		050C155912296ABA00D05937 /* EditAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155512296ABA00D05937 /* EditAccountViewController.xib */; };
 		050C155A12296ABA00D05937 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155612296ABA00D05937 /* MainWindow.xib */; };
 		050C155B12296ABA00D05937 /* StreethakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050C155712296ABA00D05937 /* StreethakViewController.xib */; };
-		050CEBEF12237DAC00A36ECE /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050CEBED12237DAC00A36ECE /* CreateAccountViewController.m */; };
-		050CEBF212237EAB00A36ECE /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050CEBF112237EAB00A36ECE /* EditAccountViewController.m */; };
+		050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */; };
+		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
+		050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* EditAccountViewController.m */; };
+		050F7A1B124704B800D9ED40 /* BottomLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A14124704B800D9ED40 /* BottomLauncherView.m */; };
+		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
+		050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A18124704B800D9ED40 /* StreethakViewController.m */; };
+		050F7A1E124704B800D9ED40 /* TopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A1A124704B800D9ED40 /* TopLauncherView.m */; };
 		050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050FE4611228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m */; };
 		0510D99712223191001FE510 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D99612223191001FE510 /* libxml2.2.dylib */; };
 		0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D9A9122232B8001FE510 /* CFNetwork.framework */; };
@@ -113,11 +115,9 @@
 		0510DBBA12223361001FE510 /* XMPPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6012223361001FE510 /* XMPPResponse.m */; };
 		0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6212223361001FE510 /* XMPPTimestamp.m */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
-		052553C01222B40A00203185 /* StreethakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BF1222B40A00203185 /* StreethakViewController.m */; };
 		055990A2124309F20013C6DD /* TouchAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 055990A1124309F20013C6DD /* TouchAreaView.m */; };
 		05700D1012442E310059964F /* bottom-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* bottom-launcher.png */; };
 		05700D1212442E410059964F /* top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D1112442E410059964F /* top-launcher.png */; };
-		05700D46124440920059964F /* BottomLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05700D45124440920059964F /* BottomLauncherView.m */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -156,24 +156,28 @@
 /* Begin PBXFileReference section */
 		0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerManager.h; sourceTree = "<group>"; };
 		0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerManager.m; sourceTree = "<group>"; };
-		0503296A12273C2A00ABB494 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
-		0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
-		0505DD4F1241837700936CD0 /* TopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLauncherView.h; sourceTree = "<group>"; };
-		0505DD501241837700936CD0 /* TopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLauncherView.m; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		050ACCF4122B53AF00A9AEB8 /* OverlayRMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayRMMapView.h; sourceTree = "<group>"; };
-		050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayRMMapView.m; sourceTree = "<group>"; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
 		050C155412296ABA00D05937 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
 		050C155512296ABA00D05937 /* EditAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAccountViewController.xib; sourceTree = "<group>"; };
 		050C155612296ABA00D05937 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		050C155712296ABA00D05937 /* StreethakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreethakViewController.xib; sourceTree = "<group>"; };
 		050C9533123F1F3F003C4777 /* streethak-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "streethak-Info copy.plist"; sourceTree = "<group>"; };
-		050CEBEC12237DAC00A36ECE /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
-		050CEBED12237DAC00A36ECE /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
-		050CEBF012237EAB00A36ECE /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
-		050CEBF112237EAB00A36ECE /* EditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAccountViewController.m; sourceTree = "<group>"; };
+		050F7A081247049D00D9ED40 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
+		050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
+		050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
+		050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
+		050F7A0E124704A800D9ED40 /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
+		050F7A0F124704A800D9ED40 /* EditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAccountViewController.m; sourceTree = "<group>"; };
+		050F7A13124704B800D9ED40 /* BottomLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomLauncherView.h; sourceTree = "<group>"; };
+		050F7A14124704B800D9ED40 /* BottomLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomLauncherView.m; sourceTree = "<group>"; };
+		050F7A15124704B800D9ED40 /* OverlayRMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayRMMapView.h; sourceTree = "<group>"; };
+		050F7A16124704B800D9ED40 /* OverlayRMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayRMMapView.m; sourceTree = "<group>"; };
+		050F7A17124704B800D9ED40 /* StreethakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakViewController.h; sourceTree = "<group>"; };
+		050F7A18124704B800D9ED40 /* StreethakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakViewController.m; sourceTree = "<group>"; };
+		050F7A19124704B800D9ED40 /* TopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLauncherView.h; sourceTree = "<group>"; };
+		050F7A1A124704B800D9ED40 /* TopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLauncherView.m; sourceTree = "<group>"; };
 		050FE4601228AF3B00D20D34 /* MapGeoLocUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGeoLocUpdateDelegate.h; sourceTree = "<group>"; };
 		050FE4611228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGeoLocUpdateDelegate.m; sourceTree = "<group>"; };
 		0510D99612223191001FE510 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
@@ -359,14 +363,10 @@
 		0510DB6212223361001FE510 /* XMPPTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPTimestamp.m; sourceTree = "<group>"; };
 		052553BA1222B3EF00203185 /* StreethakAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakAppDelegate.h; sourceTree = "<group>"; };
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
-		052553BE1222B40A00203185 /* StreethakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakViewController.h; sourceTree = "<group>"; };
-		052553BF1222B40A00203185 /* StreethakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakViewController.m; sourceTree = "<group>"; };
 		055990A0124309F20013C6DD /* TouchAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAreaView.h; sourceTree = "<group>"; };
 		055990A1124309F20013C6DD /* TouchAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAreaView.m; sourceTree = "<group>"; };
 		05700D0F12442E310059964F /* bottom-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-launcher.png"; sourceTree = "<group>"; };
 		05700D1112442E410059964F /* top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-launcher.png"; sourceTree = "<group>"; };
-		05700D44124440920059964F /* BottomLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomLauncherView.h; sourceTree = "<group>"; };
-		05700D45124440920059964F /* BottomLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomLauncherView.m; sourceTree = "<group>"; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		05FC68F2122B2B6F00878B07 /* user-location-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-location-marker.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -430,6 +430,41 @@
 				050C155712296ABA00D05937 /* StreethakViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		050F7A071247049D00D9ED40 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				050F7A081247049D00D9ED40 /* AcceptBuddyRequestView.h */,
+				050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		050F7A0B124704A800D9ED40 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */,
+				050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */,
+				050F7A0E124704A800D9ED40 /* EditAccountViewController.h */,
+				050F7A0F124704A800D9ED40 /* EditAccountViewController.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		050F7A12124704B800D9ED40 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				050F7A13124704B800D9ED40 /* BottomLauncherView.h */,
+				050F7A14124704B800D9ED40 /* BottomLauncherView.m */,
+				050F7A15124704B800D9ED40 /* OverlayRMMapView.h */,
+				050F7A16124704B800D9ED40 /* OverlayRMMapView.m */,
+				050F7A17124704B800D9ED40 /* StreethakViewController.h */,
+				050F7A18124704B800D9ED40 /* StreethakViewController.m */,
+				050F7A19124704B800D9ED40 /* TopLauncherView.h */,
+				050F7A1A124704B800D9ED40 /* TopLauncherView.m */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 		050FE45F1228AF3B00D20D34 /* Models */ = {
@@ -750,24 +785,13 @@
 		052553BD1222B40A00203185 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0503296A12273C2A00ABB494 /* AcceptBuddyRequestView.h */,
-				0503296B12273C2A00ABB494 /* AcceptBuddyRequestView.m */,
-				050CEBEC12237DAC00A36ECE /* CreateAccountViewController.h */,
-				050CEBED12237DAC00A36ECE /* CreateAccountViewController.m */,
-				050CEBF012237EAB00A36ECE /* EditAccountViewController.h */,
-				050CEBF112237EAB00A36ECE /* EditAccountViewController.m */,
-				050ACCF4122B53AF00A9AEB8 /* OverlayRMMapView.h */,
-				050ACCF5122B53AF00A9AEB8 /* OverlayRMMapView.m */,
-				052553BE1222B40A00203185 /* StreethakViewController.h */,
-				052553BF1222B40A00203185 /* StreethakViewController.m */,
+				050F7A12124704B800D9ED40 /* MapView */,
+				050F7A0B124704A800D9ED40 /* Configuration */,
+				050F7A071247049D00D9ED40 /* Chat */,
 				0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */,
 				0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */,
 				055990A0124309F20013C6DD /* TouchAreaView.h */,
 				055990A1124309F20013C6DD /* TouchAreaView.m */,
-				0505DD4F1241837700936CD0 /* TopLauncherView.h */,
-				0505DD501241837700936CD0 /* TopLauncherView.m */,
-				05700D44124440920059964F /* BottomLauncherView.h */,
-				05700D45124440920059964F /* BottomLauncherView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1038,16 +1062,16 @@
 				0510DBBA12223361001FE510 /* XMPPResponse.m in Sources */,
 				0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */,
 				052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */,
-				052553C01222B40A00203185 /* StreethakViewController.m in Sources */,
-				050CEBEF12237DAC00A36ECE /* CreateAccountViewController.m in Sources */,
-				050CEBF212237EAB00A36ECE /* EditAccountViewController.m in Sources */,
 				0500D9F81225FE7F00E58FF5 /* ViewControllerManager.m in Sources */,
-				0503296C12273C2A00ABB494 /* AcceptBuddyRequestView.m in Sources */,
 				050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */,
-				050ACCF6122B53AF00A9AEB8 /* OverlayRMMapView.m in Sources */,
-				0505DD511241837700936CD0 /* TopLauncherView.m in Sources */,
 				055990A2124309F20013C6DD /* TouchAreaView.m in Sources */,
-				05700D46124440920059964F /* BottomLauncherView.m in Sources */,
+				050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */,
+				050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */,
+				050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */,
+				050F7A1B124704B800D9ED40 /* BottomLauncherView.m in Sources */,
+				050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */,
+				050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */,
+				050F7A1E124704B800D9ED40 /* TopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

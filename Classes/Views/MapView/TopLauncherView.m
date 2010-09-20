@@ -8,7 +8,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "TopLauncherView.h"
-#import "TouchImageView.h"
+#import "TouchAreaView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface TopLauncherView (PrivateAPI)
@@ -19,6 +19,7 @@
 @implementation TopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize inventoryLauncher;
 
 //===================================================================================================================================
 #pragma mark TopLauncherView
@@ -30,9 +31,15 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (id)initInView:(UIView*)_view {
-    CGRect viewFrame = CGRectMake(0.0, 0.0, _view.frame.size.width, 0.1042*_view.frame.size.height);
+    CGFloat viewWidth =  _view.frame.size.width;
+    CGFloat viewHeight = 0.1042*_view.frame.size.height;
+    CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame])) {
         self.image = [UIImage imageNamed:@"top-launcher.png"];
+        self.userInteractionEnabled = YES;
+        CGRect inventoryFrame = CGRectMake(0.8344*viewWidth, 0.0, 0.1297*viewWidth, viewHeight);
+        self.inventoryLauncher = [TouchAreaView createWithFrame:inventoryFrame name:@"inventory" andDelegate:self];
+        [self addSubview:self.inventoryLauncher];
         [_view addSubview:self];
     }
     return self;
@@ -42,10 +49,12 @@
 #pragma mark TopLauncherView PrivateAPI
 
 //===================================================================================================================================
-#pragma mark TopLauncherView Delegate
+#pragma mark TouchAreaView Delegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)imageTouched:(TouchImageView*)_laucnhImageView {
+- (void)viewTouched:(TouchAreaView*)touchedView {
+    if ([touchedView.viewName isEqualToString:@"inventory"]) {
+    }
 }
 
 //===================================================================================================================================
