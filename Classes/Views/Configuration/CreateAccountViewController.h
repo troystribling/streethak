@@ -18,6 +18,7 @@
 	IBOutlet UITextField* jidTextField;
 	IBOutlet UITextField* passwordTextField;
 	IBOutlet UITextField* confirmedPasswordTextField;
+    IBOutlet UILabel* viewLabel;
     AccountModel* account;
 }
 
@@ -26,6 +27,7 @@
 @property (nonatomic, retain) UITextField* passwordTextField;
 @property (nonatomic, retain) UITextField* confirmedPasswordTextField;
 @property (nonatomic, retain) AccountModel* account;
+@property (nonatomic, retain) UILabel* viewLabel;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)containedView;

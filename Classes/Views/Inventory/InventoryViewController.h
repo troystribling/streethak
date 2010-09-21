@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface InventoryViewController : UITableViewController {
+@interface InventoryViewController : UIViewController {
 
 }
 

@@ -34,6 +34,7 @@
 @synthesize passwordTextField;
 @synthesize confirmedPasswordTextField;
 @synthesize account;
+@synthesize viewLabel;
 
 //===================================================================================================================================
 #pragma mark CreateAccountViewController
@@ -109,6 +110,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
+    self.viewLabel.font = [UIFont fontWithName:@"Stonehenge" size:48.0];
+    self.jidTextField.font = [UIFont fontWithName:@"Stonehenge" size:18.0];
+    self.passwordTextField.font = [UIFont fontWithName:@"Stonehenge" size:18.0];
+    self.confirmedPasswordTextField.font = [UIFont fontWithName:@"Stonehenge" size:18.0];
 	self.account = [[AccountModel alloc] init];
     self.jidTextField.delegate = self;
     self.passwordTextField.delegate = self;

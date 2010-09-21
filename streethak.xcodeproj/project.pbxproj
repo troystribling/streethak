@@ -18,12 +18,12 @@
 		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
 		050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A18124704B800D9ED40 /* StreethakViewController.m */; };
 		050F7A1E124704B800D9ED40 /* TopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A1A124704B800D9ED40 /* TopLauncherView.m */; };
-		050F7A4D1247073E00D9ED40 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A4C1247073E00D9ED40 /* InventoryViewController.m */; };
-		050F7A551247078500D9ED40 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A501247078500D9ED40 /* CreateAccountViewController.xib */; };
-		050F7A561247078500D9ED40 /* EditAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A511247078500D9ED40 /* EditAccountViewController.xib */; };
-		050F7A571247078500D9ED40 /* InventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A521247078500D9ED40 /* InventoryViewController.xib */; };
-		050F7A581247078500D9ED40 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A531247078500D9ED40 /* MainWindow.xib */; };
-		050F7A591247078500D9ED40 /* StreethakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A541247078500D9ED40 /* StreethakViewController.xib */; };
+		050F7A621247087000D9ED40 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */; };
+		050F7A631247087000D9ED40 /* EditAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */; };
+		050F7A651247087000D9ED40 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A601247087000D9ED40 /* MainWindow.xib */; };
+		050F7A661247087000D9ED40 /* StreethakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A611247087000D9ED40 /* StreethakViewController.xib */; };
+		050F7A691247092000D9ED40 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A681247092000D9ED40 /* InventoryViewController.m */; };
+		050F7A6C1247095800D9ED40 /* InventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A6B1247095800D9ED40 /* InventoryViewController.xib */; };
 		050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050FE4611228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m */; };
 		0510D99712223191001FE510 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D99612223191001FE510 /* libxml2.2.dylib */; };
 		0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D9A9122232B8001FE510 /* CFNetwork.framework */; };
@@ -117,6 +117,8 @@
 		0510DBBA12223361001FE510 /* XMPPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6012223361001FE510 /* XMPPResponse.m */; };
 		0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6212223361001FE510 /* XMPPTimestamp.m */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
+		053494E0124830B5004A6D9D /* stonehen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 053494DF124830B5004A6D9D /* stonehen.ttf */; };
+		0534950A124840C0004A6D9D /* parchment.png in Resources */ = {isa = PBXBuildFile; fileRef = 05349509124840C0004A6D9D /* parchment.png */; };
 		055990A2124309F20013C6DD /* TouchAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 055990A1124309F20013C6DD /* TouchAreaView.m */; };
 		05700D1012442E310059964F /* bottom-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* bottom-launcher.png */; };
 		05700D1212442E410059964F /* top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D1112442E410059964F /* top-launcher.png */; };
@@ -161,7 +163,6 @@
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
-		050C9533123F1F3F003C4777 /* streethak-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "streethak-Info copy.plist"; sourceTree = "<group>"; };
 		050F7A081247049D00D9ED40 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
 		050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
@@ -176,13 +177,13 @@
 		050F7A18124704B800D9ED40 /* StreethakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakViewController.m; sourceTree = "<group>"; };
 		050F7A19124704B800D9ED40 /* TopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLauncherView.h; sourceTree = "<group>"; };
 		050F7A1A124704B800D9ED40 /* TopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLauncherView.m; sourceTree = "<group>"; };
-		050F7A4B1247073E00D9ED40 /* InventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
-		050F7A4C1247073E00D9ED40 /* InventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
-		050F7A501247078500D9ED40 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CreateAccountViewController.xib; path = Resources/Views/CreateAccountViewController.xib; sourceTree = SOURCE_ROOT; };
-		050F7A511247078500D9ED40 /* EditAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditAccountViewController.xib; path = Resources/Views/EditAccountViewController.xib; sourceTree = SOURCE_ROOT; };
-		050F7A521247078500D9ED40 /* InventoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InventoryViewController.xib; path = Resources/Views/InventoryViewController.xib; sourceTree = SOURCE_ROOT; };
-		050F7A531247078500D9ED40 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/Views/MainWindow.xib; sourceTree = SOURCE_ROOT; };
-		050F7A541247078500D9ED40 /* StreethakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StreethakViewController.xib; path = Resources/Views/StreethakViewController.xib; sourceTree = SOURCE_ROOT; };
+		050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
+		050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAccountViewController.xib; sourceTree = "<group>"; };
+		050F7A601247087000D9ED40 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		050F7A611247087000D9ED40 /* StreethakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreethakViewController.xib; sourceTree = "<group>"; };
+		050F7A671247092000D9ED40 /* InventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
+		050F7A681247092000D9ED40 /* InventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
+		050F7A6B1247095800D9ED40 /* InventoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryViewController.xib; sourceTree = "<group>"; };
 		050FE4601228AF3B00D20D34 /* MapGeoLocUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGeoLocUpdateDelegate.h; sourceTree = "<group>"; };
 		050FE4611228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGeoLocUpdateDelegate.m; sourceTree = "<group>"; };
 		0510D99612223191001FE510 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
@@ -368,6 +369,8 @@
 		0510DB6212223361001FE510 /* XMPPTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPTimestamp.m; sourceTree = "<group>"; };
 		052553BA1222B3EF00203185 /* StreethakAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakAppDelegate.h; sourceTree = "<group>"; };
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
+		053494DF124830B5004A6D9D /* stonehen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stonehen.ttf; sourceTree = "<group>"; };
+		05349509124840C0004A6D9D /* parchment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parchment.png; sourceTree = "<group>"; };
 		055990A0124309F20013C6DD /* TouchAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAreaView.h; sourceTree = "<group>"; };
 		055990A1124309F20013C6DD /* TouchAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAreaView.m; sourceTree = "<group>"; };
 		05700D0F12442E310059964F /* bottom-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-launcher.png"; sourceTree = "<group>"; };
@@ -412,7 +415,6 @@
 			children = (
 				05044CC512249C0400818381 /* streethak.db */,
 				8D1107310486CEB800E47090 /* streethak-Info.plist */,
-				050C9533123F1F3F003C4777 /* streethak-Info copy.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -424,18 +426,6 @@
 				05066467122DCE8F00444709 /* RM Unit Tests.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		050C155312296ABA00D05937 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				050F7A501247078500D9ED40 /* CreateAccountViewController.xib */,
-				050F7A511247078500D9ED40 /* EditAccountViewController.xib */,
-				050F7A521247078500D9ED40 /* InventoryViewController.xib */,
-				050F7A531247078500D9ED40 /* MainWindow.xib */,
-				050F7A541247078500D9ED40 /* StreethakViewController.xib */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		050F7A071247049D00D9ED40 /* Chat */ = {
@@ -476,10 +466,23 @@
 		050F7A4A1247073E00D9ED40 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
-				050F7A4B1247073E00D9ED40 /* InventoryViewController.h */,
-				050F7A4C1247073E00D9ED40 /* InventoryViewController.m */,
+				050F7A671247092000D9ED40 /* InventoryViewController.h */,
+				050F7A681247092000D9ED40 /* InventoryViewController.m */,
 			);
 			path = Inventory;
+			sourceTree = "<group>";
+		};
+		050F7A5C1247087000D9ED40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */,
+				050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */,
+				050F7A601247087000D9ED40 /* MainWindow.xib */,
+				050F7A611247087000D9ED40 /* StreethakViewController.xib */,
+				050F7A6B1247095800D9ED40 /* InventoryViewController.xib */,
+			);
+			name = Views;
+			path = Resources/Views;
 			sourceTree = "<group>";
 		};
 		050FE45F1228AF3B00D20D34 /* Models */ = {
@@ -812,9 +815,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		053494DE124830B5004A6D9D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				053494DF124830B5004A6D9D /* stonehen.ttf */,
+			);
+			name = Fonts;
+			path = Resources/Fonts;
+			sourceTree = "<group>";
+		};
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				05349509124840C0004A6D9D /* parchment.png */,
 				05700D0F12442E310059964F /* bottom-launcher.png */,
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
@@ -869,8 +882,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				053494DE124830B5004A6D9D /* Fonts */,
+				050F7A5C1247087000D9ED40 /* Views */,
 				05FC68EC122B2B6F00878B07 /* Images */,
-				050C155312296ABA00D05937 /* Views */,
 				05044CC312249B8400818381 /* Data */,
 			);
 			name = Resources;
@@ -974,11 +988,13 @@
 				050BE2241234585800CB5CC6 /* tile-background.png in Resources */,
 				05700D1012442E310059964F /* bottom-launcher.png in Resources */,
 				05700D1212442E410059964F /* top-launcher.png in Resources */,
-				050F7A551247078500D9ED40 /* CreateAccountViewController.xib in Resources */,
-				050F7A561247078500D9ED40 /* EditAccountViewController.xib in Resources */,
-				050F7A571247078500D9ED40 /* InventoryViewController.xib in Resources */,
-				050F7A581247078500D9ED40 /* MainWindow.xib in Resources */,
-				050F7A591247078500D9ED40 /* StreethakViewController.xib in Resources */,
+				050F7A621247087000D9ED40 /* CreateAccountViewController.xib in Resources */,
+				050F7A631247087000D9ED40 /* EditAccountViewController.xib in Resources */,
+				050F7A651247087000D9ED40 /* MainWindow.xib in Resources */,
+				050F7A661247087000D9ED40 /* StreethakViewController.xib in Resources */,
+				050F7A6C1247095800D9ED40 /* InventoryViewController.xib in Resources */,
+				053494E0124830B5004A6D9D /* stonehen.ttf in Resources */,
+				0534950A124840C0004A6D9D /* parchment.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1089,7 +1105,7 @@
 				050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */,
 				050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */,
 				050F7A1E124704B800D9ED40 /* TopLauncherView.m in Sources */,
-				050F7A4D1247073E00D9ED40 /* InventoryViewController.m in Sources */,
+				050F7A691247092000D9ED40 /* InventoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
