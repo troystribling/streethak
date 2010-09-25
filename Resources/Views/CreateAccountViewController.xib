@@ -70,8 +70,8 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="312465867">
-							<string key="NSName">Helvetica</string>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">UnZialish</string>
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -98,7 +98,11 @@
 						<int key="IBUIBorderStyle">3</int>
 						<string key="IBUIPlaceholder">Enter Password</string>
 						<reference key="IBUITextColor" ref="380563361"/>
-						<reference key="IBUIFont" ref="312465867"/>
+						<object class="NSFont" key="IBUIFont" id="251378120">
+							<string key="NSName">WashingtonText-Regular</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<bool key="IBUIClearsOnBeginEditing">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -122,7 +126,7 @@
 						<int key="IBUIBorderStyle">3</int>
 						<string key="IBUIPlaceholder">Confirm Password</string>
 						<reference key="IBUITextColor" ref="380563361"/>
-						<reference key="IBUIFont" ref="312465867"/>
+						<reference key="IBUIFont" ref="251378120"/>
 						<bool key="IBUIClearsOnBeginEditing">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -252,7 +256,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>CreateAccountViewController</string>
 					<string>UIResponder</string>
-					<string>{{572, 348}, {320, 480}}</string>
+					<string>{{121, 348}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

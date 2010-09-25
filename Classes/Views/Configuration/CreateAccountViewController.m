@@ -110,9 +110,9 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
-    self.jidTextField.font = [UIFont fontWithName:@"WashingtonText" size:18.0];
-    self.passwordTextField.font = [UIFont fontWithName:@"WashingtonText" size:18.0];
-    self.confirmedPasswordTextField.font = [UIFont fontWithName:@"WashingtonText" size:18.0];
+    self.jidTextField.font = [UIFont fontWithName:@"Washington Text" size:22.0];
+    self.passwordTextField.font = [UIFont fontWithName:@"Washington Text" size:22.0];
+    self.confirmedPasswordTextField.font = [UIFont fontWithName:@"Washington Text" size:22.0];
 	self.account = [[AccountModel alloc] init];
     self.jidTextField.delegate = self;
     self.passwordTextField.delegate = self;

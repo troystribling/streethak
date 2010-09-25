@@ -4,8 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>stonehen.ttf</string>
-		<string>WashintonText.ttf</string>
+		<string>WashingtonText.ttf</string>
+		<string>VIKING-N.TTF</string>
+		<string>stonehen.tff</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0500D9F81225FE7F00E58FF5 /* ViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */; };
+		0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
@@ -162,6 +163,7 @@
 /* Begin PBXFileReference section */
 		0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerManager.h; sourceTree = "<group>"; };
 		0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerManager.m; sourceTree = "<group>"; };
+		0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VIKING-N.TTF"; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
@@ -822,6 +824,7 @@
 		053494DE124830B5004A6D9D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */,
 				05D463CA124C3B30009B9E8A /* WashingtonText.ttf */,
 				053494DF124830B5004A6D9D /* stonehen.ttf */,
 			);
@@ -1003,6 +1006,7 @@
 				0534950A124840C0004A6D9D /* parchment.png in Resources */,
 				05D463CB124C3B30009B9E8A /* WashingtonText.ttf in Resources */,
 				05D463CD124C3CB2009B9E8A /* create_account.png in Resources */,
+				0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
