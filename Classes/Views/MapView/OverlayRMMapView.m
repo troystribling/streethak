@@ -16,6 +16,7 @@
 - (CGContextRef)createContextFromImage:(UIImage*)img;
 - (CGImageRef)getImageFromContext:(CGContextRef)ctx usingByteOrder:(CGBitmapInfo)bitmapInfo;
 - (CGImageRef)createBitmapFromImage:(UIImage*)img;
+- (CGImageRef)createMaskFromImage:(UIImage*)img;
 - (void)drawImageForTile:(UIImage*)img inContext:(CGContextRef)ctx;
 - (void)createImageForTile:(UIImage*)tile inContext:(CGContextRef)ctx;
 
@@ -142,7 +143,18 @@
     CGImageRef maskedTileOverlay = [self maskTile:tile];
     CGContextSetBlendMode(ctx, kCGBlendModeOverlay);
     CGContextDrawImage(ctx, boundBox, maskedTileOverlay);
-    CFRelease(maskedTileOverlay);
+//    CFRelease(maskedTileOverlay);
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (CGImageRef)createMaskFromImage:(UIImage*)img {
+    CGImageRef maskImageRef = img.CGImage;
+    return CGImageMaskCreate(CGImageGetWidth(maskImageRef),
+                             CGImageGetHeight(maskImageRef),
+                             CGImageGetBitsPerComponent(maskImageRef),
+                             CGImageGetBitsPerPixel(maskImageRef),
+                             CGImageGetBytesPerRow(maskImageRef),
+                             CGImageGetDataProvider(maskImageRef), NULL, NO);
 }
 
 
