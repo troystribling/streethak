@@ -1,5 +1,5 @@
 //
-//  streethakViewController.m
+//  StreethakViewController.m
 //  streethak
 //
 //  Created by Troy Stribling on 11/10/09.
@@ -8,8 +8,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "StreethakViewController.h"
-#import "TopLauncherView.h"
-#import "BottomLauncherView.h"
+#import "MapTopLauncherView.h"
+#import "MapNavigationLauncherView.h"
 #import "RMCloudMadeMapSource.h"
 #import "RMMarker.h"
 #import "RMMarkerManager.h"
@@ -80,8 +80,8 @@
     self.mapGeoLocUpdateDelegate = [[MapGeoLocUpdateDelegate alloc] init:self];
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
-    [BottomLauncherView inView:self.mapView];
-    [TopLauncherView inView:self.mapView];
+    [MapNavigationLauncherView inView:self.mapView];
+    [MapTopLauncherView inView:self.mapView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

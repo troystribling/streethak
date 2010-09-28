@@ -51,7 +51,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">create_account.png</string>
+							<string key="NSResourceName">create-account.png</string>
 						</object>
 					</object>
 					<object class="IBUITextField" id="1025766312">
@@ -799,7 +799,7 @@
 		<string key="IBDocument.LastKnownRelativeProjectPath">../../streethak.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">create_account.png</string>
+			<string key="NS.key.0">create-account.png</string>
 			<string key="NS.object.0">{640, 960}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">123</string>

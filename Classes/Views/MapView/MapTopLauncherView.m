@@ -1,5 +1,5 @@
 //
-//  TopLauncherView.m
+//  MapTopLauncherView.m
 //  streethak
 //
 //  Created by Troy Stribling on 9/15/10.
@@ -7,26 +7,26 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "TopLauncherView.h"
+#import "MapTopLauncherView.h"
 #import "TouchAreaView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TopLauncherView (PrivateAPI)
+@interface MapTopLauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation TopLauncherView
+@implementation MapTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize inventoryLauncher;
 
 //===================================================================================================================================
-#pragma mark TopLauncherView
+#pragma mark MapTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view {
-    return [[[TopLauncherView alloc] initInView:_view] autorelease];
+    return [[[MapTopLauncherView alloc] initInView:_view] autorelease];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -35,9 +35,9 @@
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame])) {
-        self.image = [UIImage imageNamed:@"top-launcher.png"];
+        self.image = [UIImage imageNamed:@"map-top-launcher.png"];
         self.userInteractionEnabled = YES;
-        CGRect inventoryFrame = CGRectMake(0.8344*viewWidth, 0.0, 0.1297*viewWidth, viewHeight);
+        CGRect inventoryFrame = CGRectMake(0.7906*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
         self.inventoryLauncher = [TouchAreaView createWithFrame:inventoryFrame name:@"inventory" andDelegate:self];
         [self addSubview:self.inventoryLauncher];
         [_view addSubview:self];
@@ -46,7 +46,7 @@
 }
 
 //===================================================================================================================================
-#pragma mark TopLauncherView PrivateAPI
+#pragma mark MapTopLauncherView PrivateAPI
 
 //===================================================================================================================================
 #pragma mark TouchAreaView Delegate

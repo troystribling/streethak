@@ -1,5 +1,5 @@
 //
-//  BottomLauncherView.m
+//  MapNavigationLauncherView.m
 //  streethak
 //
 //  Created by Troy Stribling on 9/17/10.
@@ -7,45 +7,65 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "BottomLauncherView.h"
-#import "TouchImageView.h"
+#import "MapNavigationLauncherView.h"
+#import "TouchAreaView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface BottomLauncherView (PrivateAPI)
+@interface MapNavigationLauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation BottomLauncherView
+@implementation MapNavigationLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize configLauncher;
+@synthesize contactsLauncher;
+@synthesize mapLauncher;
 
 //===================================================================================================================================
-#pragma mark BottomLauncherView
+#pragma mark MapNavigationLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view {
-    return [[[BottomLauncherView alloc] initInView:_view] autorelease];
+    return [[[MapNavigationLauncherView alloc] initInView:_view] autorelease];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (id)initInView:(UIView*)_view {
-    CGRect viewFrame = CGRectMake(0.0, 0.8958*_view.frame.size.height, _view.frame.size.width, 0.1042*_view.frame.size.height);
+    CGFloat viewWidth =  _view.frame.size.width;
+    CGFloat viewHeight = 0.1042*_view.frame.size.height;
+    CGFloat viewPosY = 0.8958*_view.frame.size.height;
+    CGRect viewFrame = CGRectMake(0.0,  viewPosY, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame])) {
-        self.image = [UIImage imageNamed:@"bottom-launcher.png"];
+        self.image = [UIImage imageNamed:@"map-navigation-launcher.png"];
+        self.userInteractionEnabled = YES;
+        CGRect configFrame = CGRectMake(0.7859*viewWidth, 0.0, 0.1797*viewWidth, viewHeight);
+        self.configLauncher = [TouchAreaView createWithFrame:configFrame name:@"config" andDelegate:self];
+        [self addSubview:self.configLauncher];
+        CGRect contactsFrame = CGRectMake(0.2875*viewWidth, 0.0, 0.4531*viewWidth, viewHeight);
+        self.contactsLauncher = [TouchAreaView createWithFrame:contactsFrame name:@"contacts" andDelegate:self];
+        [self addSubview:self.contactsLauncher];
+        CGRect mapFrame = CGRectMake(0.0312*viewWidth, 0.0, 0.2266*viewWidth, viewHeight);
+        self.mapLauncher = [TouchAreaView createWithFrame:mapFrame name:@"location" andDelegate:self];
+        [self addSubview:self.mapLauncher];
         [_view addSubview:self];
     }
     return self;
 }
 
 //===================================================================================================================================
-#pragma mark TopLauncherView PrivateAPI
+#pragma mark MapTopLauncherView PrivateAPI
 
 //===================================================================================================================================
-#pragma mark TopLauncherView Delegate
+#pragma mark TouchAreaView Delegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)imageTouched:(TouchImageView*)_laucnhImageView {
+- (void)viewTouched:(TouchAreaView*)touchedView {
+    if ([touchedView.viewName isEqualToString:@"config"]) {
+    } else if ([touchedView.viewName isEqualToString:@"contacts"]) {
+    } else if ([touchedView.viewName isEqualToString:@"location"]) {
+    }
 }
 
 //===================================================================================================================================

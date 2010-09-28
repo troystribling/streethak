@@ -15,10 +15,10 @@
 		050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */; };
 		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
 		050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* EditAccountViewController.m */; };
-		050F7A1B124704B800D9ED40 /* BottomLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A14124704B800D9ED40 /* BottomLauncherView.m */; };
+		050F7A1B124704B800D9ED40 /* MapNavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A14124704B800D9ED40 /* MapNavigationLauncherView.m */; };
 		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
 		050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A18124704B800D9ED40 /* StreethakViewController.m */; };
-		050F7A1E124704B800D9ED40 /* TopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A1A124704B800D9ED40 /* TopLauncherView.m */; };
+		050F7A1E124704B800D9ED40 /* MapTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A1A124704B800D9ED40 /* MapTopLauncherView.m */; };
 		050F7A621247087000D9ED40 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */; };
 		050F7A631247087000D9ED40 /* EditAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */; };
 		050F7A651247087000D9ED40 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A601247087000D9ED40 /* MainWindow.xib */; };
@@ -118,13 +118,13 @@
 		0510DBBA12223361001FE510 /* XMPPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6012223361001FE510 /* XMPPResponse.m */; };
 		0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6212223361001FE510 /* XMPPTimestamp.m */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
+		052D8C7212518FE100A2D7FF /* create-account.png in Resources */ = {isa = PBXBuildFile; fileRef = 052D8C7112518FE100A2D7FF /* create-account.png */; };
 		053494E0124830B5004A6D9D /* stonehen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 053494DF124830B5004A6D9D /* stonehen.ttf */; };
 		0534950A124840C0004A6D9D /* parchment.png in Resources */ = {isa = PBXBuildFile; fileRef = 05349509124840C0004A6D9D /* parchment.png */; };
 		055990A2124309F20013C6DD /* TouchAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 055990A1124309F20013C6DD /* TouchAreaView.m */; };
-		05700D1012442E310059964F /* bottom-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* bottom-launcher.png */; };
-		05700D1212442E410059964F /* top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D1112442E410059964F /* top-launcher.png */; };
+		05700D1012442E310059964F /* map-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* map-navigation-launcher.png */; };
+		05700D1212442E410059964F /* map-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D1112442E410059964F /* map-top-launcher.png */; };
 		05D463CB124C3B30009B9E8A /* WashingtonText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05D463CA124C3B30009B9E8A /* WashingtonText.ttf */; };
-		05D463CD124C3CB2009B9E8A /* create_account.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D463CC124C3CB2009B9E8A /* create_account.png */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -173,14 +173,14 @@
 		050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		050F7A0E124704A800D9ED40 /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
 		050F7A0F124704A800D9ED40 /* EditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAccountViewController.m; sourceTree = "<group>"; };
-		050F7A13124704B800D9ED40 /* BottomLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomLauncherView.h; sourceTree = "<group>"; };
-		050F7A14124704B800D9ED40 /* BottomLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomLauncherView.m; sourceTree = "<group>"; };
+		050F7A13124704B800D9ED40 /* MapNavigationLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNavigationLauncherView.h; sourceTree = "<group>"; };
+		050F7A14124704B800D9ED40 /* MapNavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNavigationLauncherView.m; sourceTree = "<group>"; };
 		050F7A15124704B800D9ED40 /* OverlayRMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayRMMapView.h; sourceTree = "<group>"; };
 		050F7A16124704B800D9ED40 /* OverlayRMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayRMMapView.m; sourceTree = "<group>"; };
 		050F7A17124704B800D9ED40 /* StreethakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakViewController.h; sourceTree = "<group>"; };
 		050F7A18124704B800D9ED40 /* StreethakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakViewController.m; sourceTree = "<group>"; };
-		050F7A19124704B800D9ED40 /* TopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLauncherView.h; sourceTree = "<group>"; };
-		050F7A1A124704B800D9ED40 /* TopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLauncherView.m; sourceTree = "<group>"; };
+		050F7A19124704B800D9ED40 /* MapTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTopLauncherView.h; sourceTree = "<group>"; };
+		050F7A1A124704B800D9ED40 /* MapTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTopLauncherView.m; sourceTree = "<group>"; };
 		050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
 		050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAccountViewController.xib; sourceTree = "<group>"; };
 		050F7A601247087000D9ED40 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -373,14 +373,14 @@
 		0510DB6212223361001FE510 /* XMPPTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPTimestamp.m; sourceTree = "<group>"; };
 		052553BA1222B3EF00203185 /* StreethakAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakAppDelegate.h; sourceTree = "<group>"; };
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
+		052D8C7112518FE100A2D7FF /* create-account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-account.png"; sourceTree = "<group>"; };
 		053494DF124830B5004A6D9D /* stonehen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stonehen.ttf; sourceTree = "<group>"; };
 		05349509124840C0004A6D9D /* parchment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parchment.png; sourceTree = "<group>"; };
 		055990A0124309F20013C6DD /* TouchAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAreaView.h; sourceTree = "<group>"; };
 		055990A1124309F20013C6DD /* TouchAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAreaView.m; sourceTree = "<group>"; };
-		05700D0F12442E310059964F /* bottom-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-launcher.png"; sourceTree = "<group>"; };
-		05700D1112442E410059964F /* top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-launcher.png"; sourceTree = "<group>"; };
+		05700D0F12442E310059964F /* map-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-navigation-launcher.png"; sourceTree = "<group>"; };
+		05700D1112442E410059964F /* map-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-top-launcher.png"; sourceTree = "<group>"; };
 		05D463CA124C3B30009B9E8A /* WashingtonText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WashingtonText.ttf; sourceTree = "<group>"; };
-		05D463CC124C3CB2009B9E8A /* create_account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create_account.png; sourceTree = "<group>"; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		05FC68F2122B2B6F00878B07 /* user-location-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-location-marker.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -457,14 +457,14 @@
 		050F7A12124704B800D9ED40 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				050F7A13124704B800D9ED40 /* BottomLauncherView.h */,
-				050F7A14124704B800D9ED40 /* BottomLauncherView.m */,
+				050F7A13124704B800D9ED40 /* MapNavigationLauncherView.h */,
+				050F7A14124704B800D9ED40 /* MapNavigationLauncherView.m */,
 				050F7A15124704B800D9ED40 /* OverlayRMMapView.h */,
 				050F7A16124704B800D9ED40 /* OverlayRMMapView.m */,
 				050F7A17124704B800D9ED40 /* StreethakViewController.h */,
 				050F7A18124704B800D9ED40 /* StreethakViewController.m */,
-				050F7A19124704B800D9ED40 /* TopLauncherView.h */,
-				050F7A1A124704B800D9ED40 /* TopLauncherView.m */,
+				050F7A19124704B800D9ED40 /* MapTopLauncherView.h */,
+				050F7A1A124704B800D9ED40 /* MapTopLauncherView.m */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -835,13 +835,13 @@
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				05D463CC124C3CB2009B9E8A /* create_account.png */,
+				052D8C7112518FE100A2D7FF /* create-account.png */,
 				05349509124840C0004A6D9D /* parchment.png */,
-				05700D0F12442E310059964F /* bottom-launcher.png */,
+				05700D0F12442E310059964F /* map-navigation-launcher.png */,
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
-				05700D1112442E410059964F /* top-launcher.png */,
+				05700D1112442E410059964F /* map-top-launcher.png */,
 			);
 			name = Images;
 			path = Resources/Images;
@@ -995,8 +995,8 @@
 				05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */,
 				05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */,
 				050BE2241234585800CB5CC6 /* tile-background.png in Resources */,
-				05700D1012442E310059964F /* bottom-launcher.png in Resources */,
-				05700D1212442E410059964F /* top-launcher.png in Resources */,
+				05700D1012442E310059964F /* map-navigation-launcher.png in Resources */,
+				05700D1212442E410059964F /* map-top-launcher.png in Resources */,
 				050F7A621247087000D9ED40 /* CreateAccountViewController.xib in Resources */,
 				050F7A631247087000D9ED40 /* EditAccountViewController.xib in Resources */,
 				050F7A651247087000D9ED40 /* MainWindow.xib in Resources */,
@@ -1005,8 +1005,8 @@
 				053494E0124830B5004A6D9D /* stonehen.ttf in Resources */,
 				0534950A124840C0004A6D9D /* parchment.png in Resources */,
 				05D463CB124C3B30009B9E8A /* WashingtonText.ttf in Resources */,
-				05D463CD124C3CB2009B9E8A /* create_account.png in Resources */,
 				0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */,
+				052D8C7212518FE100A2D7FF /* create-account.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,10 +1113,10 @@
 				050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */,
 				050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */,
 				050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */,
-				050F7A1B124704B800D9ED40 /* BottomLauncherView.m in Sources */,
+				050F7A1B124704B800D9ED40 /* MapNavigationLauncherView.m in Sources */,
 				050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */,
 				050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */,
-				050F7A1E124704B800D9ED40 /* TopLauncherView.m in Sources */,
+				050F7A1E124704B800D9ED40 /* MapTopLauncherView.m in Sources */,
 				050F7A691247092000D9ED40 /* InventoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

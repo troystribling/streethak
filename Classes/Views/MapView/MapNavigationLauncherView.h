@@ -1,5 +1,5 @@
 //
-//  BottomLauncherView.h
+//  MapNavigationLauncherView.h
 //  streethak
 //
 //  Created by Troy Stribling on 9/17/10.
@@ -10,14 +10,19 @@
 #import <UIKit/UIKit.h>
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@class TouchImageView;
+@class TouchAreaView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface BottomLauncherView : UIImageView {
-
+@interface MapNavigationLauncherView : UIImageView {
+    TouchAreaView* configLauncher;
+    TouchAreaView* contactsLauncher;
+    TouchAreaView* mapLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@property (nonatomic, retain) TouchAreaView* configLauncher;
+@property (nonatomic, retain) TouchAreaView* contactsLauncher;
+@property (nonatomic, retain) TouchAreaView* mapLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view;

@@ -1,5 +1,5 @@
 //
-//  TopLauncherView.h
+//  MapTopLauncherView.h
 //  streethak
 //
 //  Created by Troy Stribling on 9/15/10.
@@ -13,7 +13,7 @@
 @class TouchAreaView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TopLauncherView : UIImageView {
+@interface MapTopLauncherView : UIImageView {
     TouchAreaView* inventoryLauncher;
 }
 
