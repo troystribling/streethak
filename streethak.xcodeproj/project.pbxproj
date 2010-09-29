@@ -117,6 +117,8 @@
 		0510DBB912223361001FE510 /* XMPPMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB5E12223361001FE510 /* XMPPMessageDelegate.m */; };
 		0510DBBA12223361001FE510 /* XMPPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6012223361001FE510 /* XMPPResponse.m */; };
 		0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6212223361001FE510 /* XMPPTimestamp.m */; };
+		051DED471252C43D00F3E0F4 /* configuration-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */; };
+		051DED481252C43D00F3E0F4 /* contact-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
 		052D8C7212518FE100A2D7FF /* create-account.png in Resources */ = {isa = PBXBuildFile; fileRef = 052D8C7112518FE100A2D7FF /* create-account.png */; };
 		053494E0124830B5004A6D9D /* stonehen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 053494DF124830B5004A6D9D /* stonehen.ttf */; };
@@ -371,6 +373,8 @@
 		0510DB6012223361001FE510 /* XMPPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPResponse.m; sourceTree = "<group>"; };
 		0510DB6112223361001FE510 /* XMPPTimestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPTimestamp.h; sourceTree = "<group>"; };
 		0510DB6212223361001FE510 /* XMPPTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPTimestamp.m; sourceTree = "<group>"; };
+		051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "configuration-navigation-launcher.png"; sourceTree = "<group>"; };
+		051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact-navigation-launcher.png"; sourceTree = "<group>"; };
 		052553BA1222B3EF00203185 /* StreethakAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakAppDelegate.h; sourceTree = "<group>"; };
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
 		052D8C7112518FE100A2D7FF /* create-account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-account.png"; sourceTree = "<group>"; };
@@ -835,13 +839,15 @@
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
+				051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */,
 				052D8C7112518FE100A2D7FF /* create-account.png */,
-				05349509124840C0004A6D9D /* parchment.png */,
+				05700D1112442E410059964F /* map-top-launcher.png */,
 				05700D0F12442E310059964F /* map-navigation-launcher.png */,
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
+				05349509124840C0004A6D9D /* parchment.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
-				05700D1112442E410059964F /* map-top-launcher.png */,
 			);
 			name = Images;
 			path = Resources/Images;
@@ -1007,6 +1013,8 @@
 				05D463CB124C3B30009B9E8A /* WashingtonText.ttf in Resources */,
 				0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */,
 				052D8C7212518FE100A2D7FF /* create-account.png in Resources */,
+				051DED471252C43D00F3E0F4 /* configuration-navigation-launcher.png in Resources */,
+				051DED481252C43D00F3E0F4 /* contact-navigation-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

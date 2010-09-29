@@ -20,6 +20,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize inventoryLauncher;
+@synthesize statsLauncher;
 
 //===================================================================================================================================
 #pragma mark MapTopLauncherView
@@ -40,6 +41,9 @@
         CGRect inventoryFrame = CGRectMake(0.7906*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
         self.inventoryLauncher = [TouchAreaView createWithFrame:inventoryFrame name:@"inventory" andDelegate:self];
         [self addSubview:self.inventoryLauncher];
+        CGRect statsFrame = CGRectMake(0.0422*viewWidth, 0.0, 0.2969*viewWidth, viewHeight);
+        self.statsLauncher = [TouchAreaView createWithFrame:statsFrame name:@"stats" andDelegate:self];
+        [self addSubview:self.statsLauncher];
         [_view addSubview:self];
     }
     return self;
@@ -54,6 +58,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"inventory"]) {
+    } else if ([touchedView.viewName isEqualToString:@"stats"]) {
     }
 }
 

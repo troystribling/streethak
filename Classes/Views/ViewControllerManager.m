@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "ViewControllerManager.h"
 #import "CreateAccountViewController.h"
+#import "InventoryViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -23,6 +24,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize createAccountViewController;
+@synthesize inventoryViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -41,11 +43,19 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (CreateAccountViewController*)showCreateAccountViewController:(UIView*)containeView {
+- (CreateAccountViewController*)showCreateAccountView:(UIView*)containeView {
     if (self.createAccountViewController == nil) {
         self.createAccountViewController = [CreateAccountViewController inView:containeView];
     }
     return self.createAccountViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (InventoryViewController*)showInventoryView:(UIView*)containeView {
+//    if (self.inventoryViewController == nil) {
+//        self.inventoryViewController = [InventoryViewController inView:containeView];
+//    }
+//    return self.inventoryViewController;
 }
 
 @end

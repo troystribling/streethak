@@ -57,7 +57,7 @@
 					<object class="IBUITextField" id="1025766312">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{38, 69}, {243, 31}}</string>
+						<string key="NSFrame">{{38, 99}, {243, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -88,7 +88,7 @@
 					<object class="IBUITextField" id="117139819">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{38, 107}, {243, 31}}</string>
+						<string key="NSFrame">{{38, 144}, {243, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -116,7 +116,7 @@
 					<object class="IBUITextField" id="491370649">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{38, 146}, {243, 31}}</string>
+						<string key="NSFrame">{{38, 189}, {243, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -198,10 +198,10 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="696390592"/>
 							<reference ref="1025766312"/>
 							<reference ref="117139819"/>
 							<reference ref="491370649"/>
-							<reference ref="696390592"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -247,8 +247,11 @@
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
 					<string>10.IBPluginDependency</string>
+					<string>10.IBViewBoundsToFrameTransform</string>
 					<string>11.IBPluginDependency</string>
+					<string>11.IBViewBoundsToFrameTransform</string>
 					<string>38.IBPluginDependency</string>
+					<string>38.IBViewBoundsToFrameTransform</string>
 					<string>42.IBPluginDependency</string>
 					<string>42.IBViewBoundsToFrameTransform</string>
 				</object>
@@ -256,11 +259,20 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>CreateAccountViewController</string>
 					<string>UIResponder</string>
-					<string>{{121, 348}, {320, 480}}</string>
+					<string>{{440, 241}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABCGAAAwtwAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABCGAAAwxQAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABCGAAAwzsAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform"/>
 				</object>

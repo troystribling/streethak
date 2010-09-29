@@ -15,10 +15,12 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface MapTopLauncherView : UIImageView {
     TouchAreaView* inventoryLauncher;
+    TouchAreaView* statsLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* inventoryLauncher;
+@property (nonatomic, retain) TouchAreaView* statsLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view;

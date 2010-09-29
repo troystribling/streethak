@@ -100,7 +100,7 @@
     [self setUnreadMessages];
     if ([AccountModel count] == 0) {
         self.creatingAccount = YES;
-        [[ViewControllerManager instance] showCreateAccountViewController:self.window];
+        [[ViewControllerManager instance] showCreateAccountView:self.window];
     } else {
         self.creatingAccount = NO;
         [self.window addSubview:viewController.view];
