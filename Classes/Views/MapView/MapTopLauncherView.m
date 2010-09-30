@@ -21,6 +21,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize inventoryLauncher;
 @synthesize statsLauncher;
+@synthesize levelLabel;
 
 //===================================================================================================================================
 #pragma mark MapTopLauncherView
@@ -38,10 +39,17 @@
     if ((self = [self initWithFrame:viewFrame])) {
         self.image = [UIImage imageNamed:@"map-top-launcher.png"];
         self.userInteractionEnabled = YES;
-        CGRect inventoryFrame = CGRectMake(0.7906*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
+        CGRect inventoryFrame = CGRectMake(0.8203*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
         self.inventoryLauncher = [TouchAreaView createWithFrame:inventoryFrame name:@"inventory" andDelegate:self];
         [self addSubview:self.inventoryLauncher];
-        CGRect statsFrame = CGRectMake(0.0422*viewWidth, 0.0, 0.2969*viewWidth, viewHeight);
+        CGRect levelFrame = CGRectMake(0.0344*viewWidth, 0.0, 0.1562*viewWidth, 0.85*viewHeight);
+        self.levelLabel = [[[UILabel alloc] initWithFrame:levelFrame] autorelease]; 
+        self.levelLabel.text = @"1";
+        self.levelLabel.font = [UIFont fontWithName:@"Washington Text" size:36.0];
+        self.levelLabel.textAlignment = UITextAlignmentCenter;
+        self.levelLabel.backgroundColor = [UIColor clearColor];
+        [self addSubview:self.levelLabel];
+        CGRect statsFrame = CGRectMake(0.0391*viewWidth, 0.0, 0.7578*viewWidth, viewHeight);
         self.statsLauncher = [TouchAreaView createWithFrame:statsFrame name:@"stats" andDelegate:self];
         [self addSubview:self.statsLauncher];
         [_view addSubview:self];

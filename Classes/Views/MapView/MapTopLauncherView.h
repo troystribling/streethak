@@ -16,11 +16,13 @@
 @interface MapTopLauncherView : UIImageView {
     TouchAreaView* inventoryLauncher;
     TouchAreaView* statsLauncher;
+    UILabel* levelLabel;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* inventoryLauncher;
 @property (nonatomic, retain) TouchAreaView* statsLauncher;
+@property (nonatomic, retain) UILabel* levelLabel;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view;

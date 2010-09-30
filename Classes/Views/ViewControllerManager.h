@@ -28,6 +28,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (CreateAccountViewController*)showCreateAccountView:(UIView*)containeView;
-- (InventoryViewController*)showInventoryView:(UIView*)containeView;
+//- (InventoryViewController*)showInventoryView:(UIView*)containeView;
 
 @end

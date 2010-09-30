@@ -51,11 +51,11 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (InventoryViewController*)showInventoryView:(UIView*)containeView {
+//- (InventoryViewController*)showInventoryView:(UIView*)containeView {
 //    if (self.inventoryViewController == nil) {
 //        self.inventoryViewController = [InventoryViewController inView:containeView];
 //    }
 //    return self.inventoryViewController;
-}
+//}
 
 @end
