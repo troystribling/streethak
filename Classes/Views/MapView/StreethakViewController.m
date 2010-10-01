@@ -68,6 +68,9 @@
 #pragma mark StreethakViewController
 
 //===================================================================================================================================
+#pragma mark NavigationLauncherViewDelegate 
+
+//===================================================================================================================================
 #pragma mark UIViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -80,7 +83,7 @@
     self.mapGeoLocUpdateDelegate = [[MapGeoLocUpdateDelegate alloc] init:self];
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
-    [MapNavigationLauncherView inView:self.mapView];
+    [NavigationLauncherView inView:self.mapView withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
     [MapTopLauncherView inView:self.mapView];
 }
 

@@ -8,6 +8,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "NavigationLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class RMMapView;
@@ -16,7 +17,7 @@
 @class OverlayRMMapView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface StreethakViewController : UIViewController {
+@interface StreethakViewController : UIViewController <NavigationLauncherViewDelegate> {
 	IBOutlet OverlayRMMapView* mapView;
     MapGeoLocUpdateDelegate* mapGeoLocUpdateDelegate;
     RMMarker* userMarker;

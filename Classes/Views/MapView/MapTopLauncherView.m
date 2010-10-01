@@ -39,12 +39,12 @@
     if ((self = [self initWithFrame:viewFrame])) {
         self.image = [UIImage imageNamed:@"map-top-launcher.png"];
         self.userInteractionEnabled = YES;
-        CGRect inventoryFrame = CGRectMake(0.8203*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
+        CGRect inventoryFrame = CGRectMake(0.8281*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
         self.inventoryLauncher = [TouchAreaView createWithFrame:inventoryFrame name:@"inventory" andDelegate:self];
         [self addSubview:self.inventoryLauncher];
-        CGRect levelFrame = CGRectMake(0.0344*viewWidth, 0.0, 0.1562*viewWidth, 0.85*viewHeight);
+        CGRect levelFrame = CGRectMake(0.0187*viewWidth, 0.0, 0.1562*viewWidth, 0.85*viewHeight);
         self.levelLabel = [[[UILabel alloc] initWithFrame:levelFrame] autorelease]; 
-        self.levelLabel.text = @"1";
+        self.levelLabel.text = @"99";
         self.levelLabel.font = [UIFont fontWithName:@"Washington Text" size:36.0];
         self.levelLabel.textAlignment = UITextAlignmentCenter;
         self.levelLabel.backgroundColor = [UIColor clearColor];

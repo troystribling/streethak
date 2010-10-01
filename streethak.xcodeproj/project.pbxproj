@@ -12,10 +12,10 @@
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
+		050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D368512556EF2001E5B06 /* NavigationLauncherView.m */; };
 		050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */; };
 		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
 		050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* EditAccountViewController.m */; };
-		050F7A1B124704B800D9ED40 /* MapNavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A14124704B800D9ED40 /* MapNavigationLauncherView.m */; };
 		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
 		050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A18124704B800D9ED40 /* StreethakViewController.m */; };
 		050F7A1E124704B800D9ED40 /* MapTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A1A124704B800D9ED40 /* MapTopLauncherView.m */; };
@@ -169,14 +169,14 @@
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
+		050D368412556EF2001E5B06 /* NavigationLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationLauncherView.h; sourceTree = "<group>"; };
+		050D368512556EF2001E5B06 /* NavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationLauncherView.m; sourceTree = "<group>"; };
 		050F7A081247049D00D9ED40 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
 		050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		050F7A0E124704A800D9ED40 /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
 		050F7A0F124704A800D9ED40 /* EditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAccountViewController.m; sourceTree = "<group>"; };
-		050F7A13124704B800D9ED40 /* MapNavigationLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNavigationLauncherView.h; sourceTree = "<group>"; };
-		050F7A14124704B800D9ED40 /* MapNavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNavigationLauncherView.m; sourceTree = "<group>"; };
 		050F7A15124704B800D9ED40 /* OverlayRMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayRMMapView.h; sourceTree = "<group>"; };
 		050F7A16124704B800D9ED40 /* OverlayRMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayRMMapView.m; sourceTree = "<group>"; };
 		050F7A17124704B800D9ED40 /* StreethakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakViewController.h; sourceTree = "<group>"; };
@@ -461,8 +461,6 @@
 		050F7A12124704B800D9ED40 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				050F7A13124704B800D9ED40 /* MapNavigationLauncherView.h */,
-				050F7A14124704B800D9ED40 /* MapNavigationLauncherView.m */,
 				050F7A15124704B800D9ED40 /* OverlayRMMapView.h */,
 				050F7A16124704B800D9ED40 /* OverlayRMMapView.m */,
 				050F7A17124704B800D9ED40 /* StreethakViewController.h */,
@@ -817,10 +815,12 @@
 				050F7A12124704B800D9ED40 /* MapView */,
 				050F7A0B124704A800D9ED40 /* Configuration */,
 				050F7A071247049D00D9ED40 /* Chat */,
-				0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */,
-				0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */,
+				050D368412556EF2001E5B06 /* NavigationLauncherView.h */,
+				050D368512556EF2001E5B06 /* NavigationLauncherView.m */,
 				055990A0124309F20013C6DD /* TouchAreaView.h */,
 				055990A1124309F20013C6DD /* TouchAreaView.m */,
+				0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */,
+				0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1121,11 +1121,11 @@
 				050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */,
 				050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */,
 				050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */,
-				050F7A1B124704B800D9ED40 /* MapNavigationLauncherView.m in Sources */,
 				050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */,
 				050F7A1D124704B800D9ED40 /* StreethakViewController.m in Sources */,
 				050F7A1E124704B800D9ED40 /* MapTopLauncherView.m in Sources */,
 				050F7A691247092000D9ED40 /* InventoryViewController.m in Sources */,
+				050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

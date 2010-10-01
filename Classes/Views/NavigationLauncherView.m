@@ -1,44 +1,46 @@
 //
-//  MapNavigationLauncherView.m
+//  NavigationLauncherView.m
 //  streethak
 //
-//  Created by Troy Stribling on 9/17/10.
+//  Created by Troy Stribling on 9/30/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "MapNavigationLauncherView.h"
+#import "NavigationLauncherView.h"
 #import "TouchAreaView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface MapNavigationLauncherView (PrivateAPI)
+@interface NavigationLauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation MapNavigationLauncherView
+@implementation NavigationLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize configLauncher;
 @synthesize contactsLauncher;
 @synthesize mapLauncher;
+@synthesize delegate;
 
 //===================================================================================================================================
-#pragma mark MapNavigationLauncherView
+#pragma mark NavigationLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view {
-    return [[[MapNavigationLauncherView alloc] initInView:_view] autorelease];
++ (id)inView:(UIView*)_view withImageNamed:(NSString*)_imageName andDelegate:(id<NavigationLauncherViewDelegate>)_delegate {
+    return [[[NavigationLauncherView alloc] initInView:_view withImageNamed:_imageName andDelegate:_delegate] autorelease];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initInView:(UIView*)_view {
+- (id)initInView:(UIView*)_view withImageNamed:(NSString*)_imageName andDelegate:(id<NavigationLauncherViewDelegate>)_delegate {
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGFloat viewPosY = 0.8958*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0,  viewPosY, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame])) {
-        self.image = [UIImage imageNamed:@"map-navigation-launcher.png"];
+        self.delegate = _delegate;
+        self.image = [UIImage imageNamed:_imageName];
         self.userInteractionEnabled = YES;
         CGRect configFrame = CGRectMake(0.7859*viewWidth, 0.0, 0.1797*viewWidth, viewHeight);
         self.configLauncher = [TouchAreaView createWithFrame:configFrame name:@"config" andDelegate:self];
@@ -63,8 +65,17 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"config"]) {
+        if ([self.delegate respondsToSelector:@selector(touchedConfig)]) {
+            [self.delegate touchedConfig];
+        }         
     } else if ([touchedView.viewName isEqualToString:@"contacts"]) {
+        if ([self.delegate respondsToSelector:@selector(touchedContacts)]) {
+            [self.delegate touchedContacts];
+        }         
     } else if ([touchedView.viewName isEqualToString:@"location"]) {
+        if ([self.delegate respondsToSelector:@selector(touchedLocation)]) {
+            [self.delegate touchedLocation];
+        }         
     }
 }
 
