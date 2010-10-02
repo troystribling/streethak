@@ -10,6 +10,7 @@
 #import "ViewControllerManager.h"
 #import "CreateAccountViewController.h"
 #import "InventoryViewController.h"
+#import "MapViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -25,6 +26,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize createAccountViewController;
 @synthesize inventoryViewController;
+@synthesize mapViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -43,19 +45,27 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (CreateAccountViewController*)showCreateAccountView:(UIView*)containeView {
+- (CreateAccountViewController*)showCreateAccountView:(UIView*)containerView {
     if (self.createAccountViewController == nil) {
-        self.createAccountViewController = [CreateAccountViewController inView:containeView];
+        self.createAccountViewController = [CreateAccountViewController inView:containerView];
     }
     return self.createAccountViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-//- (InventoryViewController*)showInventoryView:(UIView*)containeView {
-//    if (self.inventoryViewController == nil) {
-//        self.inventoryViewController = [InventoryViewController inView:containeView];
-//    }
-//    return self.inventoryViewController;
-//}
+- (InventoryViewController*)showInventoryView:(UIView*)containerView {
+    if (self.inventoryViewController == nil) {
+        self.inventoryViewController = [InventoryViewController inView:containerView];
+    }
+    return self.inventoryViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (MapViewController*)showMapView:(UIView*)containerView {
+    if (self.mapViewController == nil) {
+        self.mapViewController = [MapViewController inView:containerView];
+    }
+    return self.mapViewController;
+}
 
 @end

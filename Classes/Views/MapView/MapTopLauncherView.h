@@ -17,12 +17,14 @@
     TouchAreaView* inventoryLauncher;
     TouchAreaView* statsLauncher;
     UILabel* levelLabel;
+    UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* inventoryLauncher;
 @property (nonatomic, retain) TouchAreaView* statsLauncher;
 @property (nonatomic, retain) UILabel* levelLabel;
+@property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view;

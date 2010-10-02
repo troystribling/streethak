@@ -11,17 +11,17 @@
 #import "GeoLocManager.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@class StreethakViewController;
+@class MapViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface MapGeoLocUpdateDelegate : NSObject <GeoLocUpdateDelegate> {
-    StreethakViewController* mapViewController;
+    MapViewController* mapViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) StreethakViewController* mapViewController;
+@property (nonatomic, retain) MapViewController* mapViewController;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)init:(StreethakViewController*)initView;
+- (id)init:(MapViewController*)initView;
 
 @end

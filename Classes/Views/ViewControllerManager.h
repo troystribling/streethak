@@ -12,22 +12,26 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class CreateAccountViewController;
 @class InventoryViewController;
+@class MapViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ViewControllerManager : NSObject {
     CreateAccountViewController* createAccountViewController;
     InventoryViewController* inventoryViewController;
+    MapViewController* mapViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) CreateAccountViewController* createAccountViewController;
 @property (nonatomic, retain) InventoryViewController* inventoryViewController;
+@property (nonatomic, retain) MapViewController* mapViewController;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (ViewControllerManager*)instance;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (CreateAccountViewController*)showCreateAccountView:(UIView*)containeView;
-//- (InventoryViewController*)showInventoryView:(UIView*)containeView;
+- (CreateAccountViewController*)showCreateAccountView:(UIView*)containerView;
+- (InventoryViewController*)showInventoryView:(UIView*)containerView;
+- (MapViewController*)showMapView:(UIView*)containerView;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  streethakViewController.h
+//  MapViewController.h
 //  streethak
 //
 //  Created by Troy Stribling on 1/1/09.
@@ -17,7 +17,7 @@
 @class OverlayRMMapView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface StreethakViewController : UIViewController <NavigationLauncherViewDelegate> {
+@interface MapViewController : UIViewController <NavigationLauncherViewDelegate> {
 	IBOutlet OverlayRMMapView* mapView;
     MapGeoLocUpdateDelegate* mapGeoLocUpdateDelegate;
     RMMarker* userMarker;
@@ -29,6 +29,8 @@
 @property (nonatomic, retain) RMMarker* userMarker;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inView:(UIView*)containedView;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)containedView;
 
 @end
 

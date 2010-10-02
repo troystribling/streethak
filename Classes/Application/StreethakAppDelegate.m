@@ -8,7 +8,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import "StreethakAppDelegate.h"
-#import "StreethakViewController.h"
+#import "MapViewController.h"
 #import "WebgnosusDbi.h"
 #import "ViewControllerManager.h"
 #import "GeoLocManager.h"

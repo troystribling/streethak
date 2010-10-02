@@ -40,9 +40,18 @@
 #pragma mark CreateAccountViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)containedView {
-    return [[CreateAccountViewController alloc] initWithNibName:@"CreateAccountViewController" bundle:nil inView:containedView];
++ (id)inView:(UIView*)containerView {
+    return [[CreateAccountViewController alloc] initWithNibName:@"CreateAccountViewController" bundle:nil inView:containerView];
 }
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)containerView { 
+	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
+        self.view.frame = containerView.frame;
+        [containerView addSubview:self.view];
+	} 
+	return self; 
+} 
 
 //===================================================================================================================================
 #pragma mark CreateAccountViewController PrivateApi
@@ -98,15 +107,6 @@
 
 //===================================================================================================================================
 #pragma mark UIViewController
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)containerView { 
-	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
-        self.view.frame = containerView.frame;
-        [containerView addSubview:self.view];
-	} 
-	return self; 
-} 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {

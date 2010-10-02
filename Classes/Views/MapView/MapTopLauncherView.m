@@ -22,6 +22,7 @@
 @synthesize inventoryLauncher;
 @synthesize statsLauncher;
 @synthesize levelLabel;
+@synthesize containerView;
 
 //===================================================================================================================================
 #pragma mark MapTopLauncherView
@@ -37,6 +38,7 @@
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame])) {
+        self.containerView = _view;
         self.image = [UIImage imageNamed:@"map-top-launcher.png"];
         self.userInteractionEnabled = YES;
         CGRect inventoryFrame = CGRectMake(0.8281*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);

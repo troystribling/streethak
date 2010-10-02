@@ -1,5 +1,5 @@
 //
-//  StreethakViewController.m
+//  MapViewController.m
 //  streethak
 //
 //  Created by Troy Stribling on 11/10/09.
@@ -7,9 +7,9 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "StreethakViewController.h"
+#import "MapViewController.h"
 #import "MapTopLauncherView.h"
-#import "MapNavigationLauncherView.h"
+#import "NavigationLauncherView.h"
 #import "RMCloudMadeMapSource.h"
 #import "RMMarker.h"
 #import "RMMarkerManager.h"
@@ -21,7 +21,7 @@
 #import "XMPPGeoLoc.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface StreethakViewController (PrivateAPI)
+@interface MapViewController (PrivateAPI)
 
 - (void)setText:(NSString*)text forMarker:(RMMarker*)marker;
 - (void)setLocation;
@@ -29,7 +29,7 @@
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation StreethakViewController
+@implementation MapViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize mapView;
@@ -37,7 +37,7 @@
 @synthesize userMarker;
 
 //===================================================================================================================================
-#pragma mark StreethakViewControlleriew
+#pragma mark MapViewController PrivateAPI
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)setText:(NSString*)text forMarker:(RMMarker*)marker {
@@ -65,7 +65,21 @@
 }
 
 //===================================================================================================================================
-#pragma mark StreethakViewController
+#pragma mark MapViewController
+
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inView:(UIView*)containedView {
+    return [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil inView:containedView];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)containedView {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        self.view.frame = containedView.frame;
+        [containedView addSubview:self.view];
+    }
+    return self;
+}
 
 //===================================================================================================================================
 #pragma mark NavigationLauncherViewDelegate 
@@ -105,10 +119,9 @@
 	[super viewWillDisappear:animated];
 }
 
-
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-	return YES;
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

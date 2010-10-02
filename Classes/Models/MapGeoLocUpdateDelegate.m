@@ -8,7 +8,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "MapGeoLocUpdateDelegate.h"
-#import "StreethakViewController.h"
+#import "MapViewController.h"
 #import "RMMarkerManager.h"
 #import "RMMapView.h"
 #import "RMMapContents.h"
@@ -51,7 +51,7 @@
 #pragma mark MapGeoLocUpdateDelegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)init:(StreethakViewController*)initViewController {
+- (id)init:(MapViewController*)initViewController {
 	if(self = [super init])  {
         self.mapViewController = initViewController;
 	}
