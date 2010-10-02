@@ -68,21 +68,33 @@
 #pragma mark MapViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)containedView {
-    return [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil inView:containedView];
++ (id)inWindow:(UIWindow*)containedWindow {
+    return [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil inWindow:containedWindow];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)containedView {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inWindow:(UIWindow*)containedWindow {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        self.view.frame = containedView.frame;
-        [containedView addSubview:self.view];
+        self.view.frame = containedWindow.frame;
+        [containedWindow addSubview:self.view];
     }
     return self;
 }
 
 //===================================================================================================================================
 #pragma mark NavigationLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedConfig {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedContacts {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedLocation {
+}
 
 //===================================================================================================================================
 #pragma mark UIViewController

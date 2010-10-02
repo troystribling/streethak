@@ -35,20 +35,22 @@
 @synthesize confirmedPasswordTextField;
 @synthesize account;
 @synthesize viewLabel;
+@synthesize containerWindow;
 
 //===================================================================================================================================
 #pragma mark CreateAccountViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)containerView {
-    return [[CreateAccountViewController alloc] initWithNibName:@"CreateAccountViewController" bundle:nil inView:containerView];
++ (id)inWindow:(UIWindow*)_containerWindow {
+    return [[CreateAccountViewController alloc] initWithNibName:@"CreateAccountViewController" bundle:nil inWindow:_containerWindow];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)containerView { 
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inWindow:(UIWindow*)_containerWindow { 
 	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
-        self.view.frame = containerView.frame;
-        [containerView addSubview:self.view];
+        self.containerWindow = _containerWindow;
+        self.view.frame = self.containerWindow.frame;
+        [self.containerWindow addSubview:self.view];
 	} 
 	return self; 
 } 

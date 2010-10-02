@@ -37,14 +37,25 @@
 @synthesize doneButton;
 @synthesize deleteButton;
 @synthesize trackingSwitch;
+@synthesize containerWindow;
 
 //===================================================================================================================================
 #pragma mark EditAccountViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)containedView {
-    return [[EditAccountViewController alloc] initWithNibName:@"EditAccountViewController" bundle:nil inView:containedView];
++ (id)inWindow:(UIWindow*)_containerWindow {
+    return [[EditAccountViewController alloc] initWithNibName:@"EditAccountViewController" bundle:nil inWindow:_containerWindow];
 }
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inWindow:(UIWindow*)_containerWindow { 
+	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
+        self.containerWindow = _containerWindow;
+        self.view.frame = self.containerWindow.frame;
+        [self.containerWindow addSubview:self.view];
+	} 
+	return self; 
+} 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (IBAction)doneButtonPressed:(id)sender {
@@ -114,6 +125,21 @@
 }
 
 //===================================================================================================================================
+#pragma mark NavigationLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedConfig {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedContacts {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedLocation {
+}
+
+//===================================================================================================================================
 #pragma mark XMPPClientDelegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -150,15 +176,6 @@
 #pragma mark UIViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)containerView { 
-	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
-        self.view.frame = containerView.frame;
-        [containerView addSubview:self.view];
-	} 
-	return self; 
-} 
-
-//-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
     self.passwordTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
@@ -192,9 +209,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-//===================================================================================================================================
-#pragma mark SegmentedListPicker
 
 //===================================================================================================================================
 #pragma mark UITextFieldDelegate

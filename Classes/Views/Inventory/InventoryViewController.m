@@ -17,6 +17,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation InventoryViewController
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize containerWindow;
+
 //===================================================================================================================================
 #pragma mark InventoryViewController PrivateAPI
 
@@ -24,21 +27,34 @@
 #pragma mark InventoryViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)containerView {
-    return [[InventoryViewController alloc] initWithNibName:@"InventoryViewController" bundle:nil inView:containerView];
++ (id)inWindow:(UIWindow*)_containerWindow {
+    return [[InventoryViewController alloc] initWithNibName:@"InventoryViewController" bundle:nil inWindow:_containerWindow];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)containerView {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inWindow:(UIWindow*)_containerWindow {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        self.view.frame = containerView.frame;
-        [containerView addSubview:self.view];
+        self.containerWindow = _containerWindow;
+        self.view.frame = self.containerWindow.frame;
+        [self.containerWindow addSubview:self.view];
     }
     return self;
 }
 
 //===================================================================================================================================
 #pragma mark NavigationLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedConfig {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedContacts {
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedLocation {
+}
 
 //===================================================================================================================================
 #pragma mark UIViewController

@@ -8,16 +8,20 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "NavigationLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface InventoryViewController : UIViewController {
-
+@interface InventoryViewController : UIViewController <NavigationLauncherViewDelegate> {
+    UIWindow* containerWindow;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)containerView;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)containerView;
+@property (nonatomic, retain) UIWindow* containerWindow;
+
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inWindow:(UIWindow*)_containerWindow;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inWindow:(UIWindow*)_containerWindow;
 
 @end

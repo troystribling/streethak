@@ -30,8 +30,8 @@
 + (ViewControllerManager*)instance;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (CreateAccountViewController*)showCreateAccountView:(UIView*)containerView;
-- (InventoryViewController*)showInventoryView:(UIView*)containerView;
-- (MapViewController*)showMapView:(UIView*)containerView;
+- (CreateAccountViewController*)showCreateAccountView:(UIWindow*)containerView;
+- (InventoryViewController*)showInventoryView:(UIWindow*)containerView;
+- (MapViewController*)showMapView:(UIWindow*)containerView;
 
 @end

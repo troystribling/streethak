@@ -8,20 +8,20 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "NavigationLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
-@class AccountManagerViewController;
-@class AccountsViewController;
 @class SegmentedListPicker;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface EditAccountViewController : UIViewController <UITextFieldDelegate> {
+@interface EditAccountViewController : UIViewController <UITextFieldDelegate, NavigationLauncherViewDelegate> {
 	IBOutlet UITextField* passwordTextField;
  	IBOutlet UITextField* confirmPasswordTextField;
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* deleteButton;
     IBOutlet UISwitch* trackingSwitch;   
+    UIWindow* containerWindow;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -30,10 +30,11 @@
 @property (nonatomic, retain) UIButton* doneButton;
 @property (nonatomic, retain) UIButton* deleteButton;
 @property (nonatomic, retain) UISwitch* trackingSwitch;
+@property (nonatomic, retain) UIWindow* containerWindow;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)containedView;
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)containerView;
++ (id)inWindow:(UIWindow*)_containerWindow;
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inWindow:(UIWindow*)_containerWindow;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (IBAction)doneButtonPressed:(id)sender;

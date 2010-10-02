@@ -11,7 +11,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
-@class AccountManagerViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface CreateAccountViewController : UIViewController <UITextFieldDelegate> {
@@ -20,6 +19,7 @@
 	IBOutlet UITextField* confirmedPasswordTextField;
     IBOutlet UILabel* viewLabel;
     AccountModel* account;
+    UIWindow* containerWindow;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -28,9 +28,10 @@
 @property (nonatomic, retain) UITextField* confirmedPasswordTextField;
 @property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) UILabel* viewLabel;
+@property (nonatomic, retain) UIWindow* containerWindow;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)containedView;
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)containerView;
++ (id)inWindow:(UIWindow*)_containerWindow;
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inWindow:(UIWindow*)_containerWindow;
 
 @end

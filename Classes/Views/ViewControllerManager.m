@@ -45,25 +45,25 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (CreateAccountViewController*)showCreateAccountView:(UIView*)containerView {
+- (CreateAccountViewController*)showCreateAccountView:(UIWindow*)containerWindow {
     if (self.createAccountViewController == nil) {
-        self.createAccountViewController = [CreateAccountViewController inView:containerView];
+        self.createAccountViewController = [CreateAccountViewController inWindow:containerWindow];
     }
     return self.createAccountViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (InventoryViewController*)showInventoryView:(UIView*)containerView {
+- (InventoryViewController*)showInventoryView:(UIWindow*)containerWindow {
     if (self.inventoryViewController == nil) {
-        self.inventoryViewController = [InventoryViewController inView:containerView];
+        self.inventoryViewController = [InventoryViewController inWindow:containerWindow];
     }
     return self.inventoryViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (MapViewController*)showMapView:(UIView*)containerView {
+- (MapViewController*)showMapView:(UIWindow*)containerWindow {
     if (self.mapViewController == nil) {
-        self.mapViewController = [MapViewController inView:containerView];
+        self.mapViewController = [MapViewController inWindow:containerWindow];
     }
     return self.mapViewController;
 }
