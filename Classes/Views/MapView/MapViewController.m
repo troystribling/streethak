@@ -67,20 +67,6 @@
 //===================================================================================================================================
 #pragma mark MapViewController
 
-//-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inWindow:(UIWindow*)containedWindow {
-    return [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil inWindow:containedWindow];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inWindow:(UIWindow*)containedWindow {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        self.view.frame = containedWindow.frame;
-        [containedWindow addSubview:self.view];
-    }
-    return self;
-}
-
 //===================================================================================================================================
 #pragma mark NavigationLauncherViewDelegate 
 

@@ -21,7 +21,7 @@
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* deleteButton;
     IBOutlet UISwitch* trackingSwitch;   
-    UIWindow* containerWindow;
+    UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -30,11 +30,11 @@
 @property (nonatomic, retain) UIButton* doneButton;
 @property (nonatomic, retain) UIButton* deleteButton;
 @property (nonatomic, retain) UISwitch* trackingSwitch;
-@property (nonatomic, retain) UIWindow* containerWindow;
+@property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inWindow:(UIWindow*)_containerWindow;
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inWindow:(UIWindow*)_containerWindow;
++ (id)inView:(UIView*)_containerView;
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)_containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (IBAction)doneButtonPressed:(id)sender;

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0500D9F81225FE7F00E58FF5 /* ViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */; };
 		0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
@@ -126,6 +125,7 @@
 		055990A2124309F20013C6DD /* TouchAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 055990A1124309F20013C6DD /* TouchAreaView.m */; };
 		05700D1012442E310059964F /* map-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* map-navigation-launcher.png */; };
 		05700D1212442E410059964F /* map-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D1112442E410059964F /* map-top-launcher.png */; };
+		057E82491258D52C00B11DAC /* inventory.png in Resources */ = {isa = PBXBuildFile; fileRef = 057E82481258D52C00B11DAC /* inventory.png */; };
 		05D463CB124C3B30009B9E8A /* WashingtonText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05D463CA124C3B30009B9E8A /* WashingtonText.ttf */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
@@ -163,8 +163,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerManager.h; sourceTree = "<group>"; };
-		0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerManager.m; sourceTree = "<group>"; };
 		0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VIKING-N.TTF"; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -384,6 +382,7 @@
 		055990A1124309F20013C6DD /* TouchAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAreaView.m; sourceTree = "<group>"; };
 		05700D0F12442E310059964F /* map-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-navigation-launcher.png"; sourceTree = "<group>"; };
 		05700D1112442E410059964F /* map-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-top-launcher.png"; sourceTree = "<group>"; };
+		057E82481258D52C00B11DAC /* inventory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inventory.png; sourceTree = "<group>"; };
 		05D463CA124C3B30009B9E8A /* WashingtonText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WashingtonText.ttf; sourceTree = "<group>"; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		05FC68F2122B2B6F00878B07 /* user-location-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-location-marker.png"; sourceTree = "<group>"; };
@@ -819,8 +818,6 @@
 				050D368512556EF2001E5B06 /* NavigationLauncherView.m */,
 				055990A0124309F20013C6DD /* TouchAreaView.h */,
 				055990A1124309F20013C6DD /* TouchAreaView.m */,
-				0500D9F61225FE7F00E58FF5 /* ViewControllerManager.h */,
-				0500D9F71225FE7F00E58FF5 /* ViewControllerManager.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -839,6 +836,7 @@
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				057E82481258D52C00B11DAC /* inventory.png */,
 				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
 				051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */,
 				052D8C7112518FE100A2D7FF /* create-account.png */,
@@ -1015,6 +1013,7 @@
 				052D8C7212518FE100A2D7FF /* create-account.png in Resources */,
 				051DED471252C43D00F3E0F4 /* configuration-navigation-launcher.png in Resources */,
 				051DED481252C43D00F3E0F4 /* contact-navigation-launcher.png in Resources */,
+				057E82491258D52C00B11DAC /* inventory.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,7 +1114,6 @@
 				0510DBBA12223361001FE510 /* XMPPResponse.m in Sources */,
 				0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */,
 				052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */,
-				0500D9F81225FE7F00E58FF5 /* ViewControllerManager.m in Sources */,
 				050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */,
 				055990A2124309F20013C6DD /* TouchAreaView.m in Sources */,
 				050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */,

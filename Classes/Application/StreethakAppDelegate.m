@@ -8,9 +8,9 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import "StreethakAppDelegate.h"
+#import "CreateAccountViewController.h"
 #import "MapViewController.h"
 #import "WebgnosusDbi.h"
-#import "ViewControllerManager.h"
 #import "GeoLocManager.h"
 #import "AlertViewManager.h"
 #import "AcceptBuddyRequestView.h"
@@ -100,10 +100,10 @@
     [self setUnreadMessages];
     if ([AccountModel count] == 0) {
         self.creatingAccount = YES;
-        [[ViewControllerManager instance] showCreateAccountView:self.window];
+        [CreateAccountViewController inView:self.window];
     } else {
         self.creatingAccount = NO;
-        [self.window addSubview:viewController.view];
+        [self.window addSubview:self.viewController.view];
         [self initAccount];
     }
     [self.window makeKeyAndVisible];

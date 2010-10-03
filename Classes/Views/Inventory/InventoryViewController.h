@@ -14,14 +14,14 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryViewController : UIViewController <NavigationLauncherViewDelegate> {
-    UIWindow* containerWindow;
+    UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) UIWindow* containerWindow;
+@property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inWindow:(UIWindow*)_containerWindow;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inWindow:(UIWindow*)_containerWindow;
++ (id)inView:(UIView*)_containerView;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView;
 
 @end

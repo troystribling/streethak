@@ -37,22 +37,22 @@
 @synthesize doneButton;
 @synthesize deleteButton;
 @synthesize trackingSwitch;
-@synthesize containerWindow;
+@synthesize containerView;
 
 //===================================================================================================================================
 #pragma mark EditAccountViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inWindow:(UIWindow*)_containerWindow {
-    return [[EditAccountViewController alloc] initWithNibName:@"EditAccountViewController" bundle:nil inWindow:_containerWindow];
++ (id)inView:(UIView*)_containerView {
+    return [[EditAccountViewController alloc] initWithNibName:@"EditAccountViewController" bundle:nil inView:_containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inWindow:(UIWindow*)_containerWindow { 
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)_containerView { 
 	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
-        self.containerWindow = _containerWindow;
-        self.view.frame = self.containerWindow.frame;
-        [self.containerWindow addSubview:self.view];
+        self.containerView = _containerView;
+        self.view.frame = self.containerView.frame;
+        [self.containerView addSubview:self.view];
 	} 
 	return self; 
 } 

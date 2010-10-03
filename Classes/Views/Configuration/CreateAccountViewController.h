@@ -19,7 +19,7 @@
 	IBOutlet UITextField* confirmedPasswordTextField;
     IBOutlet UILabel* viewLabel;
     AccountModel* account;
-    UIWindow* containerWindow;
+    UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -28,10 +28,10 @@
 @property (nonatomic, retain) UITextField* confirmedPasswordTextField;
 @property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) UILabel* viewLabel;
-@property (nonatomic, retain) UIWindow* containerWindow;
+@property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inWindow:(UIWindow*)_containerWindow;
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inWindow:(UIWindow*)_containerWindow;
++ (id)inView:(UIView*)_containerView;
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)_containerView;
 
 @end

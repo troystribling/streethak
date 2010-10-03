@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "MapTopLauncherView.h"
 #import "TouchAreaView.h"
+#import "InventoryViewController.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface MapTopLauncherView (PrivateAPI)
@@ -68,6 +69,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"inventory"]) {
+        [InventoryViewController inView:self.containerView];
     } else if ([touchedView.viewName isEqualToString:@"stats"]) {
     }
 }

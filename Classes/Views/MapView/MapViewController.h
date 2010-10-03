@@ -29,8 +29,6 @@
 @property (nonatomic, retain) RMMarker* userMarker;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inWindow:(UIView*)containedWindow;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inWindow:(UIView*)containedWindow;
 
 @end
 

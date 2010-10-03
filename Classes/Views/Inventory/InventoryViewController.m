@@ -8,6 +8,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "InventoryViewController.h"
+#import "NavigationLauncherView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryViewController (PrivateAPI)
@@ -18,7 +19,7 @@
 @implementation InventoryViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@synthesize containerWindow;
+@synthesize containerView;
 
 //===================================================================================================================================
 #pragma mark InventoryViewController PrivateAPI
@@ -27,16 +28,15 @@
 #pragma mark InventoryViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inWindow:(UIWindow*)_containerWindow {
-    return [[InventoryViewController alloc] initWithNibName:@"InventoryViewController" bundle:nil inWindow:_containerWindow];
++ (id)inView:(UIView*)_containerView {
+    return [[InventoryViewController alloc] initWithNibName:@"InventoryViewController" bundle:nil inView:_containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inWindow:(UIWindow*)_containerWindow {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        self.containerWindow = _containerWindow;
-        self.view.frame = self.containerWindow.frame;
-        [self.containerWindow addSubview:self.view];
+        self.containerView = _containerView;
+        self.view.frame = self.containerView.frame;
     }
     return self;
 }
@@ -54,6 +54,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedLocation {
+    [self.view removeFromSuperview];
 }
 
 //===================================================================================================================================
@@ -61,6 +62,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
+    [self.containerView addSubview:self.view];
+    [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
     [super viewDidLoad];
 }
 
