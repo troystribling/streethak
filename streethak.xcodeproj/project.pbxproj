@@ -126,6 +126,8 @@
 		05700D1012442E310059964F /* map-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* map-navigation-launcher.png */; };
 		05700D1212442E410059964F /* map-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D1112442E410059964F /* map-top-launcher.png */; };
 		057E82491258D52C00B11DAC /* inventory.png in Resources */ = {isa = PBXBuildFile; fileRef = 057E82481258D52C00B11DAC /* inventory.png */; };
+		057E83A71259247E00B11DAC /* InventoryTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E83A61259247E00B11DAC /* InventoryTopLauncherView.m */; };
+		057E83B01259280300B11DAC /* inventory-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 057E83AF1259280300B11DAC /* inventory-top-launcher.png */; };
 		05D463CB124C3B30009B9E8A /* WashingtonText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05D463CA124C3B30009B9E8A /* WashingtonText.ttf */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
@@ -383,6 +385,9 @@
 		05700D0F12442E310059964F /* map-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-navigation-launcher.png"; sourceTree = "<group>"; };
 		05700D1112442E410059964F /* map-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-top-launcher.png"; sourceTree = "<group>"; };
 		057E82481258D52C00B11DAC /* inventory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inventory.png; sourceTree = "<group>"; };
+		057E83A51259247E00B11DAC /* InventoryTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryTopLauncherView.h; sourceTree = "<group>"; };
+		057E83A61259247E00B11DAC /* InventoryTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryTopLauncherView.m; sourceTree = "<group>"; };
+		057E83AF1259280300B11DAC /* inventory-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inventory-top-launcher.png"; sourceTree = "<group>"; };
 		05D463CA124C3B30009B9E8A /* WashingtonText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WashingtonText.ttf; sourceTree = "<group>"; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		05FC68F2122B2B6F00878B07 /* user-location-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-location-marker.png"; sourceTree = "<group>"; };
@@ -475,6 +480,8 @@
 			children = (
 				050F7A671247092000D9ED40 /* InventoryViewController.h */,
 				050F7A681247092000D9ED40 /* InventoryViewController.m */,
+				057E83A51259247E00B11DAC /* InventoryTopLauncherView.h */,
+				057E83A61259247E00B11DAC /* InventoryTopLauncherView.m */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -836,10 +843,11 @@
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				057E82481258D52C00B11DAC /* inventory.png */,
 				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
 				051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */,
 				052D8C7112518FE100A2D7FF /* create-account.png */,
+				057E82481258D52C00B11DAC /* inventory.png */,
+				057E83AF1259280300B11DAC /* inventory-top-launcher.png */,
 				05700D1112442E410059964F /* map-top-launcher.png */,
 				05700D0F12442E310059964F /* map-navigation-launcher.png */,
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
@@ -1014,6 +1022,7 @@
 				051DED471252C43D00F3E0F4 /* configuration-navigation-launcher.png in Resources */,
 				051DED481252C43D00F3E0F4 /* contact-navigation-launcher.png in Resources */,
 				057E82491258D52C00B11DAC /* inventory.png in Resources */,
+				057E83B01259280300B11DAC /* inventory-top-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1124,6 +1133,7 @@
 				050F7A1E124704B800D9ED40 /* MapTopLauncherView.m in Sources */,
 				050F7A691247092000D9ED40 /* InventoryViewController.m in Sources */,
 				050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */,
+				057E83A71259247E00B11DAC /* InventoryTopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

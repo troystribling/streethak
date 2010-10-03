@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "InventoryViewController.h"
 #import "NavigationLauncherView.h"
+#import "InventoryTopLauncherView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryViewController (PrivateAPI)
@@ -64,6 +65,7 @@
 - (void)viewDidLoad {
     [self.containerView addSubview:self.view];
     [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
+    [InventoryTopLauncherView inView:self.view];
     [super viewDidLoad];
 }
 
