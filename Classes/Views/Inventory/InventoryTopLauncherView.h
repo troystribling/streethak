@@ -14,14 +14,12 @@
 
 @interface InventoryTopLauncherView : UIImageView {
     TouchAreaView* storeLauncher;
-    TouchAreaView* statsLauncher;
     TouchAreaView* backLauncher;
     UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* storeLauncher;
-@property (nonatomic, retain) TouchAreaView* statsLauncher;
 @property (nonatomic, retain) TouchAreaView* backLauncher;
 @property (nonatomic, retain) UIView* containerView;
 

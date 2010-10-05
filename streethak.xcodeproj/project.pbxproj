@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */; };
+		050366E6125943D50010130C /* RosterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366E5125943D50010130C /* RosterViewController.xib */; };
+		050366ED1259446D0010130C /* RosterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366EC1259446D0010130C /* RosterCell.xib */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
 		050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D368512556EF2001E5B06 /* NavigationLauncherView.m */; };
-		050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */; };
 		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
 		050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* EditAccountViewController.m */; };
 		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
@@ -25,6 +26,11 @@
 		050F7A691247092000D9ED40 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A681247092000D9ED40 /* InventoryViewController.m */; };
 		050F7A6C1247095800D9ED40 /* InventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A6B1247095800D9ED40 /* InventoryViewController.xib */; };
 		050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050FE4611228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m */; };
+		05102181125AA8650010680E /* ContactMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05102180125AA8650010680E /* ContactMessageViewController.m */; };
+		05102188125AC2D90010680E /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05102187125AC2D90010680E /* SendMessageViewController.m */; };
+		0510218D125ACA550010680E /* ChatMessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510218A125ACA550010680E /* ChatMessageCache.m */; };
+		0510218E125ACA550010680E /* MessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510218C125ACA550010680E /* MessageCache.m */; };
+		05102191125ACAE70010680E /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05102190125ACAE70010680E /* ContactCell.m */; };
 		0510D99712223191001FE510 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D99612223191001FE510 /* libxml2.2.dylib */; };
 		0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D9A9122232B8001FE510 /* CFNetwork.framework */; };
 		0510DA20122232FC001FE510 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510DA1F122232FC001FE510 /* CoreLocation.framework */; };
@@ -116,6 +122,9 @@
 		0510DBB912223361001FE510 /* XMPPMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB5E12223361001FE510 /* XMPPMessageDelegate.m */; };
 		0510DBBA12223361001FE510 /* XMPPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6012223361001FE510 /* XMPPResponse.m */; };
 		0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6212223361001FE510 /* XMPPTimestamp.m */; };
+		051CD7BC1259672300D100A5 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7A51259672300D100A5 /* AcceptBuddyRequestView.m */; };
+		051CD7BD1259672300D100A5 /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7A71259672300D100A5 /* AddContactViewController.m */; };
+		051CD7C51259672300D100A5 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7B71259672300D100A5 /* ContactViewController.m */; };
 		051DED471252C43D00F3E0F4 /* configuration-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */; };
 		051DED481252C43D00F3E0F4 /* contact-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
@@ -166,13 +175,13 @@
 
 /* Begin PBXFileReference section */
 		0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VIKING-N.TTF"; sourceTree = "<group>"; };
+		050366E5125943D50010130C /* RosterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RosterViewController.xib; sourceTree = "<group>"; };
+		050366EC1259446D0010130C /* RosterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RosterCell.xib; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
 		050D368412556EF2001E5B06 /* NavigationLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationLauncherView.h; sourceTree = "<group>"; };
 		050D368512556EF2001E5B06 /* NavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationLauncherView.m; sourceTree = "<group>"; };
-		050F7A081247049D00D9ED40 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
-		050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		050F7A0E124704A800D9ED40 /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
@@ -192,6 +201,16 @@
 		050F7A6B1247095800D9ED40 /* InventoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryViewController.xib; sourceTree = "<group>"; };
 		050FE4601228AF3B00D20D34 /* MapGeoLocUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGeoLocUpdateDelegate.h; sourceTree = "<group>"; };
 		050FE4611228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGeoLocUpdateDelegate.m; sourceTree = "<group>"; };
+		0510217F125AA8650010680E /* ContactMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMessageViewController.h; sourceTree = "<group>"; };
+		05102180125AA8650010680E /* ContactMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMessageViewController.m; sourceTree = "<group>"; };
+		05102186125AC2D90010680E /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageViewController.h; sourceTree = "<group>"; };
+		05102187125AC2D90010680E /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageViewController.m; sourceTree = "<group>"; };
+		05102189125ACA550010680E /* ChatMessageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageCache.h; sourceTree = "<group>"; };
+		0510218A125ACA550010680E /* ChatMessageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageCache.m; sourceTree = "<group>"; };
+		0510218B125ACA550010680E /* MessageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCache.h; sourceTree = "<group>"; };
+		0510218C125ACA550010680E /* MessageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCache.m; sourceTree = "<group>"; };
+		0510218F125ACAE70010680E /* ContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCell.h; sourceTree = "<group>"; };
+		05102190125ACAE70010680E /* ContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCell.m; sourceTree = "<group>"; };
 		0510D99612223191001FE510 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		0510D9A9122232B8001FE510 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0510DA1F122232FC001FE510 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -373,6 +392,12 @@
 		0510DB6012223361001FE510 /* XMPPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPResponse.m; sourceTree = "<group>"; };
 		0510DB6112223361001FE510 /* XMPPTimestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPTimestamp.h; sourceTree = "<group>"; };
 		0510DB6212223361001FE510 /* XMPPTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPTimestamp.m; sourceTree = "<group>"; };
+		051CD7A41259672300D100A5 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
+		051CD7A51259672300D100A5 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
+		051CD7A61259672300D100A5 /* AddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactViewController.h; sourceTree = "<group>"; };
+		051CD7A71259672300D100A5 /* AddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactViewController.m; sourceTree = "<group>"; };
+		051CD7B61259672300D100A5 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		051CD7B71259672300D100A5 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "configuration-navigation-launcher.png"; sourceTree = "<group>"; };
 		051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact-navigation-launcher.png"; sourceTree = "<group>"; };
 		052553BA1222B3EF00203185 /* StreethakAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakAppDelegate.h; sourceTree = "<group>"; };
@@ -442,15 +467,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		050F7A071247049D00D9ED40 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				050F7A081247049D00D9ED40 /* AcceptBuddyRequestView.h */,
-				050F7A091247049D00D9ED40 /* AcceptBuddyRequestView.m */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
 		050F7A0B124704A800D9ED40 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,11 +505,13 @@
 		050F7A5C1247087000D9ED40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				050366E5125943D50010130C /* RosterViewController.xib */,
 				050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */,
 				050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */,
 				050F7A601247087000D9ED40 /* MainWindow.xib */,
 				050F7A611247087000D9ED40 /* MapViewController.xib */,
 				050F7A6B1247095800D9ED40 /* InventoryViewController.xib */,
+				050366EC1259446D0010130C /* RosterCell.xib */,
 			);
 			name = Views;
 			path = Resources/Views;
@@ -805,6 +823,29 @@
 			path = Stream;
 			sourceTree = "<group>";
 		};
+		051CD7A31259672300D100A5 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				051CD7A41259672300D100A5 /* AcceptBuddyRequestView.h */,
+				051CD7A51259672300D100A5 /* AcceptBuddyRequestView.m */,
+				051CD7A61259672300D100A5 /* AddContactViewController.h */,
+				051CD7A71259672300D100A5 /* AddContactViewController.m */,
+				05102189125ACA550010680E /* ChatMessageCache.h */,
+				0510218A125ACA550010680E /* ChatMessageCache.m */,
+				0510218F125ACAE70010680E /* ContactCell.h */,
+				05102190125ACAE70010680E /* ContactCell.m */,
+				0510217F125AA8650010680E /* ContactMessageViewController.h */,
+				05102180125AA8650010680E /* ContactMessageViewController.m */,
+				051CD7B61259672300D100A5 /* ContactViewController.h */,
+				051CD7B71259672300D100A5 /* ContactViewController.m */,
+				0510218B125ACA550010680E /* MessageCache.h */,
+				0510218C125ACA550010680E /* MessageCache.m */,
+				05102186125AC2D90010680E /* SendMessageViewController.h */,
+				05102187125AC2D90010680E /* SendMessageViewController.m */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
 		052553B91222B3EF00203185 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -819,8 +860,8 @@
 			children = (
 				050F7A4A1247073E00D9ED40 /* Inventory */,
 				050F7A12124704B800D9ED40 /* MapView */,
+				051CD7A31259672300D100A5 /* Messaging */,
 				050F7A0B124704A800D9ED40 /* Configuration */,
-				050F7A071247049D00D9ED40 /* Chat */,
 				050D368412556EF2001E5B06 /* NavigationLauncherView.h */,
 				050D368512556EF2001E5B06 /* NavigationLauncherView.m */,
 				055990A0124309F20013C6DD /* TouchAreaView.h */,
@@ -1023,6 +1064,8 @@
 				051DED481252C43D00F3E0F4 /* contact-navigation-launcher.png in Resources */,
 				057E82491258D52C00B11DAC /* inventory.png in Resources */,
 				057E83B01259280300B11DAC /* inventory-top-launcher.png in Resources */,
+				050366E6125943D50010130C /* RosterViewController.xib in Resources */,
+				050366ED1259446D0010130C /* RosterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1125,7 +1168,6 @@
 				052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */,
 				050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */,
 				055990A2124309F20013C6DD /* TouchAreaView.m in Sources */,
-				050F7A0A1247049D00D9ED40 /* AcceptBuddyRequestView.m in Sources */,
 				050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */,
 				050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */,
 				050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */,
@@ -1134,6 +1176,14 @@
 				050F7A691247092000D9ED40 /* InventoryViewController.m in Sources */,
 				050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */,
 				057E83A71259247E00B11DAC /* InventoryTopLauncherView.m in Sources */,
+				051CD7BC1259672300D100A5 /* AcceptBuddyRequestView.m in Sources */,
+				051CD7BD1259672300D100A5 /* AddContactViewController.m in Sources */,
+				051CD7C51259672300D100A5 /* ContactViewController.m in Sources */,
+				05102181125AA8650010680E /* ContactMessageViewController.m in Sources */,
+				05102188125AC2D90010680E /* SendMessageViewController.m in Sources */,
+				0510218D125ACA550010680E /* ChatMessageCache.m in Sources */,
+				0510218E125ACA550010680E /* MessageCache.m in Sources */,
+				05102191125ACAE70010680E /* ContactCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

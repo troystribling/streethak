@@ -21,7 +21,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize storeLauncher;
-@synthesize statsLauncher;
 @synthesize backLauncher;
 @synthesize containerView;
 
@@ -45,10 +44,7 @@
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
-        CGRect statsFrame = CGRectMake(0.4062*viewWidth, 0.0, 0.1875*viewWidth, viewHeight);
-        self.statsLauncher = [TouchAreaView createWithFrame:statsFrame name:@"stats" andDelegate:self];
-        [self addSubview:self.statsLauncher];
-        CGRect storeFrame = CGRectMake(0.8125*viewWidth, 0.0, 0.1797*viewWidth, viewHeight);
+        CGRect storeFrame = CGRectMake(0.7812*viewWidth, 0.0, 0.2031*viewWidth, viewHeight);
         self.storeLauncher = [TouchAreaView createWithFrame:storeFrame name:@"store" andDelegate:self];
         [self addSubview:self.storeLauncher];
         [_view addSubview:self];
@@ -66,7 +62,6 @@
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"back"]) {
         [self.containerView removeFromSuperview];
-    } else if ([touchedView.viewName isEqualToString:@"stats"]) {
     } else if ([touchedView.viewName isEqualToString:@"store"]) {
     }
 }
