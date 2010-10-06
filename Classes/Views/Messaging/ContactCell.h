@@ -7,7 +7,7 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "ResourceCell.h"
+#import <UIKit/UIKit.h>
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class RosterItemModel;
@@ -16,15 +16,23 @@
 @class XMPPJID;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface RosterCell : ResourceCell {
+@interface ContactCell : UITableViewCell {
+	IBOutlet UILabel* contactLabel;
+	IBOutlet UILabel* messageCountLabel;
+    IBOutlet UIImageView* messageCountImage;
     IBOutlet UIImageView* activeImage;
+    XMPPJID* jid;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@property (nonatomic, retain) UILabel* contactLabel;
+@property (nonatomic, retain) UILabel* messageCountLabel;
+@property (nonatomic, retain) UIImageView* messageCountImage;
 @property (nonatomic, retain) UIImageView* activeImage;
+@property (nonatomic, retain) XMPPJID* jid;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (UIImage*)rosterItemImage:(RosterItemModel*)rosterItem;
 + (UIImage*)contactImage:(ContactModel*)contact;
+- (void)setUnreadMessageCount:(AccountModel*)account;
 
 @end

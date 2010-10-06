@@ -1,8 +1,8 @@
 //
-//  ContactViewController.h
+//  CellUtils.h
 //  webgnosus
 //
-//  Created by Troy Stribling on 1/19/09.
+//  Created by Troy Stribling on 4/17/09.
 //  Copyright 2009 Plan-B Research. All rights reserved.
 //
 
@@ -10,18 +10,17 @@
 #import <UIKit/UIKit.h>
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@class AccountModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactViewController : UITableViewController <UITableViewDataSource> {
-	NSMutableArray* contacts;
-    AccountModel* account;
+@interface CellUtils : NSObject {
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) NSMutableArray* contacts;
-@property (nonatomic, retain) AccountModel* account;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (UITableViewCell*)createCell:(Class)cellClass forTableView:(UITableView*)tableView;
+
 
 @end

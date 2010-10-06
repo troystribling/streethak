@@ -54,3 +54,17 @@
 #define kCLOUDMADE_MAP_DEFAULT_ZOOM             17
 #define kCLOUDMADE_DEAFULT_LAT                  36.202654
 #define kCLOUDMADE_DEFAULT_LON                  -86.513583
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// adjust message size for edit mode when cell has status indicator
+#define kLARGE_MESSAGE_WITH_STATUS_WIDTH        235.0
+#define kSMALL_MESSAGE_WITH_STATUS_WIDTH        180.0
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// MessageCell configuration
+#define kMESSAGE_CELL_FONT_SIZE 17.0
+#define kMESSAGE_CELL_HEIGHT_PAD 30.0
+#define kLOAD_MESSAGE_CELL_HEIGHT 50.0
+#define kMESSAGE_CELL_X_OFFSET 20.0
+#define kMESSAGE_CELL_Y_OFFSET 20.0
+

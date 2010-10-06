@@ -1,5 +1,5 @@
 //
-//  RosterCell.m
+//  ContactCell.m
 //  webgnosus
 //
 //  Created by Troy Stribling on 1/20/09.
@@ -7,59 +7,66 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "RosterCell.h"
+#import "ContactCell.h"
 #import "RosterItemModel.h"
 #import "MessageModel.h"
 #import "ContactModel.h"
 #import "XMPPJID.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface RosterCell (PrivateAPI)
+@interface ContactCell (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation RosterCell
+@implementation ContactCell
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize activeImage;
+@synthesize contactLabel;
+@synthesize messageCountLabel;
+@synthesize messageCountImage;
+@synthesize jid;
 
 //===================================================================================================================================
-#pragma mark RosterCell
+#pragma mark ContactCell PrivateAPI
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (UIImage*)rosterItemImage:(RosterItemModel*)rosterItem {
-    if ([rosterItem isAvailable]) {
-        return [UIImage imageNamed:@"account-on-led.png"];
-    } 
-    return [UIImage imageNamed:@"account-off-led.png"];
+- (void)setUnreadMessageCount:(AccountModel*)account {
+    NSInteger msgCount = [MessageModel countUnreadMessagesByFromJid:[self.jid full] andAccount:account];
+    if (msgCount == 0) {
+        self.messageCountImage.hidden = YES;
+        self.messageCountLabel.hidden = YES;
+    } else {
+        self.messageCountImage.hidden = NO;
+        self.messageCountLabel.hidden = NO;
+        self.messageCountLabel.text = [NSString stringWithFormat:@"%d", msgCount];
+    }
 }
+
+//===================================================================================================================================
+#pragma mark ContactCell
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (UIImage*)contactImage:(ContactModel*)contact {
-    if ([contact hasError]) {
-        return [UIImage imageNamed:@"account-error-led.png"];
-    } else if ([RosterItemModel isJidAvailable:[contact bareJID]]) {
-        return [UIImage imageNamed:@"account-on-led.png"];
+    if ([RosterItemModel isJidAvailable:[contact bareJID]]) {
+        return [UIImage imageNamed:@"contact-offline.png"];
     } 
-    return [UIImage imageNamed:@"account-off-led.png"];
+    return [UIImage imageNamed:@"contact-online.png"];
 }
-
-//===================================================================================================================================
-#pragma mark RosterCell PrivateAPI
 
 //===================================================================================================================================
 #pragma mark UITableViewCell
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-    CGRect jidLabelRect = self.resourceLabel.frame;
+    CGRect jidLabelRect = self.contactLabel.frame;
     if (editing) {
         jidLabelRect.size.width = kSMALL_MESSAGE_WITH_STATUS_WIDTH;
     } else {
         jidLabelRect.size.width = kLARGE_MESSAGE_WITH_STATUS_WIDTH;
     }
-    self.resourceLabel.frame = jidLabelRect;
+    self.contactLabel.frame = jidLabelRect;
     [super setEditing:editing animated:animated];
 }
 
@@ -71,16 +78,18 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    }
+    return self;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
 
 //===================================================================================================================================
 #pragma mark NSObject
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)dealloc {
-    [super dealloc];
-}
 
 @end

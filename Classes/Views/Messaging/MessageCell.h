@@ -1,8 +1,8 @@
 //
-//  ContactMessageViewController.h
+//  MessageCell.h
 //  webgnosus
 //
-//  Created by Troy Stribling on 2/28/09.
+//  Created by Troy Stribling on 4/17/09.
 //  Copyright 2009 Plan-B Research. All rights reserved.
 //
 
@@ -10,22 +10,24 @@
 #import <UIKit/UIKit.h>
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@class AccountModel;
-@class ChatMessageCache;
+@class MessageModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactMessageViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
-    ChatMessageCache* items;
-    AccountModel* account;
-    UserModel* rosterItem;
+@interface MessageCell : UITableViewCell {
+    IBOutlet UILabel* dateLabel;
+    IBOutlet UILabel* jidLabel;
+    IBOutlet UILabel* messageLabel;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) ChatMessageCache* items;
-@property (nonatomic, retain) AccountModel* account;
-@property (nonatomic, retain) UserModel* rosterItem;
+@property (nonatomic, retain) UILabel* dateLabel;
+@property (nonatomic, retain) UILabel* jidLabel;
+@property (nonatomic, retain) UILabel* messageLabel;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle andTitle:(NSString*)viewTitle;
++ (void)setTime:(MessageCell*)cell forMessage:(MessageModel*)message;
++ (void)set:(MessageCell*)cell Jid:(NSString*)jid;
++ (CGFloat)tableView:(UITableView *)tableView heightForRowWithMessage:(MessageModel*)message;
++ (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath forMessage:(MessageModel*)message fromJid:(NSString*)jid;
 
 @end

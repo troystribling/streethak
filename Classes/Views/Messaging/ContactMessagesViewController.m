@@ -1,5 +1,5 @@
 //
-//  ContactMessageViewController.m
+//  ContactMessagesViewController.m
 //  webgnosus
 //
 //  Created by Troy Stribling on 2/28/09.
@@ -7,14 +7,14 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "ContactMessageViewController.h"
-#import "MessageViewController.h"
+#import "ContactMessagesViewController.h"
+#import "SendMessageViewController.h"
 #import "MessageModel.h"
 #import "UserModel.h"
 #import "RosterItemModel.h"
 #import "AccountModel.h"
 #import "ChatMessageCache.h"
-#import "ContactCell.h"
+#import "MessageCell.h"
 #import "XMPPClientManager.h"
 #import "XMPPDiscoItemsQuery.h"
 #import "XMPPDiscoInfoQuery.h"
@@ -25,11 +25,11 @@
 #import "AlertViewManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactMessageViewController (PrivateAPI)
+@interface ContactMessagesViewController (PrivateAPI)
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForResource:(RosterItemModel*)resource;
 - (void)sendMessageButtonWasPressed:(id)sender;
-- (void)loadItems;
+- (void)loadChatMessages;
 - (void)loadAccount;
 - (void)addXMPPClientDelgate;
 - (void)removeXMPPClientDelgate;
@@ -37,36 +37,28 @@
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation ContactMessageViewController
+@implementation ContactMessagesViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@synthesize items;
+@synthesize chatMessages;
 @synthesize account;
 @synthesize rosterItem;
 
 //===================================================================================================================================
-#pragma mark ContactMessageViewController
+#pragma mark ContactMessagesViewController
 
 //===================================================================================================================================
-#pragma mark ContactMessageViewController PrivateAPI
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForResource:(RosterItemModel*)resource {
-    RosterCell* cell = (RosterCell*)[CellUtils createCell:[RosterCell class] forTableView:tableView];
-    cell.resourceLabel.text = resource.resource;
-    cell.activeImage.image = [RosterCell rosterItemImage:resource];
-    return cell;
-}
+#pragma mark ContactMessagesViewController PrivateAPI
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)sendMessageButtonWasPressed:(id)sender {
-    MessageViewController* viewController = [[MessageViewController alloc] initWithNibName:@"MessageViewController" bundle:nil];
+    SendMessageViewController* viewController = [[SendMessageViewController alloc] initWithNibName:@"SendMessageViewController" bundle:nil];
     viewController.rosterItem = self.rosterItem;
 }	
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)loadItems {
-    self.items = [[ChatMessageCache alloc] initWithJid:[self.rosterItem fullJID] andAccount:self.account];
+- (void)loadChatMessages {
+    self.chatMessages = [[ChatMessageCache alloc] initWithJid:[self.rosterItem fullJID] andAccount:self.account];
     [self.tableView reloadData];
 }
 
@@ -96,7 +88,7 @@
 
 //----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient *)sender didReceiveMessage:(XMPPMessage *)message {
-    [self loadItems];
+    [self loadChatMessages];
 }
 
 //===================================================================================================================================
@@ -129,7 +121,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [self addXMPPClientDelgate];
     [self loadAccount];
-    [self loadItems];
+    [self loadChatMessages];
 	[super viewWillAppear:animated];
 }
 
@@ -157,7 +149,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-    return [self.items tableView:tableView heightForRowAtIndexPath:indexPath];
+    return [self.chatMessages tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 //===================================================================================================================================
@@ -165,17 +157,17 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.items count];
+    return [self.chatMessages count];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {   
-    return [self.items tableView:tableView cellForRowAtIndexPath:indexPath];
+    return [self.chatMessages tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    [self.items tableView:tableView didSelectRowAtIndexPath:indexPath];
+    [self.chatMessages tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
 //===================================================================================================================================

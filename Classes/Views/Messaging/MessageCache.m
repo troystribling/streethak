@@ -9,10 +9,11 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "MessageCache.h"
 #import "MessageModel.h"
-#import "MessageCellFactory.h"
+#import "MessageCell.h"
 #import "CellUtils.h"
 #import "LoadMessagesCell.h"
 #import "XMPPClientManager.h"
+#import "XMPPJID.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface MessageCache (PrivateAPI)
@@ -81,7 +82,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
     CGFloat height = kLOAD_MESSAGE_CELL_HEIGHT;
     if (indexPath.row < [self messageCount]) {
-        height = [MessageCellFactory tableView:tableView heightForRowWithMessage:[self objectAtIndex:indexPath.row]];
+        height = [MessageCell tableView:tableView heightForRowWithMessage:[self objectAtIndex:indexPath.row]];
     } 
     return height;
 }
@@ -92,7 +93,7 @@
     if (indexPath.row < [self messageCount]) {
         MessageModel* message =[self objectAtIndex:indexPath.row];
         [self markMessageRead:message];
-        cell = [MessageCellFactory tableView:tableView cellForRowAtIndexPath:indexPath forMessage:message];
+        cell = [MessageCell tableView:tableView cellForRowAtIndexPath:indexPath forMessage:message fromJid:[[XMPPJID jidWithString:message.fromJid] bare]];
     } else {
         cell = [CellUtils createCell:[LoadMessagesCell class] forTableView:tableView];
     }
