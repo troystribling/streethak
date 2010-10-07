@@ -20,6 +20,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize configLauncher;
+@synthesize notificationsLauncher;
 @synthesize contactsLauncher;
 @synthesize mapLauncher;
 @synthesize delegate;
@@ -42,13 +43,16 @@
         self.delegate = _delegate;
         self.image = [UIImage imageNamed:_imageName];
         self.userInteractionEnabled = YES;
-        CGRect configFrame = CGRectMake(0.7859*viewWidth, 0.0, 0.1797*viewWidth, viewHeight);
+        CGRect configFrame = CGRectMake(0.8109*viewWidth, 0.0, 0.1875*viewWidth, viewHeight);
         self.configLauncher = [TouchAreaView createWithFrame:configFrame name:@"config" andDelegate:self];
         [self addSubview:self.configLauncher];
-        CGRect contactsFrame = CGRectMake(0.2875*viewWidth, 0.0, 0.4531*viewWidth, viewHeight);
+        CGRect contactsFrame = CGRectMake(0.4953*viewWidth, 0.0, 0.2891*viewWidth, viewHeight);
         self.contactsLauncher = [TouchAreaView createWithFrame:contactsFrame name:@"contacts" andDelegate:self];
         [self addSubview:self.contactsLauncher];
-        CGRect mapFrame = CGRectMake(0.0312*viewWidth, 0.0, 0.2266*viewWidth, viewHeight);
+        CGRect notificationsFrame = CGRectMake(0.2500*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
+        self.notificationsLauncher = [TouchAreaView createWithFrame:notificationsFrame name:@"notifications" andDelegate:self];
+        [self addSubview:self.contactsLauncher];
+        CGRect mapFrame = CGRectMake(0.0156*viewWidth, 0.0, 0.2266*viewWidth, viewHeight);
         self.mapLauncher = [TouchAreaView createWithFrame:mapFrame name:@"location" andDelegate:self];
         [self addSubview:self.mapLauncher];
         [_view addSubview:self];
@@ -67,6 +71,10 @@
     if ([touchedView.viewName isEqualToString:@"config"]) {
         if ([self.delegate respondsToSelector:@selector(touchedConfig)]) {
             [self.delegate touchedConfig];
+        }         
+    } else if ([touchedView.viewName isEqualToString:@"notifications"]) {
+        if ([self.delegate respondsToSelector:@selector(touchedNotifications)]) {
+            [self.delegate touchedNotifications];
         }         
     } else if ([touchedView.viewName isEqualToString:@"contacts"]) {
         if ([self.delegate respondsToSelector:@selector(touchedContacts)]) {

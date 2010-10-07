@@ -21,6 +21,7 @@
 - (void)touchedConfig;
 - (void)touchedContacts;
 - (void)touchedLocation;
+- (void)touchedNotifications;
 
 @end
 
@@ -29,6 +30,7 @@
     TouchAreaView* configLauncher;
     TouchAreaView* contactsLauncher;
     TouchAreaView* mapLauncher;
+    TouchAreaView* notificationsLauncher;
 	id<NavigationLauncherViewDelegate> delegate;
 }
 
@@ -36,6 +38,7 @@
 @property (nonatomic, retain) TouchAreaView* configLauncher;
 @property (nonatomic, retain) TouchAreaView* contactsLauncher;
 @property (nonatomic, retain) TouchAreaView* mapLauncher;
+@property (nonatomic, retain) TouchAreaView* notificationsLauncher;
 @property (assign) id<NavigationLauncherViewDelegate> delegate;
 
 //-----------------------------------------------------------------------------------------------------------------------------------

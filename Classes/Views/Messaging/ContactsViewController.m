@@ -1,5 +1,5 @@
 //
-//  ContactViewController.m
+//  ContactsViewController.m
 //  webgnosus
 //
 //  Created by Troy Stribling on 1/19/09.
@@ -7,10 +7,11 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "ContactViewController.h"
+#import "ContactsViewController.h"
 #import "ContactCell.h"
 #import "AddContactViewController.h"
 #import "ContactMessagesViewController.h"
+#import "ContactsTopLauncherView.h"
 #import "ContactModel.h"
 #import "AccountModel.h"
 #import "RosterItemModel.h"
@@ -26,7 +27,7 @@
 #import "XMPPMessageDelegate.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactViewController (PrivateAPI)
+@interface ContactsViewController (PrivateAPI)
 
 - (void)onXmppClientConnectionError:(XMPPClient*)sender;
 - (void)loadItems;
@@ -42,17 +43,32 @@
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation ContactViewController
+@implementation ContactsViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize containerView;
 @synthesize contacts;
 @synthesize account;
 
 //===================================================================================================================================
-#pragma mark ContactViewController
+#pragma mark ContactsViewController
+
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inView:(UIView*)_containerView {
+    return [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil inView:_containerView];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        self.containerView = _containerView;
+        self.view.frame = self.containerView.frame;
+    }
+    return self;
+}
 
 //===================================================================================================================================
-#pragma mark ContactViewController PrivateApi
+#pragma mark ContactsViewController PrivateApi
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)onXmppClientConnectionError:(XMPPClient*)sender {
@@ -214,8 +230,11 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [self.containerView addSubview:self.view];
+    [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
+    [ContactsTopLauncherView inView:self.view];
     [self loadAccount];
+    [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

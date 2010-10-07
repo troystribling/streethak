@@ -10,6 +10,7 @@
 #import "MapViewController.h"
 #import "MapTopLauncherView.h"
 #import "NavigationLauncherView.h"
+#import "ContactsViewController.h"
 #import "RMCloudMadeMapSource.h"
 #import "RMMarker.h"
 #import "RMMarkerManager.h"
@@ -75,7 +76,12 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedNotifications {
+}            
+    
+//-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedContacts {
+    [ContactsViewController inView:self.view];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

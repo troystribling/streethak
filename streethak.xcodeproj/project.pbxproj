@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */; };
-		050366E6125943D50010130C /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366E5125943D50010130C /* ContactViewController.xib */; };
+		050366E6125943D50010130C /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366E5125943D50010130C /* ContactsViewController.xib */; };
 		050366ED1259446D0010130C /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366EC1259446D0010130C /* ContactCell.xib */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		0506D8D1125BE1DB009BC283 /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
 		050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D368512556EF2001E5B06 /* NavigationLauncherView.m */; };
+		050F33F0125D65C30005607B /* contacts-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EE125D65C30005607B /* contacts-top-launcher.png */; };
+		050F33F1125D65C30005607B /* notification-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EF125D65C30005607B /* notification-navigation-launcher.png */; };
+		050F33FC125D67AD0005607B /* ContactsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */; };
 		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
 		050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* EditAccountViewController.m */; };
 		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
@@ -127,9 +130,9 @@
 		05118950125C17C200F8F210 /* LoadMessagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0511894F125C17C200F8F210 /* LoadMessagesCell.m */; };
 		051CD7BC1259672300D100A5 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7A51259672300D100A5 /* AcceptBuddyRequestView.m */; };
 		051CD7BD1259672300D100A5 /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7A71259672300D100A5 /* AddContactViewController.m */; };
-		051CD7C51259672300D100A5 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7B71259672300D100A5 /* ContactViewController.m */; };
+		051CD7C51259672300D100A5 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7B71259672300D100A5 /* ContactsViewController.m */; };
 		051DED471252C43D00F3E0F4 /* configuration-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */; };
-		051DED481252C43D00F3E0F4 /* contact-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */; };
+		051DED481252C43D00F3E0F4 /* contacts-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED461252C43D00F3E0F4 /* contacts-navigation-launcher.png */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
 		052D8C7212518FE100A2D7FF /* create-account.png in Resources */ = {isa = PBXBuildFile; fileRef = 052D8C7112518FE100A2D7FF /* create-account.png */; };
 		053494E0124830B5004A6D9D /* stonehen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 053494DF124830B5004A6D9D /* stonehen.ttf */; };
@@ -185,7 +188,7 @@
 
 /* Begin PBXFileReference section */
 		0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VIKING-N.TTF"; sourceTree = "<group>"; };
-		050366E5125943D50010130C /* ContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
+		050366E5125943D50010130C /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		050366EC1259446D0010130C /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -193,6 +196,10 @@
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
 		050D368412556EF2001E5B06 /* NavigationLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationLauncherView.h; sourceTree = "<group>"; };
 		050D368512556EF2001E5B06 /* NavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationLauncherView.m; sourceTree = "<group>"; };
+		050F33EE125D65C30005607B /* contacts-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-top-launcher.png"; sourceTree = "<group>"; };
+		050F33EF125D65C30005607B /* notification-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notification-navigation-launcher.png"; sourceTree = "<group>"; };
+		050F33FA125D67AD0005607B /* ContactsTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTopLauncherView.h; sourceTree = "<group>"; };
+		050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTopLauncherView.m; sourceTree = "<group>"; };
 		050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		050F7A0E124704A800D9ED40 /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
@@ -411,10 +418,10 @@
 		051CD7A51259672300D100A5 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		051CD7A61259672300D100A5 /* AddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactViewController.h; sourceTree = "<group>"; };
 		051CD7A71259672300D100A5 /* AddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactViewController.m; sourceTree = "<group>"; };
-		051CD7B61259672300D100A5 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
-		051CD7B71259672300D100A5 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		051CD7B61259672300D100A5 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		051CD7B71259672300D100A5 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "configuration-navigation-launcher.png"; sourceTree = "<group>"; };
-		051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact-navigation-launcher.png"; sourceTree = "<group>"; };
+		051DED461252C43D00F3E0F4 /* contacts-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-navigation-launcher.png"; sourceTree = "<group>"; };
 		052553BA1222B3EF00203185 /* StreethakAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakAppDelegate.h; sourceTree = "<group>"; };
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
 		052D8C7112518FE100A2D7FF /* create-account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-account.png"; sourceTree = "<group>"; };
@@ -532,7 +539,7 @@
 				050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */,
 				050366EC1259446D0010130C /* ContactCell.xib */,
 				05DF1534125BE399009EFE18 /* ContactMessagesViewController.xib */,
-				050366E5125943D50010130C /* ContactViewController.xib */,
+				050366E5125943D50010130C /* ContactsViewController.xib */,
 				050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */,
 				050F7A601247087000D9ED40 /* MainWindow.xib */,
 				050F7A611247087000D9ED40 /* MapViewController.xib */,
@@ -862,8 +869,10 @@
 				05102190125ACAE70010680E /* ContactCell.m */,
 				0510217F125AA8650010680E /* ContactMessagesViewController.h */,
 				05102180125AA8650010680E /* ContactMessagesViewController.m */,
-				051CD7B61259672300D100A5 /* ContactViewController.h */,
-				051CD7B71259672300D100A5 /* ContactViewController.m */,
+				050F33FA125D67AD0005607B /* ContactsTopLauncherView.h */,
+				050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */,
+				051CD7B61259672300D100A5 /* ContactsViewController.h */,
+				051CD7B71259672300D100A5 /* ContactsViewController.m */,
 				0511894E125C17C200F8F210 /* LoadMessagesCell.h */,
 				0511894F125C17C200F8F210 /* LoadMessagesCell.m */,
 				0510218B125ACA550010680E /* MessageCache.h */,
@@ -916,11 +925,11 @@
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				05DF158C125BF5A1009EFE18 /* unread-messages.png */,
+				050F33EE125D65C30005607B /* contacts-top-launcher.png */,
 				05DF1568125BEEDD009EFE18 /* contact-online.png */,
 				05DF1575125BF2A6009EFE18 /* contact-offline.png */,
 				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
-				051DED461252C43D00F3E0F4 /* contact-navigation-launcher.png */,
+				051DED461252C43D00F3E0F4 /* contacts-navigation-launcher.png */,
 				052D8C7112518FE100A2D7FF /* create-account.png */,
 				05DF1569125BEEDD009EFE18 /* display-background.png */,
 				057E82481258D52C00B11DAC /* inventory.png */,
@@ -928,9 +937,11 @@
 				05700D1112442E410059964F /* map-top-launcher.png */,
 				05700D0F12442E310059964F /* map-navigation-launcher.png */,
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
+				050F33EF125D65C30005607B /* notification-navigation-launcher.png */,
 				05349509124840C0004A6D9D /* parchment.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
+				05DF158C125BF5A1009EFE18 /* unread-messages.png */,
 			);
 			name = Images;
 			path = Resources/Images;
@@ -1097,10 +1108,10 @@
 				0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */,
 				052D8C7212518FE100A2D7FF /* create-account.png in Resources */,
 				051DED471252C43D00F3E0F4 /* configuration-navigation-launcher.png in Resources */,
-				051DED481252C43D00F3E0F4 /* contact-navigation-launcher.png in Resources */,
+				051DED481252C43D00F3E0F4 /* contacts-navigation-launcher.png in Resources */,
 				057E82491258D52C00B11DAC /* inventory.png in Resources */,
 				057E83B01259280300B11DAC /* inventory-top-launcher.png in Resources */,
-				050366E6125943D50010130C /* ContactViewController.xib in Resources */,
+				050366E6125943D50010130C /* ContactsViewController.xib in Resources */,
 				050366ED1259446D0010130C /* ContactCell.xib in Resources */,
 				0506D8D1125BE1DB009BC283 /* SendMessageViewController.xib in Resources */,
 				05DF1535125BE399009EFE18 /* ContactMessagesViewController.xib in Resources */,
@@ -1109,6 +1120,8 @@
 				05DF156B125BEEDD009EFE18 /* display-background.png in Resources */,
 				05DF1576125BF2A6009EFE18 /* contact-offline.png in Resources */,
 				05DF158D125BF5A1009EFE18 /* unread-messages.png in Resources */,
+				050F33F0125D65C30005607B /* contacts-top-launcher.png in Resources */,
+				050F33F1125D65C30005607B /* notification-navigation-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1221,7 +1234,7 @@
 				057E83A71259247E00B11DAC /* InventoryTopLauncherView.m in Sources */,
 				051CD7BC1259672300D100A5 /* AcceptBuddyRequestView.m in Sources */,
 				051CD7BD1259672300D100A5 /* AddContactViewController.m in Sources */,
-				051CD7C51259672300D100A5 /* ContactViewController.m in Sources */,
+				051CD7C51259672300D100A5 /* ContactsViewController.m in Sources */,
 				05102181125AA8650010680E /* ContactMessagesViewController.m in Sources */,
 				05102188125AC2D90010680E /* SendMessageViewController.m in Sources */,
 				0510218D125ACA550010680E /* ChatMessageCache.m in Sources */,
@@ -1230,6 +1243,7 @@
 				05DF1594125BFCDA009EFE18 /* MessageCell.m in Sources */,
 				0511892F125C104900F8F210 /* CellUtils.m in Sources */,
 				05118950125C17C200F8F210 /* LoadMessagesCell.m in Sources */,
+				050F33FC125D67AD0005607B /* ContactsTopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
