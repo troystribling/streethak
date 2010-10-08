@@ -14,13 +14,15 @@
 @class AccountModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactsViewController : UITableViewController <UITableViewDataSource, NavigationLauncherViewDelegate> {
+@interface ContactsViewController : UIViewController <UITableViewDataSource, NavigationLauncherViewDelegate> {
+    UITableView* contactsView;
     UIView* containerView;
 	NSMutableArray* contacts;
     AccountModel* account;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@property (nonatomic, retain) UITableView* contactsView;
 @property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) NSMutableArray* contacts;
 @property (nonatomic, retain) AccountModel* account;

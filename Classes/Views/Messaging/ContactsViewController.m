@@ -30,7 +30,7 @@
 @interface ContactsViewController (PrivateAPI)
 
 - (void)onXmppClientConnectionError:(XMPPClient*)sender;
-- (void)loadItems;
+- (void)loadContacts;
 - (void)loadAccount;
 - (void)reloadtems;
 - (void)addXMPPClientDelgate;
@@ -46,6 +46,7 @@
 @implementation ContactsViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize contactsView;
 @synthesize containerView;
 @synthesize contacts;
 @synthesize account;
@@ -76,7 +77,7 @@
     [[XMPPClientManager instance] removeXMPPClientForAccount:errAccount];
     [AlertViewManager onStartDismissConnectionIndicatorAndShowErrors];
     [self loadAccount];
-    [self loadItems];
+    [self loadContacts];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -84,7 +85,7 @@
     if (self.account) {
         self.contacts = [ContactModel findAllByAccount:self.account];
     } 
-    [self.tableView reloadData];
+    [self.contactsView reloadData];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -215,7 +216,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)messageCountDidChange {
-    [self.tableView reloadData];
+    [self.contactsView reloadData];
 }
 
 //===================================================================================================================================
@@ -234,16 +235,16 @@
     [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
     [ContactsTopLauncherView inView:self.view];
     [self loadAccount];
+    [self loadContacts];
+    [self addXMPPClientDelgate];
+    [self addXMPPAccountUpdateDelgate];
+    [self addMessageCountUpdateDelgate];
     [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
-    [self addXMPPClientDelgate];
-    [self addXMPPAccountUpdateDelgate];
-    [self addMessageCountUpdateDelgate];
-    [self loadItems];
 	[super viewWillAppear:animated];
 }
 
@@ -264,9 +265,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-//===================================================================================================================================
-#pragma mark UITableViewController
 
 //===================================================================================================================================
 #pragma mark UITableViewDataSource
