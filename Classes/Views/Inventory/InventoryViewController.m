@@ -21,6 +21,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize containerView;
+@synthesize navigationLauncherView;
+@synthesize inventoryTopLauncherView;
 
 //===================================================================================================================================
 #pragma mark InventoryViewController PrivateAPI
@@ -30,7 +32,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    return [[InventoryViewController alloc] initWithNibName:@"InventoryViewController" bundle:nil inView:_containerView];
+    InventoryViewController* controller = 
+        [[InventoryViewController alloc] initWithNibName:@"InventoryViewController" bundle:nil inView:_containerView];
+    [controller viewWillAppear:NO];
+    return controller;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -40,6 +45,18 @@
         self.view.frame = self.containerView.frame;
     }
     return self;
+}
+
+//===================================================================================================================================
+#pragma mark TopLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouchedNamed:(NSString*)name {
+    if ([name isEqualToString:@"back"]) {
+        [self viewWillDisappear:NO];
+        [self.view removeFromSuperview];
+        [self release];
+    }
 }
 
 //===================================================================================================================================
@@ -68,9 +85,19 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
     [self.containerView addSubview:self.view];
-    [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
-    [InventoryTopLauncherView inView:self.view];
+    self.navigationLauncherView = [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
+    self.inventoryTopLauncherView = [InventoryTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -81,6 +108,17 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+//===================================================================================================================================
+#pragma mark NSObject
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)dealloc {
+    [self.view release];
+    [self.navigationLauncherView release];
+    [self.inventoryTopLauncherView release];
+    [super dealloc];
 }
 
 @end

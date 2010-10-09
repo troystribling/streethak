@@ -17,7 +17,6 @@
 
 @optional
 
-
 - (void)touchedConfig;
 - (void)touchedContacts;
 - (void)touchedLocation;

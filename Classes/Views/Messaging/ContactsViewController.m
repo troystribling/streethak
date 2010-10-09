@@ -56,7 +56,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    return [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil inView:_containerView];
+    ContactsViewController* controller = 
+        [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil inView:_containerView];
+    [controller viewWillAppear:NO];
+    return controller;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -234,17 +237,16 @@
     [self.containerView addSubview:self.view];
     [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
     [ContactsTopLauncherView inView:self.view];
-    [self loadAccount];
-    [self loadContacts];
-    [self addXMPPClientDelgate];
-    [self addXMPPAccountUpdateDelgate];
-    [self addMessageCountUpdateDelgate];
     [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
+    [self loadContacts];
+    [self addXMPPClientDelgate];
+    [self addXMPPAccountUpdateDelgate];
+    [self addMessageCountUpdateDelgate];
 	[super viewWillAppear:animated];
 }
 
@@ -254,6 +256,7 @@
     [self removeXMPPAccountUpdateDelgate];
     [self removeMessageCountUpdateDelgate];
 	[super viewWillDisappear:animated];
+    [self release];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

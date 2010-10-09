@@ -15,7 +15,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ContactsViewController : UIViewController <UITableViewDataSource, NavigationLauncherViewDelegate> {
-    UITableView* contactsView;
+    IBOutlet UITableView* contactsView;
     UIView* containerView;
 	NSMutableArray* contacts;
     AccountModel* account;

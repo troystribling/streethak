@@ -151,6 +151,7 @@
 		05DF1576125BF2A6009EFE18 /* contact-offline.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DF1575125BF2A6009EFE18 /* contact-offline.png */; };
 		05DF158D125BF5A1009EFE18 /* unread-messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DF158C125BF5A1009EFE18 /* unread-messages.png */; };
 		05DF1594125BFCDA009EFE18 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF1593125BFCDA009EFE18 /* MessageCell.m */; };
+		05F97DF6125FFDF100E5EC82 /* TopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F97DF5125FFDF100E5EC82 /* TopLauncherView.m */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -444,6 +445,8 @@
 		05DF158C125BF5A1009EFE18 /* unread-messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unread-messages.png"; sourceTree = "<group>"; };
 		05DF1592125BFCDA009EFE18 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		05DF1593125BFCDA009EFE18 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		05F97DF4125FFDF100E5EC82 /* TopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLauncherView.h; sourceTree = "<group>"; };
+		05F97DF5125FFDF100E5EC82 /* TopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLauncherView.m; sourceTree = "<group>"; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		05FC68F2122B2B6F00878B07 /* user-location-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-location-marker.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -907,6 +910,8 @@
 				050D368512556EF2001E5B06 /* NavigationLauncherView.m */,
 				055990A0124309F20013C6DD /* TouchAreaView.h */,
 				055990A1124309F20013C6DD /* TouchAreaView.m */,
+				05F97DF4125FFDF100E5EC82 /* TopLauncherView.h */,
+				05F97DF5125FFDF100E5EC82 /* TopLauncherView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1244,6 +1249,7 @@
 				0511892F125C104900F8F210 /* CellUtils.m in Sources */,
 				05118950125C17C200F8F210 /* LoadMessagesCell.m in Sources */,
 				050F33FC125D67AD0005607B /* ContactsTopLauncherView.m in Sources */,
+				05F97DF6125FFDF100E5EC82 /* TopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,13 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "TopLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class TouchAreaView;
 
-@interface InventoryTopLauncherView : UIImageView {
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@interface InventoryTopLauncherView : TopLauncherView {
     TouchAreaView* storeLauncher;
     TouchAreaView* backLauncher;
     UIView* containerView;
@@ -24,7 +26,7 @@
 @property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view;
-- (id)initInView:(UIView*)_view;
++ (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;
+- (id)initInView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;
 
 @end

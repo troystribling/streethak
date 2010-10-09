@@ -31,16 +31,16 @@
 #pragma mark InventoryTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view {
-    return [[[InventoryTopLauncherView alloc] initInView:_view] autorelease];
++ (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate {
+    return [[InventoryTopLauncherView alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initInView:(UIView*)_view {
+- (id)initInView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate {
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame])) {
+    if ((self = [self initWithFrame:viewFrame andDelegate:_delegate])) {
         self.containerView = _view;
         self.image = [UIImage imageNamed:@"inventory-top-launcher.png"];
         self.userInteractionEnabled = YES;
@@ -60,9 +60,9 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
-    if ([touchedView.viewName isEqualToString:@"back"]) {
-        [self.containerView removeFromSuperview];
-    } else if ([touchedView.viewName isEqualToString:@"store"]) {
+    if ([touchedView.viewName isEqualToString:@"store"]) {
+    } else {
+        [self.delegate viewTouchedNamed:touchedView.viewName];
     }
 }
 
@@ -74,6 +74,14 @@
     if ((self = [super initWithFrame:frame])) {
     }
     return self;
+}
+
+//===================================================================================================================================
+#pragma mark NSObject
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)dealloc {
+    [super dealloc];
 }
 
 @end

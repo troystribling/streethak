@@ -106,11 +106,6 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)viewDidUnload {
-    [super viewDidLoad];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [[GeoLocManager instance] addUpdateDelegate:self.mapGeoLocUpdateDelegate forAccount:[AccountModel findFirst]];
     [self setLocation];

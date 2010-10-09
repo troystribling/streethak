@@ -30,7 +30,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view withImageNamed:(NSString*)_imageName andDelegate:(id<NavigationLauncherViewDelegate>)_delegate {
-    return [[[NavigationLauncherView alloc] initInView:_view withImageNamed:_imageName andDelegate:_delegate] autorelease];
+    return [[NavigationLauncherView alloc] initInView:_view withImageNamed:_imageName andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -95,6 +95,14 @@
     if ((self = [super initWithFrame:frame])) {
     }
     return self;
+}
+
+//===================================================================================================================================
+#pragma mark NSObject
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)dealloc {
+    [super dealloc];
 }
 
 @end

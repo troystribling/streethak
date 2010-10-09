@@ -28,7 +28,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)createWithFrame:(CGRect)_frame name:(NSString*)_viewName andDelegate:(id)_delegate {
-    return [[[TouchAreaView alloc] initWithFrame:_frame name:_viewName andDelegate:_delegate] autorelease];
+    return [[TouchAreaView alloc] initWithFrame:_frame name:_viewName andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -68,6 +68,14 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
     [self delegateViewTouched];
+}
+
+//===================================================================================================================================
+#pragma mark NSObject
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)dealloc {
+    [super dealloc];
 }
 
 @end
