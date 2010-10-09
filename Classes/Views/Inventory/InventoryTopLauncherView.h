@@ -17,13 +17,11 @@
 @interface InventoryTopLauncherView : TopLauncherView {
     TouchAreaView* storeLauncher;
     TouchAreaView* backLauncher;
-    UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* storeLauncher;
 @property (nonatomic, retain) TouchAreaView* backLauncher;
-@property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;

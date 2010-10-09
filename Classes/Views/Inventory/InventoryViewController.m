@@ -21,8 +21,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize containerView;
-@synthesize navigationLauncherView;
-@synthesize inventoryTopLauncherView;
 
 //===================================================================================================================================
 #pragma mark InventoryViewController PrivateAPI
@@ -32,10 +30,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    InventoryViewController* controller = 
-        [[InventoryViewController alloc] initWithNibName:@"InventoryViewController" bundle:nil inView:_containerView];
-    [controller viewWillAppear:NO];
-    return controller;
+    return [[InventoryViewController alloc] initWithNibName:@"InventoryViewController" bundle:nil inView:_containerView];;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -52,11 +47,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouchedNamed:(NSString*)name {
-    if ([name isEqualToString:@"back"]) {
-        [self viewWillDisappear:NO];
-        [self.view removeFromSuperview];
-        [self release];
-    }
 }
 
 //===================================================================================================================================
@@ -85,8 +75,8 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
     [self.containerView addSubview:self.view];
-    self.navigationLauncherView = [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
-    self.inventoryTopLauncherView = [InventoryTopLauncherView inView:self.view andDelegate:self];
+    [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
+    [InventoryTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 
@@ -115,9 +105,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)dealloc {
-    [self.view release];
-    [self.navigationLauncherView release];
-    [self.inventoryTopLauncherView release];
     [super dealloc];
 }
 

@@ -6,23 +6,23 @@
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
+//-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
-
+#import "TopLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class TouchAreaView;
 
-@interface ContactsTopLauncherView : UIImageView {
-    TouchAreaView* backLauncher;
-    UIView* containerView;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@interface ContactsTopLauncherView : TopLauncherView {
+    TouchAreaView* addContactLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) TouchAreaView* backLauncher;
-@property (nonatomic, retain) UIView* containerView;
+@property (nonatomic, retain) TouchAreaView* addContactLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view;
-- (id)initInView:(UIView*)_view;
++ (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;
+- (id)initInView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;
 
 @end

@@ -166,17 +166,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)sender didDiscoverAllUserPubSubNodes:(XMPPJID*)targetJID {
-    [AlertViewManager dismissActivityIndicator]; 
-    GeoLocManager* geoLoc = [GeoLocManager instance];
-    NSString* geoLocNode = [[self account] geoLocPubSubNode];
-    [geoLoc addUpdateDelegate:[[[XMPPGeoLocUpdate alloc] init:[self account]] autorelease] forAccount:[self account]];
-    if (![ServiceItemModel findByNode:geoLocNode]) {
-        XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:self.account];
-        [XMPPPubSub create:client JID:[self.account pubSubService] node:geoLocNode];
-        [AlertViewManager showActivityIndicatorInView:self.view.window withTitle:@"Adding Node"];
-    } else {
-        [geoLoc start];
-    }
     [self.view removeFromSuperview];
 }
 

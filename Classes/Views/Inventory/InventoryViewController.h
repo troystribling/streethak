@@ -17,14 +17,10 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryViewController : UIViewController <NavigationLauncherViewDelegate, TopLauncherViewDelegate> {
     UIView* containerView;
-    NavigationLauncherView* navigationLauncherView;
-    InventoryTopLauncherView* inventoryTopLauncherView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UIView* containerView;
-@property (nonatomic, retain) NavigationLauncherView* navigationLauncherView;
-@property (nonatomic, retain) InventoryTopLauncherView* inventoryTopLauncherView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView;

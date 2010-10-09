@@ -9,7 +9,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "InventoryTopLauncherView.h"
 #import "TouchAreaView.h"
-
+#import "ViewControllerManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryTopLauncherView (PrivateAPI)
@@ -22,7 +22,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize storeLauncher;
 @synthesize backLauncher;
-@synthesize containerView;
 
 //===================================================================================================================================
 #pragma mark InventoryTopLauncherView PrivateAPI
@@ -40,10 +39,7 @@
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame andDelegate:_delegate])) {
-        self.containerView = _view;
-        self.image = [UIImage imageNamed:@"inventory-top-launcher.png"];
-        self.userInteractionEnabled = YES;
+    if ((self = [self initWithFrame:viewFrame image:@"inventory-top-launcher.png" andDelegate:_delegate])) {
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
@@ -61,6 +57,8 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"store"]) {
+    } else if ([touchedView.viewName isEqualToString:@"back"]) {
+        [[ViewControllerManager instance] removeInventoryView];
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }

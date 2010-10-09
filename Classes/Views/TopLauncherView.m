@@ -24,9 +24,11 @@
 #pragma mark TopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)_frame andDelegate:(id<TopLauncherViewDelegate>)_delegate {
+- (id)initWithFrame:(CGRect)_frame image:(NSString*)_image andDelegate:(id<TopLauncherViewDelegate>)_delegate {
     if ((self = [self initWithFrame:_frame])) {
         self.delegate = _delegate;
+        self.image = [UIImage imageNamed:_image];
+        self.userInteractionEnabled = YES;
     }
     return self;
 }

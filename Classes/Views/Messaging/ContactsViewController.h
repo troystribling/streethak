@@ -9,12 +9,13 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
+#import "TopLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactsViewController : UIViewController <UITableViewDataSource, NavigationLauncherViewDelegate> {
+@interface ContactsViewController : UIViewController <UITableViewDataSource, NavigationLauncherViewDelegate, TopLauncherViewDelegate> {
     IBOutlet UITableView* contactsView;
     UIView* containerView;
 	NSMutableArray* contacts;

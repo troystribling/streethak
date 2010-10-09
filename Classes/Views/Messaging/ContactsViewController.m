@@ -139,6 +139,36 @@
 }
 
 //===================================================================================================================================
+#pragma mark TopLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouchedNamed:(NSString*)name {
+}
+
+//===================================================================================================================================
+#pragma mark NavigationLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedConfig {
+    [self.view removeFromSuperview];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedNotifications {
+    [self.view removeFromSuperview];
+}            
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedContacts {
+    [self.view removeFromSuperview];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedLocation {
+    [self.view removeFromSuperview];
+}
+
+//===================================================================================================================================
 #pragma mark XMPPClientManagerAccountUpdateDelegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -236,7 +266,7 @@
 - (void)viewDidLoad {
     [self.containerView addSubview:self.view];
     [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
-    [ContactsTopLauncherView inView:self.view];
+    [ContactsTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 

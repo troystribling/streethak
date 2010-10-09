@@ -19,8 +19,7 @@
 @implementation ContactsTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@synthesize backLauncher;
-@synthesize containerView;
+@synthesize addContactLauncher;
 
 
 //===================================================================================================================================
@@ -30,22 +29,19 @@
 #pragma mark ContactsTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view {
-    return [[[ContactsTopLauncherView alloc] initInView:_view] autorelease];
++ (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate {
+    return [[ContactsTopLauncherView alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initInView:(UIView*)_view {
+- (id)initInView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate {
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame])) {
-        self.containerView = _view;
-        self.image = [UIImage imageNamed:@"contacts-top-launcher.png"];
-        self.userInteractionEnabled = YES;
-        CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
-        self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
-        [self addSubview:self.backLauncher];
+    if ((self = [self initWithFrame:viewFrame image:@"contacts-top-launcher.png" andDelegate:_delegate])) {
+        CGRect addContactFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
+        self.addContactLauncher = [TouchAreaView createWithFrame:addContactFrame name:@"add-contact" andDelegate:self];
+        [self addSubview:self.addContactLauncher];
         [_view addSubview:self];
     }
     return self;
@@ -56,9 +52,9 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
-    if ([touchedView.viewName isEqualToString:@"back"]) {
-        [self.containerView removeFromSuperview];
-    } else if ([touchedView.viewName isEqualToString:@"add_contact"]) {
+    if ([touchedView.viewName isEqualToString:@"add-contact"]) {
+    } else {
+        [self.delegate viewTouchedNamed:touchedView.viewName];
     }
 }
 

@@ -25,6 +25,6 @@
 @property (assign) id<TopLauncherViewDelegate> delegate;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)_frame andDelegate:(id<TopLauncherViewDelegate>)_delegate;
+- (id)initWithFrame:(CGRect)_frame image:(NSString*)_image andDelegate:(id<TopLauncherViewDelegate>)_delegate;
 
 @end
