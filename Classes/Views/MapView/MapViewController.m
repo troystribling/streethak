@@ -81,7 +81,7 @@
     
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedContacts {
-    [[ViewControllerManager instance] showContactsViewController:self.mapView];
+    [[ViewControllerManager instance] showContactsView:self.mapView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

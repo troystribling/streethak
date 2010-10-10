@@ -30,7 +30,7 @@
 - (InventoryViewController*)showInventoryView:(UIView*)containerView;
 - (void)removeInventoryView;
 
-- (ContactsViewController*)showContactsViewController:(UIView*)containerView;
-- (void)removeContactsViewController;
+- (ContactsViewController*)showContactsView:(UIView*)containerView;
+- (void)removeContactsView;
 
 @end

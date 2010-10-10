@@ -62,7 +62,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (ContactsViewController*)showContactsViewController:(UIView*)containerView {
+- (ContactsViewController*)showContactsView:(UIView*)containerView {
     if (self.contactsViewController == nil) {
         self.contactsViewController = [ContactsViewController inView:containerView];
     } else {
@@ -73,7 +73,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)removeContactsViewController {
+- (void)removeContactsView {
     if (self.contactsViewController) {
         [self.contactsViewController viewWillDisappear:NO];
         [self.contactsViewController.view removeFromSuperview];

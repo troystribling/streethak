@@ -56,10 +56,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    ContactsViewController* controller = 
-        [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil inView:_containerView];
-    [controller viewWillAppear:NO];
-    return controller;
+    return [[ContactsViewController alloc] initWithNibName:@"ContactsViewController" bundle:nil inView:_containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -264,6 +261,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
+    self.contactsView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
+    self.contactsView.separatorColor = [UIColor blackColor];
     [self.containerView addSubview:self.view];
     [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
     [ContactsTopLauncherView inView:self.view andDelegate:self];
@@ -304,7 +303,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.contacts count];
+    NSInteger contactCount = [self.contacts count];
+    return contactCount;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -314,6 +314,7 @@
     cell.contactLabel.text = cellItem.jid;
     cell.activeImage.image = [ContactCell contactImage:[self.contacts objectAtIndex:indexPath.row]];
     cell.jid = [cellItem toJID];
+    cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
     [cell setUnreadMessageCount:self.account];
     return cell;
 }

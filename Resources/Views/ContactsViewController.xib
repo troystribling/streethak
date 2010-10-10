@@ -42,26 +42,14 @@
 				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIImageView" id="254049790">
-						<reference key="NSNextResponder" ref="780795257"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{320, 460}</string>
-						<reference key="NSSuperview" ref="780795257"/>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">display-background.png</string>
-						</object>
-					</object>
 					<object class="IBUITableView" id="984445774">
 						<reference key="NSNextResponder" ref="780795257"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 33}, {320, 427}}</string>
+						<string key="NSFrame">{{0, 20}, {320, 420}}</string>
 						<reference key="NSSuperview" ref="780795257"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC43NDUwOTgwNSAwLjc0NTA5ODA1IDAuNzQ1MDk4MDUAA</bytes>
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
 						</object>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -142,7 +130,6 @@
 						<reference key="object" ref="780795257"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="254049790"/>
 							<reference ref="984445774"/>
 						</object>
 						<reference key="parent" ref="0"/>
@@ -150,11 +137,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">3</int>
 						<reference key="object" ref="984445774"/>
-						<reference key="parent" ref="780795257"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">19</int>
-						<reference key="object" ref="254049790"/>
 						<reference key="parent" ref="780795257"/>
 					</object>
 				</object>
@@ -167,8 +149,6 @@
 					<string>-2.CustomClassName</string>
 					<string>13.IBEditorWindowLastContentRect</string>
 					<string>13.IBPluginDependency</string>
-					<string>19.IBPluginDependency</string>
-					<string>19.IBViewBoundsToFrameTransform</string>
 					<string>3.IBEditorWindowLastContentRect</string>
 					<string>3.IBPluginDependency</string>
 					<string>3.IBViewBoundsToFrameTransform</string>
@@ -177,16 +157,12 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>ContactsViewController</string>
 					<string>UIResponder</string>
-					<string>{{500, 356}, {320, 460}}</string>
+					<string>{{283, 194}, {320, 460}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCIAAAxBwAAA</bytes>
-					</object>
 					<string>{{22, 391}, {320, 431}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAADBYAAAxDtAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw9YAAA</bytes>
 					</object>
 				</object>
 			</object>
@@ -569,14 +545,6 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">UIImageView</string>
-					<string key="superclassName">UIView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">UIKit.framework/Headers/UIImageView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
 					<string key="className">UIResponder</string>
 					<string key="superclassName">NSObject</string>
 					<reference key="sourceIdentifier" ref="435466020"/>
@@ -683,10 +651,6 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../../streethak.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">display-background.png</string>
-			<string key="NS.object.0">{640, 960}</string>
-		</object>
 		<string key="IBCocoaTouchPluginVersion">123</string>
 	</data>
 </archive>
