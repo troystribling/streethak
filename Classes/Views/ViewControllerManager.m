@@ -66,7 +66,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
     if (self.contactsViewController == nil) {
         self.contactsViewController = [ContactsViewController inView:containerView];
     } else {
-        [containerView addSubview:self.inventoryViewController.view];
+        [containerView addSubview:self.contactsViewController.view];
     }
     [self.contactsViewController viewWillAppear:NO];
     return self.contactsViewController;

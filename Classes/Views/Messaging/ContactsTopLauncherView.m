@@ -39,7 +39,7 @@
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame image:@"contacts-top-launcher.png" andDelegate:_delegate])) {
-        CGRect addContactFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
+        CGRect addContactFrame = CGRectMake(0.7656*viewWidth, 0.0, 0.2344*viewWidth, viewHeight);
         self.addContactLauncher = [TouchAreaView createWithFrame:addContactFrame name:@"add-contact" andDelegate:self];
         [self addSubview:self.addContactLauncher];
         [_view addSubview:self];
