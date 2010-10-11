@@ -298,6 +298,11 @@
     [super didReceiveMemoryWarning];
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return kCONTACTS_CELL_HEIGHT;
+}
+
 //===================================================================================================================================
 #pragma mark UITableViewDataSource
 
@@ -311,10 +316,9 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
     ContactCell* cell = (ContactCell*)[CellUtils createCell:[ContactCell class] forTableView:tableView];
     ContactModel* cellItem = [self.contacts objectAtIndex:indexPath.row]; 
-    cell.contactLabel.text = cellItem.jid;
+    cell.contactLabel.text = [[cellItem toJID] user];
+    cell.contactLabel.font = [UIFont fontWithName:@"Washington Text" size:28.0];
     cell.activeImage.image = [ContactCell contactImage:[self.contacts objectAtIndex:indexPath.row]];
-    cell.jid = [cellItem toJID];
-    cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
     [cell setUnreadMessageCount:self.account];
     return cell;
 }

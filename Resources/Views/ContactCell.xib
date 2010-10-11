@@ -50,13 +50,18 @@
 							<object class="IBUILabel" id="167500982">
 								<reference key="NSNextResponder" ref="564208555"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{60, 28}, {203, 21}}</string>
+								<string key="NSFrame">{{60, 18}, {203, 34}}</string>
 								<reference key="NSSuperview" ref="564208555"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">JID</string>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">WashingtonText-Regular</string>
+									<double key="NSSize">28</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<object class="NSColor" key="IBUITextColor">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -215,8 +220,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="380531289"/>
 							<reference ref="430386323"/>
-							<reference ref="167500982"/>
 							<reference ref="719735089"/>
+							<reference ref="167500982"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -275,7 +280,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCgAAAwfAAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCcAAAwnAAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">

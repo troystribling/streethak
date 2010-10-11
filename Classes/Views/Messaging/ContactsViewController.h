@@ -15,7 +15,7 @@
 @class AccountModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactsViewController : UIViewController <UITableViewDataSource, NavigationLauncherViewDelegate, TopLauncherViewDelegate> {
+@interface ContactsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NavigationLauncherViewDelegate, TopLauncherViewDelegate> {
     IBOutlet UITableView* contactsView;
     UIView* containerView;
 	NSMutableArray* contacts;

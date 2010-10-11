@@ -50,9 +50,9 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (UIImage*)contactImage:(ContactModel*)contact {
     if ([RosterItemModel isJidAvailable:[contact bareJID]]) {
-        return [UIImage imageNamed:@"contact-offline.png"];
+        return [UIImage imageNamed:@"contact-online.png"];
     } 
-    return [UIImage imageNamed:@"contact-online.png"];
+    return [UIImage imageNamed:@"contact-offline.png"];
 }
 
 //===================================================================================================================================
@@ -68,20 +68,6 @@
     }
     self.contactLabel.frame = jidLabelRect;
     [super setEditing:editing animated:animated];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-    }
-    return self;
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-    }
-    return self;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

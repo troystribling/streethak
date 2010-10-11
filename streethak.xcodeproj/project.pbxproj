@@ -137,7 +137,6 @@
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
 		052D8C7212518FE100A2D7FF /* create-account.png in Resources */ = {isa = PBXBuildFile; fileRef = 052D8C7112518FE100A2D7FF /* create-account.png */; };
 		053494E0124830B5004A6D9D /* stonehen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 053494DF124830B5004A6D9D /* stonehen.ttf */; };
-		0534950A124840C0004A6D9D /* parchment.png in Resources */ = {isa = PBXBuildFile; fileRef = 05349509124840C0004A6D9D /* parchment.png */; };
 		055990A2124309F20013C6DD /* TouchAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 055990A1124309F20013C6DD /* TouchAreaView.m */; };
 		05700D1012442E310059964F /* map-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* map-navigation-launcher.png */; };
 		05700D1212442E410059964F /* map-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D1112442E410059964F /* map-top-launcher.png */; };
@@ -430,7 +429,6 @@
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
 		052D8C7112518FE100A2D7FF /* create-account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-account.png"; sourceTree = "<group>"; };
 		053494DF124830B5004A6D9D /* stonehen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stonehen.ttf; sourceTree = "<group>"; };
-		05349509124840C0004A6D9D /* parchment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parchment.png; sourceTree = "<group>"; };
 		055990A0124309F20013C6DD /* TouchAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAreaView.h; sourceTree = "<group>"; };
 		055990A1124309F20013C6DD /* TouchAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAreaView.m; sourceTree = "<group>"; };
 		05700D0F12442E310059964F /* map-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-navigation-launcher.png"; sourceTree = "<group>"; };
@@ -903,10 +901,10 @@
 		052553BD1222B40A00203185 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				050F7A0B124704A800D9ED40 /* Configuration */,
 				050F7A4A1247073E00D9ED40 /* Inventory */,
 				050F7A12124704B800D9ED40 /* MapView */,
 				051CD7A31259672300D100A5 /* Messaging */,
-				050F7A0B124704A800D9ED40 /* Configuration */,
 				0511892D125C104900F8F210 /* CellUtils.h */,
 				0511892E125C104900F8F210 /* CellUtils.m */,
 				050D368412556EF2001E5B06 /* NavigationLauncherView.h */,
@@ -948,7 +946,6 @@
 				05700D0F12442E310059964F /* map-navigation-launcher.png */,
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
 				050F33EF125D65C30005607B /* notification-navigation-launcher.png */,
-				05349509124840C0004A6D9D /* parchment.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
 				05DF158C125BF5A1009EFE18 /* unread-messages.png */,
@@ -1113,7 +1110,6 @@
 				050F7A661247087000D9ED40 /* MapViewController.xib in Resources */,
 				050F7A6C1247095800D9ED40 /* InventoryViewController.xib in Resources */,
 				053494E0124830B5004A6D9D /* stonehen.ttf in Resources */,
-				0534950A124840C0004A6D9D /* parchment.png in Resources */,
 				05D463CB124C3B30009B9E8A /* WashingtonText.ttf in Resources */,
 				0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */,
 				052D8C7212518FE100A2D7FF /* create-account.png in Resources */,
