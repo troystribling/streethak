@@ -11,7 +11,7 @@
 #import "ContactModel.h"
 #import "AccountModel.h"
 #import "AlertViewManager.h"
-
+#import "AddContactTopLauncherView.h"
 #import "XMPPJID.h"
 #import "XMPPRosterItem.h"
 #import "XMPPClient.h"
@@ -30,11 +30,26 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize jidTextField;
+@synthesize containerView;
 @synthesize account;
 @synthesize newContactJidString;
 
 //===================================================================================================================================
 #pragma mark AddContactViewController
+
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inView:(UIView*)_containerView {
+    return [[AddContactViewController alloc] initWithNibName:@"AddContactViewController" bundle:nil inView:_containerView];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        self.containerView = _containerView;
+        self.view.frame = self.containerView.frame;
+    }
+    return self;
+}
 
 //===================================================================================================================================
 #pragma mark AddContactViewController PrivateAPI
@@ -60,22 +75,30 @@
 }
 
 //===================================================================================================================================
+#pragma mark TopLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouchedNamed:(NSString*)name {
+}
+
+//===================================================================================================================================
 #pragma mark UIViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	self.title = @"Add Contact";
+    [self.containerView addSubview:self.view];
+    [AddContactTopLauncherView inView:self.view andDelegate:self];
 	self.account = [AccountModel findFirstDisplayed];
 	self.jidTextField.returnKeyType = UIReturnKeyDone;
     self.jidTextField.delegate = self;
 	self.jidTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    [self.jidTextField becomeFirstResponder]; 
+    [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [[XMPPClientManager instance] delegateTo:self forAccount:self.account];
+    [self.jidTextField becomeFirstResponder]; 
 	[super viewWillAppear:animated];
 }
 
@@ -115,10 +138,5 @@
 
 //===================================================================================================================================
 #pragma mark NSObject
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)dealloc {
-    [super dealloc];
-}
 
 @end

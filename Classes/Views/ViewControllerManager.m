@@ -10,6 +10,7 @@
 #import "ViewControllerManager.h"
 #import "InventoryViewController.h"
 #import "ContactsViewController.h"
+#import "AddContactViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -25,6 +26,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize inventoryViewController;
 @synthesize contactsViewController;
+@synthesize addContactViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -42,6 +44,8 @@ static ViewControllerManager* thisViewControllerManager = nil;
     return thisViewControllerManager;
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+// InventoryViewController
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (InventoryViewController*)showInventoryView:(UIView*)containerView {
     if (self.inventoryViewController == nil) {
@@ -62,6 +66,8 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+// ContactsViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
 - (ContactsViewController*)showContactsView:(UIView*)containerView {
     if (self.contactsViewController == nil) {
         self.contactsViewController = [ContactsViewController inView:containerView];
@@ -77,6 +83,27 @@ static ViewControllerManager* thisViewControllerManager = nil;
     if (self.contactsViewController) {
         [self.contactsViewController viewWillDisappear:NO];
         [self.contactsViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// AddContactViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (AddContactViewController*)showAddContactView:(UIView*)containerView {
+    if (self.addContactViewController == nil) {
+        self.addContactViewController = [AddContactViewController inView:containerView];
+    } else {
+        [containerView addSubview:self.addContactViewController.view];
+    }
+    [self.addContactViewController viewWillAppear:NO];
+    return self.addContactViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeAddContactView {
+    if (self.addContactViewController) {
+        [self.addContactViewController viewWillDisappear:NO];
+        [self.addContactViewController.view removeFromSuperview];
     }
 }
 

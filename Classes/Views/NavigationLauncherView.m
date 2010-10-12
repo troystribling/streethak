@@ -49,9 +49,9 @@
         CGRect contactsFrame = CGRectMake(0.4953*viewWidth, 0.0, 0.2891*viewWidth, viewHeight);
         self.contactsLauncher = [TouchAreaView createWithFrame:contactsFrame name:@"contacts" andDelegate:self];
         [self addSubview:self.contactsLauncher];
-        CGRect notificationsFrame = CGRectMake(0.2500*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
+        CGRect notificationsFrame = CGRectMake(0.2578*viewWidth, 0.0, 0.2188*viewWidth, viewHeight);
         self.notificationsLauncher = [TouchAreaView createWithFrame:notificationsFrame name:@"notifications" andDelegate:self];
-        [self addSubview:self.contactsLauncher];
+        [self addSubview:self.notificationsLauncher];
         CGRect mapFrame = CGRectMake(0.0156*viewWidth, 0.0, 0.2266*viewWidth, viewHeight);
         self.mapLauncher = [TouchAreaView createWithFrame:mapFrame name:@"location" andDelegate:self];
         [self addSubview:self.mapLauncher];

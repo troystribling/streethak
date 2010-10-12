@@ -154,6 +154,9 @@
 		05F97DF6125FFDF100E5EC82 /* TopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F97DF5125FFDF100E5EC82 /* TopLauncherView.m */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
+		05FD1A041263EBC80003EDC4 /* add-contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FD1A031263EBC80003EDC4 /* add-contact.png */; };
+		05FD1A061263EC160003EDC4 /* add-contact-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */; };
+		05FD1A091263ED170003EDC4 /* AddContactTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD1A081263ED170003EDC4 /* AddContactTopLauncherView.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -450,6 +453,10 @@
 		05F97DF5125FFDF100E5EC82 /* TopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLauncherView.m; sourceTree = "<group>"; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		05FC68F2122B2B6F00878B07 /* user-location-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-location-marker.png"; sourceTree = "<group>"; };
+		05FD1A031263EBC80003EDC4 /* add-contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-contact.png"; sourceTree = "<group>"; };
+		05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-contact-top-launcher.png"; sourceTree = "<group>"; };
+		05FD1A071263ED170003EDC4 /* AddContactTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactTopLauncherView.h; sourceTree = "<group>"; };
+		05FD1A081263ED170003EDC4 /* AddContactTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactTopLauncherView.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* streethak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = streethak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -865,6 +872,8 @@
 			children = (
 				051CD7A41259672300D100A5 /* AcceptBuddyRequestView.h */,
 				051CD7A51259672300D100A5 /* AcceptBuddyRequestView.m */,
+				05FD1A071263ED170003EDC4 /* AddContactTopLauncherView.h */,
+				05FD1A081263ED170003EDC4 /* AddContactTopLauncherView.m */,
 				051CD7A61259672300D100A5 /* AddContactViewController.h */,
 				051CD7A71259672300D100A5 /* AddContactViewController.m */,
 				05102189125ACA550010680E /* ChatMessageCache.h */,
@@ -933,6 +942,8 @@
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */,
+				05FD1A031263EBC80003EDC4 /* add-contact.png */,
 				050F33EE125D65C30005607B /* contacts-top-launcher.png */,
 				05DF1568125BEEDD009EFE18 /* contact-online.png */,
 				05DF1575125BF2A6009EFE18 /* contact-offline.png */,
@@ -1128,6 +1139,8 @@
 				05DF158D125BF5A1009EFE18 /* unread-messages.png in Resources */,
 				050F33F0125D65C30005607B /* contacts-top-launcher.png in Resources */,
 				050F33F1125D65C30005607B /* notification-navigation-launcher.png in Resources */,
+				05FD1A041263EBC80003EDC4 /* add-contact.png in Resources */,
+				05FD1A061263EC160003EDC4 /* add-contact-top-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1265,7 @@
 				050F33FC125D67AD0005607B /* ContactsTopLauncherView.m in Sources */,
 				05F97DF6125FFDF100E5EC82 /* TopLauncherView.m in Sources */,
 				051379221260B4A000CF1FC5 /* ViewControllerManager.m in Sources */,
+				05FD1A091263ED170003EDC4 /* AddContactTopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,7 +65,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
-						<string key="IBUIPlaceholder">Enter User Name</string>
+						<string key="IBUIPlaceholder">Name</string>
 						<object class="NSColor" key="IBUITextColor" id="380563361">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -96,7 +96,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
-						<string key="IBUIPlaceholder">Enter Password</string>
+						<string key="IBUIPlaceholder">Password</string>
 						<reference key="IBUITextColor" ref="380563361"/>
 						<object class="NSFont" key="IBUIFont" id="251378120">
 							<string key="NSName">WashingtonText-Regular</string>
@@ -259,7 +259,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>CreateAccountViewController</string>
 					<string>UIResponder</string>
-					<string>{{897, 290}, {320, 480}}</string>
+					<string>{{993, 290}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">

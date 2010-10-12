@@ -1,37 +1,36 @@
 //
-//  InventoryTopLauncherView.m
+//  AddContactTopLauncherView.m
 //  streethak
 //
-//  Created by Troy Stribling on 10/3/10.
+//  Created by Troy Stribling on 10/11/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "InventoryTopLauncherView.h"
+#import "AddContactTopLauncherView.h"
 #import "TouchAreaView.h"
 #import "ViewControllerManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface InventoryTopLauncherView (PrivateAPI)
+@interface AddContactTopLauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation InventoryTopLauncherView
+@implementation AddContactTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@synthesize storeLauncher;
 @synthesize backLauncher;
 
 //===================================================================================================================================
-#pragma mark InventoryTopLauncherView PrivateAPI
+#pragma mark AddContactTopLauncherView PrivateAPI
 
 //===================================================================================================================================
-#pragma mark InventoryTopLauncherView
+#pragma mark AddContactTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate {
-    return [[InventoryTopLauncherView alloc] initInView:_view andDelegate:_delegate];
+    return [[AddContactTopLauncherView alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -39,14 +38,10 @@
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame image:@"inventory-top-launcher.png" andDelegate:_delegate])) {
-        self.containedView = _view;
+    if ((self = [self initWithFrame:viewFrame image:@"add-contact-top-launcher.png" andDelegate:_delegate])) {
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
-        CGRect storeFrame = CGRectMake(0.7812*viewWidth, 0.0, 0.2031*viewWidth, viewHeight);
-        self.storeLauncher = [TouchAreaView createWithFrame:storeFrame name:@"store" andDelegate:self];
-        [self addSubview:self.storeLauncher];
         [_view addSubview:self];
     }
     return self;
@@ -57,9 +52,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
-    if ([touchedView.viewName isEqualToString:@"store"]) {
-    } else if ([touchedView.viewName isEqualToString:@"back"]) {
-        [[ViewControllerManager instance] removeInventoryView];
+    if ([touchedView.viewName isEqualToString:@"back"]) {
+        [[ViewControllerManager instance] removeAddContactView];
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }

@@ -1,32 +1,28 @@
 //
-//  TopLauncherView.h
+//  AddContactTopLauncherView.h
 //  streethak
 //
-//  Created by Troy Stribling on 10/8/10.
+//  Created by Troy Stribling on 10/11/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "TopLauncherView.h"
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+@class TouchAreaView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@protocol TopLauncherViewDelegate <NSObject>
-
-- (void)viewTouchedNamed:(NSString*)name;
-
-@end
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TopLauncherView : UIImageView {
-	id<TopLauncherViewDelegate> delegate;
-    UIView* containedView;
+@interface AddContactTopLauncherView : TopLauncherView {
+    TouchAreaView* backLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (assign) id<TopLauncherViewDelegate> delegate;
-@property (nonatomic, retain) UIView* containedView;
+@property (nonatomic, retain) TouchAreaView* backLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)_frame image:(NSString*)_image andDelegate:(id<TopLauncherViewDelegate>)_delegate;
++ (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;
+- (id)initInView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;
 
 @end

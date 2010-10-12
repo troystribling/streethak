@@ -8,22 +8,27 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "TopLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface AddContactViewController : UIViewController <UITextFieldDelegate> {
+@interface AddContactViewController : UIViewController <UITextFieldDelegate, TopLauncherViewDelegate> {
 	IBOutlet UITextField* jidTextField;
+    UIView* containerView;
     AccountModel* account;
     NSString* newContactJidString;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITextField* jidTextField;
+@property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) NSString* newContactJidString;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inView:(UIView*)_view;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView;
 
 @end

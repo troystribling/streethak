@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "ContactsTopLauncherView.h"
 #import "TouchAreaView.h"
+#import "ViewControllerManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ContactsTopLauncherView (PrivateAPI)
@@ -39,6 +40,7 @@
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame image:@"contacts-top-launcher.png" andDelegate:_delegate])) {
+        self.containedView = _view;
         CGRect addContactFrame = CGRectMake(0.8281*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
         self.addContactLauncher = [TouchAreaView createWithFrame:addContactFrame name:@"add-contact" andDelegate:self];
         [self addSubview:self.addContactLauncher];
@@ -53,6 +55,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"add-contact"]) {
+        [[ViewControllerManager instance] showAddContactView:self.containedView];
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }
@@ -61,11 +64,7 @@
 //===================================================================================================================================
 #pragma mark UIView
 
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)frame {
-    if ((self = [super initWithFrame:frame])) {
-    }
-    return self;
-}
+//===================================================================================================================================
+#pragma mark NSObject
 
 @end
