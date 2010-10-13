@@ -65,13 +65,13 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)sender didAddToRoster:(XMPPRosterItem*)item {
     [AlertViewManager dismissActivityIndicator];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.view removeFromSuperview];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didReceiveRosterError:(XMPPIQ*)iq {
     [AlertViewManager dismissActivityIndicator];
-    [self failureAlert:@"JID is Invalid" message:@""];
+    [self.view removeFromSuperview];
 }
 
 //===================================================================================================================================

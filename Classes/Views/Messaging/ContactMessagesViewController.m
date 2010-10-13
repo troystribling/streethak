@@ -47,6 +47,20 @@
 //===================================================================================================================================
 #pragma mark ContactMessagesViewController
 
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inView:(UIView*)_containerView {
+    return [[AddContactViewController alloc] initWithNibName:@"AddContactViewController" bundle:nil inView:_containerView];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        self.containerView = _containerView;
+        self.view.frame = self.containerView.frame;
+    }
+    return self;
+}
+
 //===================================================================================================================================
 #pragma mark ContactMessagesViewController PrivateAPI
 
@@ -100,14 +114,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle { 
 	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
-	} 
-	return self; 
-} 
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle andTitle:(NSString*)viewTitle { 
-	if (self = [self initWithNibName:nibName bundle:nibBundle]) { 
-        self.title = viewTitle;
 	} 
 	return self; 
 } 

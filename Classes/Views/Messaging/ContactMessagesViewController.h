@@ -27,6 +27,8 @@
 @property (nonatomic, retain) UserModel* rosterItem;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle andTitle:(NSString*)viewTitle;
++ (id)inView:(UIView*)_view;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView;
+
 
 @end
