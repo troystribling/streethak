@@ -41,6 +41,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize chatMessages;
+@synthesize containerView;
 @synthesize account;
 @synthesize rosterItem;
 
@@ -49,7 +50,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    return [[AddContactViewController alloc] initWithNibName:@"AddContactViewController" bundle:nil inView:_containerView];
+    return [[ContactMessagesViewController alloc] initWithNibName:@"ContactMessagesViewController" bundle:nil inView:_containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

@@ -17,12 +17,14 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ContactMessagesViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     ChatMessageCache* chatMessages;
+    UIView* containerView;
     AccountModel* account;
     UserModel* rosterItem;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) ChatMessageCache* chatMessages;
+@property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) UserModel* rosterItem;
 
