@@ -1,37 +1,36 @@
 //
-//  ContactsTopLauncherView.m
+//  ContactsMessagesTopLauncher.m
 //  streethak
 //
-//  Created by Troy Stribling on 10/6/10.
+//  Created by Troy Stribling on 10/13/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "ContactsTopLauncherView.h"
+#import "ContactsMessagesTopLauncher.h"
 #import "TouchAreaView.h"
 #import "ViewControllerManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactsTopLauncherView (PrivateAPI)
+@interface ContactsMessagesTopLauncher (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation ContactsTopLauncherView
+@implementation ContactsMessagesTopLauncher
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@synthesize addContactLauncher;
-@synthesize partyPubSubLauncher;
+@synthesize sendMessageLauncher;
 
 //===================================================================================================================================
-#pragma mark ContactsTopLauncherView PrivateAPI
+#pragma mark ContactsMessagesTopLauncher PrivateAPI
 
 //===================================================================================================================================
-#pragma mark ContactsTopLauncherView
+#pragma mark ContactsMessagesTopLauncher
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate {
-    return [[ContactsTopLauncherView alloc] initInView:_view andDelegate:_delegate];
+    return [[ContactsMessagesTopLauncher alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -39,14 +38,11 @@
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame image:@"contacts-top-launcher.png" andDelegate:_delegate])) {
+    if ((self = [self initWithFrame:viewFrame image:@"contacts-messages-top-launcher.png" andDelegate:_delegate])) {
         self.containedView = _view;
         CGRect addContactFrame = CGRectMake(0.8281*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
-        self.addContactLauncher = [TouchAreaView createWithFrame:addContactFrame name:@"add-contact" andDelegate:self];
-        [self addSubview:self.addContactLauncher];
-        CGRect partyPubSubFrame = CGRectMake(0.0391*viewWidth, 0.0, 0.2344*viewWidth, viewHeight);
-        self.partyPubSubLauncher = [TouchAreaView createWithFrame:partyPubSubFrame name:@"add-contact" andDelegate:self];
-        [self addSubview:self.partyPubSubLauncher];
+        self.sendMessageLauncher = [TouchAreaView createWithFrame:addContactFrame name:@"send-message" andDelegate:self];
+        [self addSubview:self.sendMessageLauncher];
         [_view addSubview:self];
     }
     return self;

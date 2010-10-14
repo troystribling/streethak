@@ -11,6 +11,7 @@
 #import "InventoryViewController.h"
 #import "ContactsViewController.h"
 #import "AddContactViewController.h"
+#import "ContactMessagesViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -27,6 +28,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize inventoryViewController;
 @synthesize contactsViewController;
 @synthesize addContactViewController;
+@synthesize contactMessagesViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -104,6 +106,27 @@ static ViewControllerManager* thisViewControllerManager = nil;
     if (self.addContactViewController) {
         [self.addContactViewController viewWillDisappear:NO];
         [self.addContactViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// ContactMessagesViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (ContactMessagesViewController*)showContactMessagesView:(UIView*)containerView {
+    if (self.contactMessagesViewController == nil) {
+        self.contactMessagesViewController = [ContactMessagesViewController inView:containerView];
+    } else {
+        [containerView addSubview:self.contactMessagesViewController.view];
+    }
+    [self.contactMessagesViewController viewWillAppear:NO];
+    return self.contactMessagesViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeContactMessagesView {
+    if (self.contactMessagesViewController) {
+        [self.contactMessagesViewController viewWillDisappear:NO];
+        [self.contactMessagesViewController.view removeFromSuperview];
     }
 }
 

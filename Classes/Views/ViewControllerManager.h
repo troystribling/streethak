@@ -13,18 +13,21 @@
 @class InventoryViewController;
 @class ContactsViewController;
 @class AddContactViewController;
+@class ContactMessagesViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ViewControllerManager : NSObject {
     ContactsViewController* contactsViewController;
     InventoryViewController* inventoryViewController;
     AddContactViewController* addContactViewController;
+    ContactMessagesViewController* contactMessagesViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) InventoryViewController* inventoryViewController;
 @property (nonatomic, retain) ContactsViewController* contactsViewController;
 @property (nonatomic, retain) AddContactViewController* addContactViewController;
+@property (nonatomic, retain) ContactMessagesViewController* contactMessagesViewController;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (ViewControllerManager*)instance;
@@ -38,5 +41,8 @@
 
 - (AddContactViewController*)showAddContactView:(UIView*)containerView;
 - (void)removeAddContactView;
+
+- (ContactMessagesViewController*)showContactMessagesView:(UIView*)containerView;
+- (void)removeContactMessagesView;
 
 @end

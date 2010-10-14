@@ -10,6 +10,7 @@
 #import "InventoryViewController.h"
 #import "NavigationLauncherView.h"
 #import "InventoryTopLauncherView.h"
+#import "ViewControllerManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryViewController (PrivateAPI)
@@ -54,14 +55,18 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedConfig {
+    [self.view removeFromSuperview];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedNotifications {
+    [self.view removeFromSuperview];
 }            
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedContacts {
+    [self.view removeFromSuperview];
+    [[ViewControllerManager instance] showContactsView:self.containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
