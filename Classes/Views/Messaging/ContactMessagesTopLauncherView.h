@@ -1,5 +1,5 @@
 //
-//  ContactsMessagesTopLauncher.h
+//  ContactMessagesTopLauncherView.h
 //  streethak
 //
 //  Created by Troy Stribling on 10/13/10.
@@ -14,12 +14,14 @@
 @class TouchAreaView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactsMessagesTopLauncher : TopLauncherView {
+@interface ContactMessagesTopLauncherView : TopLauncherView {
     TouchAreaView* sendMessageLauncher;
+    TouchAreaView* backLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* sendMessageLauncher;
+@property (nonatomic, retain) TouchAreaView* backLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;

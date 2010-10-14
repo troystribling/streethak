@@ -8,6 +8,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "NavigationLauncherView.h"
+#import "ContactsTopLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
@@ -15,7 +17,8 @@
 @class UserModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactMessagesViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface ContactMessagesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, TopLauncherViewDelegate> {
+    IBOutlet UITableView* messagesView;
     ChatMessageCache* chatMessages;
     UIView* containerView;
     AccountModel* account;
@@ -23,6 +26,7 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@property (nonatomic, retain) UITableView* messagesView;
 @property (nonatomic, retain) ChatMessageCache* chatMessages;
 @property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) AccountModel* account;

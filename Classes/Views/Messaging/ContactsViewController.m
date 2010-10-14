@@ -12,6 +12,7 @@
 #import "AddContactViewController.h"
 #import "ContactMessagesViewController.h"
 #import "ContactsTopLauncherView.h"
+#import "ViewControllerManager.h"
 #import "ContactModel.h"
 #import "AccountModel.h"
 #import "RosterItemModel.h"
@@ -335,11 +336,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    ContactMessagesViewController* chatViewController = [[ContactMessagesViewController alloc] initWithNibName:@"ContactMessagesViewController" bundle:nil];;
-    if (chatViewController) {
-        [self.navigationController pushViewController:chatViewController animated:YES];
-        [chatViewController release];
-    }
+    [[ViewControllerManager instance] showContactMessagesView:self.view];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

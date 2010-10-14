@@ -8,6 +8,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "ContactMessagesViewController.h"
+#import "ContactMessagesTopLauncherView.h"
 #import "SendMessageViewController.h"
 #import "MessageModel.h"
 #import "UserModel.h"
@@ -40,6 +41,7 @@
 @implementation ContactMessagesViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize messagesView;
 @synthesize chatMessages;
 @synthesize containerView;
 @synthesize account;
@@ -74,7 +76,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadChatMessages {
     self.chatMessages = [[ChatMessageCache alloc] initWithJid:[self.rosterItem fullJID] andAccount:self.account];
-    [self.tableView reloadData];
+    [self.messagesView reloadData];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -93,12 +95,42 @@
 }
 
 //===================================================================================================================================
+#pragma mark TopLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouchedNamed:(NSString*)name {
+}
+
+//===================================================================================================================================
+#pragma mark NavigationLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedConfig {
+    [self.view removeFromSuperview];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedNotifications {
+    [self.view removeFromSuperview];
+}            
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedContacts {
+    [self.view removeFromSuperview];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedLocation {
+    [self.view removeFromSuperview];
+}
+
+//===================================================================================================================================
 #pragma mark XMPPClientDelegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)sender didReceivePresence:(XMPPPresence*)presence {
     [self.rosterItem load];
-    [self.tableView reloadData];
+    [self.messagesView reloadData];
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------
@@ -121,13 +153,18 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
+    self.messagesView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
+    self.messagesView.separatorColor = [UIColor blackColor];
+    [self.containerView addSubview:self.view];
+    [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
+    [ContactMessagesTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
-    [self addXMPPClientDelgate];
     [self loadAccount];
+    [self addXMPPClientDelgate];
     [self loadChatMessages];
 	[super viewWillAppear:animated];
 }
