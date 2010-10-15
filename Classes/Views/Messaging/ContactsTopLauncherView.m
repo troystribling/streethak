@@ -44,8 +44,8 @@
         CGRect addContactFrame = CGRectMake(0.8281*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
         self.addContactLauncher = [TouchAreaView createWithFrame:addContactFrame name:@"add-contact" andDelegate:self];
         [self addSubview:self.addContactLauncher];
-        CGRect partyPubSubFrame = CGRectMake(0.0391*viewWidth, 0.0, 0.2344*viewWidth, viewHeight);
-        self.partyPubSubLauncher = [TouchAreaView createWithFrame:partyPubSubFrame name:@"add-contact" andDelegate:self];
+        CGRect partyPubSubFrame = CGRectMake(0.0156*viewWidth, 0.0, 0.2734*viewWidth, viewHeight);
+        self.partyPubSubLauncher = [TouchAreaView createWithFrame:partyPubSubFrame name:@"pubsub" andDelegate:self];
         [self addSubview:self.partyPubSubLauncher];
         [_view addSubview:self];
     }
@@ -59,6 +59,7 @@
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"add-contact"]) {
         [[ViewControllerManager instance] showAddContactView:self.containedView];
+    } else if ([touchedView.viewName isEqualToString:@"pubsub"]) {
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }

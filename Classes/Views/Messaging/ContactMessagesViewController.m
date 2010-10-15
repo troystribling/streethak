@@ -9,10 +9,11 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "ContactMessagesViewController.h"
 #import "ContactMessagesTopLauncherView.h"
+#import "NavigationLauncherView.h"
 #import "SendMessageViewController.h"
 #import "MessageModel.h"
 #import "UserModel.h"
-#import "RosterItemModel.h"
+#import "ContactModel.h"
 #import "AccountModel.h"
 #import "ChatMessageCache.h"
 #import "MessageCell.h"
@@ -28,7 +29,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ContactMessagesViewController (PrivateAPI)
 
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForResource:(RosterItemModel*)resource;
 - (void)sendMessageButtonWasPressed:(id)sender;
 - (void)loadChatMessages;
 - (void)loadAccount;
@@ -44,8 +44,9 @@
 @synthesize messagesView;
 @synthesize chatMessages;
 @synthesize containerView;
+@synthesize topLauncher;
 @synthesize account;
-@synthesize rosterItem;
+@synthesize contact;
 
 //===================================================================================================================================
 #pragma mark ContactMessagesViewController
@@ -64,18 +65,24 @@
     return self;
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)setContact:(ContactModel*)_contact {
+    self.contact = _contact;
+    self.topLauncher.contactNameLabel.text = [[self.contact toJID] user];
+}
+
 //===================================================================================================================================
 #pragma mark ContactMessagesViewController PrivateAPI
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)sendMessageButtonWasPressed:(id)sender {
     SendMessageViewController* viewController = [[SendMessageViewController alloc] initWithNibName:@"SendMessageViewController" bundle:nil];
-    viewController.rosterItem = self.rosterItem;
+    viewController.rosterItem = self.contact;
 }	
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadChatMessages {
-    self.chatMessages = [[ChatMessageCache alloc] initWithJid:[self.rosterItem fullJID] andAccount:self.account];
+    self.chatMessages = [[ChatMessageCache alloc] initWithJid:[self.contact fullJID] andAccount:self.account];
     [self.messagesView reloadData];
 }
 
@@ -129,7 +136,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)sender didReceivePresence:(XMPPPresence*)presence {
-    [self.rosterItem load];
     [self.messagesView reloadData];
 }
 
@@ -157,7 +163,7 @@
     self.messagesView.separatorColor = [UIColor blackColor];
     [self.containerView addSubview:self.view];
     [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
-    [ContactMessagesTopLauncherView inView:self.view andDelegate:self];
+    self.topLauncher = [ContactMessagesTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 

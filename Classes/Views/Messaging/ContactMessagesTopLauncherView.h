@@ -15,11 +15,13 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ContactMessagesTopLauncherView : TopLauncherView {
+    UILabel* contactNameLabel;
     TouchAreaView* sendMessageLauncher;
     TouchAreaView* backLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@property (nonatomic, retain) UILabel* contactNameLabel;
 @property (nonatomic, retain) TouchAreaView* sendMessageLauncher;
 @property (nonatomic, retain) TouchAreaView* backLauncher;
 

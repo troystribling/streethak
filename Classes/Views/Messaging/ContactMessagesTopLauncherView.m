@@ -20,6 +20,7 @@
 @implementation ContactMessagesTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize contactNameLabel;
 @synthesize sendMessageLauncher;
 @synthesize backLauncher;
 
@@ -41,6 +42,11 @@
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame image:@"contact-messages-top-launcher.png" andDelegate:_delegate])) {
         self.containedView = _view;
+        CGRect labelFrame = CGRectMake(0.2812*viewWidth, 0.1*viewHeight, 0.4219*viewWidth, 0.45*viewHeight);
+        self.contactNameLabel = [[UILabel alloc] initWithFrame:labelFrame];
+        self.contactNameLabel.font = [UIFont fontWithName:@"Washington Text" size:36.0];
+        self.contactNameLabel.backgroundColor = [UIColor clearColor];
+        [self addSubview:self.contactNameLabel];
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
