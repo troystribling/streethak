@@ -8,13 +8,13 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
-#import "TopLauncherView.h"
+#import "LauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface AddContactViewController : UIViewController <UITextFieldDelegate, TopLauncherViewDelegate> {
+@interface AddContactViewController : UIViewController <UITextFieldDelegate, LauncherViewDelegate> {
 	IBOutlet UITextField* jidTextField;
     UIView* containerView;
     AccountModel* account;

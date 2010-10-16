@@ -10,6 +10,7 @@
 #import "ContactMessagesViewController.h"
 #import "ContactMessagesTopLauncherView.h"
 #import "NavigationLauncherView.h"
+#import "ViewControllerManager.h"
 #import "SendMessageViewController.h"
 #import "MessageModel.h"
 #import "UserModel.h"
@@ -103,10 +104,14 @@
 }
 
 //===================================================================================================================================
-#pragma mark TopLauncherViewDelegate 
+#pragma mark LauncherViewDelegate 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouchedNamed:(NSString*)name {
+    if ([name isEqualToString:@"send-message"]) {
+        SendMessageViewController* sendController = [[ViewControllerManager instance] showSendMessageView:self.view];
+        sendController.contact = self.contact;
+    }
 }
 
 //===================================================================================================================================

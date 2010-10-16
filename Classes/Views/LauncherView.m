@@ -1,5 +1,5 @@
 //
-//  TopLauncherView.m
+//  LauncherView.m
 //  streethak
 //
 //  Created by Troy Stribling on 10/8/10.
@@ -7,25 +7,25 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "TopLauncherView.h"
+#import "LauncherView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TopLauncherView (PrivateAPI)
+@interface LauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation TopLauncherView
+@implementation LauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize delegate;
 @synthesize containedView;
 
 //===================================================================================================================================
-#pragma mark TopLauncherView
+#pragma mark LauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithFrame:(CGRect)_frame image:(NSString*)_image andDelegate:(id<TopLauncherViewDelegate>)_delegate {
+- (id)initWithFrame:(CGRect)_frame image:(NSString*)_image andDelegate:(id<LauncherViewDelegate>)_delegate {
     if ((self = [self initWithFrame:_frame])) {
         self.delegate = _delegate;
         self.image = [UIImage imageNamed:_image];

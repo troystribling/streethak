@@ -8,15 +8,16 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "SendMessageTopLauncherView.h"
+#import "SendMessageBottomLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 @class ContactModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface SendMessageViewController : UIViewController <UITextViewDelegate> {
+@interface SendMessageViewController : UIViewController <UITextViewDelegate, LauncherViewDelegate> {
     IBOutlet UITextView* messageView;
-	IBOutlet UIBarButtonItem* sendMessageButton;
     AccountModel* account;
     ContactModel* contact;
     UIView* containerView;
@@ -24,13 +25,11 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITextView* messageView;
-@property (nonatomic, retain) UIBarButtonItem* sendMessageButton;
 @property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) ContactModel* contact;
 @property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)sendMessageButtonWasPressed:(id)sender;
 + (id)inView:(UIView*)_view;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView;
 

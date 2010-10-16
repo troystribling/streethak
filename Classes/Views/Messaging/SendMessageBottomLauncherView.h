@@ -1,8 +1,8 @@
 //
-//  ContactMessagesTopLauncherView.h
+//  SendMessageBottomLauncherView.h
 //  streethak
 //
-//  Created by Troy Stribling on 10/13/10.
+//  Created by Troy Stribling on 10/16/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
@@ -14,16 +14,12 @@
 @class TouchAreaView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactMessagesTopLauncherView : LauncherView {
-    UILabel* contactNameLabel;
-    TouchAreaView* sendMessageLauncher;
-    TouchAreaView* backLauncher;
+@interface SendMessageBottomLauncherView : LauncherView {
+    TouchAreaView* sendLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) UILabel* contactNameLabel;
-@property (nonatomic, retain) TouchAreaView* sendMessageLauncher;
-@property (nonatomic, retain) TouchAreaView* backLauncher;
+@property (nonatomic, retain) TouchAreaView* sendLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;

@@ -8,13 +8,13 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
-#import "TopLauncherView.h"
+#import "LauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class TouchAreaView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactsTopLauncherView : TopLauncherView {
+@interface ContactsTopLauncherView : LauncherView {
     TouchAreaView* addContactLauncher;
     TouchAreaView* partyPubSubLauncher;
 }
@@ -24,7 +24,7 @@
 @property (nonatomic, retain) TouchAreaView* partyPubSubLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;
-- (id)initInView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate;
++ (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;
+- (id)initInView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;
 
 @end

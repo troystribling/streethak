@@ -75,7 +75,7 @@
 }
 
 //===================================================================================================================================
-#pragma mark TopLauncherViewDelegate 
+#pragma mark LauncherViewDelegate 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouchedNamed:(NSString*)name {
@@ -87,7 +87,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
     [AddContactTopLauncherView inView:self.view andDelegate:self];
-	self.account = [AccountModel findFirstDisplayed];
+	self.account = [AccountModel findFirst];
 	self.jidTextField.returnKeyType = UIReturnKeyDone;
     self.jidTextField.delegate = self;
 	self.jidTextField.clearButtonMode = UITextFieldViewModeWhileEditing;

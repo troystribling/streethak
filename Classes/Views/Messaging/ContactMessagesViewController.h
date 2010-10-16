@@ -18,7 +18,7 @@
 @class ContactMessagesTopLauncherView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactMessagesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, TopLauncherViewDelegate> {
+@interface ContactMessagesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
     IBOutlet UITableView* messagesView;
     ChatMessageCache* chatMessages;
     ContactMessagesTopLauncherView* topLauncher;

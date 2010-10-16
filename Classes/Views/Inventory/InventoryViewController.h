@@ -9,13 +9,13 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
-#import "TopLauncherView.h"
+#import "LauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class InventoryTopLauncherView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface InventoryViewController : UIViewController <NavigationLauncherViewDelegate, TopLauncherViewDelegate> {
+@interface InventoryViewController : UIViewController <NavigationLauncherViewDelegate, LauncherViewDelegate> {
     UIView* containerView;
 }
 

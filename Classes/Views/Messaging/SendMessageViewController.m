@@ -8,6 +8,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "SendMessageViewController.h"
+#import "ViewControllerManager.h"
 #import "MessageModel.h"
 #import "AccountModel.h"
 
@@ -20,6 +21,7 @@
 @interface SendMessageViewController (PrivateAPI)
 
 - (void)loadAccount;
+- (void)sendMessage;
 
 @end
 
@@ -28,7 +30,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize messageView;
-@synthesize sendMessageButton;
 @synthesize account;
 @synthesize contact;
 @synthesize containerView;
@@ -46,6 +47,7 @@
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.containerView = _containerView;
         self.view.frame = self.containerView.frame;
+        self.messageView.font = [UIFont fontWithName:@"Washington Text" size:22.0];
     }
     return self;
 }
@@ -59,7 +61,7 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)sendMessageButtonWasPressed:(id)sender {
+- (void)sendMessage {
     NSString* enteredMessageText = self.messageView.text;
     if (![enteredMessageText isEqualToString:@""]) {
         MessageModel* model = [[MessageModel alloc] init];
@@ -77,8 +79,18 @@
         [XMPPMessage chat:xmppClient JID:[self.contact toJID] messageBody:enteredMessageText];
     }    
     [self.messageView resignFirstResponder];
-    [self.navigationController popViewControllerAnimated:YES];
 }	
+
+//===================================================================================================================================
+#pragma mark LauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouchedNamed:(NSString*)name {
+    if ([name isEqualToString:@"send"]) {
+        [self sendMessage];
+        [[ViewControllerManager instance] removeSendMessageView];
+    }
+}
 
 //===================================================================================================================================
 #pragma mark UIViewController
@@ -92,13 +104,16 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
-    [self.messageView becomeFirstResponder];
+    [SendMessageTopLauncherView inView:self.view andDelegate:self];
+    [SendMessageBottomLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
+    self.messageView.text = @"";
+    [self.messageView becomeFirstResponder];
     [[XMPPClientManager instance] delegateTo:self forAccount:self.account];
 }
 

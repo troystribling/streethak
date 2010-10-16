@@ -29,12 +29,12 @@
 #pragma mark AddContactTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate {
++ (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate {
     return [[AddContactTopLauncherView alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initInView:(UIView*)_view andDelegate:(id<TopLauncherViewDelegate>)_delegate {
+- (id)initInView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate {
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
