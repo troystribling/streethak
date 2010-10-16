@@ -162,7 +162,6 @@
 - (void)viewDidLoad {
     self.messagesView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
     self.messagesView.separatorColor = [UIColor blackColor];
-    [self.containerView addSubview:self.view];
     [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
     self.topLauncher = [ContactMessagesTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];

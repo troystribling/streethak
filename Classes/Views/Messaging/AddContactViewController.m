@@ -86,7 +86,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
-    [self.containerView addSubview:self.view];
     [AddContactTopLauncherView inView:self.view andDelegate:self];
 	self.account = [AccountModel findFirstDisplayed];
 	self.jidTextField.returnKeyType = UIReturnKeyDone;

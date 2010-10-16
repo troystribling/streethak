@@ -64,10 +64,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
-    if ([touchedView.viewName isEqualToString:@"add-contact"]) {
-        [[ViewControllerManager instance] showAddContactView:self.containedView];
+    if ([touchedView.viewName isEqualToString:@"send-message"]) {
+        [[ViewControllerManager instance] showSendMessageView:self.containedView];
     } else if ([touchedView.viewName isEqualToString:@"back"]) {
-            [[ViewControllerManager instance] removeContactMessagesView];
+        [[ViewControllerManager instance] removeContactMessagesView];
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }

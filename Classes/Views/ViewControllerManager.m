@@ -54,9 +54,8 @@ static ViewControllerManager* thisViewControllerManager = nil;
 - (InventoryViewController*)showInventoryView:(UIView*)containerView {
     if (self.inventoryViewController == nil) {
         self.inventoryViewController = [InventoryViewController inView:containerView];
-    } else {
-        [containerView addSubview:self.inventoryViewController.view];
-    }
+    } 
+    [containerView addSubview:self.inventoryViewController.view];
     [self.inventoryViewController viewWillAppear:NO];
     return self.inventoryViewController;
 }
@@ -75,9 +74,8 @@ static ViewControllerManager* thisViewControllerManager = nil;
 - (ContactsViewController*)showContactsView:(UIView*)containerView {
     if (self.contactsViewController == nil) {
         self.contactsViewController = [ContactsViewController inView:containerView];
-    } else {
-        [containerView addSubview:self.contactsViewController.view];
-    }
+    } 
+    [containerView addSubview:self.contactsViewController.view];
     [self.contactsViewController viewWillAppear:NO];
     return self.contactsViewController;
 }
@@ -96,9 +94,8 @@ static ViewControllerManager* thisViewControllerManager = nil;
 - (AddContactViewController*)showAddContactView:(UIView*)containerView {
     if (self.addContactViewController == nil) {
         self.addContactViewController = [AddContactViewController inView:containerView];
-    } else {
-        [containerView addSubview:self.addContactViewController.view];
     }
+    [containerView addSubview:self.addContactViewController.view];
     [self.addContactViewController viewWillAppear:NO];
     return self.addContactViewController;
 }
@@ -117,9 +114,8 @@ static ViewControllerManager* thisViewControllerManager = nil;
 - (ContactMessagesViewController*)showContactMessagesView:(UIView*)containerView {
     if (self.contactMessagesViewController == nil) {
         self.contactMessagesViewController = [ContactMessagesViewController inView:containerView];
-    } else {
-        [containerView addSubview:self.contactMessagesViewController.view];
     }
+    [containerView addSubview:self.contactMessagesViewController.view];
     [self.contactMessagesViewController viewWillAppear:NO];
     return self.contactMessagesViewController;
 }
@@ -138,9 +134,8 @@ static ViewControllerManager* thisViewControllerManager = nil;
 - (SendMessageViewController*)showSendMessageView:(UIView*)containerView {
     if (self.sendMessageViewController == nil) {
         self.sendMessageViewController = [SendMessageViewController inView:containerView];
-    } else {
-        [containerView addSubview:self.sendMessageViewController.view];
     }
+    [containerView addSubview:self.sendMessageViewController.view];
     [self.sendMessageViewController viewWillAppear:NO];
     return self.sendMessageViewController;
 }
