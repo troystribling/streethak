@@ -30,10 +30,25 @@
 @synthesize messageView;
 @synthesize sendMessageButton;
 @synthesize account;
-@synthesize rosterItem;
+@synthesize contact;
+@synthesize containerView;
 
 //===================================================================================================================================
 #pragma mark SendMessageViewController
+
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inView:(UIView*)_containerView {
+    return [[SendMessageViewController alloc] initWithNibName:@"SendMessageViewController" bundle:nil inView:_containerView];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        self.containerView = _containerView;
+        self.view.frame = self.containerView.frame;
+    }
+    return self;
+}
 
 //===================================================================================================================================
 #pragma mark SendMessageViewController PrivateAPI
@@ -50,7 +65,7 @@
         MessageModel* model = [[MessageModel alloc] init];
         model.messageText = enteredMessageText;
         model.accountPk = self.account.pk;
-        model.toJid = [self.rosterItem fullJID];
+        model.toJid = [self.contact fullJID];
         model.fromJid = [self.account fullJID];
         model.textType = MessageTextTypeBody;
         model.createdAt = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
@@ -59,7 +74,7 @@
         [model insert];
         [model release];
         XMPPClient* xmppClient = [[XMPPClientManager instance] xmppClientForAccount:self.account];
-        [XMPPMessage chat:xmppClient JID:[self.rosterItem toJID] messageBody:enteredMessageText];
+        [XMPPMessage chat:xmppClient JID:[self.contact toJID] messageBody:enteredMessageText];
     }    
     [self.messageView resignFirstResponder];
     [self.navigationController popViewControllerAnimated:YES];

@@ -11,23 +11,27 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
-@class UserModel;
+@class ContactModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SendMessageViewController : UIViewController <UITextViewDelegate> {
     IBOutlet UITextView* messageView;
 	IBOutlet UIBarButtonItem* sendMessageButton;
     AccountModel* account;
-    UserModel* rosterItem;
+    ContactModel* contact;
+    UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITextView* messageView;
 @property (nonatomic, retain) UIBarButtonItem* sendMessageButton;
 @property (nonatomic, retain) AccountModel* account;
-@property (nonatomic, retain) UserModel* rosterItem;
+@property (nonatomic, retain) ContactModel* contact;
+@property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (IBAction)sendMessageButtonWasPressed:(id)sender;
++ (id)inView:(UIView*)_view;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView;
 
 @end

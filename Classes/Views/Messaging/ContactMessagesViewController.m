@@ -66,9 +66,10 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)setContact:(ContactModel*)_contact {
+- (void)setContactName:(ContactModel*)_contact {
     self.contact = _contact;
     self.topLauncher.contactNameLabel.text = [[self.contact toJID] user];
+    [self loadChatMessages];
 }
 
 //===================================================================================================================================
@@ -77,7 +78,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)sendMessageButtonWasPressed:(id)sender {
     SendMessageViewController* viewController = [[SendMessageViewController alloc] initWithNibName:@"SendMessageViewController" bundle:nil];
-    viewController.rosterItem = self.contact;
+    viewController.contact = self.contact;
 }	
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -171,7 +172,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
     [self addXMPPClientDelgate];
-    [self loadChatMessages];
 	[super viewWillAppear:animated];
 }
 

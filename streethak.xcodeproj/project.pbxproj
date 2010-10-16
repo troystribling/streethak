@@ -13,6 +13,8 @@
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		0506D8D1125BE1DB009BC283 /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */; };
+		0506E1051269318D003E6C55 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506E1041269318D003E6C55 /* MessageCell.xib */; };
+		0506E12C12693F01003E6C55 /* LoadMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */; };
 		05075B0312669905008FC4B6 /* ContactMessagesTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05075B0212669905008FC4B6 /* ContactMessagesTopLauncherView.m */; };
 		0508E006126756FA00872A56 /* contact-messages-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0508E005126756FA00872A56 /* contact-messages-top-launcher.png */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
@@ -199,6 +201,8 @@
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendMessageViewController.xib; sourceTree = "<group>"; };
+		0506E1041269318D003E6C55 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMessagesCell.xib; sourceTree = "<group>"; };
 		05075B0112669905008FC4B6 /* ContactMessagesTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMessagesTopLauncherView.h; sourceTree = "<group>"; };
 		05075B0212669905008FC4B6 /* ContactMessagesTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMessagesTopLauncherView.m; sourceTree = "<group>"; };
 		0508E005126756FA00872A56 /* contact-messages-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact-messages-top-launcher.png"; sourceTree = "<group>"; };
@@ -557,8 +561,10 @@
 				05DF1534125BE399009EFE18 /* ContactMessagesViewController.xib */,
 				050366E5125943D50010130C /* ContactsViewController.xib */,
 				050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */,
+				0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */,
 				050F7A601247087000D9ED40 /* MainWindow.xib */,
 				050F7A611247087000D9ED40 /* MapViewController.xib */,
+				0506E1041269318D003E6C55 /* MessageCell.xib */,
 				050F7A6B1247095800D9ED40 /* InventoryViewController.xib */,
 				0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */,
 			);
@@ -1150,6 +1156,8 @@
 				05FD1A041263EBC80003EDC4 /* add-contact.png in Resources */,
 				05FD1A061263EC160003EDC4 /* add-contact-top-launcher.png in Resources */,
 				0508E006126756FA00872A56 /* contact-messages-top-launcher.png in Resources */,
+				0506E1051269318D003E6C55 /* MessageCell.xib in Resources */,
+				0506E12C12693F01003E6C55 /* LoadMessagesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

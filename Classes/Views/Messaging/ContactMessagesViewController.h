@@ -38,6 +38,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView;
-- (void)setContact:(ContactModel*)_contact;
+- (void)setContactName:(ContactModel*)_contact;
 
 @end

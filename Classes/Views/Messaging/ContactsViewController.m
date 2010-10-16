@@ -337,7 +337,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     ContactMessagesViewController* msgController = [[ViewControllerManager instance] showContactMessagesView:self.view];
-    [msgController setContact:[self.contacts objectAtIndex:indexPath.row]];
+    [msgController setContactName:[self.contacts objectAtIndex:indexPath.row]];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

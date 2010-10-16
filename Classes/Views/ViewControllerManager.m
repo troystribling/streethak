@@ -12,6 +12,7 @@
 #import "ContactsViewController.h"
 #import "AddContactViewController.h"
 #import "ContactMessagesViewController.h"
+#import "SendMessageViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -29,6 +30,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize contactsViewController;
 @synthesize addContactViewController;
 @synthesize contactMessagesViewController;
+@synthesize sendMessageViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -127,6 +129,27 @@ static ViewControllerManager* thisViewControllerManager = nil;
     if (self.contactMessagesViewController) {
         [self.contactMessagesViewController viewWillDisappear:NO];
         [self.contactMessagesViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// SendMessageViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (SendMessageViewController*)showSendMessageView:(UIView*)containerView {
+    if (self.sendMessageViewController == nil) {
+        self.sendMessageViewController = [SendMessageViewController inView:containerView];
+    } else {
+        [containerView addSubview:self.sendMessageViewController.view];
+    }
+    [self.sendMessageViewController viewWillAppear:NO];
+    return self.sendMessageViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeSendMessageView {
+    if (self.sendMessageViewController) {
+        [self.sendMessageViewController viewWillDisappear:NO];
+        [self.sendMessageViewController.view removeFromSuperview];
     }
 }
 
