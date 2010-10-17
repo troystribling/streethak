@@ -12,7 +12,6 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="2"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -50,8 +49,9 @@
 							<object class="IBUILabel" id="830783947">
 								<reference key="NSNextResponder" ref="322374134"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 5}, {160, 30}}</string>
+								<string key="NSFrame">{{20, 10}, {160, 30}}</string>
 								<reference key="NSSuperview" ref="322374134"/>
+								<reference key="NSWindow"/>
 								<object class="NSColor" key="IBUIBackgroundColor" id="728132735">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MCAwAA</bytes>
@@ -66,7 +66,7 @@
 									<double key="NSSize">11</double>
 									<int key="NSfFlags">16</int>
 								</object>
-								<object class="NSColor" key="IBUITextColor" id="567492278">
+								<object class="NSColor" key="IBUITextColor" id="313665612">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MCAwIDAAA</bytes>
 								</object>
@@ -79,8 +79,9 @@
 							<object class="IBUILabel" id="1032376026">
 								<reference key="NSNextResponder" ref="322374134"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{190, 5}, {110, 30}}</string>
+								<string key="NSFrame">{{190, 10}, {110, 30}}</string>
 								<reference key="NSSuperview" ref="322374134"/>
+								<reference key="NSWindow"/>
 								<reference key="IBUIBackgroundColor" ref="728132735"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -88,7 +89,7 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Date</string>
 								<reference key="IBUIFont" ref="146160924"/>
-								<reference key="IBUITextColor" ref="567492278"/>
+								<reference key="IBUITextColor" ref="313665612"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -97,6 +98,7 @@
 						</object>
 						<string key="NSFrameSize">{320, 80}</string>
 						<reference key="NSSuperview" ref="989178184"/>
+						<reference key="NSWindow"/>
 						<reference key="IBUIBackgroundColor" ref="728132735"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -107,6 +109,7 @@
 				</object>
 				<string key="NSFrameSize">{320, 80}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="IBUIBackgroundColor" ref="728132735"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>

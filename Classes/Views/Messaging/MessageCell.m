@@ -76,14 +76,14 @@
     NSRange dateAndTime = {0, 19};
     cell.dateLabel.text = [[message.createdAt description] substringWithRange:dateAndTime];
     cell.dateLabel.font = [UIFont fontWithName:@"Washington Text" size:20.0];
-    cell.dateLabel.textColor = [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]; 
+    cell.dateLabel.textColor = [UIColor colorWithRed:0.40 green:0.35 blue:0.30 alpha:0.9]; 
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (void)set:(MessageCell*)cell Jid:(NSString*)jid {
     cell.jidLabel.font = [UIFont fontWithName:@"Washington Text" size:20.0];
     cell.jidLabel.text = jid;
-    cell.jidLabel.textColor = [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]; 
+    cell.jidLabel.textColor = [UIColor colorWithRed:0.4 green:0.35 blue:0.30 alpha:0.9]; 
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

@@ -50,7 +50,7 @@
 							<object class="IBUILabel" id="167500982">
 								<reference key="NSNextResponder" ref="564208555"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{60, 18}, {203, 34}}</string>
+								<string key="NSFrame">{{60, 27}, {203, 34}}</string>
 								<reference key="NSSuperview" ref="564208555"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -75,7 +75,7 @@
 							<object class="IBUIImageView" id="430386323">
 								<reference key="NSNextResponder" ref="564208555"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{6, 12}, {46, 46}}</string>
+								<string key="NSFrame">{{6, 21}, {46, 46}}</string>
 								<reference key="NSSuperview" ref="564208555"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -90,7 +90,7 @@
 							<object class="IBUIImageView" id="380531289">
 								<reference key="NSNextResponder" ref="564208555"/>
 								<int key="NSvFlags">-2147483356</int>
-								<string key="NSFrame">{{267, 28}, {30, 20}}</string>
+								<string key="NSFrame">{{267, 34}, {30, 20}}</string>
 								<reference key="NSSuperview" ref="564208555"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -108,7 +108,7 @@
 							<object class="IBUILabel" id="719735089">
 								<reference key="NSNextResponder" ref="564208555"/>
 								<int key="NSvFlags">-2147483356</int>
-								<string key="NSFrame">{{267, 29}, {30, 20}}</string>
+								<string key="NSFrame">{{267, 34}, {30, 20}}</string>
 								<reference key="NSSuperview" ref="564208555"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -131,7 +131,7 @@
 								<int key="IBUITextAlignment">1</int>
 							</object>
 						</object>
-						<string key="NSFrameSize">{300, 75}</string>
+						<string key="NSFrameSize">{300, 90}</string>
 						<reference key="NSSuperview" ref="674307072"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="419363101">
 							<int key="NSColorSpace">3</int>
@@ -144,7 +144,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</object>
-				<string key="NSFrameSize">{320, 75}</string>
+				<string key="NSFrameSize">{320, 90}</string>
 				<reference key="NSSuperview"/>
 				<reference key="IBUIBackgroundColor" ref="419363101"/>
 				<bool key="IBUIOpaque">NO</bool>
@@ -220,8 +220,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="380531289"/>
 							<reference ref="430386323"/>
-							<reference ref="719735089"/>
 							<reference ref="167500982"/>
+							<reference ref="719735089"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -270,17 +270,17 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDhYAAwfgAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDhYAAwlAAAA</bytes>
 					</object>
 					<string>ContactCell</string>
-					<string>{{243, 388}, {320, 75}}</string>
+					<string>{{288, 110}, {320, 90}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAwiwAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCcAAAwnAAAA</bytes>
+						<bytes key="NSTransformStruct">AUJwAABBoAAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -773,7 +773,7 @@
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>{46, 46}</string>
+				<string>{22, 50}</string>
 				<string>{20, 20}</string>
 			</object>
 		</object>
