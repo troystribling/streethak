@@ -10,6 +10,7 @@
 #import "MessageCache.h"
 #import "MessageModel.h"
 #import "MessageCell.h"
+#import "AccountModel.h"
 #import "CellUtils.h"
 #import "LoadMessagesCell.h"
 #import "XMPPClientManager.h"
@@ -93,7 +94,8 @@
     if (indexPath.row < [self messageCount]) {
         MessageModel* message =[self objectAtIndex:indexPath.row];
         [self markMessageRead:message];
-        cell = [MessageCell tableView:tableView cellForRowAtIndexPath:indexPath forMessage:message fromJid:[[XMPPJID jidWithString:message.fromJid] bare]];
+        cell = [MessageCell tableView:tableView cellForRowAtIndexPath:indexPath forMessage:message 
+                            fromJid:[[XMPPJID jidWithString:message.fromJid] user] andAccount:[[self.account toJID] user]];
     } else {
         cell = [CellUtils createCell:[LoadMessagesCell class] forTableView:tableView];
     }

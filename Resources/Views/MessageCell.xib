@@ -52,6 +52,10 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 5}, {160, 30}}</string>
 								<reference key="NSSuperview" ref="322374134"/>
+								<object class="NSColor" key="IBUIBackgroundColor" id="728132735">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MCAwAA</bytes>
+								</object>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -62,9 +66,9 @@
 									<double key="NSSize">11</double>
 									<int key="NSfFlags">16</int>
 								</object>
-								<object class="NSColor" key="IBUITextColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MC40MDAwMDAwMQA</bytes>
+								<object class="NSColor" key="IBUITextColor" id="567492278">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MCAwIDAAA</bytes>
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
@@ -77,16 +81,14 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{190, 5}, {110, 30}}</string>
 								<reference key="NSSuperview" ref="322374134"/>
+								<reference key="IBUIBackgroundColor" ref="728132735"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Date</string>
 								<reference key="IBUIFont" ref="146160924"/>
-								<object class="NSColor" key="IBUITextColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MC40MDAwMDAwMQA</bytes>
-								</object>
+								<reference key="IBUITextColor" ref="567492278"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -95,10 +97,7 @@
 						</object>
 						<string key="NSFrameSize">{320, 80}</string>
 						<reference key="NSSuperview" ref="989178184"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="728132735">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="728132735"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>

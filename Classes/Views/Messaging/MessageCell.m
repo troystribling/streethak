@@ -17,7 +17,7 @@
 
 + (NSString*)getMessageText:(MessageModel*)message;
 + (CGRect)getMessageRect:(NSString*)messageText;
-+ (UIView*)viewForMessage:(MessageModel*)message;
++ (UIView*)viewForMessage:(MessageModel*)message andColor:(UIColor*)color;
 
 @end
 
@@ -50,7 +50,7 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (UIView*)viewForMessage:(MessageModel*)message {
++ (UIView*)viewForMessage:(MessageModel*)message andColor:(UIColor*)color {
     NSString* messageText = [self getMessageText:message];
     CGRect viewRect = [self getMessageRect:messageText];
     UILabel* messageView = [[UILabel alloc] initWithFrame:viewRect];
@@ -58,8 +58,15 @@
     messageView.lineBreakMode = UILineBreakModeWordWrap;
     messageView.numberOfLines = 0;
     messageView.text = messageText;
+    messageView.font = [UIFont fontWithName:@"Washington Text" size:24.0];
+    if (color) {
+        messageView.textColor = color;
+    } else {
+        messageView.textColor = [UIColor blackColor];
+    }
     return messageView;
 }
+
 
 //===================================================================================================================================
 #pragma mark MessageCell
@@ -68,26 +75,34 @@
 + (void)setTime:(MessageCell*)cell forMessage:(MessageModel*)message {
     NSRange dateAndTime = {0, 19};
     cell.dateLabel.text = [[message.createdAt description] substringWithRange:dateAndTime];
+    cell.dateLabel.font = [UIFont fontWithName:@"Washington Text" size:20.0];
+    cell.dateLabel.textColor = [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]; 
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (void)set:(MessageCell*)cell Jid:(NSString*)jid {
+    cell.jidLabel.font = [UIFont fontWithName:@"Washington Text" size:20.0];
     cell.jidLabel.text = jid;
+    cell.jidLabel.textColor = [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]; 
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (CGFloat)tableView:(UITableView *)tableView heightForRowWithMessage:(MessageModel*)message {
-    UIView* msgView = [self viewForMessage:message];
+    UIView* msgView = [self viewForMessage:message andColor:nil];
     CGRect msgRect = [msgView frame];
 	return msgRect.size.height + kMESSAGE_CELL_HEIGHT_PAD;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath forMessage:(MessageModel*)message fromJid:(NSString*)jid {        
++ (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath forMessage:(MessageModel*)message fromJid:(NSString*)jid andAccount:(NSString*)account {        
     MessageCell* cell = (MessageCell*)[CellUtils createCell:[MessageCell class] forTableView:tableView];
+    UIColor* color = [UIColor blackColor];
+    if ([account isEqualToString:jid]) {
+        color = [UIColor colorWithRed:0.4 green:0.05 blue:0.05 alpha:1.0];
+    }
     [self set:cell Jid:jid];
     [self setTime:cell forMessage:message];
-    UIView* msgView = [self viewForMessage:message];
+    UIView* msgView = [self viewForMessage:message andColor:color];
     CGRect msgRect = msgView.frame;
     UIView* container = [[UIView alloc] initWithFrame:CGRectMake(kMESSAGE_CELL_X_OFFSET, kMESSAGE_CELL_Y_OFFSET, msgRect.size.width,  msgRect.size.width)];
     [container addSubview:msgView];
@@ -97,6 +112,13 @@
 
 //===================================================================================================================================
 #pragma mark UITableViewCell
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithCoder:(NSCoder *)coder { 
+	if (self = [super initWithCoder:coder]) { 
+	} 
+	return self; 
+} 
 
 //===================================================================================================================================
 #pragma mark NSObject
