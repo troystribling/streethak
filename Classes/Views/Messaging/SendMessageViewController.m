@@ -47,7 +47,7 @@
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.containerView = _containerView;
         self.view.frame = self.containerView.frame;
-        self.messageView.font = [UIFont fontWithName:@"Washington Text" size:22.0];
+        self.messageView.font = [UIFont fontWithName:@"Washington Text" size:24.0];
     }
     return self;
 }
@@ -70,7 +70,7 @@
         model.toJid = [self.contact fullJID];
         model.fromJid = [self.account fullJID];
         model.textType = MessageTextTypeBody;
-        model.createdAt = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+        model.createdAt = [NSDate date];
         model.itemId = @"-1";
         model.messageRead = YES;
         [model insert];

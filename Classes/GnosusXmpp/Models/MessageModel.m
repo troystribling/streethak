@@ -282,7 +282,7 @@
             messageModel.fromJid = [[iq fromJID] full];
             messageModel.accountPk = account.pk;
             messageModel.toJid = [account fullJID];
-            messageModel.createdAt = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+            messageModel.createdAt = [NSDate date];
             messageModel.textType = MessageTextTypeCommandXData;
             messageModel.node = [command node];
             messageModel.itemId = @"-1";
@@ -311,7 +311,11 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (NSString*)createdAtAsString {
-    return [self.createdAt description];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd hh:mm:ss zzz"];
+    NSString* dateString = [df stringFromDate:self.createdAt];
+    [df release];
+    return dateString;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -418,7 +422,7 @@
     char* createdAtVal = (char*)sqlite3_column_text(statement, 2);
     if (createdAtVal != nil) {		
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
-        [df setDateFormat:@"yyyy-MM-dd hh:mm:ss Z"];
+        [df setDateFormat:@"yyyy-MM-dd hh:mm:ss zzz"];
         self.createdAt = [df dateFromString:[NSString stringWithCString:createdAtVal encoding:NSUTF8StringEncoding]];
         [df release];
     }
