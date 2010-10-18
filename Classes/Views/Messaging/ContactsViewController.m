@@ -297,13 +297,13 @@
     [super didReceiveMemoryWarning];
 }
 
+//===================================================================================================================================
+#pragma mark UITableViewDataSource
+
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return kCONTACTS_CELL_HEIGHT;
 }
-
-//===================================================================================================================================
-#pragma mark UITableViewDataSource
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

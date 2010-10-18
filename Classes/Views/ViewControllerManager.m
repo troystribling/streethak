@@ -13,6 +13,8 @@
 #import "AddContactViewController.h"
 #import "ContactMessagesViewController.h"
 #import "SendMessageViewController.h"
+#import "EventsViewController.h"
+#import "SendEventViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -31,6 +33,8 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize addContactViewController;
 @synthesize contactMessagesViewController;
 @synthesize sendMessageViewController;
+@synthesize eventsViewController;
+@synthesize sendEventViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -145,6 +149,46 @@ static ViewControllerManager* thisViewControllerManager = nil;
     if (self.sendMessageViewController) {
         [self.sendMessageViewController viewWillDisappear:NO];
         [self.sendMessageViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// EventsViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (EventsViewController*)showSendMessageView:(UIView*)containerView {
+    if (self.eventsViewController == nil) {
+        self.eventsViewController = [EventsViewController inView:containerView];
+    }
+    [containerView addSubview:self.eventsViewController.view];
+    [self.eventsViewController viewWillAppear:NO];
+    return self.eventsViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeSendMessageView {
+    if (self.eventsViewController) {
+        [self.eventsViewController viewWillDisappear:NO];
+        [self.eventsViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// SendEventViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (SendEventViewController*)showSendMessageView:(UIView*)containerView {
+    if (self.sendEventViewController == nil) {
+        self.sendEventViewController = [SendEventViewController inView:containerView];
+    }
+    [containerView addSubview:self.sendEventViewController.view];
+    [self.sendEventViewController viewWillAppear:NO];
+    return self.sendEventViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeSendMessageView {
+    if (self.sendEventViewController) {
+        [self.sendEventViewController viewWillDisappear:NO];
+        [self.sendEventViewController.view removeFromSuperview];
     }
 }
 
