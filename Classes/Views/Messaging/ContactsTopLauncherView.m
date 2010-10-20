@@ -21,7 +21,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize addContactLauncher;
-@synthesize partyPubSubLauncher;
+@synthesize shoutLauncher;
 
 //===================================================================================================================================
 #pragma mark ContactsTopLauncherView PrivateAPI
@@ -44,9 +44,9 @@
         CGRect addContactFrame = CGRectMake(0.8281*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
         self.addContactLauncher = [TouchAreaView createWithFrame:addContactFrame name:@"add-contact" andDelegate:self];
         [self addSubview:self.addContactLauncher];
-        CGRect partyPubSubFrame = CGRectMake(0.0156*viewWidth, 0.0, 0.2734*viewWidth, viewHeight);
-        self.partyPubSubLauncher = [TouchAreaView createWithFrame:partyPubSubFrame name:@"pubsub" andDelegate:self];
-        [self addSubview:self.partyPubSubLauncher];
+        CGRect shoutFrame = CGRectMake(0.0156*viewWidth, 0.0, 0.2734*viewWidth, viewHeight);
+        self.shoutLauncher = [TouchAreaView createWithFrame:shoutFrame name:@"shout" andDelegate:self];
+        [self addSubview:self.shoutLauncher];
         [_view addSubview:self];
     }
     return self;
@@ -59,7 +59,8 @@
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"add-contact"]) {
         [[ViewControllerManager instance] showAddContactView:self.containedView];
-    } else if ([touchedView.viewName isEqualToString:@"pubsub"]) {
+    } else if ([touchedView.viewName isEqualToString:@"shout"]) {
+        [[ViewControllerManager instance] showShoutsView:self.containedView];
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }

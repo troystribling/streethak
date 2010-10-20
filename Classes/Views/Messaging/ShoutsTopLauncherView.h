@@ -1,8 +1,8 @@
 //
-//  ContactsTopLauncherView.h
+//  ShoutsTopLauncherView.h
 //  streethak
 //
-//  Created by Troy Stribling on 10/6/10.
+//  Created by Troy Stribling on 10/19/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
@@ -14,14 +14,14 @@
 @class TouchAreaView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactsTopLauncherView : LauncherView {
-    TouchAreaView* addContactLauncher;
-    TouchAreaView* shoutLauncher;
+@interface ShoutsTopLauncherView : LauncherView {
+    TouchAreaView* sendMessageLauncher;
+    TouchAreaView* backLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) TouchAreaView* addContactLauncher;
-@property (nonatomic, retain) TouchAreaView* shoutLauncher;
+@property (nonatomic, retain) TouchAreaView* sendMessageLauncher;
+@property (nonatomic, retain) TouchAreaView* backLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;

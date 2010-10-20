@@ -7,7 +7,7 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "EventMessageViewController.h"
+#import "SendEventViewController.h"
 #import "MessageModel.h"
 #import "AccountModel.h"
 
@@ -28,13 +28,27 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize messageView;
-@synthesize sendMessageButton;
+@synthesize containerView;
 @synthesize service;
 @synthesize node;
 @synthesize account;
 
 //===================================================================================================================================
 #pragma mark SendEventViewController
+
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (id)inView:(UIView*)_containerView {
+    return [[SendEventViewController alloc] initWithNibName:@"SendEventViewController" bundle:nil inView:_containerView];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        self.containerView = _containerView;
+        self.view.frame = self.containerView.frame;
+    }
+    return self;
+}
 
 //===================================================================================================================================
 #pragma mark SendEventViewController PrivateAPI

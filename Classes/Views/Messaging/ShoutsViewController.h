@@ -1,5 +1,5 @@
 //
-//  EventsViewController.h
+//  ShoutsViewController.h
 //  webgnosus
 //
 //  Created by Troy Stribling on 9/7/09.
@@ -9,17 +9,17 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
-#import "EventsTopLauncherView.h"
+#import "ShoutsTopLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 @class UserModel;
-@class MessageCache;
+@class EventsMessageCache;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface EventsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
-    IBOutlet UITableView* eventsView;
-    MessageCache* events;
+@interface ShoutsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
+    IBOutlet UITableView* shoutsView;
+    EventsMessageCache* shouts;
     UIView* containerView;
     AccountModel* account;
     NSString* service;
@@ -28,8 +28,9 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) UITableView* eventsView;
-@property (nonatomic, retain) MessageCache* events;
+@property (nonatomic, retain) UITableView* shoutsView;
+@property (nonatomic, retain) UIView* containerView;
+@property (nonatomic, retain) EventsMessageCache* shouts;
 @property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) NSString* service;
 @property (nonatomic, retain) NSString* node;

@@ -16,7 +16,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SendEventViewController : UIViewController {
     IBOutlet UITextView* messageView;
-	IBOutlet UIBarButtonItem* sendMessageButton;
+    UIView* containerView;
     NSString* service;
     NSString* node;
     AccountModel* account;
@@ -24,12 +24,13 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITextView* messageView;
-@property (nonatomic, retain) UIBarButtonItem* sendMessageButton;
+@property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) NSString* service;
 @property (nonatomic, retain) NSString* node;
 @property (nonatomic, retain) AccountModel* account;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)sendEventButtonWasPressed:(id)sender;
++ (id)inView:(UIView*)_view;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView;
 
 @end

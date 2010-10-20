@@ -1,38 +1,37 @@
 //
-//  ContactMessagesTopLauncherView.m
+//  ShoutsTopLauncherView.m
 //  streethak
 //
-//  Created by Troy Stribling on 10/13/10.
+//  Created by Troy Stribling on 10/19/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "ContactMessagesTopLauncherView.h"
+#import "ShoutsTopLauncherView.h"
 #import "TouchAreaView.h"
 #import "ViewControllerManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactMessagesTopLauncherView (PrivateAPI)
+@interface ShoutsTopLauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation ContactMessagesTopLauncherView
+@implementation ShoutsTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@synthesize contactNameLabel;
 @synthesize sendMessageLauncher;
 @synthesize backLauncher;
 
 //===================================================================================================================================
-#pragma mark ContactMessagesTopLauncherView PrivateAPI
+#pragma mark ShoutsTopLauncherView PrivateAPI
 
 //===================================================================================================================================
-#pragma mark ContactMessagesTopLauncherView
+#pragma mark ShoutsTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate {
-    return [[ContactMessagesTopLauncherView alloc] initInView:_view andDelegate:_delegate];
+    return [[ShoutsTopLauncherView alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -40,14 +39,8 @@
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame image:@"contact-messages-top-launcher.png" andDelegate:_delegate])) {
+    if ((self = [self initWithFrame:viewFrame image:@"shouts-top-launcher.png" andDelegate:_delegate])) {
         self.containedView = _view;
-        CGRect labelFrame = CGRectMake(0.2891*viewWidth, 0.175*viewHeight, 0.4219*viewWidth, 0.45*viewHeight);
-        self.contactNameLabel = [[UILabel alloc] initWithFrame:labelFrame];
-        self.contactNameLabel.font = [UIFont fontWithName:@"Washington Text" size:24.0];
-        self.contactNameLabel.backgroundColor = [UIColor clearColor];
-        self.contactNameLabel.textAlignment = UITextAlignmentCenter;
-        [self addSubview:self.contactNameLabel];
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
@@ -65,7 +58,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"back"]) {
-        [[ViewControllerManager instance] removeContactMessagesView];
+        [[ViewControllerManager instance] removeShoutsView];
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }

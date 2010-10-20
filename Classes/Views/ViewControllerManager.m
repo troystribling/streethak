@@ -13,7 +13,7 @@
 #import "AddContactViewController.h"
 #import "ContactMessagesViewController.h"
 #import "SendMessageViewController.h"
-#import "EventsViewController.h"
+#import "ShoutsViewController.h"
 #import "SendEventViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize addContactViewController;
 @synthesize contactMessagesViewController;
 @synthesize sendMessageViewController;
-@synthesize eventsViewController;
+@synthesize shoutsViewController;
 @synthesize sendEventViewController;
 
 //===================================================================================================================================
@@ -153,29 +153,29 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-// EventsViewController
+// ShoutsViewController
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (EventsViewController*)showSendMessageView:(UIView*)containerView {
-    if (self.eventsViewController == nil) {
-        self.eventsViewController = [EventsViewController inView:containerView];
+- (ShoutsViewController*)showShoutsView:(UIView*)containerView {
+    if (self.shoutsViewController == nil) {
+        self.shoutsViewController = [ShoutsViewController inView:containerView];
     }
-    [containerView addSubview:self.eventsViewController.view];
-    [self.eventsViewController viewWillAppear:NO];
-    return self.eventsViewController;
+    [containerView addSubview:self.shoutsViewController.view];
+    [self.shoutsViewController viewWillAppear:NO];
+    return self.shoutsViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)removeSendMessageView {
-    if (self.eventsViewController) {
-        [self.eventsViewController viewWillDisappear:NO];
-        [self.eventsViewController.view removeFromSuperview];
+- (void)removeShoutsView {
+    if (self.shoutsViewController) {
+        [self.shoutsViewController viewWillDisappear:NO];
+        [self.shoutsViewController.view removeFromSuperview];
     }
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 // SendEventViewController
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (SendEventViewController*)showSendMessageView:(UIView*)containerView {
+- (SendEventViewController*)showSendEventView:(UIView*)containerView {
     if (self.sendEventViewController == nil) {
         self.sendEventViewController = [SendEventViewController inView:containerView];
     }
@@ -185,7 +185,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)removeSendMessageView {
+- (void)removeSendEventView {
     if (self.sendEventViewController) {
         [self.sendEventViewController viewWillDisappear:NO];
         [self.sendEventViewController.view removeFromSuperview];

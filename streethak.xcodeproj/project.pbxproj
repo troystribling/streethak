@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0500E3B1126BC65B00BB248B /* load_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 0500E3B0126BC65B00BB248B /* load_message.png */; };
 		0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */; };
+		0502D21E126E6D8000638A74 /* ShoutsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0502D21D126E6D8000638A74 /* ShoutsTopLauncherView.m */; };
+		0502D22A126E6FED00638A74 /* shouts-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502D229126E6FED00638A74 /* shouts-top-launcher.png */; };
 		050366E6125943D50010130C /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366E5125943D50010130C /* ContactsViewController.xib */; };
 		050366ED1259446D0010130C /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366EC1259446D0010130C /* ContactCell.xib */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
@@ -21,9 +23,9 @@
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
 		050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D368512556EF2001E5B06 /* NavigationLauncherView.m */; };
 		050EFA33126BE0F000DC3ACF /* SendEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050EFA32126BE0F000DC3ACF /* SendEventViewController.m */; };
-		050EFA36126BE3C200DC3ACF /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050EFA35126BE3C200DC3ACF /* EventsViewController.m */; };
+		050EFA36126BE3C200DC3ACF /* ShoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050EFA35126BE3C200DC3ACF /* ShoutsViewController.m */; };
 		050EFA39126BE5B100DC3ACF /* EventsMessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 050EFA38126BE5B100DC3ACF /* EventsMessageCache.m */; };
-		050EFA47126BEB1B00DC3ACF /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050EFA46126BEB1B00DC3ACF /* EventsViewController.xib */; };
+		050EFA47126BEB1B00DC3ACF /* ShoutsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */; };
 		050EFA65126BF09400DC3ACF /* SendEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050EFA64126BF09400DC3ACF /* SendEventViewController.xib */; };
 		050F33F0125D65C30005607B /* contacts-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EE125D65C30005607B /* contacts-top-launcher.png */; };
 		050F33F1125D65C30005607B /* notification-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EF125D65C30005607B /* notification-navigation-launcher.png */; };
@@ -208,6 +210,9 @@
 /* Begin PBXFileReference section */
 		0500E3B0126BC65B00BB248B /* load_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = load_message.png; sourceTree = "<group>"; };
 		0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VIKING-N.TTF"; sourceTree = "<group>"; };
+		0502D21C126E6D8000638A74 /* ShoutsTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutsTopLauncherView.h; sourceTree = "<group>"; };
+		0502D21D126E6D8000638A74 /* ShoutsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutsTopLauncherView.m; sourceTree = "<group>"; };
+		0502D229126E6FED00638A74 /* shouts-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouts-top-launcher.png"; sourceTree = "<group>"; };
 		050366E5125943D50010130C /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		050366EC1259446D0010130C /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
@@ -223,11 +228,11 @@
 		050D368512556EF2001E5B06 /* NavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationLauncherView.m; sourceTree = "<group>"; };
 		050EFA31126BE0F000DC3ACF /* SendEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendEventViewController.h; sourceTree = "<group>"; };
 		050EFA32126BE0F000DC3ACF /* SendEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendEventViewController.m; sourceTree = "<group>"; };
-		050EFA34126BE3C200DC3ACF /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		050EFA35126BE3C200DC3ACF /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		050EFA34126BE3C200DC3ACF /* ShoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutsViewController.h; sourceTree = "<group>"; };
+		050EFA35126BE3C200DC3ACF /* ShoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutsViewController.m; sourceTree = "<group>"; };
 		050EFA37126BE5B100DC3ACF /* EventsMessageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsMessageCache.h; sourceTree = "<group>"; };
 		050EFA38126BE5B100DC3ACF /* EventsMessageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsMessageCache.m; sourceTree = "<group>"; };
-		050EFA46126BEB1B00DC3ACF /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoutsViewController.xib; sourceTree = "<group>"; };
 		050EFA64126BF09400DC3ACF /* SendEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendEventViewController.xib; sourceTree = "<group>"; };
 		050F33EE125D65C30005607B /* contacts-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-top-launcher.png"; sourceTree = "<group>"; };
 		050F33EF125D65C30005607B /* notification-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notification-navigation-launcher.png"; sourceTree = "<group>"; };
@@ -588,7 +593,6 @@
 				05DF1534125BE399009EFE18 /* ContactMessagesViewController.xib */,
 				050366E5125943D50010130C /* ContactsViewController.xib */,
 				050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */,
-				050EFA46126BEB1B00DC3ACF /* EventsViewController.xib */,
 				050F7A6B1247095800D9ED40 /* InventoryViewController.xib */,
 				0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */,
 				050F7A601247087000D9ED40 /* MainWindow.xib */,
@@ -596,6 +600,7 @@
 				0506E1041269318D003E6C55 /* MessageCell.xib */,
 				050EFA64126BF09400DC3ACF /* SendEventViewController.xib */,
 				0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */,
+				050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */,
 			);
 			name = Views;
 			path = Resources/Views;
@@ -930,8 +935,6 @@
 				051CD7B71259672300D100A5 /* ContactsViewController.m */,
 				050EFA37126BE5B100DC3ACF /* EventsMessageCache.h */,
 				050EFA38126BE5B100DC3ACF /* EventsMessageCache.m */,
-				050EFA34126BE3C200DC3ACF /* EventsViewController.h */,
-				050EFA35126BE3C200DC3ACF /* EventsViewController.m */,
 				0511894E125C17C200F8F210 /* LoadMessagesCell.h */,
 				0511894F125C17C200F8F210 /* LoadMessagesCell.m */,
 				0510218B125ACA550010680E /* MessageCache.h */,
@@ -946,6 +949,10 @@
 				05113052126A005100A9C996 /* SendMessageTopLauncherView.m */,
 				05102186125AC2D90010680E /* SendMessageViewController.h */,
 				05102187125AC2D90010680E /* SendMessageViewController.m */,
+				0502D21C126E6D8000638A74 /* ShoutsTopLauncherView.h */,
+				0502D21D126E6D8000638A74 /* ShoutsTopLauncherView.m */,
+				050EFA34126BE3C200DC3ACF /* ShoutsViewController.h */,
+				050EFA35126BE3C200DC3ACF /* ShoutsViewController.m */,
 			);
 			path = Messaging;
 			sourceTree = "<group>";
@@ -1014,6 +1021,7 @@
 				051130CF126A261800A9C996 /* send-message.png */,
 				051130A6126A21EB00A9C996 /* send-message-bottom-launcher.png */,
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
+				0502D229126E6FED00638A74 /* shouts-top-launcher.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
 				05DF158C125BF5A1009EFE18 /* unread-messages.png */,
@@ -1205,8 +1213,9 @@
 				051130A9126A21EB00A9C996 /* send-message-top-launcher.png in Resources */,
 				051130D0126A261800A9C996 /* send-message.png in Resources */,
 				0500E3B1126BC65B00BB248B /* load_message.png in Resources */,
-				050EFA47126BEB1B00DC3ACF /* EventsViewController.xib in Resources */,
+				050EFA47126BEB1B00DC3ACF /* ShoutsViewController.xib in Resources */,
 				050EFA65126BF09400DC3ACF /* SendEventViewController.xib in Resources */,
+				0502D22A126E6FED00638A74 /* shouts-top-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1336,8 +1345,9 @@
 				05113053126A005100A9C996 /* SendMessageTopLauncherView.m in Sources */,
 				05113056126A006B00A9C996 /* SendMessageBottomLauncherView.m in Sources */,
 				050EFA33126BE0F000DC3ACF /* SendEventViewController.m in Sources */,
-				050EFA36126BE3C200DC3ACF /* EventsViewController.m in Sources */,
+				050EFA36126BE3C200DC3ACF /* ShoutsViewController.m in Sources */,
 				050EFA39126BE5B100DC3ACF /* EventsMessageCache.m in Sources */,
+				0502D21E126E6D8000638A74 /* ShoutsTopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

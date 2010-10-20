@@ -1,5 +1,5 @@
 //
-//  EventsViewController.m
+//  ShoutsViewController.m
 //  webgnosus
 //
 //  Created by Troy Stribling on 9/7/09.
@@ -7,11 +7,13 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "EventsViewController.h"
+#import "ShoutsViewController.h"
+#import "ShoutsTopLauncherView.h"
+#import "SendEventViewController.h"
+#import "ViewControllerManager.h"
 #import "MessageModel.h"
 #import "AccountModel.h"
 #import "ServiceItemModel.h"
-#import "EventMessageViewController.h"
 #import "EventsMessageCache.h"
 #import "XMPPClientManager.h"
 #import "XMPPClient.h"
@@ -20,7 +22,7 @@
 #import "XMPPMessage.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface EventsViewController (PrivateAPI)
+@interface ShoutsViewController (PrivateAPI)
 
 - (void)addEventButton;
 - (void)addDelgate;
@@ -31,23 +33,23 @@
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation EventsViewController
+@implementation ShoutsViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@synthesize eventsView;
+@synthesize shoutsView;
 @synthesize containerView;
-@synthesize events;
+@synthesize shouts;
 @synthesize service;
 @synthesize node;
 @synthesize name;
 @synthesize account;
 
 //===================================================================================================================================
-#pragma mark EventsViewController
+#pragma mark ShoutsViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    return [[AddContactViewController alloc] initWithNibName:@"EventsViewController" bundle:nil inView:_containerView];
+    return [[ShoutsViewController alloc] initWithNibName:@"ShoutsViewController" bundle:nil inView:_containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -60,26 +62,16 @@
 }
 
 //===================================================================================================================================
-#pragma mark EventsViewController PrivateAPI
+#pragma mark ShoutsViewController PrivateAPI
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)sendEventButtonWasPressed:(id)sender {
-}	
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)addDelgates {
-    if (self.account) {
-        [[XMPPClientManager instance] delegateTo:self forAccount:self.account];
-        [[GeoLocManager instance] addUpdateDelegate:self forAccount:self.account];
-    }
+- (void)addXMPPClientDelgate {
+    [[XMPPClientManager instance] delegateTo:self forAccount:self.account];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)removeDelgates {
-    if (self.account) {
-        [[XMPPClientManager instance] removeXMPPClientDelegate:self forAccount:self.account];
-        [[GeoLocManager instance] removeUpdateDelegate:self forAccount:self.account];
-    }
+- (void)removeXMPPClientDelgate {
+    [[XMPPClientManager instance] removeXMPPClientDelegate:self forAccount:self.account];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -89,7 +81,42 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadEvents {
-    self.events = [[EventsMessageCache alloc] initWithNode:self.node andAccount:self.account];
+    self.shouts = [[EventsMessageCache alloc] initWithNode:@"shout" andAccount:self.account];
+    [self.shoutsView reloadData];
+}
+
+//===================================================================================================================================
+#pragma mark LauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouchedNamed:(NSString*)_name {
+    if ([_name isEqualToString:@"send-message"]) {
+        SendEventViewController* sendController = [[ViewControllerManager instance] showSendEventView:self.view];
+        sendController.node = @"shout";
+    }
+}
+
+//===================================================================================================================================
+#pragma mark NavigationLauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedConfig {
+    [self.view removeFromSuperview];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedNotifications {
+    [self.view removeFromSuperview];
+}            
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedContacts {
+    [self.view removeFromSuperview];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedLocation {
+    [self.view removeFromSuperview];
 }
 
 //===================================================================================================================================
@@ -112,13 +139,17 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
+    self.shoutsView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
+    self.shoutsView.separatorColor = [UIColor blackColor];
+    [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
+    [ShoutsTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
-    [self addDelgates];
+    [self addXMPPClientDelgate];
     [self loadEvents];
     [super viewWillAppear:animated];
 }
@@ -130,16 +161,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillDisappear:(BOOL)animated {
-    [self removeDelgates];
+    [self removeXMPPClientDelgate];
 	[super viewWillDisappear:animated];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)viewDidDisappear:(BOOL)animated {
-    if (self.displayType == kGEOLOC_MODE) {
-        [self removeMapView];
-    }        
-	[super viewDidDisappear:animated];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -160,22 +183,22 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-    return [self.events tableView:tableView heightForRowAtIndexPath:indexPath];
+    return [self.shouts tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.events count];
+    return [self.shouts count];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {  
-    return [self.events tableView:tableView cellForRowAtIndexPath:indexPath];
+    return [self.shouts tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.events tableView:tableView didSelectRowAtIndexPath:indexPath];
+    [self.shouts tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -185,11 +208,6 @@
 
 //===================================================================================================================================
 #pragma mark NSObject
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)dealloc {
-    [super dealloc];
-}
 
 @end
 

@@ -15,7 +15,7 @@
 @class AddContactViewController;
 @class ContactMessagesViewController;
 @class SendMessageViewController;
-@class EventsViewController;
+@class ShoutsViewController;
 @class SendEventViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,7 +25,7 @@
     AddContactViewController* addContactViewController;
     ContactMessagesViewController* contactMessagesViewController;
     SendMessageViewController* sendMessageViewController;
-    EventsViewController* eventsViewController;
+    ShoutsViewController* shoutsViewController;
     SendEventViewController* sendEventViewController;
 }
 
@@ -35,7 +35,7 @@
 @property (nonatomic, retain) AddContactViewController* addContactViewController;
 @property (nonatomic, retain) ContactMessagesViewController* contactMessagesViewController;
 @property (nonatomic, retain) SendMessageViewController* sendMessageViewController;
-@property (nonatomic, retain) EventsViewController* eventsViewController;
+@property (nonatomic, retain) ShoutsViewController* shoutsViewController;
 @property (nonatomic, retain) SendEventViewController* sendEventViewController;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -57,8 +57,8 @@
 - (SendMessageViewController*)showSendMessageView:(UIView*)containerView;
 - (void)removeSendMessageView;
 
-- (EventsViewController*)showEventsView:(UIView*)containerView;
-- (void)removeEventsViewView;
+- (ShoutsViewController*)showShoutsView:(UIView*)containerView;
+- (void)removeShoutsView;
 
 - (SendEventViewController*)showSendEventView:(UIView*)containerView;
 - (void)removeSendEventView;

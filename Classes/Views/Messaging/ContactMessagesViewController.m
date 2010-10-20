@@ -30,7 +30,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ContactMessagesViewController (PrivateAPI)
 
-- (void)sendMessageButtonWasPressed:(id)sender;
 - (void)loadChatMessages;
 - (void)loadAccount;
 - (void)addXMPPClientDelgate;
@@ -75,12 +74,6 @@
 
 //===================================================================================================================================
 #pragma mark ContactMessagesViewController PrivateAPI
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)sendMessageButtonWasPressed:(id)sender {
-    SendMessageViewController* viewController = [[SendMessageViewController alloc] initWithNibName:@"SendMessageViewController" bundle:nil];
-    viewController.contact = self.contact;
-}	
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadChatMessages {
@@ -142,7 +135,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)sender didReceivePresence:(XMPPPresence*)presence {
-    [self.messagesView reloadData];
+    [self loadChatMessages];
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------
