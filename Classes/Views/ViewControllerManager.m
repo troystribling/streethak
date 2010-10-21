@@ -73,6 +73,16 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (void)inventoryViewWillAppear {
+    [self.inventoryViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)inventoryViewWillDisappear {
+    [self.inventoryViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 // ContactsViewController
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (ContactsViewController*)showContactsView:(UIView*)containerView {
@@ -90,6 +100,16 @@ static ViewControllerManager* thisViewControllerManager = nil;
         [self.contactsViewController viewWillDisappear:NO];
         [self.contactsViewController.view removeFromSuperview];
     }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)contactsViewWillAppear {
+    [self.contactsViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)contactsViewWillDisappear {
+    [self.contactsViewController viewWillDisappear:NO];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -113,6 +133,16 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (void)addContactViewWillAppear {
+    [self.addContactViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)addContactViewWillDisappear {
+    [self.addContactViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 // ContactMessagesViewController
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (ContactMessagesViewController*)showContactMessagesView:(UIView*)containerView {
@@ -130,6 +160,16 @@ static ViewControllerManager* thisViewControllerManager = nil;
         [self.contactMessagesViewController viewWillDisappear:NO];
         [self.contactMessagesViewController.view removeFromSuperview];
     }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)contactMessagesViewWillAppear {
+    [self.contactMessagesViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)contactMessagesViewWillDisappear {
+    [self.contactMessagesViewController viewWillDisappear:NO];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -153,6 +193,16 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (void)sendMessageViewWillAppear {
+    [self.sendMessageViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)sendMessageViewWillDisappear {
+    [self.sendMessageViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 // ShoutsViewController
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (ShoutsViewController*)showShoutsView:(UIView*)containerView {
@@ -173,6 +223,16 @@ static ViewControllerManager* thisViewControllerManager = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (void)shoutsViewWillAppear {
+    [self.shoutsViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)shoutsViewWillDisappear {
+    [self.shoutsViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 // SendEventViewController
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (SendEventViewController*)showSendEventView:(UIView*)containerView {
@@ -190,6 +250,16 @@ static ViewControllerManager* thisViewControllerManager = nil;
         [self.sendEventViewController viewWillDisappear:NO];
         [self.sendEventViewController.view removeFromSuperview];
     }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)sendEventViewWillAppear {
+    [self.sendEventViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)sendEventViewWillDisappear {
+    [self.sendEventViewController viewWillDisappear:NO];
 }
 
 @end

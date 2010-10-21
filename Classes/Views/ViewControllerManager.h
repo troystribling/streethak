@@ -44,23 +44,37 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (InventoryViewController*)showInventoryView:(UIView*)containerView;
 - (void)removeInventoryView;
+- (void)inventoryViewWillAppear;
+- (void)inventoryViewWillDisappear;
 
 - (ContactsViewController*)showContactsView:(UIView*)containerView;
 - (void)removeContactsView;
+- (void)contactsViewWillAppear;
+- (void)contactsViewWillDisappear;
 
 - (AddContactViewController*)showAddContactView:(UIView*)containerView;
 - (void)removeAddContactView;
+- (void)addContactViewWillAppear;
+- (void)addContactViewWillDisappear;
 
 - (ContactMessagesViewController*)showContactMessagesView:(UIView*)containerView;
 - (void)removeContactMessagesView;
+- (void)contactMessagesViewWillAppear;
+- (void)contactMessagesViewWillDisappear;
 
 - (SendMessageViewController*)showSendMessageView:(UIView*)containerView;
 - (void)removeSendMessageView;
+- (void)sendMessageViewWillAppear;
+- (void)sendMessageViewWillDisappear;
 
 - (ShoutsViewController*)showShoutsView:(UIView*)containerView;
 - (void)removeShoutsView;
+- (void)shoutsViewWillAppear;
+- (void)shoutsViewWillDisappear;
 
 - (SendEventViewController*)showSendEventView:(UIView*)containerView;
 - (void)removeSendEventView;
+- (void)sendEventViewWillAppear;
+- (void)sendEventViewWillDisappear;
 
 @end

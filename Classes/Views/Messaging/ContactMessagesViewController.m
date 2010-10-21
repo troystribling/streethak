@@ -77,8 +77,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadChatMessages {
-    self.chatMessages = [[ChatMessageCache alloc] initWithJid:[self.contact fullJID] andAccount:self.account];
-    [self.messagesView reloadData];
+    if (self.contact) {
+        self.chatMessages = [[ChatMessageCache alloc] initWithJid:[self.contact fullJID] andAccount:self.account];
+        [self.messagesView reloadData];
+    }
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -168,6 +170,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
+    [self loadChatMessages];
     [self addXMPPClientDelgate];
 	[super viewWillAppear:animated];
 }

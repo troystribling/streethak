@@ -8,10 +8,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "SendMessageViewController.h"
+#import "SendBottomLauncherView.h"
 #import "ViewControllerManager.h"
 #import "MessageModel.h"
 #import "AccountModel.h"
-
 #import "XMPPMessage.h"
 #import "XMPPClientManager.h"
 #import "XMPPClient.h"
@@ -89,6 +89,9 @@
     if ([name isEqualToString:@"send"]) {
         [self sendMessage];
         [[ViewControllerManager instance] removeSendMessageView];
+        [[ViewControllerManager instance] contactMessagesViewWillAppear];
+    } else if ([name isEqualToString:@"back"]) {
+        [[ViewControllerManager instance] removeSendMessageView];
     }
 }
 
@@ -104,8 +107,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
-    [SendMessageTopLauncherView inView:self.view andDelegate:self];
-    [SendMessageBottomLauncherView inView:self.view andDelegate:self];
+    [SendTopLauncherView inView:self.view withImageNamed:@"send-message-top-launcher.png" andDelegate:self];
+    [SendBottomLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 

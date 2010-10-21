@@ -8,9 +8,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "SendEventViewController.h"
+#import "SendBottomLauncherView.h"
+#import "ViewControllerManager.h"
 #import "MessageModel.h"
 #import "AccountModel.h"
-
 #import "XMPPEntry.h"
 #import "XMPPClientManager.h"
 #import "XMPPClient.h"
@@ -20,6 +21,7 @@
 @interface SendEventViewController (PrivateAPI)
 
 - (void)loadAccount;
+- (void)sendMessage;
 
 @end
 
@@ -29,6 +31,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize messageView;
 @synthesize containerView;
+@synthesize delegate;
 @synthesize service;
 @synthesize node;
 @synthesize account;
@@ -59,7 +62,7 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)sendMessageButtonWasPressed:(id)sender {
+- (void)sendMessage {
     NSString* enteredMessageText = self.messageView.text;
     if (![enteredMessageText isEqualToString:@""]) {
         MessageModel* model = [[MessageModel alloc] init];
@@ -93,13 +96,16 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
-    [self.messageView becomeFirstResponder];
+    [SendTopLauncherView inView:self.view withImageNamed:@"send-shout-top-launcher.png" andDelegate:self];
+    [SendBottomLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
+    self.messageView.text = @"";
+    [self.messageView becomeFirstResponder];
     [[XMPPClientManager instance] delegateTo:self forAccount:self.account];
 }
 
@@ -116,6 +122,22 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; 
+}
+
+//===================================================================================================================================
+#pragma mark LauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouchedNamed:(NSString*)name {
+    if ([name isEqualToString:@"send"]) {
+        [self sendMessage];
+        [[ViewControllerManager instance] removeSendEventView];
+        if (self.delegate) {
+            [self.delegate eventSent];
+        }
+    } else if ([name isEqualToString:@"back"]) {
+        [[ViewControllerManager instance] removeSendEventView];
+    }
 }
 
 //===================================================================================================================================

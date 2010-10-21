@@ -8,22 +8,34 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "SendTopLauncherView.h"
+
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 @class UserModel;
 @class ServiceItemModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface SendEventViewController : UIViewController {
+@protocol SendEventViewDelegate <NSObject>
+
+- (void)eventSent;
+
+@end
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@interface SendEventViewController : UIViewController <UITextViewDelegate, LauncherViewDelegate> {
     IBOutlet UITextView* messageView;
-    UIView* containerView;
+    id<SendEventViewDelegate> delegate;
+    AccountModel* account;
     NSString* service;
     NSString* node;
-    AccountModel* account;
+    UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITextView* messageView;
+@property (assign) id<SendEventViewDelegate> delegate;
 @property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) NSString* service;
 @property (nonatomic, retain) NSString* node;

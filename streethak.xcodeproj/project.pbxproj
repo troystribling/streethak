@@ -138,9 +138,9 @@
 		0510DBB912223361001FE510 /* XMPPMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB5E12223361001FE510 /* XMPPMessageDelegate.m */; };
 		0510DBBA12223361001FE510 /* XMPPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6012223361001FE510 /* XMPPResponse.m */; };
 		0510DBBB12223361001FE510 /* XMPPTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510DB6212223361001FE510 /* XMPPTimestamp.m */; };
-		05113053126A005100A9C996 /* SendMessageTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05113052126A005100A9C996 /* SendMessageTopLauncherView.m */; };
-		05113056126A006B00A9C996 /* SendMessageBottomLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05113055126A006B00A9C996 /* SendMessageBottomLauncherView.m */; };
-		051130A8126A21EB00A9C996 /* send-message-bottom-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051130A6126A21EB00A9C996 /* send-message-bottom-launcher.png */; };
+		05113053126A005100A9C996 /* SendTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05113052126A005100A9C996 /* SendTopLauncherView.m */; };
+		05113056126A006B00A9C996 /* SendBottomLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05113055126A006B00A9C996 /* SendBottomLauncherView.m */; };
+		051130A8126A21EB00A9C996 /* send-bottom-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051130A6126A21EB00A9C996 /* send-bottom-launcher.png */; };
 		051130A9126A21EB00A9C996 /* send-message-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051130A7126A21EB00A9C996 /* send-message-top-launcher.png */; };
 		051130D0126A261800A9C996 /* send-message.png in Resources */ = {isa = PBXBuildFile; fileRef = 051130CF126A261800A9C996 /* send-message.png */; };
 		0511892F125C104900F8F210 /* CellUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0511892E125C104900F8F210 /* CellUtils.m */; };
@@ -174,6 +174,7 @@
 		05FD1A041263EBC80003EDC4 /* add-contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FD1A031263EBC80003EDC4 /* add-contact.png */; };
 		05FD1A061263EC160003EDC4 /* add-contact-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */; };
 		05FD1A091263ED170003EDC4 /* AddContactTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FD1A081263ED170003EDC4 /* AddContactTopLauncherView.m */; };
+		05FF7064126FB66900CEA060 /* send-shout-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -448,11 +449,11 @@
 		0510DB6012223361001FE510 /* XMPPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPResponse.m; sourceTree = "<group>"; };
 		0510DB6112223361001FE510 /* XMPPTimestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPTimestamp.h; sourceTree = "<group>"; };
 		0510DB6212223361001FE510 /* XMPPTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPTimestamp.m; sourceTree = "<group>"; };
-		05113051126A005100A9C996 /* SendMessageTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageTopLauncherView.h; sourceTree = "<group>"; };
-		05113052126A005100A9C996 /* SendMessageTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageTopLauncherView.m; sourceTree = "<group>"; };
-		05113054126A006B00A9C996 /* SendMessageBottomLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageBottomLauncherView.h; sourceTree = "<group>"; };
-		05113055126A006B00A9C996 /* SendMessageBottomLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageBottomLauncherView.m; sourceTree = "<group>"; };
-		051130A6126A21EB00A9C996 /* send-message-bottom-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-message-bottom-launcher.png"; sourceTree = "<group>"; };
+		05113051126A005100A9C996 /* SendTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendTopLauncherView.h; sourceTree = "<group>"; };
+		05113052126A005100A9C996 /* SendTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendTopLauncherView.m; sourceTree = "<group>"; };
+		05113054126A006B00A9C996 /* SendBottomLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendBottomLauncherView.h; sourceTree = "<group>"; };
+		05113055126A006B00A9C996 /* SendBottomLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendBottomLauncherView.m; sourceTree = "<group>"; };
+		051130A6126A21EB00A9C996 /* send-bottom-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-bottom-launcher.png"; sourceTree = "<group>"; };
 		051130A7126A21EB00A9C996 /* send-message-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-message-top-launcher.png"; sourceTree = "<group>"; };
 		051130CF126A261800A9C996 /* send-message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-message.png"; sourceTree = "<group>"; };
 		0511892D125C104900F8F210 /* CellUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellUtils.h; sourceTree = "<group>"; };
@@ -498,6 +499,7 @@
 		05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-contact-top-launcher.png"; sourceTree = "<group>"; };
 		05FD1A071263ED170003EDC4 /* AddContactTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactTopLauncherView.h; sourceTree = "<group>"; };
 		05FD1A081263ED170003EDC4 /* AddContactTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactTopLauncherView.m; sourceTree = "<group>"; };
+		05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-shout-top-launcher.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* streethak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = streethak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -941,14 +943,14 @@
 				0510218C125ACA550010680E /* MessageCache.m */,
 				05DF1592125BFCDA009EFE18 /* MessageCell.h */,
 				05DF1593125BFCDA009EFE18 /* MessageCell.m */,
+				05113054126A006B00A9C996 /* SendBottomLauncherView.h */,
+				05113055126A006B00A9C996 /* SendBottomLauncherView.m */,
 				050EFA31126BE0F000DC3ACF /* SendEventViewController.h */,
 				050EFA32126BE0F000DC3ACF /* SendEventViewController.m */,
-				05113054126A006B00A9C996 /* SendMessageBottomLauncherView.h */,
-				05113055126A006B00A9C996 /* SendMessageBottomLauncherView.m */,
-				05113051126A005100A9C996 /* SendMessageTopLauncherView.h */,
-				05113052126A005100A9C996 /* SendMessageTopLauncherView.m */,
 				05102186125AC2D90010680E /* SendMessageViewController.h */,
 				05102187125AC2D90010680E /* SendMessageViewController.m */,
+				05113051126A005100A9C996 /* SendTopLauncherView.h */,
+				05113052126A005100A9C996 /* SendTopLauncherView.m */,
 				0502D21C126E6D8000638A74 /* ShoutsTopLauncherView.h */,
 				0502D21D126E6D8000638A74 /* ShoutsTopLauncherView.m */,
 				050EFA34126BE3C200DC3ACF /* ShoutsViewController.h */,
@@ -1019,8 +1021,9 @@
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
 				050F33EF125D65C30005607B /* notification-navigation-launcher.png */,
 				051130CF126A261800A9C996 /* send-message.png */,
-				051130A6126A21EB00A9C996 /* send-message-bottom-launcher.png */,
+				051130A6126A21EB00A9C996 /* send-bottom-launcher.png */,
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
+				05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */,
 				0502D229126E6FED00638A74 /* shouts-top-launcher.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
@@ -1209,13 +1212,14 @@
 				0508E006126756FA00872A56 /* contact-messages-top-launcher.png in Resources */,
 				0506E1051269318D003E6C55 /* MessageCell.xib in Resources */,
 				0506E12C12693F01003E6C55 /* LoadMessagesCell.xib in Resources */,
-				051130A8126A21EB00A9C996 /* send-message-bottom-launcher.png in Resources */,
+				051130A8126A21EB00A9C996 /* send-bottom-launcher.png in Resources */,
 				051130A9126A21EB00A9C996 /* send-message-top-launcher.png in Resources */,
 				051130D0126A261800A9C996 /* send-message.png in Resources */,
 				0500E3B1126BC65B00BB248B /* load_message.png in Resources */,
 				050EFA47126BEB1B00DC3ACF /* ShoutsViewController.xib in Resources */,
 				050EFA65126BF09400DC3ACF /* SendEventViewController.xib in Resources */,
 				0502D22A126E6FED00638A74 /* shouts-top-launcher.png in Resources */,
+				05FF7064126FB66900CEA060 /* send-shout-top-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1342,8 +1346,8 @@
 				051379221260B4A000CF1FC5 /* ViewControllerManager.m in Sources */,
 				05FD1A091263ED170003EDC4 /* AddContactTopLauncherView.m in Sources */,
 				05075B0312669905008FC4B6 /* ContactMessagesTopLauncherView.m in Sources */,
-				05113053126A005100A9C996 /* SendMessageTopLauncherView.m in Sources */,
-				05113056126A006B00A9C996 /* SendMessageBottomLauncherView.m in Sources */,
+				05113053126A005100A9C996 /* SendTopLauncherView.m in Sources */,
+				05113056126A006B00A9C996 /* SendBottomLauncherView.m in Sources */,
 				050EFA33126BE0F000DC3ACF /* SendEventViewController.m in Sources */,
 				050EFA36126BE3C200DC3ACF /* ShoutsViewController.m in Sources */,
 				050EFA39126BE5B100DC3ACF /* EventsMessageCache.m in Sources */,

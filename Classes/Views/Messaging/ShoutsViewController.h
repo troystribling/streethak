@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
 #import "ShoutsTopLauncherView.h"
+#import "SendEventViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
@@ -17,7 +18,7 @@
 @class EventsMessageCache;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ShoutsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
+@interface ShoutsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate, SendEventViewDelegate> {
     IBOutlet UITableView* shoutsView;
     EventsMessageCache* shouts;
     UIView* containerView;

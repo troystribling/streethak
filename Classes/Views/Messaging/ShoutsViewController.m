@@ -92,8 +92,16 @@
 - (void)viewTouchedNamed:(NSString*)_name {
     if ([_name isEqualToString:@"send-message"]) {
         SendEventViewController* sendController = [[ViewControllerManager instance] showSendEventView:self.view];
+        sendController.delegate = self;
         sendController.node = @"shout";
     }
+}
+
+//===================================================================================================================================
+#pragma mark SendEventViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)eventSent {
 }
 
 //===================================================================================================================================
