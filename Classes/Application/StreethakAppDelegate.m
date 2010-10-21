@@ -35,6 +35,7 @@
 - (void)initAccount;
 - (void)createAccountManager;
 - (void)setUnreadMessages;
+- (NSString*)shoutNodeForAccount:(AccountModel*)account;
 
 @end
 
@@ -80,6 +81,11 @@
     if (eventCount > 0) {
     } else {
     }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (NSString*)shoutNodeForAccount:(AccountModel*)account {
+    return [NSString stringWithFormat:@"%@/shout", [account pubSubRoot]];
 }
 
 //===================================================================================================================================
@@ -141,10 +147,14 @@
     AccountModel* account = [AccountModel findFirst];
     GeoLocManager* geoLoc = [GeoLocManager instance];
     NSString* geoLocNode = [account geoLocPubSubNode];
+    NSString* shoutNode = [self shoutNodeForAccount:account];
     [geoLoc addUpdateDelegate:[[[XMPPGeoLocUpdate alloc] init:account] autorelease] forAccount:account];
     if (![ServiceItemModel findByNode:geoLocNode]) {
         XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:account];
         [XMPPPubSub create:client JID:[account pubSubService] node:geoLocNode];
+    } else if (![ServiceItemModel findByNode:shoutNode]) {
+        XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:account];
+        [XMPPPubSub create:client JID:[account pubSubService] node:shoutNode];
     } else {
         [AlertViewManager dismissActivityIndicator];
         [geoLoc start];
@@ -154,12 +164,11 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didReceivePubSubCreateError:(XMPPIQ*)iq {
     [AlertViewManager dismissActivityIndicator];
-    [AlertViewManager showAlert:@"geoloc node create failed"];
+    [AlertViewManager showAlert:@"node create failed"];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didReceivePubSubCreateResult:(XMPPIQ*)iq {
-    [AlertViewManager dismissActivityIndicator];
 }
 
 //===================================================================================================================================
