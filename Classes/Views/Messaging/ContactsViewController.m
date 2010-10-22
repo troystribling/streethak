@@ -16,7 +16,7 @@
 #import "ContactModel.h"
 #import "AccountModel.h"
 #import "RosterItemModel.h"
-#import "MessageModel.h"
+#import "SubscriptionModel.h"
 #import "CellUtils.h"
 #import "AlertViewManager.h"
 #import "XMPPClient.h"
@@ -26,6 +26,7 @@
 #import "XMPPRosterQuery.h"
 #import "XMPPJID.h"
 #import "XMPPMessageDelegate.h"
+#import "XMPPPubSubSubscriptions.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ContactsViewController (PrivateAPI)
@@ -222,8 +223,14 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)sender didRemoveFromRoster:(XMPPRosterItem*)item {
-    [AlertViewManager dismissActivityIndicator];
-    [self loadContacts];
+    XMPPJID* contactJID = [item jid];
+    XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:self.account];
+    NSString* nodeFullPath = [NSString stringWithFormat:@"%@/%@", [contactJID pubSubRoot], @"shout"];
+    NSMutableArray* subModels = [SubscriptionModel findAllByAccount:self.account andNode:nodeFullPath];
+    if ([subModels count] > 0) {
+        SubscriptionModel* subModel = [subModels objectAtIndex:0];
+        [XMPPPubSubSubscriptions unsubscribe:client JID:[XMPPJID jidWithString:subModel.service] node:nodeFullPath andSubId:subModel.subId];
+    }
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -239,6 +246,16 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)sender didAcceptBuddyRequest:(XMPPJID*)buddyJid {
     [self loadContacts];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)xmppClient:(XMPPClient*)client didReceivePubSubUnsubscribeError:(XMPPIQ*)iq {
+    [self loadContacts];
+    [AlertViewManager dismissActivityIndicator];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)xmppClient:(XMPPClient*)client didReceivePubSubUnsubscribeResult:(XMPPIQ*)iq {
 }
 
 //===================================================================================================================================
