@@ -8,11 +8,12 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "AddContactViewController.h"
+#import "AlertViewManager.h"
+#import "AddContactTopLauncherView.h"
 #import "ContactModel.h"
 #import "AccountModel.h"
 #import "SubscriptionModel.h"
 #import "AlertViewManager.h"
-#import "AddContactTopLauncherView.h"
 #import "XMPPJID.h"
 #import "XMPPRosterItem.h"
 #import "XMPPClient.h"

@@ -18,7 +18,7 @@
 @class EventsMessageCache;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ShoutsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate, SendEventViewDelegate> {
+@interface ShoutsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
     IBOutlet UITableView* shoutsView;
     EventsMessageCache* shouts;
     UIView* containerView;

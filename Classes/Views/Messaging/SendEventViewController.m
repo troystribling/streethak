@@ -9,6 +9,8 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "SendEventViewController.h"
 #import "SendBottomLauncherView.h"
+#import "AlertViewManager.h"
+#import "ServiceModel.h"
 #import "ViewControllerManager.h"
 #import "MessageModel.h"
 #import "AccountModel.h"
@@ -31,8 +33,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize messageView;
 @synthesize containerView;
-@synthesize delegate;
-@synthesize service;
 @synthesize node;
 @synthesize account;
 
@@ -67,19 +67,25 @@
     NSString* enteredMessageText = self.messageView.text;
     if (![enteredMessageText isEqualToString:@""]) {
         MessageModel* model = [[MessageModel alloc] init];
-        model.messageText = enteredMessageText;
-        model.accountPk = self.account.pk;
-        model.toJid = self.service;
-        model.fromJid = [self.account fullJID];
-        model.createdAt = [NSDate date];
-        model.textType = MessageTextTypeEventText;
-        model.itemId = @"-1";
-        model.node = self.node;
-        model.messageRead = YES;
-        [model insert];
-        [model release];
-        XMPPClient* xmppClient = [[XMPPClientManager instance] xmppClientForAccount:self.account];
-        [XMPPEntry publish:xmppClient  JID:[XMPPJID jidWithString:self.service] node:self.node withTitle:enteredMessageText];
+        NSMutableArray* pubSubServices = [ServiceModel findAllByServiceCategory:@"pubsub"];
+        if ([pubSubServices count] > 0) {
+            ServiceModel* pubSubService = [pubSubServices objectAtIndex:0];
+            model.messageText = enteredMessageText;
+            model.accountPk = self.account.pk;
+            model.toJid = pubSubService.jid;
+            model.fromJid = [self.account fullJID];
+            model.createdAt = [NSDate date];
+            model.textType = MessageTextTypeEventText;
+            model.itemId = @"-1";
+            model.node = self.node;
+            model.messageRead = YES;
+            [model insert];
+            [model release];
+            XMPPClient* xmppClient = [[XMPPClientManager instance] xmppClientForAccount:self.account];
+            [XMPPEntry publish:xmppClient  JID:[XMPPJID jidWithString:pubSubService.jid] node:self.node withTitle:enteredMessageText];
+        } else {
+            [AlertViewManager showAlert:@"Service not found" withMessage:@""];
+        }
     }    
     [self.messageView resignFirstResponder];
     [self.navigationController popViewControllerAnimated:YES];
@@ -133,9 +139,7 @@
     if ([name isEqualToString:@"send"]) {
         [self sendMessage];
         [[ViewControllerManager instance] removeSendEventView];
-        if (self.delegate) {
-            [self.delegate eventSent];
-        }
+        [[ViewControllerManager instance] shoutsViewWillAppear];
     } else if ([name isEqualToString:@"back"]) {
         [[ViewControllerManager instance] removeSendEventView];
     }

@@ -30,12 +30,12 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (NSArray*)addMessages {
-    return [MessageModel findAllSubscribedEventsByNode:self.node forAccount:self.account withPkGreaterThan:self.lastPk andLimit:self.cacheIncrement];
+    return [MessageModel findAllEventsLikeNode:self.node forAccount:self.account withPkGreaterThan:self.lastPk andLimit:self.cacheIncrement];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (NSInteger)totalCount {
-    return [MessageModel countSubscribedEventsByNode:self.node andAccount:self.account];
+    return [MessageModel countEventsLikeNode:self.node andAccount:self.account];
 }
 
 @end

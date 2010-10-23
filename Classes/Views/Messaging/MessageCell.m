@@ -10,6 +10,8 @@
 #import "MessageCell.h"
 #import "MessageModel.h"
 #import "CellUtils.h"
+#import "XMPPEntry.h"
+#import "XMPPJID.h"
 #import "NSXMLElementAdditions.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -18,6 +20,7 @@
 + (NSString*)getMessageText:(MessageModel*)message;
 + (CGRect)getMessageRect:(NSString*)messageText;
 + (UIView*)viewForMessage:(MessageModel*)message andColor:(UIColor*)color;
++ (NSString*)getJID:(MessageModel*)message;
 
 @end
 
@@ -34,7 +37,15 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (NSString*)getMessageText:(MessageModel*)message {
-    return message.messageText;
+    NSString* msgText;
+    if (message.textType == MessageTextTypeEventText) {
+        msgText = message.messageText;
+    } else if (message.textType == MessageTextTypeBody) {
+        msgText = message.messageText;
+    } else if (message.textType == MessageTextTypeEventEntry) {
+        msgText = [[message parseEntryMessage] title];
+    }
+    return msgText;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -67,6 +78,19 @@
     return messageView;
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
++ (NSString*)getJID:(MessageModel*)message {
+    NSString* msgJID;
+    if (message.textType == MessageTextTypeEventText) {
+        msgJID = [[XMPPJID jidWithString:message.fromJid] user];
+    } else if (message.textType == MessageTextTypeBody) {
+        msgJID = [[XMPPJID jidWithString:message.fromJid] user];
+    } else if (message.textType == MessageTextTypeEventEntry) {
+        NSArray* nodeComp = [message.node componentsSeparatedByString:@"/"];
+        msgJID = [NSString stringWithFormat:@"%@", [nodeComp objectAtIndex:3]];
+    }
+    return msgJID;
+}
 
 //===================================================================================================================================
 #pragma mark MessageCell
@@ -80,9 +104,9 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (void)set:(MessageCell*)cell Jid:(NSString*)jid {
++ (void)setJID:(MessageCell*)cell forMessage:(MessageModel*)message {
     cell.jidLabel.font = [UIFont fontWithName:@"Washington Text" size:20.0];
-    cell.jidLabel.text = jid;
+    cell.jidLabel.text = [self getJID:message];
     cell.jidLabel.textColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.20 alpha:0.8]; 
 }
 
@@ -94,13 +118,13 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath forMessage:(MessageModel*)message fromJid:(NSString*)jid andAccount:(NSString*)account {        
++ (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath forMessage:(MessageModel*)message andAccount:(NSString*)account {        
     MessageCell* cell = (MessageCell*)[CellUtils createCell:[MessageCell class] forTableView:tableView];
     UIColor* color = [UIColor blackColor];
-    if ([account isEqualToString:jid]) {
+    if ([account isEqualToString:[[XMPPJID jidWithString:message.fromJid] user]]) {
         color = [UIColor colorWithRed:0.4 green:0.05 blue:0.05 alpha:1.0];
     }
-    [self set:cell Jid:jid];
+    [self setJID:cell forMessage:message];
     [self setTime:cell forMessage:message];
     UIView* msgView = [self viewForMessage:message andColor:color];
     CGRect msgRect = msgView.frame;

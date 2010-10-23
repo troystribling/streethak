@@ -94,8 +94,7 @@
     if (indexPath.row < [self messageCount]) {
         MessageModel* message =[self objectAtIndex:indexPath.row];
         [self markMessageRead:message];
-        cell = [MessageCell tableView:tableView cellForRowAtIndexPath:indexPath forMessage:message 
-                            fromJid:[[XMPPJID jidWithString:message.fromJid] user] andAccount:[[self.account toJID] user]];
+        cell = [MessageCell tableView:tableView cellForRowAtIndexPath:indexPath forMessage:message andAccount:[[self.account toJID] user]];
     } else {
         cell = [CellUtils createCell:[LoadMessagesCell class] forTableView:tableView];
     }

@@ -27,8 +27,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (void)setTime:(MessageCell*)cell forMessage:(MessageModel*)message;
-+ (void)set:(MessageCell*)cell Jid:(NSString*)jid;
++ (void)setJID:(MessageCell*)cell forMessage:(MessageModel*)message;
 + (CGFloat)tableView:(UITableView *)tableView heightForRowWithMessage:(MessageModel*)message;
-+ (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath forMessage:(MessageModel*)message fromJid:(NSString*)jid andAccount:(NSString*)account;
++ (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath forMessage:(MessageModel*)message andAccount:(NSString*)account;
 
 @end

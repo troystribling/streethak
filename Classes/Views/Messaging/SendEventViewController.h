@@ -16,28 +16,16 @@
 @class ServiceItemModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@protocol SendEventViewDelegate <NSObject>
-
-- (void)eventSent;
-
-@end
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SendEventViewController : UIViewController <UITextViewDelegate, LauncherViewDelegate> {
     IBOutlet UITextView* messageView;
-    id<SendEventViewDelegate> delegate;
     AccountModel* account;
-    NSString* service;
     NSString* node;
     UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITextView* messageView;
-@property (assign) id<SendEventViewDelegate> delegate;
 @property (nonatomic, retain) UIView* containerView;
-@property (nonatomic, retain) NSString* service;
 @property (nonatomic, retain) NSString* node;
 @property (nonatomic, retain) AccountModel* account;
 
