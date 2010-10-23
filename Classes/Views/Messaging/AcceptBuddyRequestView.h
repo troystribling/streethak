@@ -11,22 +11,22 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class XMPPClient;
-@class ContactModel;
+@class XMPPJID;
 @class AccountModel;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AcceptBuddyRequestView : UIAlertView {
     XMPPClient* xmppClient;
-    ContactModel* contact;
+    XMPPJID* contactJID;
     AccountModel* account;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) XMPPClient* xmppClient;
-@property (nonatomic, retain) ContactModel* contact;
+@property (nonatomic, retain) XMPPJID* contactJID;
 @property (nonatomic, retain) AccountModel* account;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithClient:(XMPPClient*)client contact:(ContactModel*)_contact account:(AccountModel*)_account andDelegate:(id)delegate;
+- (id)initWithClient:(XMPPClient*)client contactJID:(XMPPJID*)_contactJID account:(AccountModel*)_account andDelegate:(id)delegate;
 
 @end

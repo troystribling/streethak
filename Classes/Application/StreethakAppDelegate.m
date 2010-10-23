@@ -37,7 +37,7 @@
 - (void)createAccountManager;
 - (void)setUnreadMessages;
 - (NSString*)shoutNodeForAccount:(AccountModel*)account;
-- (void)subscribeToShoutNodeForContact:(ContactModel*)contact andAccount:(AccountModel*)account;
+- (void)subscribeToShoutNodeForContactJID:(XMPPJID*)contactJID andAccount:(AccountModel*)account;
 
 @end
 
@@ -91,8 +91,7 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)subscribeToShoutNodeForContact:(ContactModel*)contact andAccount:(AccountModel*)account {
-    XMPPJID* contactJID = [contact toJID];
+- (void)subscribeToShoutNodeForContactJID:(XMPPJID*)contactJID andAccount:(AccountModel*)account {
     NSString* nodeFullPath = [NSString stringWithFormat:@"%@/%@", [contactJID pubSubRoot], @"shout"];
     NSString* pubSubService = [NSString stringWithFormat:@"pubsub.%@", [contactJID domain]];
     if ([[SubscriptionModel findAllByAccount:account andNode:nodeFullPath] count] == 0) {
@@ -149,11 +148,11 @@
         ContactModel* contact = [ContactModel findByJid:[buddyJid bare] andAccount:account];	
         if (contact == nil) {
             AcceptBuddyRequestView* buddyRequestView = 
-                [[AcceptBuddyRequestView alloc] initWithClient:sender contact:contact account:account andDelegate:self];
+                [[AcceptBuddyRequestView alloc] initWithClient:sender contactJID:buddyJid account:account andDelegate:self];
             [buddyRequestView show];	
             [buddyRequestView release];
         } else {
-            [self subscribeToShoutNodeForContact:contact andAccount:account];
+            [self subscribeToShoutNodeForContactJID:[contact toJID] andAccount:account];
         }
     }
 }
@@ -194,10 +193,10 @@
 -(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     AcceptBuddyRequestView* buddyRequestView = (AcceptBuddyRequestView*)alertView;
     if (buttonIndex == 0) {
-        [XMPPPresence decline:buddyRequestView.xmppClient JID:[buddyRequestView.contact JID]];        
+        [XMPPPresence decline:buddyRequestView.xmppClient JID:buddyRequestView.contactJID];        
     } else if (buttonIndex == 1) {
-        [XMPPMessageDelegate acceptBuddyRequest:buddyRequestView.xmppClient JID:[buddyRequestView.contact toJID]];
-        [self subscribeToShoutNodeForContact:buddyRequestView.contact andAccount:buddyRequestView.account];
+        [XMPPMessageDelegate acceptBuddyRequest:buddyRequestView.xmppClient JID:buddyRequestView.contactJID];
+        [self subscribeToShoutNodeForContactJID:buddyRequestView.contactJID andAccount:buddyRequestView.account];
     }
 }
 

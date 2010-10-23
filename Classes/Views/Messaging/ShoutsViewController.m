@@ -81,7 +81,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadEvents {
-    self.shouts = [[EventsMessageCache alloc] initWithNode:@"shout" andAccount:self.account];
+    self.shouts = [[EventsMessageCache alloc] initWithNode:[NSString stringWithFormat:@"%@/shout", [self.account pubSubRoot]] andAccount:self.account];
     [self.shoutsView reloadData];
 }
 
@@ -93,7 +93,7 @@
     if ([_name isEqualToString:@"send-message"]) {
         SendEventViewController* sendController = [[ViewControllerManager instance] showSendEventView:self.view];
         sendController.delegate = self;
-        sendController.node = @"shout";
+        sendController.node = [NSString stringWithFormat:@"%@/shout", [self.account pubSubRoot]];
     }
 }
 
