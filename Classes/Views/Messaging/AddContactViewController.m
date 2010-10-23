@@ -24,7 +24,6 @@
 @interface AddContactViewController (PrivateAPI)
 
 - (void)failureAlert:(NSString*)title message:(NSString*)message;
-- (void)subscribeToShoutNode;
 
 @end
 
@@ -62,41 +61,19 @@
     [AlertViewManager showAlert:title withMessage:message];
 }
 
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)subscribeToShoutNode {
-    XMPPJID* contactJID = [XMPPJID jidWithString:self.newContactJidString];
-    NSString* nodeFullPath = [NSString stringWithFormat:@"%@/%@", [contactJID pubSubRoot], @"shout"];
-    NSString* pubSubService = [NSString stringWithFormat:@"pubsub.%@", [contactJID domain]];
-    if ([[SubscriptionModel findAllByAccount:self.account andNode:nodeFullPath] count] == 0) {
-        XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:self.account];
-        [XMPPPubSubSubscriptions subscribe:client JID:[XMPPJID jidWithString:pubSubService] node:nodeFullPath];
-    }    
-}
-
 //===================================================================================================================================
 #pragma mark XMPPClientDelegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)sender didAddToRoster:(XMPPRosterItem*)item {
-    [self subscribeToShoutNode];
+    [AlertViewManager dismissActivityIndicator];
+    [self.view removeFromSuperview];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didReceiveRosterError:(XMPPIQ*)iq {
     [AlertViewManager dismissActivityIndicator];
     [self failureAlert:@"Name does not exist" message:@""];
-    [self.view removeFromSuperview];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)xmppClient:(XMPPClient*)client didReceivePubSubSubscribeError:(XMPPIQ*)iq {
-    [AlertViewManager dismissActivityIndicator];
-    [self.view removeFromSuperview];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)xmppClient:(XMPPClient*)client didReceivePubSubSubscribeResult:(XMPPIQ*)iq {
-    [AlertViewManager dismissActivityIndicator];
     [self.view removeFromSuperview];
 }
 

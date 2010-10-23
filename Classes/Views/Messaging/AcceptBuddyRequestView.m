@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "AcceptBuddyRequestView.h"
 #import "AccountModel.h"
+#import "ContactModel.h"
 
 #import "XMPPClient.h"
 #import "XMPPJID.h"
@@ -23,18 +24,20 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize xmppClient;
-@synthesize buddyJid;
+@synthesize contact;
+@synthesize account;
 
 //===================================================================================================================================
 #pragma mark AcceptBuddyRequestView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithClient:(XMPPClient*)client buddyJid:(XMPPJID*)aBuddyJid andDelegate:(id)delegate {
-    NSString* message = [[NSString alloc] initWithFormat:@"Add to Party Request from \n '%@'", [aBuddyJid full]];
-    if (self = [super initWithTitle:[[client myJID] full] message:message delegate:delegate cancelButtonTitle:@"reject" otherButtonTitles:nil]) {
-        [self addButtonWithTitle:@"accept"];
+- (id)initWithClient:(XMPPClient*)client contact:(ContactModel*)_contact account:(AccountModel*)_account andDelegate:(id)delegate {
+    NSString* message = [[NSString alloc] initWithFormat:@"'%@'\n wants to be in your Party", [[_contact toJID] user]];
+    if (self = [super initWithTitle:[[client myJID] full] message:message delegate:delegate cancelButtonTitle:@"no" otherButtonTitles:nil]) {
+        [self addButtonWithTitle:@"yes"];
         self.xmppClient = client;
-        self.buddyJid = aBuddyJid;
+        self.contact = _contact;
+        self.account = _account;
     }
     return self;
 }

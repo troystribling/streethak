@@ -24,6 +24,7 @@
 #import "RosterItemModel.h"
 #import "XMPPClientManager.h"
 #import "XMPPMessageDelegate.h"
+#import "XMPPPubSubSubscriptions.h"
 #import "XMPPPresence.h"
 #import "XMPPGeoLocUpdate.h"
 #import "XMPPPubSub.h"
@@ -36,6 +37,7 @@
 - (void)createAccountManager;
 - (void)setUnreadMessages;
 - (NSString*)shoutNodeForAccount:(AccountModel*)account;
+- (void)subscribeToShoutNodeForContact:(ContactModel*)contact andAccount:(AccountModel*)account;
 
 @end
 
@@ -88,6 +90,17 @@
     return [NSString stringWithFormat:@"%@/shout", [account pubSubRoot]];
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)subscribeToShoutNodeForContact:(ContactModel*)contact andAccount:(AccountModel*)account {
+    XMPPJID* contactJID = [contact toJID];
+    NSString* nodeFullPath = [NSString stringWithFormat:@"%@/%@", [contactJID pubSubRoot], @"shout"];
+    NSString* pubSubService = [NSString stringWithFormat:@"pubsub.%@", [contactJID domain]];
+    if ([[SubscriptionModel findAllByAccount:account andNode:nodeFullPath] count] == 0) {
+        XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:account];
+        [XMPPPubSubSubscriptions subscribe:client JID:[XMPPJID jidWithString:pubSubService] node:nodeFullPath];
+    } 
+}
+
 //===================================================================================================================================
 #pragma mark UIApplicationDelegate
 
@@ -135,9 +148,12 @@
     if (account) {
         ContactModel* contact = [ContactModel findByJid:[buddyJid bare] andAccount:account];	
         if (contact == nil) {
-            AcceptBuddyRequestView* buddyRequestView = [[AcceptBuddyRequestView alloc] initWithClient:sender buddyJid:buddyJid andDelegate:self];
+            AcceptBuddyRequestView* buddyRequestView = 
+                [[AcceptBuddyRequestView alloc] initWithClient:sender contact:contact account:account andDelegate:self];
             [buddyRequestView show];	
             [buddyRequestView release];
+        } else {
+            [self subscribeToShoutNodeForContact:contact andAccount:account];
         }
     }
 }
@@ -178,9 +194,10 @@
 -(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     AcceptBuddyRequestView* buddyRequestView = (AcceptBuddyRequestView*)alertView;
     if (buttonIndex == 0) {
-        [XMPPPresence decline:buddyRequestView.xmppClient JID:buddyRequestView.buddyJid];        
+        [XMPPPresence decline:buddyRequestView.xmppClient JID:[buddyRequestView.contact JID]];        
     } else if (buttonIndex == 1) {
-        [XMPPMessageDelegate acceptBuddyRequest:buddyRequestView.xmppClient JID:buddyRequestView.buddyJid];
+        [XMPPMessageDelegate acceptBuddyRequest:buddyRequestView.xmppClient JID:[buddyRequestView.contact toJID]];
+        [self subscribeToShoutNodeForContact:buddyRequestView.contact andAccount:buddyRequestView.account];
     }
 }
 

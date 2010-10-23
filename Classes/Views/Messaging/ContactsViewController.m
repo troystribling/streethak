@@ -227,8 +227,8 @@
     XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:self.account];
     NSString* nodeFullPath = [NSString stringWithFormat:@"%@/%@", [contactJID pubSubRoot], @"shout"];
     NSMutableArray* subModels = [SubscriptionModel findAllByAccount:self.account andNode:nodeFullPath];
-    if ([subModels count] > 0) {
-        SubscriptionModel* subModel = [subModels objectAtIndex:0];
+    for (int i = 0; i < [subModels count]; i++) {
+        SubscriptionModel* subModel = [subModels objectAtIndex:i];
         [XMPPPubSubSubscriptions unsubscribe:client JID:[XMPPJID jidWithString:subModel.service] node:nodeFullPath andSubId:subModel.subId];
     }
 }
@@ -256,6 +256,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didReceivePubSubUnsubscribeResult:(XMPPIQ*)iq {
+    [self loadContacts];
+    [AlertViewManager dismissActivityIndicator];
 }
 
 //===================================================================================================================================
