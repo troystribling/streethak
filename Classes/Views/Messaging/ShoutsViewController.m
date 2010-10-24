@@ -33,6 +33,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize shoutsView;
 @synthesize containerView;
+@synthesize rootView;
 @synthesize shouts;
 @synthesize account;
 
@@ -94,11 +95,14 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedConfig {
     [self.view removeFromSuperview];
+    [[ViewControllerManager instance] removeContactsView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedNotifications {
     [self.view removeFromSuperview];
+    [[ViewControllerManager instance] removeContactsView];
+    [[ViewControllerManager instance] showNotificationsView:self.rootView];
 }            
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -109,6 +113,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedLocation {
     [self.view removeFromSuperview];
+    [[ViewControllerManager instance] removeContactsView];
 }
 
 //===================================================================================================================================

@@ -10,6 +10,7 @@
 #import "ContactsTopLauncherView.h"
 #import "TouchAreaView.h"
 #import "ViewControllerManager.h"
+#import "ShoutsViewController.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ContactsTopLauncherView (PrivateAPI)
@@ -22,6 +23,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize addContactLauncher;
 @synthesize shoutLauncher;
+@synthesize rootView;
 
 //===================================================================================================================================
 #pragma mark ContactsTopLauncherView PrivateAPI
@@ -60,7 +62,8 @@
     if ([touchedView.viewName isEqualToString:@"add-contact"]) {
         [[ViewControllerManager instance] showAddContactView:self.containedView];
     } else if ([touchedView.viewName isEqualToString:@"shout"]) {
-        [[ViewControllerManager instance] showShoutsView:self.containedView];
+        ShoutsViewController* shoutsView = [[ViewControllerManager instance] showShoutsView:self.containedView];
+        shoutsView.rootView = self.rootView;
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }

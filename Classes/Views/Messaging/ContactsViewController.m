@@ -284,7 +284,8 @@
     self.contactsView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
     self.contactsView.separatorColor = [UIColor blackColor];
     [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
-    [ContactsTopLauncherView inView:self.view andDelegate:self];
+    ContactsTopLauncherView* topView = [ContactsTopLauncherView inView:self.view andDelegate:self];
+    topView.rootView = self.containerView;
     [super viewDidLoad];
 }
 
@@ -356,6 +357,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     ContactMessagesViewController* msgController = [[ViewControllerManager instance] showContactMessagesView:self.view];
+    msgController.rootView = self.containerView;
     [msgController setContactName:[self.contacts objectAtIndex:indexPath.row]];
 }
 
