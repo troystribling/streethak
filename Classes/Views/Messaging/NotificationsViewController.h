@@ -1,16 +1,15 @@
 //
-//  ShoutsViewController.h
-//  webgnosus
+//  NotificationsViewController.h
+//  streethak
 //
-//  Created by Troy Stribling on 9/7/09.
-//  Copyright 2009 Plan-B Research. All rights reserved.
+//  Created by Troy Stribling on 10/24/10.
+//  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
-#import "ShoutsTopLauncherView.h"
-#import "SendEventViewController.h"
+#import "NotificationsTopLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
@@ -18,17 +17,17 @@
 @class EventsMessageCache;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ShoutsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
-    IBOutlet UITableView* shoutsView;
-    EventsMessageCache* shouts;
+@interface NotificationsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
+    IBOutlet UITableView* notificationsView;
+    EventsMessageCache* notifications;
     UIView* containerView;
     AccountModel* account;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) UITableView* shoutsView;
+@property (nonatomic, retain) UITableView* notificationsView;
 @property (nonatomic, retain) UIView* containerView;
-@property (nonatomic, retain) EventsMessageCache* shouts;
+@property (nonatomic, retain) EventsMessageCache* notifications;
 @property (nonatomic, retain) AccountModel* account;
 
 //-----------------------------------------------------------------------------------------------------------------------------------

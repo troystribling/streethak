@@ -1,59 +1,46 @@
 //
-//  ContactMessagesViewController.m
-//  webgnosus
+//  NotificationsViewController.m
+//  streethak
 //
-//  Created by Troy Stribling on 2/28/09.
-//  Copyright 2009 Plan-B Research. All rights reserved.fullJID
+//  Created by Troy Stribling on 10/24/10.
+//  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "ContactMessagesViewController.h"
-#import "ContactMessagesTopLauncherView.h"
-#import "NavigationLauncherView.h"
+#import "NotificationsViewController.h"
+#import "NotificationsTopLauncherView.h"
 #import "ViewControllerManager.h"
-#import "SendMessageViewController.h"
-#import "MessageModel.h"
-#import "UserModel.h"
-#import "ContactModel.h"
 #import "AccountModel.h"
-#import "ChatMessageCache.h"
-#import "MessageCell.h"
+#import "EventsMessageCache.h"
 #import "XMPPClientManager.h"
-#import "XMPPDiscoItemsQuery.h"
-#import "XMPPDiscoInfoQuery.h"
 #import "XMPPClient.h"
 #import "XMPPMessage.h"
-#import "XMPPJID.h"
-#import "CellUtils.h"
-#import "AlertViewManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ContactMessagesViewController (PrivateAPI)
+@interface NotificationsViewController (PrivateAPI)
 
-- (void)loadChatMessages;
-- (void)loadAccount;
 - (void)addXMPPClientDelgate;
 - (void)removeXMPPClientDelgate;
+- (void)loadAccount;
+- (void)loadNotifications;
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation ContactMessagesViewController
+@implementation NotificationsViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@synthesize messagesView;
-@synthesize chatMessages;
+@synthesize notificationsView;
 @synthesize containerView;
-@synthesize topLauncher;
+@synthesize notifications;
 @synthesize account;
-@synthesize contact;
 
 //===================================================================================================================================
-#pragma mark ContactMessagesViewController
+#pragma mark ShoutsViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    return [[ContactMessagesViewController alloc] initWithNibName:@"ContactMessagesViewController" bundle:nil inView:_containerView];
+    return [[NotificationsViewController alloc] initWithNibName:@"NotificationsViewController" bundle:nil inView:_containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -65,28 +52,8 @@
     return self;
 }
 
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)setContactName:(ContactModel*)_contact {
-    self.contact = _contact;
-    self.topLauncher.contactNameLabel.text = [[self.contact toJID] user];
-    [self loadChatMessages];
-}
-
 //===================================================================================================================================
-#pragma mark ContactMessagesViewController PrivateAPI
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)loadChatMessages {
-    if (self.contact) {
-        self.chatMessages = [[ChatMessageCache alloc] initWithJid:[self.contact fullJID] andAccount:self.account];
-        [self.messagesView reloadData];
-    }
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)loadAccount {
-    self.account = [AccountModel findFirst];
-}
+#pragma mark ShoutsViewController PrivateAPI
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)addXMPPClientDelgate {
@@ -98,15 +65,22 @@
     [[XMPPClientManager instance] removeXMPPClientDelegate:self forAccount:self.account];
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)loadAccount {
+    self.account = [AccountModel findFirst];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)loadNotifications {
+    self.notifications = [[EventsMessageCache alloc] initWithNode:@"%ngin%" andAccount:self.account];
+    [self.notificationsView reloadData];
+}
+
 //===================================================================================================================================
 #pragma mark LauncherViewDelegate 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)viewTouchedNamed:(NSString*)name {
-    if ([name isEqualToString:@"send-message"]) {
-        SendMessageViewController* sendController = [[ViewControllerManager instance] showSendMessageView:self.view];
-        sendController.contact = self.contact;
-    }
+- (void)viewTouchedNamed:(NSString*)_name {
 }
 
 //===================================================================================================================================
@@ -120,12 +94,12 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedNotifications {
     [self.view removeFromSuperview];
-    [[ViewControllerManager instance] showNotificationsView:self.containerView];
 }            
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedContacts {
     [self.view removeFromSuperview];
+    [[ViewControllerManager instance] showContactsView:self.containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -137,43 +111,40 @@
 #pragma mark XMPPClientDelegate
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)xmppClient:(XMPPClient*)sender didReceivePresence:(XMPPPresence*)presence {
-    [self loadChatMessages];
+- (void)xmppClient:(XMPPClient*)client didReceiveEvent:(XMPPMessage*)message {
+    [self loadNotifications];
 }
-
-//----------------------------------------------------------------------------------------------------------------------------------
-- (void)xmppClient:(XMPPClient *)sender didReceiveMessage:(XMPPMessage *)message {
-    [self loadChatMessages];
-}
-
-//===================================================================================================================================
-#pragma mark XMPPClientManagerMessageCountUpdateDelegate
 
 //===================================================================================================================================
 #pragma mark UIViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle { 
-	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
-	} 
-	return self; 
-} 
+- (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle  {
+    if (self = [super initWithNibName:nibName bundle:nibBundle]) {
+    }
+    return self;
+}
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
-    self.messagesView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
-    self.messagesView.separatorColor = [UIColor blackColor];
-    [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
-    self.topLauncher = [ContactMessagesTopLauncherView inView:self.view andDelegate:self];
+    self.notificationsView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
+    self.notificationsView.separatorColor = [UIColor blackColor];
+    [NavigationLauncherView inView:self.view withImageNamed:@"notifications-navigation-launcher.png" andDelegate:self];
+    [NotificationsTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
-    [self loadChatMessages];
     [self addXMPPClientDelgate];
-	[super viewWillAppear:animated];
+    [self loadNotifications];
+    [super viewWillAppear:animated];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -189,7 +160,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; 
+    [super didReceiveMemoryWarning];
 }
 
 //===================================================================================================================================
@@ -200,32 +171,30 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
-    return [self.chatMessages tableView:tableView heightForRowAtIndexPath:indexPath];
+    return [self.notifications tableView:tableView heightForRowAtIndexPath:indexPath];
 }
-
-//===================================================================================================================================
-#pragma mark UITableViewDataSource
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.chatMessages count];
+    return [self.notifications count];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {   
-    return [self.chatMessages tableView:tableView cellForRowAtIndexPath:indexPath];
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {  
+    return [self.notifications tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    [self.chatMessages tableView:tableView didSelectRowAtIndexPath:indexPath];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.notifications tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
-//===================================================================================================================================
-#pragma mark UITextViewDelegate
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
 
 //===================================================================================================================================
 #pragma mark NSObject
 
 @end
-

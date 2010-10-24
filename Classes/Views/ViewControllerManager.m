@@ -15,6 +15,7 @@
 #import "SendMessageViewController.h"
 #import "ShoutsViewController.h"
 #import "SendEventViewController.h"
+#import "NotificationsViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -35,6 +36,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize sendMessageViewController;
 @synthesize shoutsViewController;
 @synthesize sendEventViewController;
+@synthesize notificationsViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -260,6 +262,36 @@ static ViewControllerManager* thisViewControllerManager = nil;
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)sendEventViewWillDisappear {
     [self.sendEventViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// NotificationsViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (NotificationsViewController*)showNotificationsView:(UIView*)containerView {
+    if (self.notificationsViewController == nil) {
+        self.notificationsViewController = [NotificationsViewController inView:containerView];
+    }
+    [containerView addSubview:self.notificationsViewController.view];
+    [self.notificationsViewController viewWillAppear:NO];
+    return self.notificationsViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeNotificationsView {
+    if (self.notificationsViewController) {
+        [self.notificationsViewController viewWillDisappear:NO];
+        [self.notificationsViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)notificationsViewWillAppear {
+    [self.notificationsViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)notificationsViewWillDisappear {
+    [self.notificationsViewController viewWillDisappear:NO];
 }
 
 @end

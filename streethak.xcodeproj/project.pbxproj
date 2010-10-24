@@ -28,7 +28,7 @@
 		050EFA47126BEB1B00DC3ACF /* ShoutsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */; };
 		050EFA65126BF09400DC3ACF /* SendEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050EFA64126BF09400DC3ACF /* SendEventViewController.xib */; };
 		050F33F0125D65C30005607B /* contacts-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EE125D65C30005607B /* contacts-top-launcher.png */; };
-		050F33F1125D65C30005607B /* notification-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EF125D65C30005607B /* notification-navigation-launcher.png */; };
+		050F33F1125D65C30005607B /* notifications-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EF125D65C30005607B /* notifications-navigation-launcher.png */; };
 		050F33FC125D67AD0005607B /* ContactsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */; };
 		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
 		050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* EditAccountViewController.m */; };
@@ -153,6 +153,10 @@
 		051DED481252C43D00F3E0F4 /* contacts-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED461252C43D00F3E0F4 /* contacts-navigation-launcher.png */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
 		052D8C7212518FE100A2D7FF /* create-account.png in Resources */ = {isa = PBXBuildFile; fileRef = 052D8C7112518FE100A2D7FF /* create-account.png */; };
+		052E1BCD12747B9F0060051A /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052E1BCB12747B9F0060051A /* NotificationsViewController.m */; };
+		052E1BD012747EA60060051A /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 052E1BCF12747EA60060051A /* NotificationsViewController.xib */; };
+		052E1BDA1274A1990060051A /* NotificationsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 052E1BD91274A1990060051A /* NotificationsTopLauncherView.m */; };
+		052E1BEC1274A6060060051A /* notifications-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 052E1BEB1274A6060060051A /* notifications-top-launcher.png */; };
 		053494E0124830B5004A6D9D /* stonehen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 053494DF124830B5004A6D9D /* stonehen.ttf */; };
 		055990A2124309F20013C6DD /* TouchAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 055990A1124309F20013C6DD /* TouchAreaView.m */; };
 		05700D1012442E310059964F /* map-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* map-navigation-launcher.png */; };
@@ -236,7 +240,7 @@
 		050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoutsViewController.xib; sourceTree = "<group>"; };
 		050EFA64126BF09400DC3ACF /* SendEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendEventViewController.xib; sourceTree = "<group>"; };
 		050F33EE125D65C30005607B /* contacts-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-top-launcher.png"; sourceTree = "<group>"; };
-		050F33EF125D65C30005607B /* notification-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notification-navigation-launcher.png"; sourceTree = "<group>"; };
+		050F33EF125D65C30005607B /* notifications-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notifications-navigation-launcher.png"; sourceTree = "<group>"; };
 		050F33FA125D67AD0005607B /* ContactsTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTopLauncherView.h; sourceTree = "<group>"; };
 		050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTopLauncherView.m; sourceTree = "<group>"; };
 		050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
@@ -473,6 +477,12 @@
 		052553BA1222B3EF00203185 /* StreethakAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakAppDelegate.h; sourceTree = "<group>"; };
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
 		052D8C7112518FE100A2D7FF /* create-account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-account.png"; sourceTree = "<group>"; };
+		052E1BCA12747B9F0060051A /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		052E1BCB12747B9F0060051A /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
+		052E1BCF12747EA60060051A /* NotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsViewController.xib; sourceTree = "<group>"; };
+		052E1BD81274A1990060051A /* NotificationsTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsTopLauncherView.h; sourceTree = "<group>"; };
+		052E1BD91274A1990060051A /* NotificationsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsTopLauncherView.m; sourceTree = "<group>"; };
+		052E1BEB1274A6060060051A /* notifications-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notifications-top-launcher.png"; sourceTree = "<group>"; };
 		053494DF124830B5004A6D9D /* stonehen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stonehen.ttf; sourceTree = "<group>"; };
 		055990A0124309F20013C6DD /* TouchAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAreaView.h; sourceTree = "<group>"; };
 		055990A1124309F20013C6DD /* TouchAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAreaView.m; sourceTree = "<group>"; };
@@ -600,6 +610,7 @@
 				050F7A601247087000D9ED40 /* MainWindow.xib */,
 				050F7A611247087000D9ED40 /* MapViewController.xib */,
 				0506E1041269318D003E6C55 /* MessageCell.xib */,
+				052E1BCF12747EA60060051A /* NotificationsViewController.xib */,
 				050EFA64126BF09400DC3ACF /* SendEventViewController.xib */,
 				0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */,
 				050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */,
@@ -943,6 +954,10 @@
 				0510218C125ACA550010680E /* MessageCache.m */,
 				05DF1592125BFCDA009EFE18 /* MessageCell.h */,
 				05DF1593125BFCDA009EFE18 /* MessageCell.m */,
+				052E1BD81274A1990060051A /* NotificationsTopLauncherView.h */,
+				052E1BD91274A1990060051A /* NotificationsTopLauncherView.m */,
+				052E1BCA12747B9F0060051A /* NotificationsViewController.h */,
+				052E1BCB12747B9F0060051A /* NotificationsViewController.m */,
 				05113054126A006B00A9C996 /* SendBottomLauncherView.h */,
 				05113055126A006B00A9C996 /* SendBottomLauncherView.m */,
 				050EFA31126BE0F000DC3ACF /* SendEventViewController.h */,
@@ -1019,7 +1034,8 @@
 				05700D1112442E410059964F /* map-top-launcher.png */,
 				05700D0F12442E310059964F /* map-navigation-launcher.png */,
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
-				050F33EF125D65C30005607B /* notification-navigation-launcher.png */,
+				050F33EF125D65C30005607B /* notifications-navigation-launcher.png */,
+				052E1BEB1274A6060060051A /* notifications-top-launcher.png */,
 				051130CF126A261800A9C996 /* send-message.png */,
 				051130A6126A21EB00A9C996 /* send-bottom-launcher.png */,
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
@@ -1206,7 +1222,7 @@
 				05DF1576125BF2A6009EFE18 /* contact-offline.png in Resources */,
 				05DF158D125BF5A1009EFE18 /* unread-messages.png in Resources */,
 				050F33F0125D65C30005607B /* contacts-top-launcher.png in Resources */,
-				050F33F1125D65C30005607B /* notification-navigation-launcher.png in Resources */,
+				050F33F1125D65C30005607B /* notifications-navigation-launcher.png in Resources */,
 				05FD1A041263EBC80003EDC4 /* add-contact.png in Resources */,
 				05FD1A061263EC160003EDC4 /* add-contact-top-launcher.png in Resources */,
 				0508E006126756FA00872A56 /* contact-messages-top-launcher.png in Resources */,
@@ -1220,6 +1236,8 @@
 				050EFA65126BF09400DC3ACF /* SendEventViewController.xib in Resources */,
 				0502D22A126E6FED00638A74 /* shouts-top-launcher.png in Resources */,
 				05FF7064126FB66900CEA060 /* send-shout-top-launcher.png in Resources */,
+				052E1BD012747EA60060051A /* NotificationsViewController.xib in Resources */,
+				052E1BEC1274A6060060051A /* notifications-top-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1352,6 +1370,8 @@
 				050EFA36126BE3C200DC3ACF /* ShoutsViewController.m in Sources */,
 				050EFA39126BE5B100DC3ACF /* EventsMessageCache.m in Sources */,
 				0502D21E126E6D8000638A74 /* ShoutsTopLauncherView.m in Sources */,
+				052E1BCD12747B9F0060051A /* NotificationsViewController.m in Sources */,
+				052E1BDA1274A1990060051A /* NotificationsTopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,24 +11,19 @@
 #import "ShoutsTopLauncherView.h"
 #import "SendEventViewController.h"
 #import "ViewControllerManager.h"
-#import "MessageModel.h"
 #import "AccountModel.h"
-#import "ServiceItemModel.h"
 #import "EventsMessageCache.h"
 #import "XMPPClientManager.h"
 #import "XMPPClient.h"
-#import "XMPPJID.h"
-#import "XMPPGeoLoc.h"
 #import "XMPPMessage.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ShoutsViewController (PrivateAPI)
 
-- (void)addEventButton;
-- (void)addDelgate;
-- (void)removeDelgate;
+- (void)addXMPPClientDelgate;
+- (void)removeXMPPClientDelgate;
 - (void)loadAccount;
-- (void)loadMessages;
+- (void)loadEvents;
 
 @end
 
@@ -39,9 +34,6 @@
 @synthesize shoutsView;
 @synthesize containerView;
 @synthesize shouts;
-@synthesize service;
-@synthesize node;
-@synthesize name;
 @synthesize account;
 
 //===================================================================================================================================
@@ -81,7 +73,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadEvents {
-    self.shouts = [[EventsMessageCache alloc] initWithNode:@"/shout" andAccount:self.account];
+    self.shouts = [[EventsMessageCache alloc] initWithNode:@"%/shout" andAccount:self.account];
     [self.shoutsView reloadData];
 }
 

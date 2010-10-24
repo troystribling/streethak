@@ -17,6 +17,7 @@
 @class SendMessageViewController;
 @class ShoutsViewController;
 @class SendEventViewController;
+@class NotificationsViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ViewControllerManager : NSObject {
@@ -27,6 +28,7 @@
     SendMessageViewController* sendMessageViewController;
     ShoutsViewController* shoutsViewController;
     SendEventViewController* sendEventViewController;
+    NotificationsViewController* notificationsViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -37,6 +39,7 @@
 @property (nonatomic, retain) SendMessageViewController* sendMessageViewController;
 @property (nonatomic, retain) ShoutsViewController* shoutsViewController;
 @property (nonatomic, retain) SendEventViewController* sendEventViewController;
+@property (nonatomic, retain) NotificationsViewController* notificationsViewController;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (ViewControllerManager*)instance;
@@ -76,5 +79,10 @@
 - (void)removeSendEventView;
 - (void)sendEventViewWillAppear;
 - (void)sendEventViewWillDisappear;
+
+- (NotificationsViewController*)showNotificationsView:(UIView*)containerView;
+- (void)removeNotificationsView;
+- (void)notificationsViewWillAppear;
+- (void)notificationsViewWillDisappear;
 
 @end
