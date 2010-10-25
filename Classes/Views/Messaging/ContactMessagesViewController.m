@@ -103,7 +103,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouchedNamed:(NSString*)name {
-    if ([name isEqualToString:@"send-message"]) {
+    if ([name isEqualToString:@"back"]) {
+        [self.view removeFromSuperview];
+        [[ViewControllerManager instance] showContactsView:self.containerView];
+    } else if ([name isEqualToString:@"send-message"]) {
         SendMessageViewController* sendController = [[ViewControllerManager instance] showSendMessageView:self.view];
         sendController.contact = self.contact;
     }

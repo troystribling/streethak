@@ -85,13 +85,14 @@
 #pragma mark LauncherViewDelegate 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)viewTouchedNamed:(NSString*)name {
-    if ([name isEqualToString:@"send"]) {
+- (void)viewTouchedNamed:(NSString*)_name {
+    if ([_name isEqualToString:@"send"]) {
         [self sendMessage];
-        [[ViewControllerManager instance] removeSendMessageView];
+        [self.view removeFromSuperview];
         [[ViewControllerManager instance] contactMessagesViewWillAppear];
-    } else if ([name isEqualToString:@"back"]) {
-        [[ViewControllerManager instance] removeSendMessageView];
+    } else if ([_name isEqualToString:@"back"]) {
+        [self.view removeFromSuperview];
+        [[ViewControllerManager instance] showContactMessagesView:self.containerView];
     }
 }
 

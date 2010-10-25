@@ -64,11 +64,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
-    if ([touchedView.viewName isEqualToString:@"back"]) {
-        [[ViewControllerManager instance] removeContactMessagesView];
-    } else {
-        [self.delegate viewTouchedNamed:touchedView.viewName];
-    }
+    [self.delegate viewTouchedNamed:touchedView.viewName];
 }
 
 //===================================================================================================================================

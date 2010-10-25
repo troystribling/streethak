@@ -82,7 +82,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouchedNamed:(NSString*)_name {
-    if ([_name isEqualToString:@"send-message"]) {
+    if ([_name isEqualToString:@"back"]) {
+        [self.view removeFromSuperview];
+        [[ViewControllerManager instance] showContactsView:self.containerView];
+    } else if ([_name isEqualToString:@"send-message"]) {
         SendEventViewController* sendController = [[ViewControllerManager instance] showSendEventView:self.view];
         sendController.node = [NSString stringWithFormat:@"%@/shout", [self.account pubSubRoot]];
     }

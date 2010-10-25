@@ -57,11 +57,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
-    if ([touchedView.viewName isEqualToString:@"back"]) {
-        [[ViewControllerManager instance] removeShoutsView];
-    } else {
-        [self.delegate viewTouchedNamed:touchedView.viewName];
-    }
+    [self.delegate viewTouchedNamed:touchedView.viewName];
 }
 
 //===================================================================================================================================
