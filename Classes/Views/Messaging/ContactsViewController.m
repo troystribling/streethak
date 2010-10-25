@@ -142,6 +142,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouchedNamed:(NSString*)name {
+    if ([name isEqualToString:@"shout"]) {
+        [self.view removeFromSuperview];
+        [[ViewControllerManager instance] showShoutsView:self.containerView];
+    }
 }
 
 //===================================================================================================================================
@@ -284,8 +288,7 @@
     self.contactsView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
     self.contactsView.separatorColor = [UIColor blackColor];
     [NavigationLauncherView inView:self.view withImageNamed:@"contacts-navigation-launcher.png" andDelegate:self];
-    ContactsTopLauncherView* topView = [ContactsTopLauncherView inView:self.view andDelegate:self];
-    topView.rootView = self.containerView;
+    [ContactsTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 
@@ -356,8 +359,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    ContactMessagesViewController* msgController = [[ViewControllerManager instance] showContactMessagesView:self.view];
-    msgController.rootView = self.containerView;
+    [self.view removeFromSuperview];
+    ContactMessagesViewController* msgController = [[ViewControllerManager instance] showContactMessagesView:self.containerView];
     [msgController setContactName:[self.contacts objectAtIndex:indexPath.row]];
 }
 

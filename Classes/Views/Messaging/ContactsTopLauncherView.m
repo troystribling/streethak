@@ -23,7 +23,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize addContactLauncher;
 @synthesize shoutLauncher;
-@synthesize rootView;
 
 //===================================================================================================================================
 #pragma mark ContactsTopLauncherView PrivateAPI
@@ -61,9 +60,6 @@
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"add-contact"]) {
         [[ViewControllerManager instance] showAddContactView:self.containedView];
-    } else if ([touchedView.viewName isEqualToString:@"shout"]) {
-        ShoutsViewController* shoutsView = [[ViewControllerManager instance] showShoutsView:self.containedView];
-        shoutsView.rootView = self.rootView;
     } else {
         [self.delegate viewTouchedNamed:touchedView.viewName];
     }

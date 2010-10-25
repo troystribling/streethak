@@ -23,7 +23,6 @@
     ChatMessageCache* chatMessages;
     ContactMessagesTopLauncherView* topLauncher;
     UIView* containerView;
-    UIView* rootView;
     AccountModel* account;
     ContactModel* contact;
 }
@@ -32,7 +31,6 @@
 @property (nonatomic, retain) UITableView* messagesView;
 @property (nonatomic, retain) ChatMessageCache* chatMessages;
 @property (nonatomic, retain) UIView* containerView;
-@property (nonatomic, retain) UIView* rootView;
 @property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) ContactModel* contact;
 @property (nonatomic, retain) ContactMessagesTopLauncherView* topLauncher;

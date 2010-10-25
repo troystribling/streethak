@@ -17,13 +17,11 @@
 @interface ContactsTopLauncherView : LauncherView {
     TouchAreaView* addContactLauncher;
     TouchAreaView* shoutLauncher;
-    UIView* rootView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* addContactLauncher;
 @property (nonatomic, retain) TouchAreaView* shoutLauncher;
-@property (nonatomic, retain) UIView* rootView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;

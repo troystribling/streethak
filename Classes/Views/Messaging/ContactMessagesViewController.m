@@ -44,7 +44,6 @@
 @synthesize messagesView;
 @synthesize chatMessages;
 @synthesize containerView;
-@synthesize rootView;
 @synthesize topLauncher;
 @synthesize account;
 @synthesize contact;
@@ -116,25 +115,23 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedConfig {
     [self.view removeFromSuperview];
-    [[ViewControllerManager instance] removeContactsView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedNotifications {
     [self.view removeFromSuperview];
-    [[ViewControllerManager instance] removeContactsView];
-    [[ViewControllerManager instance] showNotificationsView:self.rootView];
+    [[ViewControllerManager instance] showNotificationsView:self.containerView];
 }            
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedContacts {
     [self.view removeFromSuperview];
+    [[ViewControllerManager instance] showContactsView:self.containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedLocation {
     [self.view removeFromSuperview];
-    [[ViewControllerManager instance] removeContactsView];
 }
 
 //===================================================================================================================================

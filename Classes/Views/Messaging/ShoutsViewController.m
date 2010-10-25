@@ -33,7 +33,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize shoutsView;
 @synthesize containerView;
-@synthesize rootView;
 @synthesize shouts;
 @synthesize account;
 
@@ -101,13 +100,13 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedNotifications {
     [self.view removeFromSuperview];
-    [[ViewControllerManager instance] removeContactsView];
-    [[ViewControllerManager instance] showNotificationsView:self.rootView];
+    [[ViewControllerManager instance] showNotificationsView:self.containerView];
 }            
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedContacts {
     [self.view removeFromSuperview];
+    [[ViewControllerManager instance] showContactsView:self.containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

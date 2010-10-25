@@ -22,14 +22,12 @@
     IBOutlet UITableView* shoutsView;
     EventsMessageCache* shouts;
     UIView* containerView;
-    UIView* rootView;
     AccountModel* account;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITableView* shoutsView;
 @property (nonatomic, retain) UIView* containerView;
-@property (nonatomic, retain) UIView* rootView;
 @property (nonatomic, retain) EventsMessageCache* shouts;
 @property (nonatomic, retain) AccountModel* account;
 
