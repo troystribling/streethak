@@ -78,7 +78,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadChatMessages {
     if (self.contact) {
-        self.chatMessages = [[ChatMessageCache alloc] initWithJid:[self.contact fullJID] andAccount:self.account];
+        self.chatMessages = [[[ChatMessageCache alloc] initWithJid:[self.contact fullJID] andAccount:self.account] autorelease];
         [self.messagesView reloadData];
     }
 }

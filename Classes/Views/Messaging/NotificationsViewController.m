@@ -72,7 +72,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadNotifications {
-    self.notifications = [[EventsMessageCache alloc] initWithNode:@"%ngin%" andAccount:self.account];
+    self.notifications = [[[EventsMessageCache alloc] initWithNode:@"%ngin%" andAccount:self.account] autorelease];
     [self.notificationsView reloadData];
 }
 

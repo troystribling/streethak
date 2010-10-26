@@ -73,7 +73,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)loadEvents {
-    self.shouts = [[EventsMessageCache alloc] initWithNode:@"%/shout" andAccount:self.account];
+    self.shouts = [[[EventsMessageCache alloc] initWithNode:@"%/shout" andAccount:self.account] autorelease];
     [self.shoutsView reloadData];
 }
 
