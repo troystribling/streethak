@@ -37,7 +37,11 @@
 - (void)createAccountManager;
 - (void)setUnreadMessages;
 - (NSString*)shoutNodeForAccount:(AccountModel*)account;
+- (NSString*)nginNodeForAccount:(AccountModel*)account;
+- (NSString*)globalNodeForAccount:(AccountModel*)account;
 - (void)subscribeToShoutNodeForContactJID:(XMPPJID*)contactJID andAccount:(AccountModel*)account;
+- (NSString*)pubSubServiceForJID:(XMPPJID*)jid;
+- (XMPPJID*)nginJID;
 
 @end
 
@@ -91,9 +95,24 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (NSString*)nginNodeForAccount:(AccountModel*)account {
+    return [NSString stringWithFormat:@"/home/%@/ngin/%@", [[account toJID] domain], [[account toJID] user]];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (NSString*)globalNodeForAccount:(AccountModel*)account {
+    return [NSString stringWithFormat:@"/home/%@/ngin/global", [[account toJID] domain]];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (NSString*)pubSubServiceForJID:(XMPPJID*)jid {
+    return [NSString stringWithFormat:@"pubsub.%@", [jid domain]];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 - (void)subscribeToShoutNodeForContactJID:(XMPPJID*)contactJID andAccount:(AccountModel*)account {
     NSString* nodeFullPath = [NSString stringWithFormat:@"%@/%@", [contactJID pubSubRoot], @"shout"];
-    NSString* pubSubService = [NSString stringWithFormat:@"pubsub.%@", [contactJID domain]];
+    NSString* pubSubService = [self pubSubServiceForJID:contactJID];
     if ([[SubscriptionModel findAllByAccount:account andNode:nodeFullPath] count] == 0) {
         XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:account];
         [XMPPPubSubSubscriptions subscribe:client JID:[XMPPJID jidWithString:pubSubService] node:nodeFullPath];
@@ -132,6 +151,16 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didReceivePubSubSubscriptionsResult:(XMPPIQ *)iq {
+    AccountModel* account = [AccountModel findFirst];
+    NSString* pubSubService = [self pubSubServiceForJID:[account toJID]];
+    NSString* nginNode = [self nginNodeForAccount:account];
+    NSString* globalNode = [self globalNodeForAccount:account];
+    if ([[SubscriptionModel findAllByAccount:account andNode:nginNode] count] == 0) {
+        [XMPPPubSubSubscriptions subscribe:client JID:[XMPPJID jidWithString:pubSubService] node:nginNode];
+    } 
+    if ([[SubscriptionModel findAllByAccount:account andNode:globalNode] count] == 0) {
+        [XMPPPubSubSubscriptions subscribe:client JID:[XMPPJID jidWithString:pubSubService] node:globalNode];
+    } 
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -142,13 +171,13 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)xmppClient:(XMPPClient*)sender didReceiveBuddyRequest:(XMPPJID*)buddyJid {
-    AccountModel* account = [XMPPMessageDelegate accountForXMPPClient:sender];
+- (void)xmppClient:(XMPPClient*)client didReceiveBuddyRequest:(XMPPJID*)buddyJid {
+    AccountModel* account = [XMPPMessageDelegate accountForXMPPClient:client];
     if (account) {
         ContactModel* contact = [ContactModel findByJid:[buddyJid bare] andAccount:account];	
         if (contact == nil) {
             AcceptBuddyRequestView* buddyRequestView = 
-                [[AcceptBuddyRequestView alloc] initWithClient:sender contactJID:buddyJid account:account andDelegate:self];
+                [[AcceptBuddyRequestView alloc] initWithClient:client contactJID:buddyJid account:account andDelegate:self];
             [buddyRequestView show];	
             [buddyRequestView release];
         } else {
@@ -158,17 +187,15 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)xmppClient:(XMPPClient*)sender didDiscoverAllUserPubSubNodes:(XMPPJID*)targetJID {
+- (void)xmppClient:(XMPPClient*)client didDiscoverAllUserPubSubNodes:(XMPPJID*)targetJID {
     AccountModel* account = [AccountModel findFirst];
     GeoLocManager* geoLoc = [GeoLocManager instance];
     NSString* geoLocNode = [account geoLocPubSubNode];
     NSString* shoutNode = [self shoutNodeForAccount:account];
     [geoLoc addUpdateDelegate:[[[XMPPGeoLocUpdate alloc] init:account] autorelease] forAccount:account];
     if (![ServiceItemModel findByNode:geoLocNode]) {
-        XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:account];
         [XMPPPubSub create:client JID:[account pubSubService] node:geoLocNode];
     } else if (![ServiceItemModel findByNode:shoutNode]) {
-        XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:account];
         [XMPPPubSub create:client JID:[account pubSubService] node:shoutNode];
     } else {
         [AlertViewManager dismissActivityIndicator];
