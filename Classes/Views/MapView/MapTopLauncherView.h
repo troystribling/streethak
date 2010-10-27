@@ -8,26 +8,25 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "LauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class TouchAreaView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface MapTopLauncherView : UIImageView {
+@interface MapTopLauncherView : LauncherView {
     TouchAreaView* inventoryLauncher;
     TouchAreaView* statsLauncher;
     UILabel* levelLabel;
-    UIView* containerView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* inventoryLauncher;
 @property (nonatomic, retain) TouchAreaView* statsLauncher;
 @property (nonatomic, retain) UILabel* levelLabel;
-@property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view;
-- (id)initInView:(UIView*)_view;
++ (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;
+- (id)initInView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;
 
 @end

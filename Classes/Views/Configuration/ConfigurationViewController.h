@@ -1,5 +1,5 @@
 //
-//  EditAccountViewController.h
+//  ConfigurationViewController.h
 //  webgnosus
 //
 //  Created by Troy Stribling on 2/6/09.
@@ -15,7 +15,7 @@
 @class SegmentedListPicker;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface EditAccountViewController : UIViewController <UITextFieldDelegate, NavigationLauncherViewDelegate> {
+@interface ConfigurationViewController : UIViewController <UITextFieldDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
 	IBOutlet UITextField* passwordTextField;
  	IBOutlet UITextField* confirmPasswordTextField;
     IBOutlet UIButton* doneButton;

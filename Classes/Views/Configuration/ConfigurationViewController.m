@@ -1,5 +1,5 @@
 //
-//  EditAccountViewController.m
+//  ConfigurationViewController.m
 //  webgnosus
 //
 //  Created by Troy Stribling on 2/6/09.
@@ -7,7 +7,7 @@
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "EditAccountViewController.h"
+#import "ConfigurationViewController.h"
 #import "UICustomSwitch.h"
 #import "AccountModel.h"
 #import "ServiceItemModel.h"
@@ -22,14 +22,14 @@
 #import "XMPPPubSub.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface EditAccountViewController (PrivateAPI)
+@interface ConfigurationViewController (PrivateAPI)
 
 - (void)trackingSwitchChanged:(id)sender;
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation EditAccountViewController
+@implementation ConfigurationViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize passwordTextField;
@@ -40,11 +40,11 @@
 @synthesize containerView;
 
 //===================================================================================================================================
-#pragma mark EditAccountViewController
+#pragma mark ConfigurationViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    return [[EditAccountViewController alloc] initWithNibName:@"EditAccountViewController" bundle:nil inView:_containerView];
+    return [[ConfigurationViewController alloc] initWithNibName:@"ConfigurationViewController" bundle:nil inView:_containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -103,7 +103,7 @@
 }
 
 //===================================================================================================================================
-#pragma mark EditAccountViewController PrivateApi
+#pragma mark ConfigurationViewController PrivateApi
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)trackingSwitchChanged:(id)sender {

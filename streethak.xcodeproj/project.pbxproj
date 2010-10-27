@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0500E3B1126BC65B00BB248B /* load_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 0500E3B0126BC65B00BB248B /* load_message.png */; };
 		0501BCE3124D7DDB00834DA4 /* VIKING-N.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */; };
+		05028A5F1277A93200798260 /* send-event.png in Resources */ = {isa = PBXBuildFile; fileRef = 05028A5E1277A93200798260 /* send-event.png */; };
 		0502D21E126E6D8000638A74 /* ShoutsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0502D21D126E6D8000638A74 /* ShoutsTopLauncherView.m */; };
 		0502D22A126E6FED00638A74 /* shouts-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502D229126E6FED00638A74 /* shouts-top-launcher.png */; };
 		050366E6125943D50010130C /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366E5125943D50010130C /* ContactsViewController.xib */; };
@@ -31,12 +32,12 @@
 		050F33F1125D65C30005607B /* notifications-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EF125D65C30005607B /* notifications-navigation-launcher.png */; };
 		050F33FC125D67AD0005607B /* ContactsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */; };
 		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
-		050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* EditAccountViewController.m */; };
+		050F7A11124704A800D9ED40 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* ConfigurationViewController.m */; };
 		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
 		050F7A1D124704B800D9ED40 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A18124704B800D9ED40 /* MapViewController.m */; };
 		050F7A1E124704B800D9ED40 /* MapTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A1A124704B800D9ED40 /* MapTopLauncherView.m */; };
 		050F7A621247087000D9ED40 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */; };
-		050F7A631247087000D9ED40 /* EditAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */; };
+		050F7A631247087000D9ED40 /* ConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A5E1247087000D9ED40 /* ConfigurationViewController.xib */; };
 		050F7A651247087000D9ED40 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A601247087000D9ED40 /* MainWindow.xib */; };
 		050F7A661247087000D9ED40 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F7A611247087000D9ED40 /* MapViewController.xib */; };
 		050F7A691247092000D9ED40 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A681247092000D9ED40 /* InventoryViewController.m */; };
@@ -215,6 +216,7 @@
 /* Begin PBXFileReference section */
 		0500E3B0126BC65B00BB248B /* load_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = load_message.png; sourceTree = "<group>"; };
 		0501BCE2124D7DDB00834DA4 /* VIKING-N.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VIKING-N.TTF"; sourceTree = "<group>"; };
+		05028A5E1277A93200798260 /* send-event.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-event.png"; sourceTree = "<group>"; };
 		0502D21C126E6D8000638A74 /* ShoutsTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutsTopLauncherView.h; sourceTree = "<group>"; };
 		0502D21D126E6D8000638A74 /* ShoutsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutsTopLauncherView.m; sourceTree = "<group>"; };
 		0502D229126E6FED00638A74 /* shouts-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouts-top-launcher.png"; sourceTree = "<group>"; };
@@ -245,8 +247,8 @@
 		050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTopLauncherView.m; sourceTree = "<group>"; };
 		050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
-		050F7A0E124704A800D9ED40 /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
-		050F7A0F124704A800D9ED40 /* EditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAccountViewController.m; sourceTree = "<group>"; };
+		050F7A0E124704A800D9ED40 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		050F7A0F124704A800D9ED40 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
 		050F7A15124704B800D9ED40 /* OverlayRMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayRMMapView.h; sourceTree = "<group>"; };
 		050F7A16124704B800D9ED40 /* OverlayRMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayRMMapView.m; sourceTree = "<group>"; };
 		050F7A17124704B800D9ED40 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -254,7 +256,7 @@
 		050F7A19124704B800D9ED40 /* MapTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTopLauncherView.h; sourceTree = "<group>"; };
 		050F7A1A124704B800D9ED40 /* MapTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTopLauncherView.m; sourceTree = "<group>"; };
 		050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
-		050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAccountViewController.xib; sourceTree = "<group>"; };
+		050F7A5E1247087000D9ED40 /* ConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigurationViewController.xib; sourceTree = "<group>"; };
 		050F7A601247087000D9ED40 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		050F7A611247087000D9ED40 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		050F7A671247092000D9ED40 /* InventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
@@ -566,8 +568,8 @@
 			children = (
 				050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */,
 				050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */,
-				050F7A0E124704A800D9ED40 /* EditAccountViewController.h */,
-				050F7A0F124704A800D9ED40 /* EditAccountViewController.m */,
+				050F7A0E124704A800D9ED40 /* ConfigurationViewController.h */,
+				050F7A0F124704A800D9ED40 /* ConfigurationViewController.m */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -604,7 +606,7 @@
 				050366EC1259446D0010130C /* ContactCell.xib */,
 				05DF1534125BE399009EFE18 /* ContactMessagesViewController.xib */,
 				050366E5125943D50010130C /* ContactsViewController.xib */,
-				050F7A5E1247087000D9ED40 /* EditAccountViewController.xib */,
+				050F7A5E1247087000D9ED40 /* ConfigurationViewController.xib */,
 				050F7A6B1247095800D9ED40 /* InventoryViewController.xib */,
 				0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */,
 				050F7A601247087000D9ED40 /* MainWindow.xib */,
@@ -1018,6 +1020,7 @@
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				05028A5E1277A93200798260 /* send-event.png */,
 				05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */,
 				05FD1A031263EBC80003EDC4 /* add-contact.png */,
 				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
@@ -1200,7 +1203,7 @@
 				05700D1012442E310059964F /* map-navigation-launcher.png in Resources */,
 				05700D1212442E410059964F /* map-top-launcher.png in Resources */,
 				050F7A621247087000D9ED40 /* CreateAccountViewController.xib in Resources */,
-				050F7A631247087000D9ED40 /* EditAccountViewController.xib in Resources */,
+				050F7A631247087000D9ED40 /* ConfigurationViewController.xib in Resources */,
 				050F7A651247087000D9ED40 /* MainWindow.xib in Resources */,
 				050F7A661247087000D9ED40 /* MapViewController.xib in Resources */,
 				050F7A6C1247095800D9ED40 /* InventoryViewController.xib in Resources */,
@@ -1238,6 +1241,7 @@
 				05FF7064126FB66900CEA060 /* send-shout-top-launcher.png in Resources */,
 				052E1BD012747EA60060051A /* NotificationsViewController.xib in Resources */,
 				052E1BEC1274A6060060051A /* notifications-top-launcher.png in Resources */,
+				05028A5F1277A93200798260 /* send-event.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1341,7 +1345,7 @@
 				050FE4621228AF3B00D20D34 /* MapGeoLocUpdateDelegate.m in Sources */,
 				055990A2124309F20013C6DD /* TouchAreaView.m in Sources */,
 				050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */,
-				050F7A11124704A800D9ED40 /* EditAccountViewController.m in Sources */,
+				050F7A11124704A800D9ED40 /* ConfigurationViewController.m in Sources */,
 				050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */,
 				050F7A1D124704B800D9ED40 /* MapViewController.m in Sources */,
 				050F7A1E124704B800D9ED40 /* MapTopLauncherView.m in Sources */,

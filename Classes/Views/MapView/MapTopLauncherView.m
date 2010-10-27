@@ -23,25 +23,22 @@
 @synthesize inventoryLauncher;
 @synthesize statsLauncher;
 @synthesize levelLabel;
-@synthesize containerView;
 
 //===================================================================================================================================
 #pragma mark MapTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-+ (id)inView:(UIView*)_view {
-    return [[[MapTopLauncherView alloc] initInView:_view] autorelease];
++ (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate {
+    return [[MapTopLauncherView alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (id)initInView:(UIView*)_view {
+- (id)initInView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate {
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame])) {
-        self.containerView = _view;
-        self.image = [UIImage imageNamed:@"map-top-launcher.png"];
-        self.userInteractionEnabled = YES;
+    if ((self = [self initWithFrame:viewFrame image:@"map-top-launcher.png" andDelegate:_delegate])) {
+        self.containedView = _view;
         CGRect inventoryFrame = CGRectMake(0.8281*viewWidth, 0.0, 0.1562*viewWidth, viewHeight);
         self.inventoryLauncher = [TouchAreaView createWithFrame:inventoryFrame name:@"inventory" andDelegate:self];
         [self addSubview:self.inventoryLauncher];
@@ -68,10 +65,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
-    if ([touchedView.viewName isEqualToString:@"inventory"]) {
-        [[ViewControllerManager instance] showInventoryView:self.containerView];
-    } else if ([touchedView.viewName isEqualToString:@"stats"]) {
-    }
+    [self.delegate viewTouchedNamed:touchedView.viewName];
 }
 
 //===================================================================================================================================

@@ -57,12 +57,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
-    if ([touchedView.viewName isEqualToString:@"store"]) {
-    } else if ([touchedView.viewName isEqualToString:@"back"]) {
-        [[ViewControllerManager instance] removeInventoryView];
-    } else {
-        [self.delegate viewTouchedNamed:touchedView.viewName];
-    }
+    [self.delegate viewTouchedNamed:touchedView.viewName];
 }
 
 //===================================================================================================================================

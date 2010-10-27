@@ -69,6 +69,17 @@
 #pragma mark MapViewController
 
 //===================================================================================================================================
+#pragma mark LauncherViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouchedNamed:(NSString*)name {
+    if ([name isEqualToString:@"inventory"]) {
+        [[ViewControllerManager instance] showInventoryView:self.mapView];
+    } else if ([name isEqualToString:@"stats"]) {
+    }
+}
+
+//===================================================================================================================================
 #pragma mark NavigationLauncherViewDelegate 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -103,7 +114,7 @@
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
     [NavigationLauncherView inView:self.mapView withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
-    [MapTopLauncherView inView:self.mapView];
+    [MapTopLauncherView inView:self.mapView andDelegate:self];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
