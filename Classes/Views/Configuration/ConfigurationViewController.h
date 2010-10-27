@@ -8,6 +8,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
+#import "LauncherView.h"
 #import "NavigationLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -20,7 +21,6 @@
  	IBOutlet UITextField* confirmPasswordTextField;
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* deleteButton;
-    IBOutlet UISwitch* trackingSwitch;   
     UIView* containerView;
 }
 
@@ -29,7 +29,6 @@
 @property (nonatomic, retain) UITextField* confirmPasswordTextField;
 @property (nonatomic, retain) UIButton* doneButton;
 @property (nonatomic, retain) UIButton* deleteButton;
-@property (nonatomic, retain) UISwitch* trackingSwitch;
 @property (nonatomic, retain) UIView* containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------

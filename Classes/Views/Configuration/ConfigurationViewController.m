@@ -14,17 +14,13 @@
 #import "AlertViewManager.h"
 #import "SegmentedListPicker.h"
 #import "AccountModel.h"
-#import "GeoLocManager.h"
 #import "XMPPClient.h"
 #import "XMPPClientManager.h"
 #import "XMPPRegisterQuery.h"
-#import "XMPPGeoLocUpdate.h"
 #import "XMPPPubSub.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ConfigurationViewController (PrivateAPI)
-
-- (void)trackingSwitchChanged:(id)sender;
 
 @end
 
@@ -36,7 +32,6 @@
 @synthesize confirmPasswordTextField;
 @synthesize doneButton;
 @synthesize deleteButton;
-@synthesize trackingSwitch;
 @synthesize containerView;
 
 //===================================================================================================================================
@@ -70,11 +65,6 @@
 - (IBAction)deleteButtonPressed:(id)sender {
     AccountModel* acct = [self account];
     [[XMPPClientManager instance] removeXMPPClientForAccount:acct];
-    GeoLocManager* geoLoc = [GeoLocManager instance];
-    if ([geoLoc accountUpdatesEnabled:acct]) {
-        [geoLoc removeUpdateDelegatesForAccount:acct];
-        [geoLoc stopIfNotUpdating];
-    }
     [acct destroy];
     if ([AccountModel count] > 0) {    
         [[[XMPPClientManager instance] accountUpdateDelegate] didRemoveAccount];
@@ -105,23 +95,11 @@
 //===================================================================================================================================
 #pragma mark ConfigurationViewController PrivateApi
 
+//===================================================================================================================================
+#pragma mark LauncherViewDelegate 
+
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)trackingSwitchChanged:(id)sender {
-    GeoLocManager* geoLoc = [GeoLocManager instance];
-    if (self.trackingSwitch.on) {
-        NSString* geoLocNode = [[self account] geoLocPubSubNode];
-        [geoLoc addUpdateDelegate:[[[XMPPGeoLocUpdate alloc] init:[self account]] autorelease] forAccount:[self account]];
-        if (![ServiceItemModel findByNode:geoLocNode]) {
-            XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:self.account];
-            [XMPPPubSub create:client JID:[self.account pubSubService] node:geoLocNode];
-            [AlertViewManager showActivityIndicatorInView:self.view.window withTitle:@"Adding Node"];
-        } else {
-            [geoLoc start];
-        }
-    } else {
-        [geoLoc removeUpdateDelegatesForAccount:[self account]];
-        [geoLoc stopIfNotUpdating];
-    }
+- (void)viewTouchedNamed:(NSString*)name {
 }
 
 //===================================================================================================================================
@@ -145,7 +123,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didReceivePubSubCreateError:(XMPPIQ*)iq {
     [AlertViewManager dismissActivityIndicator];
-    [self.trackingSwitch setOn:NO animated:YES];
     [AlertViewManager showAlert:@"geoloc node create failed"];
 }
 
@@ -156,8 +133,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didDiscoverAllUserPubSubNodes:(XMPPJID*)jid {
     [AlertViewManager dismissActivityIndicator];
-    GeoLocManager* geoLoc = [GeoLocManager instance];
-    [geoLoc start];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -179,19 +154,12 @@
 - (void)viewDidLoad {
     self.passwordTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
-    [self.trackingSwitch addTarget:self action:@selector(trackingSwitchChanged:) forControlEvents:UIControlEventValueChanged];    
     [super viewDidLoad];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
-    [[XMPPClientManager instance] delegateTo:self forAccount:self.account];
-    if ([[GeoLocManager instance] accountUpdatesEnabled:[self account]]) {
-        self.trackingSwitch.on = YES;
-    } else {
-        self.trackingSwitch.on = NO;
-    }
-	[super viewWillAppear:animated];
+    [[XMPPClientManager instance] delegateTo:self forAccount:self.account];	[super viewWillAppear:animated];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

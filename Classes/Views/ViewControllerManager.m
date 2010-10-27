@@ -16,6 +16,7 @@
 #import "ShoutsViewController.h"
 #import "SendEventViewController.h"
 #import "NotificationsViewController.h"
+#import "ConfigurationViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -37,6 +38,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize shoutsViewController;
 @synthesize sendEventViewController;
 @synthesize notificationsViewController;
+@synthesize configurationViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -292,6 +294,36 @@ static ViewControllerManager* thisViewControllerManager = nil;
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)notificationsViewWillDisappear {
     [self.notificationsViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// ConfigurationViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (ConfigurationViewController*)showConfigurationView:(UIView*)containerView {
+    if (self.configurationViewController == nil) {
+        self.configurationViewController = [ConfigurationViewController inView:containerView];
+    }
+    [containerView addSubview:self.configurationViewController.view];
+    [self.configurationViewController viewWillAppear:NO];
+    return self.configurationViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeConfigurationView {
+    if (self.configurationViewController) {
+        [self.configurationViewController viewWillDisappear:NO];
+        [self.configurationViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)configurationViewWillAppear {
+    [self.configurationViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)configurationViewWillDisappear {
+    [self.configurationViewController viewWillDisappear:NO];
 }
 
 @end

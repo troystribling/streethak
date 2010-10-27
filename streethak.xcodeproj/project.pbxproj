@@ -152,6 +152,8 @@
 		051CD7C51259672300D100A5 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7B71259672300D100A5 /* ContactsViewController.m */; };
 		051DED471252C43D00F3E0F4 /* configuration-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */; };
 		051DED481252C43D00F3E0F4 /* contacts-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 051DED461252C43D00F3E0F4 /* contacts-navigation-launcher.png */; };
+		05208F5F1277D80C006C5DAE /* configuration.png in Resources */ = {isa = PBXBuildFile; fileRef = 05208F5E1277D80C006C5DAE /* configuration.png */; };
+		05208F7A1277DFFC006C5DAE /* configuration-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05208F791277DFFC006C5DAE /* configuration-top-launcher.png */; };
 		052553BC1222B3EF00203185 /* StreethakAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052553BB1222B3EF00203185 /* StreethakAppDelegate.m */; };
 		052D8C7212518FE100A2D7FF /* create-account.png in Resources */ = {isa = PBXBuildFile; fileRef = 052D8C7112518FE100A2D7FF /* create-account.png */; };
 		052E1BCD12747B9F0060051A /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052E1BCB12747B9F0060051A /* NotificationsViewController.m */; };
@@ -476,6 +478,8 @@
 		051CD7B71259672300D100A5 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "configuration-navigation-launcher.png"; sourceTree = "<group>"; };
 		051DED461252C43D00F3E0F4 /* contacts-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-navigation-launcher.png"; sourceTree = "<group>"; };
+		05208F5E1277D80C006C5DAE /* configuration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = configuration.png; sourceTree = "<group>"; };
+		05208F791277DFFC006C5DAE /* configuration-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "configuration-top-launcher.png"; sourceTree = "<group>"; };
 		052553BA1222B3EF00203185 /* StreethakAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreethakAppDelegate.h; sourceTree = "<group>"; };
 		052553BB1222B3EF00203185 /* StreethakAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreethakAppDelegate.m; sourceTree = "<group>"; };
 		052D8C7112518FE100A2D7FF /* create-account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-account.png"; sourceTree = "<group>"; };
@@ -603,10 +607,10 @@
 			children = (
 				05DF153D125BE434009EFE18 /* AddContactViewController.xib */,
 				050F7A5D1247087000D9ED40 /* CreateAccountViewController.xib */,
+				050F7A5E1247087000D9ED40 /* ConfigurationViewController.xib */,
 				050366EC1259446D0010130C /* ContactCell.xib */,
 				05DF1534125BE399009EFE18 /* ContactMessagesViewController.xib */,
 				050366E5125943D50010130C /* ContactsViewController.xib */,
-				050F7A5E1247087000D9ED40 /* ConfigurationViewController.xib */,
 				050F7A6B1247095800D9ED40 /* InventoryViewController.xib */,
 				0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */,
 				050F7A601247087000D9ED40 /* MainWindow.xib */,
@@ -1020,10 +1024,11 @@
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				05028A5E1277A93200798260 /* send-event.png */,
 				05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */,
 				05FD1A031263EBC80003EDC4 /* add-contact.png */,
+				05208F5E1277D80C006C5DAE /* configuration.png */,
 				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
+				05208F791277DFFC006C5DAE /* configuration-top-launcher.png */,
 				0508E005126756FA00872A56 /* contact-messages-top-launcher.png */,
 				051DED461252C43D00F3E0F4 /* contacts-navigation-launcher.png */,
 				05DF1568125BEEDD009EFE18 /* contact-online.png */,
@@ -1039,6 +1044,7 @@
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
 				050F33EF125D65C30005607B /* notifications-navigation-launcher.png */,
 				052E1BEB1274A6060060051A /* notifications-top-launcher.png */,
+				05028A5E1277A93200798260 /* send-event.png */,
 				051130CF126A261800A9C996 /* send-message.png */,
 				051130A6126A21EB00A9C996 /* send-bottom-launcher.png */,
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
@@ -1242,6 +1248,8 @@
 				052E1BD012747EA60060051A /* NotificationsViewController.xib in Resources */,
 				052E1BEC1274A6060060051A /* notifications-top-launcher.png in Resources */,
 				05028A5F1277A93200798260 /* send-event.png in Resources */,
+				05208F5F1277D80C006C5DAE /* configuration.png in Resources */,
+				05208F7A1277DFFC006C5DAE /* configuration-top-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

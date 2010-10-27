@@ -138,11 +138,11 @@
 - (void)viewTouchedNamed:(NSString*)_name {
     if ([_name isEqualToString:@"send"]) {
         [self sendMessage];
-        [self.view removeFromSuperview];
         [[ViewControllerManager instance] shoutsViewWillAppear];
-    } else if ([_name isEqualToString:@"back"]) {
         [self.view removeFromSuperview];
-        [[ViewControllerManager instance] showContactMessagesView:self.containerView];
+    } else if ([_name isEqualToString:@"back"]) {
+        [[ViewControllerManager instance] shoutsViewWillAppear];
+        [self.view removeFromSuperview];
     }
 }
 
