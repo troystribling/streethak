@@ -54,7 +54,7 @@
     CGFloat width =  kDISPLAY_WIDTH;
     if (messageText) {
         CGSize textSize = {width, 20000.0f};
-        CGSize size = [messageText sizeWithFont:[UIFont fontWithName:@"Washington Text" size:24.0] constrainedToSize:textSize lineBreakMode:UILineBreakModeWordWrap];
+        CGSize size = [messageText sizeWithFont:[UIFont fontWithName:kGLOBAL_FONT size:24.0] constrainedToSize:textSize lineBreakMode:UILineBreakModeWordWrap];
         cellHeight = MAX(size.height, cellHeight);
     }    
 	return CGRectMake(0.0f, 0.0f, width, cellHeight);
@@ -69,7 +69,7 @@
     messageView.lineBreakMode = UILineBreakModeWordWrap;
     messageView.numberOfLines = 0;
     messageView.text = messageText;
-    messageView.font = [UIFont fontWithName:@"Washington Text" size:24.0];
+    messageView.font = [UIFont fontWithName:kGLOBAL_FONT size:24.0];
     if (color) {
         messageView.textColor = color;
     } else {
@@ -99,13 +99,13 @@
 + (void)setTime:(MessageCell*)cell forMessage:(MessageModel*)message {
     NSRange dateAndTime = {0, 16};
     cell.dateLabel.text = [[message createdAtAsString] substringWithRange:dateAndTime];
-    cell.dateLabel.font = [UIFont fontWithName:@"Washington Text" size:20.0];
+    cell.dateLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:20.0];
     cell.dateLabel.textColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.20 alpha:0.8]; 
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (void)setJID:(MessageCell*)cell forMessage:(MessageModel*)message {
-    cell.jidLabel.font = [UIFont fontWithName:@"Washington Text" size:20.0];
+    cell.jidLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:20.0];
     cell.jidLabel.text = [self getJID:message];
     cell.jidLabel.textColor = [UIColor colorWithRed:0.25 green:0.25 blue:0.20 alpha:0.8]; 
 }

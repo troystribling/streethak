@@ -22,14 +22,14 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 
 //===================================================================================================================================
-#pragma mark AddContactTopLauncherView PrivateAPI
+#pragma mark ConfigurationTopLauncherView PrivateAPI
 
 //===================================================================================================================================
-#pragma mark AddContactTopLauncherView
+#pragma mark ConfigurationTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate {
-    return [[AddContactTopLauncherView alloc] initInView:_view andDelegate:_delegate];
+    return [[ConfigurationTopLauncherView alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame image:@"configurstion-top-launcher.png" andDelegate:_delegate])) {
+    if ((self = [self initWithFrame:viewFrame image:@"configuration-top-launcher.png" andDelegate:_delegate])) {
         [_view addSubview:self];
     }
     return self;

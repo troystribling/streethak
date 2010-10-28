@@ -154,6 +154,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedConfig {
     [self.view removeFromSuperview];
+    [[ViewControllerManager instance] showConfigurationView:self.containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -340,7 +341,7 @@
     ContactCell* cell = (ContactCell*)[CellUtils createCell:[ContactCell class] forTableView:tableView];
     ContactModel* cellItem = [self.contacts objectAtIndex:indexPath.row]; 
     cell.contactLabel.text = [[cellItem toJID] user];
-    cell.contactLabel.font = [UIFont fontWithName:@"Washington Text" size:28.0];
+    cell.contactLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
     cell.activeImage.image = [ContactCell contactImage:[self.contacts objectAtIndex:indexPath.row]];
     [cell setUnreadMessageCount:self.account];
     return cell;

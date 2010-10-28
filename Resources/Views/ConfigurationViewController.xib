@@ -57,7 +57,7 @@
 					<object class="IBUITextField" id="190325613">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{42, 64}, {235, 31}}</string>
+						<string key="NSFrame">{{42, 60}, {235, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -82,6 +82,7 @@
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocorrectionType">1</int>
+							<int key="IBUIReturnKeyType">9</int>
 							<bool key="IBUISecureTextEntry">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -90,7 +91,7 @@
 					<object class="IBUITextField" id="510569274">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{42, 108}, {235, 31}}</string>
+						<string key="NSFrame">{{42, 105}, {235, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -109,6 +110,7 @@
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocorrectionType">1</int>
+							<int key="IBUIReturnKeyType">9</int>
 							<bool key="IBUISecureTextEntry">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -167,13 +169,21 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{85, 206}, {150, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<bool key="IBUIAutoresizesSubviews">NO</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
+						<object class="NSCustomResource" key="IBUIImage" id="1033910892">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">divider.png</string>
 						</object>
+					</object>
+					<object class="IBUIImageView" id="231580041">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{84, 297}, {150, 25}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<reference key="IBUIImage" ref="1033910892"/>
 					</object>
 					<object class="IBUILabel" id="338633784">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -266,6 +276,14 @@
 					</object>
 					<int key="connectionID">49</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">deleteAccountLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="338633784"/>
+					</object>
+					<int key="connectionID">55</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -288,6 +306,7 @@
 							<reference ref="190325613"/>
 							<reference ref="1026788002"/>
 							<reference ref="338633784"/>
+							<reference ref="231580041"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -337,6 +356,11 @@
 						<reference key="object" ref="338633784"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">53</int>
+						<reference key="object" ref="231580041"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -359,6 +383,8 @@
 					<string>52.IBEditorWindowLastContentRect</string>
 					<string>52.IBPluginDependency</string>
 					<string>52.IBViewBoundsToFrameTransform</string>
+					<string>53.IBPluginDependency</string>
+					<string>53.IBViewBoundsToFrameTransform</string>
 					<string>6.IBPluginDependency</string>
 					<string>6.IBViewBoundsToFrameTransform</string>
 				</object>
@@ -366,7 +392,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>ConfigurationViewController</string>
 					<string>UIResponder</string>
-					<string>{{820, 277}, {320, 460}}</string>
+					<string>{{620, 193}, {320, 460}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -383,12 +409,16 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDBgAAw2UAAA</bytes>
+						<bytes key="NSTransformStruct">AUKqAABDTgAAA</bytes>
 					</object>
 					<string>{{0, 824}, {42, 21}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDCwAAw28AAA</bytes>
+						<bytes key="NSTransformStruct">AUMWAABDdAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABCqgAAw3EAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -412,7 +442,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">52</int>
+			<int key="maxID">55</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -464,6 +494,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>confirmPasswordTextField</string>
+							<string>deleteAccountLabel</string>
 							<string>deleteButton</string>
 							<string>doneButton</string>
 							<string>passwordTextField</string>
@@ -471,6 +502,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UITextField</string>
+							<string>UILabel</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UITextField</string>
@@ -481,6 +513,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>confirmPasswordTextField</string>
+							<string>deleteAccountLabel</string>
 							<string>deleteButton</string>
 							<string>doneButton</string>
 							<string>passwordTextField</string>
@@ -490,6 +523,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">confirmPasswordTextField</string>
 								<string key="candidateClassName">UITextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">deleteAccountLabel</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">deleteButton</string>

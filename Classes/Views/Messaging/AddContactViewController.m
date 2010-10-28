@@ -97,7 +97,7 @@
 	self.account = [AccountModel findFirst];
 	self.jidTextField.returnKeyType = UIReturnKeyDone;
     self.jidTextField.delegate = self;
-    self.jidTextField.font = [UIFont fontWithName:@"Washington Text" size:22.0];
+    self.jidTextField.font = [UIFont fontWithName:kGLOBAL_FONT size:22.0];
 	self.jidTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [super viewDidLoad];
 }

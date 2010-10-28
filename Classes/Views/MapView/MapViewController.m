@@ -10,7 +10,7 @@
 #import "MapViewController.h"
 #import "MapTopLauncherView.h"
 #import "NavigationLauncherView.h"
-#import "ConfigurationTopLauncherView.h"
+#import "MapTopLauncherView.h"
 #import "ViewControllerManager.h"
 #import "RMCloudMadeMapSource.h"
 #import "RMMarker.h"
@@ -116,7 +116,7 @@
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
     [NavigationLauncherView inView:self.mapView withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
-    [ConfigurationTopLauncherView inView:self.mapView andDelegate:self];
+    [MapTopLauncherView inView:self.mapView andDelegate:self];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

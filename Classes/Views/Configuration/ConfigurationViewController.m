@@ -8,7 +8,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "ConfigurationViewController.h"
-#import "UICustomSwitch.h"
+#import "ConfigurationTopLauncherView.h"
+#import "ViewControllerManager.h"
 #import "AccountModel.h"
 #import "ServiceItemModel.h"
 #import "AlertViewManager.h"
@@ -33,6 +34,7 @@
 @synthesize doneButton;
 @synthesize deleteButton;
 @synthesize containerView;
+@synthesize deleteAccountLabel;
 
 //===================================================================================================================================
 #pragma mark ConfigurationViewController
@@ -110,11 +112,20 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+- (void)touchedNotifications {
+    [self.view removeFromSuperview];
+    [[ViewControllerManager instance] showNotificationsView:self.containerView];
+}            
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedContacts {
+    [self.view removeFromSuperview];
+    [[ViewControllerManager instance] showContactsView:self.containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedLocation {
+    [self.view removeFromSuperview];
 }
 
 //===================================================================================================================================
@@ -152,10 +163,13 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
+    self.passwordTextField.font = [UIFont fontWithName:kGLOBAL_FONT size:22.0];
     self.passwordTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
-    [NavigationLauncherView inView:self.mapView withImageNamed:@"configuration-navigation-launcher.png" andDelegate:self];
-    [ConfTopLauncherView inView:self.mapView andDelegate:self];
+    self.confirmPasswordTextField.font = [UIFont fontWithName:kGLOBAL_FONT size:22.0];
+    self.deleteAccountLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:26.0];
+    [NavigationLauncherView inView:self.view withImageNamed:@"configuration-navigation-launcher.png" andDelegate:self];
+    [ConfigurationTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 

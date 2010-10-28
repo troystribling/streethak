@@ -21,6 +21,7 @@
  	IBOutlet UITextField* confirmPasswordTextField;
     IBOutlet UIButton* doneButton;
     IBOutlet UIButton* deleteButton;
+    IBOutlet UILabel* deleteAccountLabel;
     UIView* containerView;
 }
 
@@ -30,6 +31,7 @@
 @property (nonatomic, retain) UIButton* doneButton;
 @property (nonatomic, retain) UIButton* deleteButton;
 @property (nonatomic, retain) UIView* containerView;
+@property (nonatomic, retain) UILabel* deleteAccountLabel;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView;

@@ -23,11 +23,12 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 // Define application configuration
-#define kAPP_NAME       "streethak"
-#define kAPP_VERSION    "0.0"
-#define kOS_VERSION     "iPhone"
-#define kAPP_CATEGORY   "client"
-#define kAPP_TYPE       "handheld"
+#define kAPP_NAME           "streethak"
+#define kAPP_VERSION        "0.0"
+#define kOS_VERSION         "iPhone"
+#define kAPP_CATEGORY       "client"
+#define kAPP_TYPE           "handheld"
+#define kGLOBAL_FONT        @"Washington Text"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 //LabelGridView configuration

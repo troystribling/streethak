@@ -97,7 +97,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedConfig {
     [self.view removeFromSuperview];
-    [[ViewControllerManager instance] removeContactsView];
+    [[ViewControllerManager instance] showConfigurationView:self.containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

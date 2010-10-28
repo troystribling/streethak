@@ -49,7 +49,7 @@
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.containerView = _containerView;
         self.view.frame = self.containerView.frame;
-        self.messageView.font = [UIFont fontWithName:@"Washington Text" size:24.0];
+        self.messageView.font = [UIFont fontWithName:kGLOBAL_FONT size:24.0];
     }
     return self;
 }

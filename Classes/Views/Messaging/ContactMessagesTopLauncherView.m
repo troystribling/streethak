@@ -44,7 +44,7 @@
         self.containedView = _view;
         CGRect labelFrame = CGRectMake(0.2891*viewWidth, 0.175*viewHeight, 0.4219*viewWidth, 0.45*viewHeight);
         self.contactNameLabel = [[UILabel alloc] initWithFrame:labelFrame];
-        self.contactNameLabel.font = [UIFont fontWithName:@"Washington Text" size:24.0];
+        self.contactNameLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:24.0];
         self.contactNameLabel.backgroundColor = [UIColor clearColor];
         self.contactNameLabel.textAlignment = UITextAlignmentCenter;
         [self addSubview:self.contactNameLabel];
