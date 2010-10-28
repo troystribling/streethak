@@ -14,6 +14,10 @@
 		0502D22A126E6FED00638A74 /* shouts-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502D229126E6FED00638A74 /* shouts-top-launcher.png */; };
 		050366E6125943D50010130C /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366E5125943D50010130C /* ContactsViewController.xib */; };
 		050366ED1259446D0010130C /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366EC1259446D0010130C /* ContactCell.xib */; };
+		0503945C127901D000CF4D84 /* delete-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0503945A127901D000CF4D84 /* delete-button.png */; };
+		0503945D127901D000CF4D84 /* update-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0503945B127901D000CF4D84 /* update-button.png */; };
+		050394671279078900CF4D84 /* divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 050394661279078900CF4D84 /* divider.png */; };
+		0503947212790F6600CF4D84 /* ConfigurationTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0503947112790F6600CF4D84 /* ConfigurationTopLauncherView.m */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		0506D8D1125BE1DB009BC283 /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */; };
@@ -224,6 +228,11 @@
 		0502D229126E6FED00638A74 /* shouts-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouts-top-launcher.png"; sourceTree = "<group>"; };
 		050366E5125943D50010130C /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		050366EC1259446D0010130C /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		0503945A127901D000CF4D84 /* delete-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-button.png"; sourceTree = "<group>"; };
+		0503945B127901D000CF4D84 /* update-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-button.png"; sourceTree = "<group>"; };
+		050394661279078900CF4D84 /* divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divider.png; sourceTree = "<group>"; };
+		0503947012790F6600CF4D84 /* ConfigurationTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationTopLauncherView.h; sourceTree = "<group>"; };
+		0503947112790F6600CF4D84 /* ConfigurationTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationTopLauncherView.m; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendMessageViewController.xib; sourceTree = "<group>"; };
@@ -572,6 +581,8 @@
 			children = (
 				050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */,
 				050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */,
+				0503947012790F6600CF4D84 /* ConfigurationTopLauncherView.h */,
+				0503947112790F6600CF4D84 /* ConfigurationTopLauncherView.m */,
 				050F7A0E124704A800D9ED40 /* ConfigurationViewController.h */,
 				050F7A0F124704A800D9ED40 /* ConfigurationViewController.m */,
 			);
@@ -1035,7 +1046,9 @@
 				05DF1575125BF2A6009EFE18 /* contact-offline.png */,
 				050F33EE125D65C30005607B /* contacts-top-launcher.png */,
 				052D8C7112518FE100A2D7FF /* create-account.png */,
+				0503945A127901D000CF4D84 /* delete-button.png */,
 				05DF1569125BEEDD009EFE18 /* display-background.png */,
+				050394661279078900CF4D84 /* divider.png */,
 				057E82481258D52C00B11DAC /* inventory.png */,
 				057E83AF1259280300B11DAC /* inventory-top-launcher.png */,
 				0500E3B0126BC65B00BB248B /* load_message.png */,
@@ -1053,6 +1066,7 @@
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
 				05DF158C125BF5A1009EFE18 /* unread-messages.png */,
+				0503945B127901D000CF4D84 /* update-button.png */,
 			);
 			name = Images;
 			path = Resources/Images;
@@ -1250,6 +1264,9 @@
 				05028A5F1277A93200798260 /* send-event.png in Resources */,
 				05208F5F1277D80C006C5DAE /* configuration.png in Resources */,
 				05208F7A1277DFFC006C5DAE /* configuration-top-launcher.png in Resources */,
+				0503945C127901D000CF4D84 /* delete-button.png in Resources */,
+				0503945D127901D000CF4D84 /* update-button.png in Resources */,
+				050394671279078900CF4D84 /* divider.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1384,6 +1401,7 @@
 				0502D21E126E6D8000638A74 /* ShoutsTopLauncherView.m in Sources */,
 				052E1BCD12747B9F0060051A /* NotificationsViewController.m in Sources */,
 				052E1BDA1274A1990060051A /* NotificationsTopLauncherView.m in Sources */,
+				0503947212790F6600CF4D84 /* ConfigurationTopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

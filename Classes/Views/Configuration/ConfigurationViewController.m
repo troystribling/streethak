@@ -154,6 +154,8 @@
 - (void)viewDidLoad {
     self.passwordTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
+    [NavigationLauncherView inView:self.mapView withImageNamed:@"configuration-navigation-launcher.png" andDelegate:self];
+    [ConfTopLauncherView inView:self.mapView andDelegate:self];
     [super viewDidLoad];
 }
 
