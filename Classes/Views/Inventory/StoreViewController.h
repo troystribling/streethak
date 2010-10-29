@@ -1,32 +1,27 @@
 //
-//  NotificationsViewController.h
+//  StoreViewController.h
 //  streethak
 //
-//  Created by Troy Stribling on 10/24/10.
+//  Created by Troy Stribling on 10/28/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
-#import "NotificationsTopLauncherView.h"
+#import "StoreTopLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
-@class EventsMessageCache;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface NotificationsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate> {
-    IBOutlet UITableView* notificationsView;
-    EventsMessageCache* notifications;
+@interface StoreViewController : UIViewController <NavigationLauncherViewDelegate, LauncherViewDelegate> {
     UIView* containerView;
     AccountModel* account;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) UITableView* notificationsView;
 @property (nonatomic, retain) UIView* containerView;
-@property (nonatomic, retain) EventsMessageCache* notifications;
 @property (nonatomic, retain) AccountModel* account;
 
 //-----------------------------------------------------------------------------------------------------------------------------------

@@ -19,6 +19,7 @@
 @class SendEventViewController;
 @class NotificationsViewController;
 @class ConfigurationViewController;
+@class StoreViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ViewControllerManager : NSObject {
@@ -31,6 +32,7 @@
     SendEventViewController* sendEventViewController;
     NotificationsViewController* notificationsViewController;
     ConfigurationViewController* configurationViewController;
+    StoreViewController* storeViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -43,6 +45,7 @@
 @property (nonatomic, retain) SendEventViewController* sendEventViewController;
 @property (nonatomic, retain) NotificationsViewController* notificationsViewController;
 @property (nonatomic, retain) ConfigurationViewController* configurationViewController;
+@property (nonatomic, retain) StoreViewController* storeViewController;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (ViewControllerManager*)instance;
@@ -92,5 +95,10 @@
 - (void)removeConfigurationView;
 - (void)configurationViewWillAppear;
 - (void)configurationViewWillDisappear;
+
+- (StoreViewController*)showStoreView:(UIView*)containerView;
+- (void)removeStoreView;
+- (void)storeViewWillAppear;
+- (void)storeViewWillDisappear;
 
 @end

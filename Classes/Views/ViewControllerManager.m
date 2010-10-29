@@ -17,6 +17,7 @@
 #import "SendEventViewController.h"
 #import "NotificationsViewController.h"
 #import "ConfigurationViewController.h"
+#import "StoreViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -39,6 +40,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize sendEventViewController;
 @synthesize notificationsViewController;
 @synthesize configurationViewController;
+@synthesize storeViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -324,6 +326,36 @@ static ViewControllerManager* thisViewControllerManager = nil;
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)configurationViewWillDisappear {
     [self.configurationViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// StoreViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (StoreViewController*)showStoreView:(UIView*)containerView {
+    if (self.storeViewController == nil) {
+        self.storeViewController = [StoreViewController inView:containerView];
+    }
+    [containerView addSubview:self.storeViewController.view];
+    [self.storeViewController viewWillAppear:NO];
+    return self.storeViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeStoreView {
+    if (self.storeViewController) {
+        [self.storeViewController viewWillDisappear:NO];
+        [self.storeViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)storeViewWillAppear {
+    [self.storeViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)storeViewWillDisappear {
+    [self.storeViewController viewWillDisappear:NO];
 }
 
 @end

@@ -10,11 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
 #import "ShoutsTopLauncherView.h"
-#import "SendEventViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
-@class UserModel;
 @class EventsMessageCache;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

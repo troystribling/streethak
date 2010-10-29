@@ -52,6 +52,11 @@
 		0510218D125ACA550010680E /* ChatMessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510218A125ACA550010680E /* ChatMessageCache.m */; };
 		0510218E125ACA550010680E /* MessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510218C125ACA550010680E /* MessageCache.m */; };
 		05102191125ACAE70010680E /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05102190125ACAE70010680E /* ContactCell.m */; };
+		0510D086127A6B58003DD4B4 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510D085127A6B58003DD4B4 /* StoreViewController.m */; };
+		0510D08B127A6BB0003DD4B4 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0510D08A127A6BB0003DD4B4 /* StoreViewController.xib */; };
+		0510D0A3127A802E003DD4B4 /* StoreTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */; };
+		0510D0A5127A80F2003DD4B4 /* store-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */; };
+		0510D0A9127A837F003DD4B4 /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = 0510D0A8127A837F003DD4B4 /* store.png */; };
 		0510D99712223191001FE510 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D99612223191001FE510 /* libxml2.2.dylib */; };
 		0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D9A9122232B8001FE510 /* CFNetwork.framework */; };
 		0510DA20122232FC001FE510 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510DA1F122232FC001FE510 /* CoreLocation.framework */; };
@@ -285,6 +290,13 @@
 		0510218C125ACA550010680E /* MessageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCache.m; sourceTree = "<group>"; };
 		0510218F125ACAE70010680E /* ContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCell.h; sourceTree = "<group>"; };
 		05102190125ACAE70010680E /* ContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCell.m; sourceTree = "<group>"; };
+		0510D084127A6B58003DD4B4 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		0510D085127A6B58003DD4B4 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		0510D08A127A6BB0003DD4B4 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
+		0510D0A1127A802E003DD4B4 /* StoreTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTopLauncherView.h; sourceTree = "<group>"; };
+		0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTopLauncherView.m; sourceTree = "<group>"; };
+		0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "store-top-launcher.png"; sourceTree = "<group>"; };
+		0510D0A8127A837F003DD4B4 /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store.png; sourceTree = "<group>"; };
 		0510D99612223191001FE510 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		0510D9A9122232B8001FE510 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0510DA1F122232FC001FE510 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -609,6 +621,10 @@
 				050F7A681247092000D9ED40 /* InventoryViewController.m */,
 				057E83A51259247E00B11DAC /* InventoryTopLauncherView.h */,
 				057E83A61259247E00B11DAC /* InventoryTopLauncherView.m */,
+				0510D084127A6B58003DD4B4 /* StoreViewController.h */,
+				0510D085127A6B58003DD4B4 /* StoreViewController.m */,
+				0510D0A1127A802E003DD4B4 /* StoreTopLauncherView.h */,
+				0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -631,6 +647,7 @@
 				050EFA64126BF09400DC3ACF /* SendEventViewController.xib */,
 				0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */,
 				050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */,
+				0510D08A127A6BB0003DD4B4 /* StoreViewController.xib */,
 			);
 			name = Views;
 			path = Resources/Views;
@@ -1062,6 +1079,8 @@
 				051130A6126A21EB00A9C996 /* send-bottom-launcher.png */,
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
 				05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */,
+				0510D0A8127A837F003DD4B4 /* store.png */,
+				0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */,
 				0502D229126E6FED00638A74 /* shouts-top-launcher.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
@@ -1267,6 +1286,9 @@
 				0503945C127901D000CF4D84 /* delete-button.png in Resources */,
 				0503945D127901D000CF4D84 /* update-button.png in Resources */,
 				050394671279078900CF4D84 /* divider.png in Resources */,
+				0510D08B127A6BB0003DD4B4 /* StoreViewController.xib in Resources */,
+				0510D0A5127A80F2003DD4B4 /* store-top-launcher.png in Resources */,
+				0510D0A9127A837F003DD4B4 /* store.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1402,6 +1424,8 @@
 				052E1BCD12747B9F0060051A /* NotificationsViewController.m in Sources */,
 				052E1BDA1274A1990060051A /* NotificationsTopLauncherView.m in Sources */,
 				0503947212790F6600CF4D84 /* ConfigurationTopLauncherView.m in Sources */,
+				0510D086127A6B58003DD4B4 /* StoreViewController.m in Sources */,
+				0510D0A3127A802E003DD4B4 /* StoreTopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
