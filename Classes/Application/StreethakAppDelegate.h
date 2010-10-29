@@ -16,13 +16,11 @@
 @interface StreethakAppDelegate : NSObject <UIApplicationDelegate, UIAlertViewDelegate> {
     UIWindow *window;
     MapViewController *viewController;
-    BOOL creatingAccount;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet MapViewController *viewController;
-@property (nonatomic, assign) BOOL creatingAccount;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 

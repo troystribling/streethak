@@ -10,6 +10,7 @@
 #import "ConfigurationViewController.h"
 #import "ConfigurationTopLauncherView.h"
 #import "ViewControllerManager.h"
+#import "GeoLocManager.h"
 #import "AccountModel.h"
 #import "ServiceItemModel.h"
 #import "AlertViewManager.h"
@@ -23,6 +24,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ConfigurationViewController (PrivateAPI)
 
+- (void)deleteAccount;
+
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -31,10 +34,10 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize passwordTextField;
 @synthesize confirmPasswordTextField;
-@synthesize doneButton;
+@synthesize updatePasswordButton;
 @synthesize deleteButton;
-@synthesize containerView;
 @synthesize deleteAccountLabel;
+@synthesize containerView;
 
 //===================================================================================================================================
 #pragma mark ConfigurationViewController
@@ -55,34 +58,22 @@
 } 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)doneButtonPressed:(id)sender {
-    AccountModel* acct = [self account];
-    [AccountModel setAllNotDisplayed];
-    acct.displayed = YES;
-    [acct update];
-    [[[XMPPClientManager instance] accountUpdateDelegate] didUpdateAccount];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
 - (IBAction)deleteButtonPressed:(id)sender {
-    AccountModel* acct = [self account];
-    [[XMPPClientManager instance] removeXMPPClientForAccount:acct];
-    [acct destroy];
-    if ([AccountModel count] > 0) {    
-        [[[XMPPClientManager instance] accountUpdateDelegate] didRemoveAccount];
-    }
-    [self.view removeFromSuperview];
+    UIAlertView* deleteAccountAlert = 
+        [[UIAlertView alloc] initWithTitle:@"Delete Account?" message:@"What is done is done" delegate:self cancelButtonTitle:@"no" otherButtonTitles:@"yes", nil];
+    [deleteAccountAlert show];	
+    [deleteAccountAlert release];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)sendPassword:(id)sender {
+- (IBAction)updateButtonPressed:(id)sender {
 	NSString* password = self.passwordTextField.text;
 	NSString* reenterPassword = self.confirmPasswordTextField.text;
-    [self.confirmPasswordTextField resignFirstResponder]; 
     if (![password isEqualToString:@""] && [password isEqualToString:reenterPassword]) {
         NSString* username = [[[self account] toJID] user];
         XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:self.account];
         [XMPPRegisterQuery set:client user:username withPassword:password];
+        [self.confirmPasswordTextField resignFirstResponder]; 
         [AlertViewManager showActivityIndicatorInView:self.view.window withTitle:@"Changing Password"];
     } else {
         [AlertViewManager showAlert:@"Password is Invalid"];
@@ -96,6 +87,16 @@
 
 //===================================================================================================================================
 #pragma mark ConfigurationViewController PrivateApi
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)deleteAccount {
+    AccountModel* acct = [self account];
+    [[XMPPClientManager instance] removeXMPPClientForAccount:acct];
+    [acct destroy];
+    [[[XMPPClientManager instance] accountUpdateDelegate] didRemoveAccount];
+    [[GeoLocManager instance] stop];
+    [self.view removeFromSuperview];
+}
 
 //===================================================================================================================================
 #pragma mark LauncherViewDelegate 
@@ -154,8 +155,21 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)xmppClient:(XMPPClient*)client didReceiveRegisterResult:(XMPPIQ*)iq {
+    self.passwordTextField.text = @"";
+    self.confirmPasswordTextField.text = @"";
     [AlertViewManager dismissActivityIndicator];
     [AlertViewManager showAlert:@"Password Changed"];
+}
+
+//===================================================================================================================================
+#pragma mark UIAlertViewDelegate
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+    } else if (buttonIndex == 1) {
+        [self deleteAccount];
+    }
 }
 
 //===================================================================================================================================
@@ -175,6 +189,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
+    self.passwordTextField.text = @"";
+    self.confirmPasswordTextField.text = @"";
     [[XMPPClientManager instance] delegateTo:self forAccount:self.account];	[super viewWillAppear:animated];
 }
 

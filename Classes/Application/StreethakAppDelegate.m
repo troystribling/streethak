@@ -51,7 +51,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize window;
 @synthesize viewController;
-@synthesize creatingAccount;
 
 //===================================================================================================================================
 #pragma mark streethakAppDelegate
@@ -136,10 +135,8 @@
     [[XMPPClientManager instance] addAccountUpdateDelegate:self];
     [self setUnreadMessages];
     if ([AccountModel count] == 0) {
-        self.creatingAccount = YES;
         [CreateAccountViewController inView:self.window];
     } else {
-        self.creatingAccount = NO;
         [self.window addSubview:self.viewController.view];
         [self initAccount];
     }
@@ -240,11 +237,13 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)didAddAccount {
-    [self.window addSubview:viewController.view];
+    [self.window addSubview:self.viewController.view];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)didRemoveAccount {
+    [self.viewController.view removeFromSuperview];
+    [CreateAccountViewController inView:self.window];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -256,8 +255,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)dealloc {
-    [viewController release];
-    [window release];
     [super dealloc];
 }
 
