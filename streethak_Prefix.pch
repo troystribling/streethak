@@ -71,8 +71,9 @@
 #define kMESSAGE_CELL_Y_OFFSET                  45.0
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-// ContactsView
+// Cell Heights
 #define kCONTACTS_CELL_HEIGHT                   90.0
+#define kSTORE_CELL_HEIGHT                      90.0
 
 
 

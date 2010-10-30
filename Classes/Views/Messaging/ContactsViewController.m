@@ -34,11 +34,8 @@
 - (void)onXmppClientConnectionError:(XMPPClient*)sender;
 - (void)loadContacts;
 - (void)loadAccount;
-- (void)reloadtems;
 - (void)addXMPPClientDelgate;
 - (void)removeXMPPClientDelgate;
-- (void)addXMPPAccountUpdateDelgate;
-- (void)removeXMPPAccountUpdateDelgate;
 - (void)addMessageCountUpdateDelgate;
 - (void)removeMessageCountUpdateDelgate;
 
@@ -96,14 +93,6 @@
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)reloadContacts {
-    [self loadAccount];
-    [self removeXMPPClientDelgate];
-    [self addXMPPClientDelgate];
-    [self loadContacts];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
 - (void)addXMPPClientDelgate {
     if (self.account) {
         [[XMPPClientManager instance] delegateTo:self forAccount:self.account];
@@ -115,16 +104,6 @@
     if (self.account) {
         [[XMPPClientManager instance] removeXMPPClientDelegate:self forAccount:self.account];
     }
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)addXMPPAccountUpdateDelgate {
-    [[XMPPClientManager instance] addAccountUpdateDelegate:self];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)removeXMPPAccountUpdateDelgate {
-    [[XMPPClientManager instance] removeAccountUpdateDelegate:self];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -170,24 +149,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)touchedLocation {
     [self.view removeFromSuperview];
-}
-
-//===================================================================================================================================
-#pragma mark XMPPClientManagerAccountUpdateDelegate
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)didAddAccount {
-    [self reloadContacts];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)didRemoveAccount {
-    [self reloadContacts];
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)didUpdateAccount {
-    [self reloadContacts];
 }
 
 //===================================================================================================================================
@@ -298,7 +259,6 @@
     [self loadAccount];
     [self loadContacts];
     [self addXMPPClientDelgate];
-    [self addXMPPAccountUpdateDelgate];
     [self addMessageCountUpdateDelgate];
 	[super viewWillAppear:animated];
 }
@@ -306,10 +266,8 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillDisappear:(BOOL)animated {
     [self removeXMPPClientDelgate];
-    [self removeXMPPAccountUpdateDelgate];
     [self removeMessageCountUpdateDelgate];
 	[super viewWillDisappear:animated];
-    [self release];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -372,11 +330,6 @@
 
 //===================================================================================================================================
 #pragma mark NSObject
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)dealloc {
-    [super dealloc];
-}
 
 @end
 

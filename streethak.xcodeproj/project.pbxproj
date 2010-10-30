@@ -33,6 +33,9 @@
 		0508E006126756FA00872A56 /* contact-messages-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0508E005126756FA00872A56 /* contact-messages-top-launcher.png */; };
 		050BCD7B127C63C7008BA6BC /* store-buy-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BCD79127C63C7008BA6BC /* store-buy-button.png */; };
 		050BCD7C127C63C7008BA6BC /* store-sell-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BCD7A127C63C7008BA6BC /* store-sell-button.png */; };
+		050BCD91127CC599008BA6BC /* StoreItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 050BCD90127CC599008BA6BC /* StoreItemCell.m */; };
+		050BCD93127CC6C3008BA6BC /* StoreItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050BCD92127CC6C3008BA6BC /* StoreItemCell.xib */; };
+		050BCDCA127CD000008BA6BC /* health-potion-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BCDC9127CD000008BA6BC /* health-potion-1.png */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
 		050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D368512556EF2001E5B06 /* NavigationLauncherView.m */; };
 		050EFA33126BE0F000DC3ACF /* SendEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050EFA32126BE0F000DC3ACF /* SendEventViewController.m */; };
@@ -263,6 +266,10 @@
 		0508E005126756FA00872A56 /* contact-messages-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact-messages-top-launcher.png"; sourceTree = "<group>"; };
 		050BCD79127C63C7008BA6BC /* store-buy-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "store-buy-button.png"; sourceTree = "<group>"; };
 		050BCD7A127C63C7008BA6BC /* store-sell-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "store-sell-button.png"; sourceTree = "<group>"; };
+		050BCD8F127CC599008BA6BC /* StoreItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreItemCell.h; sourceTree = "<group>"; };
+		050BCD90127CC599008BA6BC /* StoreItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreItemCell.m; sourceTree = "<group>"; };
+		050BCD92127CC6C3008BA6BC /* StoreItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreItemCell.xib; sourceTree = "<group>"; };
+		050BCDC9127CD000008BA6BC /* health-potion-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "health-potion-1.png"; sourceTree = "<group>"; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
 		050D368412556EF2001E5B06 /* NavigationLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationLauncherView.h; sourceTree = "<group>"; };
 		050D368512556EF2001E5B06 /* NavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationLauncherView.m; sourceTree = "<group>"; };
@@ -637,14 +644,16 @@
 				050F7A681247092000D9ED40 /* InventoryViewController.m */,
 				057E83A51259247E00B11DAC /* InventoryTopLauncherView.h */,
 				057E83A61259247E00B11DAC /* InventoryTopLauncherView.m */,
-				0510D084127A6B58003DD4B4 /* StoreViewController.h */,
-				0510D085127A6B58003DD4B4 /* StoreViewController.m */,
-				0510D0A1127A802E003DD4B4 /* StoreTopLauncherView.h */,
-				0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */,
 				05056CC7127BD5410015CAEA /* StatsTopLauncherView.h */,
 				05056CC8127BD5410015CAEA /* StatsTopLauncherView.m */,
 				05056CC2127BD1290015CAEA /* StatsViewController.h */,
 				05056CC3127BD1290015CAEA /* StatsViewController.m */,
+				050BCD8F127CC599008BA6BC /* StoreItemCell.h */,
+				050BCD90127CC599008BA6BC /* StoreItemCell.m */,
+				0510D084127A6B58003DD4B4 /* StoreViewController.h */,
+				0510D085127A6B58003DD4B4 /* StoreViewController.m */,
+				0510D0A1127A802E003DD4B4 /* StoreTopLauncherView.h */,
+				0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -666,9 +675,10 @@
 				052E1BCF12747EA60060051A /* NotificationsViewController.xib */,
 				050EFA64126BF09400DC3ACF /* SendEventViewController.xib */,
 				0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */,
-				050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */,
 				05056CBD127BD0C40015CAEA /* StatsViewController.xib */,
 				0510D08A127A6BB0003DD4B4 /* StoreViewController.xib */,
+				050BCD92127CC6C3008BA6BC /* StoreItemCell.xib */,
+				050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */,
 			);
 			name = Views;
 			path = Resources/Views;
@@ -1088,6 +1098,7 @@
 				0503945A127901D000CF4D84 /* delete-button.png */,
 				05DF1569125BEEDD009EFE18 /* display-background.png */,
 				050394661279078900CF4D84 /* divider.png */,
+				050BCDC9127CD000008BA6BC /* health-potion-1.png */,
 				057E82481258D52C00B11DAC /* inventory.png */,
 				057E83AF1259280300B11DAC /* inventory-top-launcher.png */,
 				0500E3B0126BC65B00BB248B /* load_message.png */,
@@ -1319,6 +1330,8 @@
 				05056CDC127BD6050015CAEA /* stats-top-launcher.png in Resources */,
 				050BCD7B127C63C7008BA6BC /* store-buy-button.png in Resources */,
 				050BCD7C127C63C7008BA6BC /* store-sell-button.png in Resources */,
+				050BCD93127CC6C3008BA6BC /* StoreItemCell.xib in Resources */,
+				050BCDCA127CD000008BA6BC /* health-potion-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1458,6 +1471,7 @@
 				0510D0A3127A802E003DD4B4 /* StoreTopLauncherView.m in Sources */,
 				05056CC4127BD1290015CAEA /* StatsViewController.m in Sources */,
 				05056CC9127BD5410015CAEA /* StatsTopLauncherView.m in Sources */,
+				050BCD91127CC599008BA6BC /* StoreItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
