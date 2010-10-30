@@ -20,6 +20,7 @@
 @class NotificationsViewController;
 @class ConfigurationViewController;
 @class StoreViewController;
+@class StatsViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ViewControllerManager : NSObject {
@@ -33,6 +34,7 @@
     NotificationsViewController* notificationsViewController;
     ConfigurationViewController* configurationViewController;
     StoreViewController* storeViewController;
+    StatsViewController* statsViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -46,6 +48,7 @@
 @property (nonatomic, retain) NotificationsViewController* notificationsViewController;
 @property (nonatomic, retain) ConfigurationViewController* configurationViewController;
 @property (nonatomic, retain) StoreViewController* storeViewController;
+@property (nonatomic, retain) StatsViewController* statsViewController;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (ViewControllerManager*)instance;
@@ -100,5 +103,10 @@
 - (void)removeStoreView;
 - (void)storeViewWillAppear;
 - (void)storeViewWillDisappear;
+
+- (StatsViewController*)showStatsView:(UIView*)containerView;
+- (void)removeStatsView;
+- (void)statsViewWillAppear;
+- (void)statsViewWillDisappear;
 
 @end

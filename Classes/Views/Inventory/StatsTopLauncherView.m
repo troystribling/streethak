@@ -1,35 +1,35 @@
 //
-//  StoreTopLauncherView.m
+//  StatsTopLauncherView.m
 //  streethak
 //
-//  Created by Troy Stribling on 10/29/10.
+//  Created by Troy Stribling on 10/30/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "StoreTopLauncherView.h"
+#import "StatsTopLauncherView.h"
 #import "TouchAreaView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface StoreTopLauncherView (PrivateAPI)
+@interface StatsTopLauncherView (PrivateAPI)
 
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation StoreTopLauncherView
+@implementation StatsTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize backLauncher;
 
 //===================================================================================================================================
-#pragma mark StoreTopLauncherView PrivateAPI
+#pragma mark StatsTopLauncherView PrivateAPI
 
 //===================================================================================================================================
-#pragma mark StoreTopLauncherView
+#pragma mark StatsTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate {
-    return [[StoreTopLauncherView alloc] initInView:_view andDelegate:_delegate];
+    return [[StatsTopLauncherView alloc] initInView:_view andDelegate:_delegate];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@
     CGFloat viewWidth =  _view.frame.size.width;
     CGFloat viewHeight = 0.1042*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0, 0.0, viewWidth, viewHeight);
-    if ((self = [self initWithFrame:viewFrame image:@"store-top-launcher.png" andDelegate:_delegate])) {
+    if ((self = [self initWithFrame:viewFrame image:@"stats-top-launcher.png" andDelegate:_delegate])) {
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];

@@ -77,6 +77,7 @@
     if ([name isEqualToString:@"inventory"]) {
         [[ViewControllerManager instance] showInventoryView:self.mapView];
     } else if ([name isEqualToString:@"stats"]) {
+        [[ViewControllerManager instance] showStatsView:self.mapView];
     }
 }
 

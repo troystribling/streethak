@@ -18,6 +18,7 @@
 #import "NotificationsViewController.h"
 #import "ConfigurationViewController.h"
 #import "StoreViewController.h"
+#import "StatsViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -41,6 +42,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize notificationsViewController;
 @synthesize configurationViewController;
 @synthesize storeViewController;
+@synthesize statsViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -356,6 +358,36 @@ static ViewControllerManager* thisViewControllerManager = nil;
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)storeViewWillDisappear {
     [self.storeViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// StatsViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (StatsViewController*)showStatsView:(UIView*)containerView {
+    if (self.statsViewController == nil) {
+        self.statsViewController = [StatsViewController inView:containerView];
+    }
+    [containerView addSubview:self.storeViewController.view];
+    [self.statsViewController viewWillAppear:NO];
+    return self.statsViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeStatsView {
+    if (self.statsViewController) {
+        [self.statsViewController viewWillDisappear:NO];
+        [self.statsViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)statsViewWillAppear {
+    [self.statsViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)statsViewWillDisappear {
+    [self.statsViewController viewWillDisappear:NO];
 }
 
 @end

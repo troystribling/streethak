@@ -1,21 +1,21 @@
 //
-//  StoreViewController.m
+//  StatsViewController.m
 //  streethak
 //
-//  Created by Troy Stribling on 10/28/10.
+//  Created by Troy Stribling on 10/30/10.
 //  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-#import "StoreViewController.h"
+#import "StatsViewController.h"
 #import "ViewControllerManager.h"
-#import "StoreTopLauncherView.h"
+#import "StatsTopLauncherView.h"
 #import "NavigationLauncherView.h"
 #import "AccountModel.h"
 #import "XMPPClientManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface StoreViewController (PrivateAPI)
+@interface StatsViewController (PrivateAPI)
 
 - (void)addXMPPClientDelgate;
 - (void)removeXMPPClientDelgate;
@@ -24,18 +24,18 @@
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation StoreViewController
+@implementation StatsViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize containerView;
 @synthesize account;
 
 //===================================================================================================================================
-#pragma mark StoreViewController
+#pragma mark StatsTopLauncherView
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView {
-    return [[StoreViewController alloc] initWithNibName:@"StoreViewController" bundle:nil inView:_containerView];
+    return [[StatsViewController alloc] initWithNibName:@"StatsViewController" bundle:nil inView:_containerView];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -48,7 +48,7 @@
 }
 
 //===================================================================================================================================
-#pragma mark ShoutsViewController PrivateAPI
+#pragma mark StatsTopLauncherView PrivateAPI
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)addXMPPClientDelgate {
@@ -72,7 +72,6 @@
 - (void)viewTouchedNamed:(NSString*)_name {
     if ([_name isEqualToString:@"back"]) {
         [self.view removeFromSuperview];
-        [[ViewControllerManager instance] showInventoryView:self.containerView];
     }
 }
 
@@ -118,7 +117,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
     [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
-    [StoreTopLauncherView inView:self.view andDelegate:self];
+    [StatsTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
 }
 

@@ -1,4 +1,4 @@
-    //
+//
 //  InventoryViewController.m
 //  streethak
 //
@@ -49,6 +49,8 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouchedNamed:(NSString*)name {
     if ([name isEqualToString:@"store"]) {
+        [self.view removeFromSuperview];
+        [[ViewControllerManager instance] showStoreView:self.containerView];
     } else if ([name isEqualToString:@"back"]) {
         [self.view removeFromSuperview];
     } 

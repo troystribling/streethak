@@ -19,6 +19,10 @@
 		050394671279078900CF4D84 /* divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 050394661279078900CF4D84 /* divider.png */; };
 		0503947212790F6600CF4D84 /* ConfigurationTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0503947112790F6600CF4D84 /* ConfigurationTopLauncherView.m */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
+		05056CBE127BD0C40015CAEA /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05056CBD127BD0C40015CAEA /* StatsViewController.xib */; };
+		05056CC4127BD1290015CAEA /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05056CC3127BD1290015CAEA /* StatsViewController.m */; };
+		05056CC9127BD5410015CAEA /* StatsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05056CC8127BD5410015CAEA /* StatsTopLauncherView.m */; };
+		05056CDC127BD6050015CAEA /* stats-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05056CDB127BD6050015CAEA /* stats-top-launcher.png */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
 		050666B8127BBA1C00C04CF6 /* battle.png in Resources */ = {isa = PBXBuildFile; fileRef = 050666B6127BBA1C00C04CF6 /* battle.png */; };
 		050666B9127BBA1C00C04CF6 /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = 050666B7127BBA1C00C04CF6 /* stats.png */; };
@@ -58,7 +62,6 @@
 		0510D08B127A6BB0003DD4B4 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0510D08A127A6BB0003DD4B4 /* StoreViewController.xib */; };
 		0510D0A3127A802E003DD4B4 /* StoreTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */; };
 		0510D0A5127A80F2003DD4B4 /* store-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */; };
-		0510D0A9127A837F003DD4B4 /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = 0510D0A8127A837F003DD4B4 /* store.png */; };
 		0510D99712223191001FE510 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D99612223191001FE510 /* libxml2.2.dylib */; };
 		0510D9AA122232B8001FE510 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510D9A9122232B8001FE510 /* CFNetwork.framework */; };
 		0510DA20122232FC001FE510 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0510DA1F122232FC001FE510 /* CoreLocation.framework */; };
@@ -241,6 +244,12 @@
 		0503947012790F6600CF4D84 /* ConfigurationTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationTopLauncherView.h; sourceTree = "<group>"; };
 		0503947112790F6600CF4D84 /* ConfigurationTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationTopLauncherView.m; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
+		05056CBD127BD0C40015CAEA /* StatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
+		05056CC2127BD1290015CAEA /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		05056CC3127BD1290015CAEA /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		05056CC7127BD5410015CAEA /* StatsTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTopLauncherView.h; sourceTree = "<group>"; };
+		05056CC8127BD5410015CAEA /* StatsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTopLauncherView.m; sourceTree = "<group>"; };
+		05056CDB127BD6050015CAEA /* stats-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats-top-launcher.png"; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		050666B6127BBA1C00C04CF6 /* battle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battle.png; sourceTree = "<group>"; };
 		050666B7127BBA1C00C04CF6 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
@@ -300,7 +309,6 @@
 		0510D0A1127A802E003DD4B4 /* StoreTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTopLauncherView.h; sourceTree = "<group>"; };
 		0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTopLauncherView.m; sourceTree = "<group>"; };
 		0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "store-top-launcher.png"; sourceTree = "<group>"; };
-		0510D0A8127A837F003DD4B4 /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store.png; sourceTree = "<group>"; };
 		0510D99612223191001FE510 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		0510D9A9122232B8001FE510 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0510DA1F122232FC001FE510 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -629,6 +637,10 @@
 				0510D085127A6B58003DD4B4 /* StoreViewController.m */,
 				0510D0A1127A802E003DD4B4 /* StoreTopLauncherView.h */,
 				0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */,
+				05056CC7127BD5410015CAEA /* StatsTopLauncherView.h */,
+				05056CC8127BD5410015CAEA /* StatsTopLauncherView.m */,
+				05056CC2127BD1290015CAEA /* StatsViewController.h */,
+				05056CC3127BD1290015CAEA /* StatsViewController.m */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -651,6 +663,7 @@
 				050EFA64126BF09400DC3ACF /* SendEventViewController.xib */,
 				0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */,
 				050EFA46126BEB1B00DC3ACF /* ShoutsViewController.xib */,
+				05056CBD127BD0C40015CAEA /* StatsViewController.xib */,
 				0510D08A127A6BB0003DD4B4 /* StoreViewController.xib */,
 			);
 			name = Views;
@@ -1085,7 +1098,7 @@
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
 				05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */,
 				050666B7127BBA1C00C04CF6 /* stats.png */,
-				0510D0A8127A837F003DD4B4 /* store.png */,
+				05056CDB127BD6050015CAEA /* stats-top-launcher.png */,
 				0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */,
 				0502D229126E6FED00638A74 /* shouts-top-launcher.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
@@ -1294,9 +1307,10 @@
 				050394671279078900CF4D84 /* divider.png in Resources */,
 				0510D08B127A6BB0003DD4B4 /* StoreViewController.xib in Resources */,
 				0510D0A5127A80F2003DD4B4 /* store-top-launcher.png in Resources */,
-				0510D0A9127A837F003DD4B4 /* store.png in Resources */,
 				050666B8127BBA1C00C04CF6 /* battle.png in Resources */,
 				050666B9127BBA1C00C04CF6 /* stats.png in Resources */,
+				05056CBE127BD0C40015CAEA /* StatsViewController.xib in Resources */,
+				05056CDC127BD6050015CAEA /* stats-top-launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1434,6 +1448,8 @@
 				0503947212790F6600CF4D84 /* ConfigurationTopLauncherView.m in Sources */,
 				0510D086127A6B58003DD4B4 /* StoreViewController.m in Sources */,
 				0510D0A3127A802E003DD4B4 /* StoreTopLauncherView.m in Sources */,
+				05056CC4127BD1290015CAEA /* StatsViewController.m in Sources */,
+				05056CC9127BD5410015CAEA /* StatsTopLauncherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
