@@ -20,6 +20,8 @@
 		0503947212790F6600CF4D84 /* ConfigurationTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0503947112790F6600CF4D84 /* ConfigurationTopLauncherView.m */; };
 		05044CC612249C0400818381 /* streethak.db in Resources */ = {isa = PBXBuildFile; fileRef = 05044CC512249C0400818381 /* streethak.db */; };
 		05066468122DCF3800444709 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05066465122DCE8F00444709 /* libMapView.a */; };
+		050666B8127BBA1C00C04CF6 /* battle.png in Resources */ = {isa = PBXBuildFile; fileRef = 050666B6127BBA1C00C04CF6 /* battle.png */; };
+		050666B9127BBA1C00C04CF6 /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = 050666B7127BBA1C00C04CF6 /* stats.png */; };
 		0506D8D1125BE1DB009BC283 /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */; };
 		0506E1051269318D003E6C55 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506E1041269318D003E6C55 /* MessageCell.xib */; };
 		0506E12C12693F01003E6C55 /* LoadMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */; };
@@ -240,6 +242,8 @@
 		0503947112790F6600CF4D84 /* ConfigurationTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationTopLauncherView.m; sourceTree = "<group>"; };
 		05044CC512249C0400818381 /* streethak.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = streethak.db; sourceTree = "<group>"; };
 		0506645D122DCE8F00444709 /* MapView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapView.xcodeproj; path = "../route-me/MapView/MapView.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		050666B6127BBA1C00C04CF6 /* battle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battle.png; sourceTree = "<group>"; };
+		050666B7127BBA1C00C04CF6 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
 		0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendMessageViewController.xib; sourceTree = "<group>"; };
 		0506E1041269318D003E6C55 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMessagesCell.xib; sourceTree = "<group>"; };
@@ -1054,6 +1058,7 @@
 			children = (
 				05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */,
 				05FD1A031263EBC80003EDC4 /* add-contact.png */,
+				050666B6127BBA1C00C04CF6 /* battle.png */,
 				05208F5E1277D80C006C5DAE /* configuration.png */,
 				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
 				05208F791277DFFC006C5DAE /* configuration-top-launcher.png */,
@@ -1079,6 +1084,7 @@
 				051130A6126A21EB00A9C996 /* send-bottom-launcher.png */,
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
 				05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */,
+				050666B7127BBA1C00C04CF6 /* stats.png */,
 				0510D0A8127A837F003DD4B4 /* store.png */,
 				0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */,
 				0502D229126E6FED00638A74 /* shouts-top-launcher.png */,
@@ -1289,6 +1295,8 @@
 				0510D08B127A6BB0003DD4B4 /* StoreViewController.xib in Resources */,
 				0510D0A5127A80F2003DD4B4 /* store-top-launcher.png in Resources */,
 				0510D0A9127A837F003DD4B4 /* store.png in Resources */,
+				050666B8127BBA1C00C04CF6 /* battle.png in Resources */,
+				050666B9127BBA1C00C04CF6 /* stats.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
