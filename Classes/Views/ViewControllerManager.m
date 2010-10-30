@@ -367,7 +367,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
     if (self.statsViewController == nil) {
         self.statsViewController = [StatsViewController inView:containerView];
     }
-    [containerView addSubview:self.storeViewController.view];
+    [containerView addSubview:self.statsViewController.view];
     [self.statsViewController viewWillAppear:NO];
     return self.statsViewController;
 }

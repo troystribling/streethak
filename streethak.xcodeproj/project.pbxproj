@@ -31,6 +31,8 @@
 		0506E12C12693F01003E6C55 /* LoadMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */; };
 		05075B0312669905008FC4B6 /* ContactMessagesTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05075B0212669905008FC4B6 /* ContactMessagesTopLauncherView.m */; };
 		0508E006126756FA00872A56 /* contact-messages-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0508E005126756FA00872A56 /* contact-messages-top-launcher.png */; };
+		050BCD7B127C63C7008BA6BC /* store-buy-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BCD79127C63C7008BA6BC /* store-buy-button.png */; };
+		050BCD7C127C63C7008BA6BC /* store-sell-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BCD7A127C63C7008BA6BC /* store-sell-button.png */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
 		050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D368512556EF2001E5B06 /* NavigationLauncherView.m */; };
 		050EFA33126BE0F000DC3ACF /* SendEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050EFA32126BE0F000DC3ACF /* SendEventViewController.m */; };
@@ -259,6 +261,8 @@
 		05075B0112669905008FC4B6 /* ContactMessagesTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMessagesTopLauncherView.h; sourceTree = "<group>"; };
 		05075B0212669905008FC4B6 /* ContactMessagesTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMessagesTopLauncherView.m; sourceTree = "<group>"; };
 		0508E005126756FA00872A56 /* contact-messages-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact-messages-top-launcher.png"; sourceTree = "<group>"; };
+		050BCD79127C63C7008BA6BC /* store-buy-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "store-buy-button.png"; sourceTree = "<group>"; };
+		050BCD7A127C63C7008BA6BC /* store-sell-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "store-sell-button.png"; sourceTree = "<group>"; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
 		050D368412556EF2001E5B06 /* NavigationLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationLauncherView.h; sourceTree = "<group>"; };
 		050D368512556EF2001E5B06 /* NavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationLauncherView.m; sourceTree = "<group>"; };
@@ -1098,8 +1102,10 @@
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
 				05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */,
 				050666B7127BBA1C00C04CF6 /* stats.png */,
-				05056CDB127BD6050015CAEA /* stats-top-launcher.png */,
+				050BCD79127C63C7008BA6BC /* store-buy-button.png */,
+				050BCD7A127C63C7008BA6BC /* store-sell-button.png */,
 				0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */,
+				05056CDB127BD6050015CAEA /* stats-top-launcher.png */,
 				0502D229126E6FED00638A74 /* shouts-top-launcher.png */,
 				050BE2231234585800CB5CC6 /* tile-background.png */,
 				05FC68F2122B2B6F00878B07 /* user-location-marker.png */,
@@ -1311,6 +1317,8 @@
 				050666B9127BBA1C00C04CF6 /* stats.png in Resources */,
 				05056CBE127BD0C40015CAEA /* StatsViewController.xib in Resources */,
 				05056CDC127BD6050015CAEA /* stats-top-launcher.png in Resources */,
+				050BCD7B127C63C7008BA6BC /* store-buy-button.png in Resources */,
+				050BCD7C127C63C7008BA6BC /* store-sell-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
