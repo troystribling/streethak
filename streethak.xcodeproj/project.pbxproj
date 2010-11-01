@@ -35,7 +35,6 @@
 		050BCD7C127C63C7008BA6BC /* store-sell-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BCD7A127C63C7008BA6BC /* store-sell-button.png */; };
 		050BCD91127CC599008BA6BC /* StoreItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 050BCD90127CC599008BA6BC /* StoreItemCell.m */; };
 		050BCD93127CC6C3008BA6BC /* StoreItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050BCD92127CC6C3008BA6BC /* StoreItemCell.xib */; };
-		050BCDCA127CD000008BA6BC /* health-potion-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BCDC9127CD000008BA6BC /* health-potion-1.png */; };
 		050BE2241234585800CB5CC6 /* tile-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BE2231234585800CB5CC6 /* tile-background.png */; };
 		050D368612556EF2001E5B06 /* NavigationLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D368512556EF2001E5B06 /* NavigationLauncherView.m */; };
 		050EFA33126BE0F000DC3ACF /* SendEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050EFA32126BE0F000DC3ACF /* SendEventViewController.m */; };
@@ -194,6 +193,9 @@
 		05DF1576125BF2A6009EFE18 /* contact-offline.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DF1575125BF2A6009EFE18 /* contact-offline.png */; };
 		05DF158D125BF5A1009EFE18 /* unread-messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DF158C125BF5A1009EFE18 /* unread-messages.png */; };
 		05DF1594125BFCDA009EFE18 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF1593125BFCDA009EFE18 /* MessageCell.m */; };
+		05F8169A127E3A2D00ABBAD8 /* armor-leather-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F81698127E3A2D00ABBAD8 /* armor-leather-1.png */; };
+		05F8169B127E3A2D00ABBAD8 /* health-potion-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F81699127E3A2D00ABBAD8 /* health-potion-1.png */; };
+		05F816A3127E447300ABBAD8 /* resurrection-amulet-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F816A2127E447300ABBAD8 /* resurrection-amulet-1.png */; };
 		05F97DF6125FFDF100E5EC82 /* LauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F97DF5125FFDF100E5EC82 /* LauncherView.m */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
@@ -269,7 +271,6 @@
 		050BCD8F127CC599008BA6BC /* StoreItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreItemCell.h; sourceTree = "<group>"; };
 		050BCD90127CC599008BA6BC /* StoreItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreItemCell.m; sourceTree = "<group>"; };
 		050BCD92127CC6C3008BA6BC /* StoreItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreItemCell.xib; sourceTree = "<group>"; };
-		050BCDC9127CD000008BA6BC /* health-potion-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "health-potion-1.png"; sourceTree = "<group>"; };
 		050BE2231234585800CB5CC6 /* tile-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tile-background.png"; sourceTree = "<group>"; };
 		050D368412556EF2001E5B06 /* NavigationLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationLauncherView.h; sourceTree = "<group>"; };
 		050D368512556EF2001E5B06 /* NavigationLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationLauncherView.m; sourceTree = "<group>"; };
@@ -551,6 +552,9 @@
 		05DF158C125BF5A1009EFE18 /* unread-messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unread-messages.png"; sourceTree = "<group>"; };
 		05DF1592125BFCDA009EFE18 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		05DF1593125BFCDA009EFE18 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		05F81698127E3A2D00ABBAD8 /* armor-leather-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armor-leather-1.png"; sourceTree = "<group>"; };
+		05F81699127E3A2D00ABBAD8 /* health-potion-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "health-potion-1.png"; sourceTree = "<group>"; };
+		05F816A2127E447300ABBAD8 /* resurrection-amulet-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resurrection-amulet-1.png"; sourceTree = "<group>"; };
 		05F97DF4125FFDF100E5EC82 /* LauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauncherView.h; sourceTree = "<group>"; };
 		05F97DF5125FFDF100E5EC82 /* LauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherView.m; sourceTree = "<group>"; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
@@ -1080,9 +1084,20 @@
 			path = Resources/Fonts;
 			sourceTree = "<group>";
 		};
+		05F81697127E3A2D00ABBAD8 /* inventory */ = {
+			isa = PBXGroup;
+			children = (
+				05F816A2127E447300ABBAD8 /* resurrection-amulet-1.png */,
+				05F81698127E3A2D00ABBAD8 /* armor-leather-1.png */,
+				05F81699127E3A2D00ABBAD8 /* health-potion-1.png */,
+			);
+			path = inventory;
+			sourceTree = "<group>";
+		};
 		05FC68EC122B2B6F00878B07 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				05F81697127E3A2D00ABBAD8 /* inventory */,
 				05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */,
 				05FD1A031263EBC80003EDC4 /* add-contact.png */,
 				050666B6127BBA1C00C04CF6 /* battle.png */,
@@ -1098,7 +1113,6 @@
 				0503945A127901D000CF4D84 /* delete-button.png */,
 				05DF1569125BEEDD009EFE18 /* display-background.png */,
 				050394661279078900CF4D84 /* divider.png */,
-				050BCDC9127CD000008BA6BC /* health-potion-1.png */,
 				057E82481258D52C00B11DAC /* inventory.png */,
 				057E83AF1259280300B11DAC /* inventory-top-launcher.png */,
 				0500E3B0126BC65B00BB248B /* load_message.png */,
@@ -1331,7 +1345,9 @@
 				050BCD7B127C63C7008BA6BC /* store-buy-button.png in Resources */,
 				050BCD7C127C63C7008BA6BC /* store-sell-button.png in Resources */,
 				050BCD93127CC6C3008BA6BC /* StoreItemCell.xib in Resources */,
-				050BCDCA127CD000008BA6BC /* health-potion-1.png in Resources */,
+				05F8169A127E3A2D00ABBAD8 /* armor-leather-1.png in Resources */,
+				05F8169B127E3A2D00ABBAD8 /* health-potion-1.png in Resources */,
+				05F816A3127E447300ABBAD8 /* resurrection-amulet-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -85,6 +85,7 @@
     if ([_name isEqualToString:@"back"]) {
         [self.view removeFromSuperview];
         [[ViewControllerManager instance] showInventoryView:self.containerView];
+    } else if ([_name isEqualToString:@"mode"]) {
     }
 }
 

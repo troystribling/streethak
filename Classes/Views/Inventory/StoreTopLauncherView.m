@@ -20,6 +20,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize backLauncher;
+@synthesize modeLauncher;
 
 //===================================================================================================================================
 #pragma mark StoreTopLauncherView PrivateAPI
@@ -42,6 +43,9 @@
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
         [_view addSubview:self];
+        CGRect modeFrame = CGRectMake(0.7578*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
+        self.modeLauncher = [TouchAreaView createWithFrame:modeFrame name:@"mode" andDelegate:self];
+        [self addSubview:self.modeLauncher];
     }
     return self;
 }
