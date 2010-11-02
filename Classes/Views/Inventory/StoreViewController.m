@@ -32,6 +32,9 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize itemsView;
 @synthesize containerView;
+@synthesize sellImage;
+@synthesize buyImage;
+@synthesize storeMode;
 @synthesize items;
 @synthesize account;
 
@@ -48,6 +51,9 @@
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.containerView = _containerView;
         self.view.frame = self.containerView.frame;
+        self.sellImage = [UIImage imageNamed:@"store-sell-button"];
+        self.buyImage = [UIImage imageNamed:@"store-buy-button"];
+        self.storeMode = StoreModeBuy;
     }
     return self;
 }
@@ -86,6 +92,9 @@
         [self.view removeFromSuperview];
         [[ViewControllerManager instance] showInventoryView:self.containerView];
     } else if ([_name isEqualToString:@"mode"]) {
+        if (self.storeMode == StoreModeBuy) {
+        } else {
+        }
     }
 }
 

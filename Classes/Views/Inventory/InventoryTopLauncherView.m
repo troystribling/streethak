@@ -44,7 +44,7 @@
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
-        CGRect storeFrame = CGRectMake(0.7812*viewWidth, 0.0, 0.2031*viewWidth, viewHeight);
+        CGRect storeFrame = CGRectMake(0.7891*viewWidth, 0.0, 0.2078*viewWidth, viewHeight);
         self.storeLauncher = [TouchAreaView createWithFrame:storeFrame name:@"store" andDelegate:self];
         [self addSubview:self.storeLauncher];
         [_view addSubview:self];

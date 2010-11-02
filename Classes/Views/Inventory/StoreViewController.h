@@ -14,9 +14,18 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+typedef enum storeMode {
+    StoreModeSell,
+    StoreModeBuy,
+} StoreModeType;
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface StoreViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NavigationLauncherViewDelegate, LauncherViewDelegate> {
     IBOutlet UITableView* itemsView;
+    UIImage* sellImage;
+    UIImage* buyImage;
+    StoreModeType storeMode;
     UIView* containerView;
     NSMutableArray* items;
     AccountModel* account;
@@ -25,6 +34,9 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITableView* itemsView;
 @property (nonatomic, retain) UIView* containerView;
+@property (nonatomic, retain) UIImage* sellImage;
+@property (nonatomic, retain) UIImage* buyImage;
+@property (nonatomic, assign) StoreModeType storeMode;
 @property (nonatomic, retain) NSMutableArray* items;
 @property (nonatomic, retain) AccountModel* account;
 

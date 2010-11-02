@@ -17,11 +17,13 @@
 @interface StoreTopLauncherView : LauncherView {
     TouchAreaView* backLauncher;
     TouchAreaView* modeLauncher;
+    UIImageView* modeView;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* backLauncher;
 @property (nonatomic, retain) TouchAreaView* modeLauncher;
+@property (nonatomic, retain) UIImageView* modeView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;
