@@ -31,9 +31,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize itemsView;
-@synthesize containerView;
 @synthesize sellImage;
 @synthesize buyImage;
+@synthesize containerView;
+@synthesize storeTopLauncherView;
 @synthesize storeMode;
 @synthesize items;
 @synthesize account;
@@ -50,10 +51,10 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.containerView = _containerView;
-        self.view.frame = self.containerView.frame;
-        self.sellImage = [UIImage imageNamed:@"store-sell-button"];
-        self.buyImage = [UIImage imageNamed:@"store-buy-button"];
+        self.buyImage = [UIImage imageNamed:@"store-buy-button.png"];
+        self.sellImage = [UIImage imageNamed:@"store-sell-button.png"];
         self.storeMode = StoreModeBuy;
+        self.view.frame = self.containerView.frame;
     }
     return self;
 }
@@ -93,7 +94,11 @@
         [[ViewControllerManager instance] showInventoryView:self.containerView];
     } else if ([_name isEqualToString:@"mode"]) {
         if (self.storeMode == StoreModeBuy) {
+            self.storeMode = StoreModeSell;
+            self.storeTopLauncherView.modeView.image = self.sellImage;
         } else {
+            self.storeMode = StoreModeBuy;
+            self.storeTopLauncherView.modeView.image = self.buyImage;
         }
     }
 }
@@ -142,7 +147,8 @@
     self.itemsView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
     self.itemsView.separatorColor = [UIColor blackColor];
     [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
-    [StoreTopLauncherView inView:self.view andDelegate:self];
+    self.storeTopLauncherView = [StoreTopLauncherView inView:self.view andDelegate:self];
+    self.storeTopLauncherView.modeView.image = self.buyImage;
     [super viewDidLoad];
 }
 

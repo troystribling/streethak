@@ -46,7 +46,10 @@
         [_view addSubview:self];
         CGRect modeFrame = CGRectMake(0.7578*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.modeLauncher = [TouchAreaView createWithFrame:modeFrame name:@"mode" andDelegate:self];
+        self.modeView = [[UIImageView alloc] initWithFrame:modeFrame];
+        self.modeView.contentMode = UIViewContentModeCenter; 
         [self addSubview:self.modeLauncher];
+        [self addSubview:self.modeView];
     }
     return self;
 }

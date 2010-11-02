@@ -13,6 +13,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
+@class StoreTopLauncherView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 typedef enum storeMode {
@@ -25,17 +26,19 @@ typedef enum storeMode {
     IBOutlet UITableView* itemsView;
     UIImage* sellImage;
     UIImage* buyImage;
-    StoreModeType storeMode;
     UIView* containerView;
+    StoreTopLauncherView* storeTopLauncherView;
+    StoreModeType storeMode;
     NSMutableArray* items;
     AccountModel* account;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UITableView* itemsView;
-@property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) UIImage* sellImage;
 @property (nonatomic, retain) UIImage* buyImage;
+@property (nonatomic, retain) UIView* containerView;
+@property (nonatomic, retain) StoreTopLauncherView* storeTopLauncherView;;
 @property (nonatomic, assign) StoreModeType storeMode;
 @property (nonatomic, retain) NSMutableArray* items;
 @property (nonatomic, retain) AccountModel* account;
