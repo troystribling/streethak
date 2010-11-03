@@ -11,6 +11,9 @@
 #import "NavigationLauncherView.h"
 #import "InventoryTopLauncherView.h"
 #import "ViewControllerManager.h"
+#import "XMPPClientManager.h"
+#import "AccountModel.h"
+#import "CellUtils.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryViewController (PrivateAPI)
@@ -21,10 +24,41 @@
 @implementation InventoryViewController
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+@synthesize itemsView;
+@synthesize equippedImage;
+@synthesize unequippedImage;
 @synthesize containerView;
+@synthesize equipMode;
+@synthesize items;
+@synthesize account;
 
 //===================================================================================================================================
 #pragma mark InventoryViewController PrivateAPI
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)addXMPPClientDelgate {
+    [[XMPPClientManager instance] delegateTo:self forAccount:self.account];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeXMPPClientDelgate {
+    [[XMPPClientManager instance] removeXMPPClientDelegate:self forAccount:self.account];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)loadAccount {
+    self.account = [AccountModel findFirst];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)loadItems {
+    if (self.account) {
+        if (self.equipMode == EquipModeEquipped) {
+        } else {
+        }
+        [self.itemsView reloadData];
+    } 
+}
 
 //===================================================================================================================================
 #pragma mark InventoryViewController
@@ -38,6 +72,9 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.containerView = _containerView;
+        self.equippedImage = [UIImage imageNamed:@"inventory-equipped-button.png"];
+        self.unequippedImage = [UIImage imageNamed:@"inventory-unequipped-button.png"];
+        self.equipMode = EquipModeEquipped;
         self.view.frame = self.containerView.frame;
     }
     return self;
@@ -47,13 +84,19 @@
 #pragma mark LauncherViewDelegate 
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (void)viewTouchedNamed:(NSString*)name {
-    if ([name isEqualToString:@"store"]) {
+- (void)viewTouchedNamed:(NSString*)_name {
+    if ([_name isEqualToString:@"store"]) {
         [self.view removeFromSuperview];
         [[ViewControllerManager instance] showStoreView:self.containerView];
-    } else if ([name isEqualToString:@"back"]) {
+    } else if ([_name isEqualToString:@"back"]) {
         [self.view removeFromSuperview];
-    } 
+    } else if ([_name isEqualToString:@"mode"]) {
+        if (self.equipMode == EquipModeEquipped) {
+            self.equipMode = EquipModeUnequipped;
+        } else {
+            self.equipMode = EquipModeEquipped;
+        }
+    }
 }
 
 //===================================================================================================================================
@@ -87,6 +130,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
+    self.itemsView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"display-background.png"]];
+    self.itemsView.separatorColor = [UIColor blackColor];
     [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
     [InventoryTopLauncherView inView:self.view andDelegate:self];
     [super viewDidLoad];
@@ -94,11 +139,15 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
+    [self loadAccount];
+    [self loadItems];
+    [self addXMPPClientDelgate];
 	[super viewWillAppear:animated];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillDisappear:(BOOL)animated {
+    [self removeXMPPClientDelgate];
 	[super viewWillDisappear:animated];
 }
 
@@ -110,6 +159,36 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+//===================================================================================================================================
+#pragma mark UITableViewDataSource
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return kSTORE_CELL_HEIGHT;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //    NSInteger itemCount = [self.items count];
+    return 0;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
+//    StoreItemCell* cell = (StoreItemCell*)[CellUtils createCell:[StoreItemCell class] forTableView:tableView];
+//    cell.itemLabel.text = @"Health Potion";
+//    cell.itemLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
+//    cell.itemPriceLabel.text = @"10gp";
+//    cell.itemPriceLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
+//    cell.itemImage.image = [UIImage imageNamed:@"health-potion-1.png"];
+//    return cell;
+    return nil;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
 }
 
 //===================================================================================================================================

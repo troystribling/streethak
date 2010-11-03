@@ -13,14 +13,33 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class InventoryTopLauncherView;
+@class AccountModel;
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+typedef enum equipMode {
+    EquipModeEquipped,
+    EquipModeUnequipped,
+} EquipModeType;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface InventoryViewController : UIViewController <NavigationLauncherViewDelegate, LauncherViewDelegate> {
+@interface InventoryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NavigationLauncherViewDelegate, LauncherViewDelegate> {
+    IBOutlet UITableView* itemsView;
+    UIImage* equippedImage;
+    UIImage* unequippedImage;
     UIView* containerView;
+    EquipModeType equipMode;
+    NSMutableArray* items;
+    AccountModel* account;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UIView* containerView;
+@property (nonatomic, retain) UIImage* equippedImage;
+@property (nonatomic, retain) UIImage* unequippedImage;
+@property (nonatomic, retain) UITableView* itemsView;
+@property (nonatomic, assign) EquipModeType equipMode;
+@property (nonatomic, retain) NSMutableArray* items;
+@property (nonatomic, retain) AccountModel* account;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView;

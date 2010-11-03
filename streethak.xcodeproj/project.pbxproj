@@ -165,6 +165,8 @@
 		0511892F125C104900F8F210 /* CellUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0511892E125C104900F8F210 /* CellUtils.m */; };
 		05118950125C17C200F8F210 /* LoadMessagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0511894F125C17C200F8F210 /* LoadMessagesCell.m */; };
 		051379221260B4A000CF1FC5 /* ViewControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 051379211260B4A000CF1FC5 /* ViewControllerManager.m */; };
+		05185695128113BA00B88A98 /* inventory-equipped-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 05185693128113BA00B88A98 /* inventory-equipped-button.png */; };
+		05185696128113BA00B88A98 /* inventory-unequipped-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 05185694128113BA00B88A98 /* inventory-unequipped-button.png */; };
 		051CD7BC1259672300D100A5 /* AcceptBuddyRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7A51259672300D100A5 /* AcceptBuddyRequestView.m */; };
 		051CD7BD1259672300D100A5 /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7A71259672300D100A5 /* AddContactViewController.m */; };
 		051CD7C51259672300D100A5 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 051CD7B71259672300D100A5 /* ContactsViewController.m */; };
@@ -515,6 +517,8 @@
 		0511894F125C17C200F8F210 /* LoadMessagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMessagesCell.m; sourceTree = "<group>"; };
 		051379201260B4A000CF1FC5 /* ViewControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerManager.h; sourceTree = "<group>"; };
 		051379211260B4A000CF1FC5 /* ViewControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerManager.m; sourceTree = "<group>"; };
+		05185693128113BA00B88A98 /* inventory-equipped-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inventory-equipped-button.png"; sourceTree = "<group>"; };
+		05185694128113BA00B88A98 /* inventory-unequipped-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inventory-unequipped-button.png"; sourceTree = "<group>"; };
 		051CD7A41259672300D100A5 /* AcceptBuddyRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptBuddyRequestView.h; sourceTree = "<group>"; };
 		051CD7A51259672300D100A5 /* AcceptBuddyRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptBuddyRequestView.m; sourceTree = "<group>"; };
 		051CD7A61259672300D100A5 /* AddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactViewController.h; sourceTree = "<group>"; };
@@ -1114,6 +1118,8 @@
 				05DF1569125BEEDD009EFE18 /* display-background.png */,
 				050394661279078900CF4D84 /* divider.png */,
 				057E82481258D52C00B11DAC /* inventory.png */,
+				05185693128113BA00B88A98 /* inventory-equipped-button.png */,
+				05185694128113BA00B88A98 /* inventory-unequipped-button.png */,
 				057E83AF1259280300B11DAC /* inventory-top-launcher.png */,
 				0500E3B0126BC65B00BB248B /* load_message.png */,
 				05700D1112442E410059964F /* map-top-launcher.png */,
@@ -1348,6 +1354,8 @@
 				05F8169A127E3A2D00ABBAD8 /* armor-leather-1.png in Resources */,
 				05F8169B127E3A2D00ABBAD8 /* health-potion-1.png in Resources */,
 				05F816A3127E447300ABBAD8 /* resurrection-amulet-1.png in Resources */,
+				05185695128113BA00B88A98 /* inventory-equipped-button.png in Resources */,
+				05185696128113BA00B88A98 /* inventory-unequipped-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
