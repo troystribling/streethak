@@ -36,8 +36,8 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (id)initInView:(UIView*)_view withImageNamed:(NSString*)_imageName andDelegate:(id<NavigationLauncherViewDelegate>)_delegate {
     CGFloat viewWidth =  _view.frame.size.width;
-    CGFloat viewHeight = 0.1042*_view.frame.size.height;
-    CGFloat viewPosY = 0.8958*_view.frame.size.height;
+    CGFloat viewHeight = 0.1823*_view.frame.size.height;
+    CGFloat viewPosY = 0.8177*_view.frame.size.height;
     CGRect viewFrame = CGRectMake(0.0,  viewPosY, viewWidth, viewHeight);
     if ((self = [self initWithFrame:viewFrame])) {
         self.delegate = _delegate;

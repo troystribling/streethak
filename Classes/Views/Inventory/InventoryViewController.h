@@ -13,6 +13,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class InventoryTopLauncherView;
+@class TouchAreaView;
 @class AccountModel;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -26,6 +27,7 @@ typedef enum equipMode {
     IBOutlet UITableView* itemsView;
     UIImage* equippedImage;
     UIImage* unequippedImage;
+    TouchAreaView* equipButtonView;
     UIView* containerView;
     EquipModeType equipMode;
     NSMutableArray* items;
@@ -36,6 +38,7 @@ typedef enum equipMode {
 @property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) UIImage* equippedImage;
 @property (nonatomic, retain) UIImage* unequippedImage;
+@property (nonatomic, retain) TouchAreaView* equipButtonView;
 @property (nonatomic, retain) UITableView* itemsView;
 @property (nonatomic, assign) EquipModeType equipMode;
 @property (nonatomic, retain) NSMutableArray* items;

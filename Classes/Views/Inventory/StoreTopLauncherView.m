@@ -43,7 +43,6 @@
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
-        [_view addSubview:self];
         CGRect modeLauncherFrame = CGRectMake(0.7578*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.modeLauncher = [TouchAreaView createWithFrame:modeLauncherFrame name:@"mode" andDelegate:self];
         [self addSubview:self.modeLauncher];
@@ -51,6 +50,7 @@
         self.modeView = [[UIImageView alloc] initWithFrame:modeViewFrame];
         self.modeView.contentMode = UIViewContentModeScaleToFill; 
         [self addSubview:self.modeView];
+        [_view addSubview:self];
     }
     return self;
 }

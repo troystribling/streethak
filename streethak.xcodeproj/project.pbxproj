@@ -1566,7 +1566,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = streethak;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "721E6981-725C-4418-94ED-8A25C586288C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF2FEC7B-0EC4-447F-B1E7-A3D7E932696B";
 			};
 			name = Release;
 		};
@@ -1602,7 +1602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: William Stribling (EP33FMNW27)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1617,6 +1617,7 @@
 					"-ObjC",
 				);
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF2FEC7B-0EC4-447F-B1E7-A3D7E932696B";
 				SDKROOT = iphoneos4.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
