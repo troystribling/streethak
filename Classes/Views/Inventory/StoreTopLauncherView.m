@@ -9,6 +9,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import "StoreTopLauncherView.h"
 #import "TouchAreaView.h"
+#import "TouchImageView.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface StoreTopLauncherView (PrivateAPI)
@@ -21,7 +22,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize backLauncher;
 @synthesize modeLauncher;
-@synthesize modeView;
 
 //===================================================================================================================================
 #pragma mark StoreTopLauncherView PrivateAPI
@@ -43,13 +43,11 @@
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
-        CGRect modeLauncherFrame = CGRectMake(0.7578*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
-        self.modeLauncher = [TouchAreaView createWithFrame:modeLauncherFrame name:@"mode" andDelegate:self];
+        CGRect modeLauncherFrame = CGRectMake(0.7672*viewWidth, 0.05*viewHeight, 0.2062*viewWidth, 0.6800*viewHeight);
+        self.modeLauncher = [TouchImageView createWithFrame:modeLauncherFrame name:@"mode" andDelegate:self];
+        self.modeLauncher.contentMode = UIViewContentModeScaleToFill; 
+        self.modeLauncher.image = [UIImage imageNamed:@"store-buy-button.png"];
         [self addSubview:self.modeLauncher];
-        CGRect modeViewFrame = CGRectMake(0.7672*viewWidth, 0.05*viewHeight, 0.2062*viewWidth, 0.6800*viewHeight);
-        self.modeView = [[UIImageView alloc] initWithFrame:modeViewFrame];
-        self.modeView.contentMode = UIViewContentModeScaleToFill; 
-        [self addSubview:self.modeView];
         [_view addSubview:self];
     }
     return self;
@@ -60,6 +58,14 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
+    [self.delegate viewTouchedNamed:touchedView.viewName];
+}
+
+//===================================================================================================================================
+#pragma mark TouchImageView Delegate
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)imageTouched:(TouchImageView*)touchedView {
     [self.delegate viewTouchedNamed:touchedView.viewName];
 }
 

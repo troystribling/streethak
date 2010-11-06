@@ -36,6 +36,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize mapView;
 @synthesize mapGeoLocUpdateDelegate;
+@synthesize mapTopLauncherView;
 @synthesize userMarker;
 
 //===================================================================================================================================
@@ -117,13 +118,14 @@
     UIImage* userLocationMarkerImage = [UIImage imageNamed:@"user-location-marker.png"];
     self.userMarker = [[RMMarker alloc] initWithUIImage:userLocationMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
     [NavigationLauncherView inView:self.mapView withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
-    [MapTopLauncherView inView:self.mapView andDelegate:self];
+    self.mapTopLauncherView = [MapTopLauncherView inView:self.mapView andDelegate:self];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
     [[GeoLocManager instance] addUpdateDelegate:self.mapGeoLocUpdateDelegate forAccount:[AccountModel findFirst]];
     [self setLocation];
+    [self.mapTopLauncherView setLevel];
 	[super viewWillAppear:animated];
 }
 

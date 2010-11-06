@@ -578,7 +578,7 @@
 		05FD1A081263ED170003EDC4 /* AddContactTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactTopLauncherView.m; sourceTree = "<group>"; };
 		05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send-shout-top-launcher.png"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* streethak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = streethak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* Street Hak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Street Hak.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1175,7 +1175,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* streethak.app */,
+				1D6058910D05DD3D006BFB54 /* Street Hak.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1247,7 +1247,7 @@
 			);
 			name = streethak;
 			productName = streethak;
-			productReference = 1D6058910D05DD3D006BFB54 /* streethak.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* Street Hak.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1554,7 +1554,7 @@
 					"-lCloudMadeApi",
 					"-ObjC",
 				);
-				PRODUCT_NAME = streethak;
+				PRODUCT_NAME = "Street Hak";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8C74BA1-5C22-4A81-AFF9-313A204C4CDD";
 			};
 			name = Debug;
@@ -1583,7 +1583,7 @@
 					"-lCloudMadeApi",
 					"-ObjC",
 				);
-				PRODUCT_NAME = streethak;
+				PRODUCT_NAME = "Street Hak";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF2FEC7B-0EC4-447F-B1E7-A3D7E932696B";
 			};
 			name = Release;

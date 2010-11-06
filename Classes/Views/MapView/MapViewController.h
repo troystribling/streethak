@@ -16,17 +16,20 @@
 @class RMMarker;
 @class MapGeoLocUpdateDelegate;
 @class OverlayRMMapView;
+@class MapTopLauncherView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface MapViewController : UIViewController <NavigationLauncherViewDelegate, LauncherViewDelegate> {
 	IBOutlet OverlayRMMapView* mapView;
     MapGeoLocUpdateDelegate* mapGeoLocUpdateDelegate;
+    MapTopLauncherView* mapTopLauncherView;
     RMMarker* userMarker;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) RMMapView* mapView;
 @property (nonatomic, retain) MapGeoLocUpdateDelegate* mapGeoLocUpdateDelegate;
+@property (nonatomic, retain) MapTopLauncherView* mapTopLauncherView;
 @property (nonatomic, retain) RMMarker* userMarker;
 
 //-----------------------------------------------------------------------------------------------------------------------------------

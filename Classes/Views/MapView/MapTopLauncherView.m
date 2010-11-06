@@ -44,7 +44,6 @@
         [self addSubview:self.inventoryLauncher];
         CGRect levelFrame = CGRectMake(0.0187*viewWidth, 0.0, 0.1562*viewWidth, 0.85*viewHeight);
         self.levelLabel = [[[UILabel alloc] initWithFrame:levelFrame] autorelease]; 
-        self.levelLabel.text = @"99";
         self.levelLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:36.0];
         self.levelLabel.textAlignment = UITextAlignmentCenter;
         self.levelLabel.backgroundColor = [UIColor clearColor];
@@ -55,6 +54,11 @@
         [_view addSubview:self];
     }
     return self;
+}
+
+//------------------------------------------------------------------------------------------------------------------------------------ 
+- (void)setLevel {
+    self.levelLabel.text = @"99";
 }
 
 //===================================================================================================================================

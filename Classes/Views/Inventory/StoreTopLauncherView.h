@@ -12,18 +12,17 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class TouchAreaView;
+@class TouchImageView;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface StoreTopLauncherView : LauncherView {
     TouchAreaView* backLauncher;
-    TouchAreaView* modeLauncher;
-    UIImageView* modeView;
+    TouchImageView* modeLauncher;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) TouchAreaView* backLauncher;
-@property (nonatomic, retain) TouchAreaView* modeLauncher;
-@property (nonatomic, retain) UIImageView* modeView;
+@property (nonatomic, retain) TouchImageView* modeLauncher;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;

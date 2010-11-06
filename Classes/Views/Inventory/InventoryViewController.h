@@ -14,6 +14,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class InventoryTopLauncherView;
 @class TouchAreaView;
+@class TouchImageView;
 @class AccountModel;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -25,9 +26,13 @@ typedef enum equipMode {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NavigationLauncherViewDelegate, LauncherViewDelegate> {
     IBOutlet UITableView* itemsView;
+    IBOutlet UILabel* goldLabel;
+    IBOutlet UILabel* healthPotionLabel;
     UIImage* equippedImage;
     UIImage* unequippedImage;
-    TouchAreaView* equipButtonView;
+    TouchImageView* equipButtonView;
+    TouchAreaView* goldView;
+    TouchAreaView* healthPotionView;
     UIView* containerView;
     EquipModeType equipMode;
     NSMutableArray* items;
@@ -38,7 +43,11 @@ typedef enum equipMode {
 @property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) UIImage* equippedImage;
 @property (nonatomic, retain) UIImage* unequippedImage;
-@property (nonatomic, retain) TouchAreaView* equipButtonView;
+@property (nonatomic, retain) UILabel* goldLabel;
+@property (nonatomic, retain) UILabel* healthPotionLabel;
+@property (nonatomic, retain) TouchImageView* equipButtonView;
+@property (nonatomic, retain) TouchAreaView* goldView;
+@property (nonatomic, retain) TouchAreaView* healthPotionView;
 @property (nonatomic, retain) UITableView* itemsView;
 @property (nonatomic, assign) EquipModeType equipMode;
 @property (nonatomic, retain) NSMutableArray* items;

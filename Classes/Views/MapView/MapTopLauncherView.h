@@ -29,4 +29,7 @@
 + (id)inView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;
 - (id)initInView:(UIView*)_view andDelegate:(id<LauncherViewDelegate>)_delegate;
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)setLevel;
+
 @end

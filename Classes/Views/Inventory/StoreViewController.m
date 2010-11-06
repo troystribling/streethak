@@ -10,6 +10,7 @@
 #import "StoreViewController.h"
 #import "ViewControllerManager.h"
 #import "StoreTopLauncherView.h"
+#import "TouchImageView.h"
 #import "CellUtils.h"
 #import "StoreItemCell.h"
 #import "NavigationLauncherView.h"
@@ -98,10 +99,10 @@
     } else if ([_name isEqualToString:@"mode"]) {
         if (self.storeMode == StoreModeBuy) {
             self.storeMode = StoreModeSell;
-            self.storeTopLauncherView.modeView.image = self.sellImage;
+            self.storeTopLauncherView.modeLauncher.image = self.sellImage;
         } else {
             self.storeMode = StoreModeBuy;
-            self.storeTopLauncherView.modeView.image = self.buyImage;
+            self.storeTopLauncherView.modeLauncher.image = self.buyImage;
         }
     }
 }
@@ -151,7 +152,7 @@
     self.itemsView.separatorColor = [UIColor blackColor];
     [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
     self.storeTopLauncherView = [StoreTopLauncherView inView:self.view andDelegate:self];
-    self.storeTopLauncherView.modeView.image = self.buyImage;
+    self.storeTopLauncherView.modeLauncher.image = self.buyImage;
     [super viewDidLoad];
 }
 
@@ -203,7 +204,7 @@
     StoreItemCell* cell = (StoreItemCell*)[CellUtils createCell:[StoreItemCell class] forTableView:tableView];
     cell.itemLabel.text = @"Plate Armor";
     cell.itemLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
-    cell.itemPriceLabel.text = @"500gp";
+    cell.itemPriceLabel.text = @"500p";
     cell.itemPriceLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
     cell.itemImage.image = [UIImage imageNamed:@"armor-plate-1.png"];
     return cell;
