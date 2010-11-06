@@ -14,7 +14,7 @@
 #import "XMPPClientManager.h"
 #import "AccountModel.h"
 #import "CellUtils.h"
-#import "StoreItemCell.h"
+#import "InventoryItemCell.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface InventoryViewController (PrivateAPI)
@@ -179,12 +179,10 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
-    StoreItemCell* cell = (StoreItemCell*)[CellUtils createCell:[StoreItemCell class] forTableView:tableView];
-    cell.itemLabel.text = @"Health Potion";
+    InventoryItemCell* cell = (InventoryItemCell*)[CellUtils createCell:[InventoryItemCell class] forTableView:tableView];
+    cell.itemLabel.text = @"Shield";
     cell.itemLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
-    cell.itemPriceLabel.text = @"10gp";
-    cell.itemPriceLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
-    cell.itemImage.image = [UIImage imageNamed:@"health-potion-1.png"];
+    cell.itemImage.image = [UIImage imageNamed:@"shield-1.png"];
     return cell;
     return nil;
 }

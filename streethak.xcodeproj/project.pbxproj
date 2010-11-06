@@ -12,6 +12,12 @@
 		05028A5F1277A93200798260 /* send-event.png in Resources */ = {isa = PBXBuildFile; fileRef = 05028A5E1277A93200798260 /* send-event.png */; };
 		0502D21E126E6D8000638A74 /* ShoutsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0502D21D126E6D8000638A74 /* ShoutsTopLauncherView.m */; };
 		0502D22A126E6FED00638A74 /* shouts-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502D229126E6FED00638A74 /* shouts-top-launcher.png */; };
+		0502FF891284F27F00546777 /* armor-padded-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502FF851284F27F00546777 /* armor-padded-1.png */; };
+		0502FF8A1284F27F00546777 /* armor-plate-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502FF861284F27F00546777 /* armor-plate-1.png */; };
+		0502FF8B1284F27F00546777 /* shield-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502FF871284F27F00546777 /* shield-1.png */; };
+		0502FF8C1284F27F00546777 /* shield-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502FF881284F27F00546777 /* shield-2.png */; };
+		0502FF8F1284F2FA00546777 /* InventoryItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0502FF8E1284F2FA00546777 /* InventoryItemCell.m */; };
+		0502FF961284F4E100546777 /* InventoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0502FF951284F4E100546777 /* InventoryItemCell.xib */; };
 		050366E6125943D50010130C /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366E5125943D50010130C /* ContactsViewController.xib */; };
 		050366ED1259446D0010130C /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050366EC1259446D0010130C /* ContactCell.xib */; };
 		0503945C127901D000CF4D84 /* delete-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0503945A127901D000CF4D84 /* delete-button.png */; };
@@ -196,8 +202,6 @@
 		05DF158D125BF5A1009EFE18 /* unread-messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 05DF158C125BF5A1009EFE18 /* unread-messages.png */; };
 		05DF1594125BFCDA009EFE18 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DF1593125BFCDA009EFE18 /* MessageCell.m */; };
 		05F8169A127E3A2D00ABBAD8 /* armor-leather-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F81698127E3A2D00ABBAD8 /* armor-leather-1.png */; };
-		05F8169B127E3A2D00ABBAD8 /* health-potion-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F81699127E3A2D00ABBAD8 /* health-potion-1.png */; };
-		05F816A3127E447300ABBAD8 /* resurrection-amulet-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F816A2127E447300ABBAD8 /* resurrection-amulet-1.png */; };
 		05F97DF6125FFDF100E5EC82 /* LauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F97DF5125FFDF100E5EC82 /* LauncherView.m */; };
 		05FC68F5122B2B6F00878B07 /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68EF122B2B6F00878B07 /* main_icon.png */; };
 		05FC68F8122B2B6F00878B07 /* user-location-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 05FC68F2122B2B6F00878B07 /* user-location-marker.png */; };
@@ -245,6 +249,13 @@
 		0502D21C126E6D8000638A74 /* ShoutsTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutsTopLauncherView.h; sourceTree = "<group>"; };
 		0502D21D126E6D8000638A74 /* ShoutsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutsTopLauncherView.m; sourceTree = "<group>"; };
 		0502D229126E6FED00638A74 /* shouts-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shouts-top-launcher.png"; sourceTree = "<group>"; };
+		0502FF851284F27F00546777 /* armor-padded-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armor-padded-1.png"; sourceTree = "<group>"; };
+		0502FF861284F27F00546777 /* armor-plate-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armor-plate-1.png"; sourceTree = "<group>"; };
+		0502FF871284F27F00546777 /* shield-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shield-1.png"; sourceTree = "<group>"; };
+		0502FF881284F27F00546777 /* shield-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shield-2.png"; sourceTree = "<group>"; };
+		0502FF8D1284F2FA00546777 /* InventoryItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryItemCell.h; sourceTree = "<group>"; };
+		0502FF8E1284F2FA00546777 /* InventoryItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryItemCell.m; sourceTree = "<group>"; };
+		0502FF951284F4E100546777 /* InventoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryItemCell.xib; sourceTree = "<group>"; };
 		050366E5125943D50010130C /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		050366EC1259446D0010130C /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		0503945A127901D000CF4D84 /* delete-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-button.png"; sourceTree = "<group>"; };
@@ -557,8 +568,6 @@
 		05DF1592125BFCDA009EFE18 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		05DF1593125BFCDA009EFE18 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		05F81698127E3A2D00ABBAD8 /* armor-leather-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armor-leather-1.png"; sourceTree = "<group>"; };
-		05F81699127E3A2D00ABBAD8 /* health-potion-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "health-potion-1.png"; sourceTree = "<group>"; };
-		05F816A2127E447300ABBAD8 /* resurrection-amulet-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resurrection-amulet-1.png"; sourceTree = "<group>"; };
 		05F97DF4125FFDF100E5EC82 /* LauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauncherView.h; sourceTree = "<group>"; };
 		05F97DF5125FFDF100E5EC82 /* LauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherView.m; sourceTree = "<group>"; };
 		05FC68EF122B2B6F00878B07 /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
@@ -648,10 +657,12 @@
 		050F7A4A1247073E00D9ED40 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
-				050F7A671247092000D9ED40 /* InventoryViewController.h */,
-				050F7A681247092000D9ED40 /* InventoryViewController.m */,
+				0502FF8D1284F2FA00546777 /* InventoryItemCell.h */,
+				0502FF8E1284F2FA00546777 /* InventoryItemCell.m */,
 				057E83A51259247E00B11DAC /* InventoryTopLauncherView.h */,
 				057E83A61259247E00B11DAC /* InventoryTopLauncherView.m */,
+				050F7A671247092000D9ED40 /* InventoryViewController.h */,
+				050F7A681247092000D9ED40 /* InventoryViewController.m */,
 				05056CC7127BD5410015CAEA /* StatsTopLauncherView.h */,
 				05056CC8127BD5410015CAEA /* StatsTopLauncherView.m */,
 				05056CC2127BD1290015CAEA /* StatsViewController.h */,
@@ -676,6 +687,7 @@
 				05DF1534125BE399009EFE18 /* ContactMessagesViewController.xib */,
 				050366E5125943D50010130C /* ContactsViewController.xib */,
 				050F7A6B1247095800D9ED40 /* InventoryViewController.xib */,
+				0502FF951284F4E100546777 /* InventoryItemCell.xib */,
 				0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */,
 				050F7A601247087000D9ED40 /* MainWindow.xib */,
 				050F7A611247087000D9ED40 /* MapViewController.xib */,
@@ -1091,9 +1103,11 @@
 		05F81697127E3A2D00ABBAD8 /* inventory */ = {
 			isa = PBXGroup;
 			children = (
-				05F816A2127E447300ABBAD8 /* resurrection-amulet-1.png */,
 				05F81698127E3A2D00ABBAD8 /* armor-leather-1.png */,
-				05F81699127E3A2D00ABBAD8 /* health-potion-1.png */,
+				0502FF851284F27F00546777 /* armor-padded-1.png */,
+				0502FF861284F27F00546777 /* armor-plate-1.png */,
+				0502FF871284F27F00546777 /* shield-1.png */,
+				0502FF881284F27F00546777 /* shield-2.png */,
 			);
 			path = inventory;
 			sourceTree = "<group>";
@@ -1352,10 +1366,13 @@
 				050BCD7C127C63C7008BA6BC /* store-sell-button.png in Resources */,
 				050BCD93127CC6C3008BA6BC /* StoreItemCell.xib in Resources */,
 				05F8169A127E3A2D00ABBAD8 /* armor-leather-1.png in Resources */,
-				05F8169B127E3A2D00ABBAD8 /* health-potion-1.png in Resources */,
-				05F816A3127E447300ABBAD8 /* resurrection-amulet-1.png in Resources */,
 				05185695128113BA00B88A98 /* inventory-equipped-button.png in Resources */,
 				05185696128113BA00B88A98 /* inventory-unequipped-button.png in Resources */,
+				0502FF891284F27F00546777 /* armor-padded-1.png in Resources */,
+				0502FF8A1284F27F00546777 /* armor-plate-1.png in Resources */,
+				0502FF8B1284F27F00546777 /* shield-1.png in Resources */,
+				0502FF8C1284F27F00546777 /* shield-2.png in Resources */,
+				0502FF961284F4E100546777 /* InventoryItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1496,6 +1513,7 @@
 				05056CC4127BD1290015CAEA /* StatsViewController.m in Sources */,
 				05056CC9127BD5410015CAEA /* StatsTopLauncherView.m in Sources */,
 				050BCD91127CC599008BA6BC /* StoreItemCell.m in Sources */,
+				0502FF8F1284F2FA00546777 /* InventoryItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
