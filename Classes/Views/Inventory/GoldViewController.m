@@ -15,6 +15,7 @@
 @interface GoldViewController (PrivateAPI)
 
 - (void)loadAccount;
+- (void)setMsg;
 
 @end
 
@@ -24,6 +25,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize buyButton;
 @synthesize cancelButton;
+@synthesize msgLabel;
 @synthesize account;
 @synthesize containerView;
 @synthesize delegate;
@@ -41,6 +43,7 @@
 	if (self = [super initWithNibName:nibName bundle:nibBundle]) { 
         self.containerView = _containerView;
         self.view.frame = self.containerView.frame;
+        self.msgLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
         [self.containerView addSubview:self.view];
 	} 
 	return self; 
@@ -65,6 +68,11 @@
     self.account = [AccountModel findFirst];
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)setMsg {
+    self.msgLabel.text = @"Buy 100p Gold for $1";
+}
+
 //===================================================================================================================================
 #pragma mark UIViewController
 
@@ -75,6 +83,8 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated {
+    [self loadAccount];
+    [self setMsg];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------

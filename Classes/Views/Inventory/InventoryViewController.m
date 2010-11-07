@@ -140,6 +140,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewTouched:(TouchAreaView*)touchedView {
     if ([touchedView.viewName isEqualToString:@"gold"]) {
+        [[ViewControllerManager instance] showGoldView:self.view];
     } else if ([touchedView.viewName isEqualToString:@"health-potion"]) {
     }
 }

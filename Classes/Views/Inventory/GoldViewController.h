@@ -24,6 +24,7 @@
 @interface GoldViewController : UIViewController {
     IBOutlet UIButton* buyButton;
     IBOutlet UIButton* cancelButton;
+    IBOutlet UILabel* msgLabel;
     AccountModel* account;
     UIView* containerView;
     id<GoldViewDelegate> delegate;
@@ -32,6 +33,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 @property (nonatomic, retain) UIButton* buyButton;
 @property (nonatomic, retain) UIButton* cancelButton;
+@property (nonatomic, retain) UILabel* msgLabel;
 @property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) UIView* containerView;
 @property (assign) id<GoldViewDelegate> delegate;
