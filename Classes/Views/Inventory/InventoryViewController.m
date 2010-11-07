@@ -25,8 +25,6 @@
 - (void)removeXMPPClientDelgate;
 - (void)loadAccount;
 - (void)loadItems;
-- (void)setGoldValue;
-- (void)setHealthPotionCount;
 
 @end
 
@@ -75,16 +73,6 @@
     } 
 }
 
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)setGoldValue {
-    self.goldLabel.text = @"999p";
-}
-
-//-----------------------------------------------------------------------------------------------------------------------------------
-- (void)setHealthPotionCount {
-    self.healthPotionLabel.text = @"99";
-}
-
 //===================================================================================================================================
 #pragma mark InventoryViewController
 
@@ -118,6 +106,19 @@
         [self.view addSubview:self.equipButtonView];
     }
     return self;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)setHealthPotionCount {
+    self.healthPotionLabel.text = @"99";
+}
+
+//===================================================================================================================================
+#pragma mark GoldViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)setGoldValue {
+    self.goldLabel.text = @"999p";
 }
 
 //===================================================================================================================================
@@ -240,7 +241,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
     InventoryItemCell* cell = (InventoryItemCell*)[CellUtils createCell:[InventoryItemCell class] forTableView:tableView];
-    cell.itemLabel.text = @"Shield";
+    cell.itemLabel.text = @"Small Shield";
     cell.itemLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:28.0];
     cell.itemImage.image = [UIImage imageNamed:@"shield-1.png"];
     return cell;

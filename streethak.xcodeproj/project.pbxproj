@@ -51,6 +51,7 @@
 		050F33F0125D65C30005607B /* contacts-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EE125D65C30005607B /* contacts-top-launcher.png */; };
 		050F33F1125D65C30005607B /* notifications-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 050F33EF125D65C30005607B /* notifications-navigation-launcher.png */; };
 		050F33FC125D67AD0005607B /* ContactsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */; };
+		050F52DE12866D8B0088E6B4 /* GoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F52DD12866D8B0088E6B4 /* GoldViewController.m */; };
 		050F7A10124704A800D9ED40 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */; };
 		050F7A11124704A800D9ED40 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A0F124704A800D9ED40 /* ConfigurationViewController.m */; };
 		050F7A1C124704B800D9ED40 /* OverlayRMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F7A16124704B800D9ED40 /* OverlayRMMapView.m */; };
@@ -68,6 +69,10 @@
 		0510218D125ACA550010680E /* ChatMessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510218A125ACA550010680E /* ChatMessageCache.m */; };
 		0510218E125ACA550010680E /* MessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510218C125ACA550010680E /* MessageCache.m */; };
 		05102191125ACAE70010680E /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05102190125ACAE70010680E /* ContactCell.m */; };
+		0510466012871B3C00C1975E /* GoldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0510465F12871B3C00C1975E /* GoldViewController.xib */; };
+		051046671287428700C1975E /* cancel-dialog-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 051046641287428700C1975E /* cancel-dialog-button.png */; };
+		051046681287428700C1975E /* parchment-dialog.png in Resources */ = {isa = PBXBuildFile; fileRef = 051046651287428700C1975E /* parchment-dialog.png */; };
+		0510466C1287444D00C1975E /* buy-more-dialog-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0510466B1287444D00C1975E /* buy-more-dialog-button.png */; };
 		0510D086127A6B58003DD4B4 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510D085127A6B58003DD4B4 /* StoreViewController.m */; };
 		0510D08B127A6BB0003DD4B4 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0510D08A127A6BB0003DD4B4 /* StoreViewController.xib */; };
 		0510D0A3127A802E003DD4B4 /* StoreTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510D0A2127A802E003DD4B4 /* StoreTopLauncherView.m */; };
@@ -299,6 +304,8 @@
 		050F33EF125D65C30005607B /* notifications-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notifications-navigation-launcher.png"; sourceTree = "<group>"; };
 		050F33FA125D67AD0005607B /* ContactsTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTopLauncherView.h; sourceTree = "<group>"; };
 		050F33FB125D67AD0005607B /* ContactsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTopLauncherView.m; sourceTree = "<group>"; };
+		050F52DC12866D8B0088E6B4 /* GoldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldViewController.h; sourceTree = "<group>"; };
+		050F52DD12866D8B0088E6B4 /* GoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldViewController.m; sourceTree = "<group>"; };
 		050F7A0C124704A800D9ED40 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		050F7A0D124704A800D9ED40 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		050F7A0E124704A800D9ED40 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
@@ -328,6 +335,10 @@
 		0510218C125ACA550010680E /* MessageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCache.m; sourceTree = "<group>"; };
 		0510218F125ACAE70010680E /* ContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCell.h; sourceTree = "<group>"; };
 		05102190125ACAE70010680E /* ContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCell.m; sourceTree = "<group>"; };
+		0510465F12871B3C00C1975E /* GoldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoldViewController.xib; sourceTree = "<group>"; };
+		051046641287428700C1975E /* cancel-dialog-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-dialog-button.png"; sourceTree = "<group>"; };
+		051046651287428700C1975E /* parchment-dialog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "parchment-dialog.png"; sourceTree = "<group>"; };
+		0510466B1287444D00C1975E /* buy-more-dialog-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-more-dialog-button.png"; sourceTree = "<group>"; };
 		0510D084127A6B58003DD4B4 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		0510D085127A6B58003DD4B4 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		0510D08A127A6BB0003DD4B4 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
@@ -657,6 +668,8 @@
 		050F7A4A1247073E00D9ED40 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				050F52DC12866D8B0088E6B4 /* GoldViewController.h */,
+				050F52DD12866D8B0088E6B4 /* GoldViewController.m */,
 				0502FF8D1284F2FA00546777 /* InventoryItemCell.h */,
 				0502FF8E1284F2FA00546777 /* InventoryItemCell.m */,
 				057E83A51259247E00B11DAC /* InventoryTopLauncherView.h */,
@@ -686,6 +699,7 @@
 				050366EC1259446D0010130C /* ContactCell.xib */,
 				05DF1534125BE399009EFE18 /* ContactMessagesViewController.xib */,
 				050366E5125943D50010130C /* ContactsViewController.xib */,
+				0510465F12871B3C00C1975E /* GoldViewController.xib */,
 				050F7A6B1247095800D9ED40 /* InventoryViewController.xib */,
 				0502FF951284F4E100546777 /* InventoryItemCell.xib */,
 				0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */,
@@ -1119,6 +1133,8 @@
 				05FD1A051263EC160003EDC4 /* add-contact-top-launcher.png */,
 				05FD1A031263EBC80003EDC4 /* add-contact.png */,
 				050666B6127BBA1C00C04CF6 /* battle.png */,
+				0510466B1287444D00C1975E /* buy-more-dialog-button.png */,
+				051046641287428700C1975E /* cancel-dialog-button.png */,
 				05208F5E1277D80C006C5DAE /* configuration.png */,
 				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
 				05208F791277DFFC006C5DAE /* configuration-top-launcher.png */,
@@ -1141,6 +1157,7 @@
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
 				050F33EF125D65C30005607B /* notifications-navigation-launcher.png */,
 				052E1BEB1274A6060060051A /* notifications-top-launcher.png */,
+				051046651287428700C1975E /* parchment-dialog.png */,
 				05028A5E1277A93200798260 /* send-event.png */,
 				051130CF126A261800A9C996 /* send-message.png */,
 				051130A6126A21EB00A9C996 /* send-bottom-launcher.png */,
@@ -1373,6 +1390,10 @@
 				0502FF8B1284F27F00546777 /* shield-1.png in Resources */,
 				0502FF8C1284F27F00546777 /* shield-2.png in Resources */,
 				0502FF961284F4E100546777 /* InventoryItemCell.xib in Resources */,
+				0510466012871B3C00C1975E /* GoldViewController.xib in Resources */,
+				051046671287428700C1975E /* cancel-dialog-button.png in Resources */,
+				051046681287428700C1975E /* parchment-dialog.png in Resources */,
+				0510466C1287444D00C1975E /* buy-more-dialog-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1514,6 +1535,7 @@
 				05056CC9127BD5410015CAEA /* StatsTopLauncherView.m in Sources */,
 				050BCD91127CC599008BA6BC /* StoreItemCell.m in Sources */,
 				0502FF8F1284F2FA00546777 /* InventoryItemCell.m in Sources */,
+				050F52DE12866D8B0088E6B4 /* GoldViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

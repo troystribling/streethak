@@ -21,6 +21,7 @@
 @class ConfigurationViewController;
 @class StoreViewController;
 @class StatsViewController;
+@class GoldViewController;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ViewControllerManager : NSObject {
@@ -35,6 +36,7 @@
     ConfigurationViewController* configurationViewController;
     StoreViewController* storeViewController;
     StatsViewController* statsViewController;
+    GoldViewController* goldViewController;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
@@ -49,6 +51,7 @@
 @property (nonatomic, retain) ConfigurationViewController* configurationViewController;
 @property (nonatomic, retain) StoreViewController* storeViewController;
 @property (nonatomic, retain) StatsViewController* statsViewController;
+@property (nonatomic, retain) GoldViewController* goldViewController;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (ViewControllerManager*)instance;
@@ -108,5 +111,10 @@
 - (void)removeStatsView;
 - (void)statsViewWillAppear;
 - (void)statsViewWillDisappear;
+
+- (GoldViewController*)showGoldView:(UIView*)containerView;
+- (void)removeGoldView;
+- (void)goldViewWillAppear;
+- (void)goldViewWillDisappear;
 
 @end

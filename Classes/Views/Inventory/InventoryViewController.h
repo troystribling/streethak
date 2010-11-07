@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
 #import "LauncherView.h"
+#import "GoldViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class InventoryTopLauncherView;
@@ -24,7 +25,7 @@ typedef enum equipMode {
 } EquipModeType;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface InventoryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NavigationLauncherViewDelegate, LauncherViewDelegate> {
+@interface InventoryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NavigationLauncherViewDelegate, LauncherViewDelegate, GoldViewDelegate> {
     IBOutlet UITableView* itemsView;
     IBOutlet UILabel* goldLabel;
     IBOutlet UILabel* healthPotionLabel;
@@ -56,5 +57,9 @@ typedef enum equipMode {
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView;
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)setGoldValue;
+- (void)setHealthPotionCount;
 
 @end

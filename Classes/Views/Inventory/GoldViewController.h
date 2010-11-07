@@ -1,44 +1,47 @@
 //
-//  ConfigurationViewController.h
-//  webgnosus
+//  GoldViewController.h
+//  streethak
 //
-//  Created by Troy Stribling on 2/6/09.
-//  Copyright 2009 Plan-B Research. All rights reserved.
+//  Created by Troy Stribling on 11/7/10.
+//  Copyright 2010 planBresearch. All rights reserved.
 //
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 #import <UIKit/UIKit.h>
-#import "LauncherView.h"
-#import "NavigationLauncherView.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ConfigurationViewController : UIViewController <UITextFieldDelegate, NavigationLauncherViewDelegate, LauncherViewDelegate, UIAlertViewDelegate> {
-	IBOutlet UITextField* passwordTextField;
- 	IBOutlet UITextField* confirmPasswordTextField;
-    IBOutlet UIButton* updatePasswordButton;
-    IBOutlet UIButton* deleteButton;
-    IBOutlet UILabel* deleteAccountLabel;
+@protocol GoldViewDelegate <NSObject>
+
+- (void)setGoldValue;
+
+@end
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@interface GoldViewController : UIViewController {
+    IBOutlet UIButton* buyButton;
+    IBOutlet UIButton* cancelButton;
+    AccountModel* account;
     UIView* containerView;
+    id<GoldViewDelegate> delegate;
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-@property (nonatomic, retain) UITextField* passwordTextField;
-@property (nonatomic, retain) UITextField* confirmPasswordTextField;
-@property (nonatomic, retain) UIButton* updatePasswordButton;
-@property (nonatomic, retain) UIButton* deleteButton;
-@property (nonatomic, retain) UILabel* deleteAccountLabel;
+@property (nonatomic, retain) UIButton* buyButton;
+@property (nonatomic, retain) UIButton* cancelButton;
+@property (nonatomic, retain) AccountModel* account;
 @property (nonatomic, retain) UIView* containerView;
+@property (assign) id<GoldViewDelegate> delegate;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 + (id)inView:(UIView*)_containerView;
 - (id)initWithNibName:(NSString*)nibName bundle:(NSBundle*)nibBundle inView:(UIView*)_containerView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)deleteButtonPressed:(id)sender;
-- (IBAction)updateButtonPressed:(id)sender;
+- (IBAction)buyButtonPressed:(id)sender;
+- (IBAction)cancelButtonPressed:(id)sender;
 
-    
 @end

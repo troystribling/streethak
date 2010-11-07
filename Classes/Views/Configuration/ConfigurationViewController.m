@@ -24,6 +24,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface ConfigurationViewController (PrivateAPI)
 
+- (AccountModel*)account;
 - (void)deleteAccount;
 
 @end
@@ -70,8 +71,9 @@
 	NSString* password = self.passwordTextField.text;
 	NSString* reenterPassword = self.confirmPasswordTextField.text;
     if (![password isEqualToString:@""] && [password isEqualToString:reenterPassword]) {
-        NSString* username = [[[self account] toJID] user];
-        XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:self.account];
+        AccountModel* acct = [self account];
+        NSString* username = [[acct toJID] user];
+        XMPPClient* client = [[XMPPClientManager instance] xmppClientForAccount:acct];
         [XMPPRegisterQuery set:client user:username withPassword:password];
         [self.confirmPasswordTextField resignFirstResponder]; 
         [AlertViewManager showActivityIndicatorInView:self.view.window withTitle:@"Changing Password"];
@@ -191,12 +193,12 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.passwordTextField.text = @"";
     self.confirmPasswordTextField.text = @"";
-    [[XMPPClientManager instance] delegateTo:self forAccount:self.account];	[super viewWillAppear:animated];
+    [[XMPPClientManager instance] delegateTo:self forAccount:[self account]];	[super viewWillAppear:animated];
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)viewWillDisappear:(BOOL)animated {
-    [[XMPPClientManager instance] removeXMPPClientDelegate:self forAccount:self.account];
+    [[XMPPClientManager instance] removeXMPPClientDelegate:self forAccount:[self account]];
 	[super viewWillDisappear:animated];
 }
 

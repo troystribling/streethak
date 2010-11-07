@@ -19,6 +19,7 @@
 #import "ConfigurationViewController.h"
 #import "StoreViewController.h"
 #import "StatsViewController.h"
+#import "GoldViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 static ViewControllerManager* thisViewControllerManager = nil;
@@ -43,6 +44,7 @@ static ViewControllerManager* thisViewControllerManager = nil;
 @synthesize configurationViewController;
 @synthesize storeViewController;
 @synthesize statsViewController;
+@synthesize goldViewController;
 
 //===================================================================================================================================
 #pragma mark ViewControllerManager PrivateApi
@@ -388,6 +390,36 @@ static ViewControllerManager* thisViewControllerManager = nil;
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (void)statsViewWillDisappear {
     [self.statsViewController viewWillDisappear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// GoldViewController
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (GoldViewController*)showGoldView:(UIView*)containerView {
+    if (self.goldViewController == nil) {
+        self.goldViewController = [GoldViewController inView:containerView];
+    }
+    [containerView addSubview:self.goldViewController.view];
+    [self.goldViewController viewWillAppear:NO];
+    return self.goldViewController;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)removeGoldView {
+    if (self.goldViewController) {
+        [self.goldViewController viewWillDisappear:NO];
+        [self.goldViewController.view removeFromSuperview];
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)goldViewWillAppear {
+    [self.goldViewController viewWillAppear:NO];
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)goldViewWillDisappear {
+    [self.goldViewController viewWillDisappear:NO];
 }
 
 @end
