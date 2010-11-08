@@ -93,7 +93,7 @@
         self.view.frame = self.containerView.frame;
         self.goldLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:20.0];
         self.healthPotionLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:20.0];
-        CGRect goldFrame = CGRectMake(0.0625*viewWidth, 0.1042*viewHeight, 0.1953*viewWidth, 0.07812*viewHeight);
+        CGRect goldFrame = CGRectMake(0.0, 0.0969*viewHeight, 0.2656*viewWidth, 0.1510*viewHeight);
         self.goldView = [TouchAreaView createWithFrame:goldFrame name:@"gold" andDelegate:self];
         [self.view addSubview:self.goldView];
         CGRect healthPotionFrame = CGRectMake(0.7109*viewWidth, 0.0938*viewHeight, 0.1484*viewWidth, 0.1354*viewHeight);

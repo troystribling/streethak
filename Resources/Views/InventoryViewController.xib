@@ -57,7 +57,7 @@
 					<object class="IBUITableView" id="1059644245">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 121}, {320, 339}}</string>
+						<string key="NSFrame">{{0, 120}, {320, 340}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="369793674">
 							<int key="NSColorSpace">3</int>
@@ -76,7 +76,7 @@
 					<object class="IBUILabel" id="928500837">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{14, 82}, {74, 25}}</string>
+						<string key="NSFrame">{{14, 82}, {75, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -253,7 +253,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>InventoryViewController</string>
 					<string>UIResponder</string>
-					<string>{{283, 282}, {320, 480}}</string>
+					<string>{{1095, 337}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw+UAAA</bytes>

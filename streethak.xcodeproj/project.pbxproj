@@ -35,6 +35,7 @@
 		0506D8D1125BE1DB009BC283 /* SendMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */; };
 		0506E1051269318D003E6C55 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506E1041269318D003E6C55 /* MessageCell.xib */; };
 		0506E12C12693F01003E6C55 /* LoadMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */; };
+		0507250412879C71001892C8 /* no-thanks-dialog-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0507250312879C71001892C8 /* no-thanks-dialog-button.png */; };
 		05075B0312669905008FC4B6 /* ContactMessagesTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05075B0212669905008FC4B6 /* ContactMessagesTopLauncherView.m */; };
 		0508E006126756FA00872A56 /* contact-messages-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 0508E005126756FA00872A56 /* contact-messages-top-launcher.png */; };
 		050BCD7B127C63C7008BA6BC /* store-buy-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 050BCD79127C63C7008BA6BC /* store-buy-button.png */; };
@@ -70,7 +71,6 @@
 		0510218E125ACA550010680E /* MessageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510218C125ACA550010680E /* MessageCache.m */; };
 		05102191125ACAE70010680E /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05102190125ACAE70010680E /* ContactCell.m */; };
 		0510466012871B3C00C1975E /* GoldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0510465F12871B3C00C1975E /* GoldViewController.xib */; };
-		051046671287428700C1975E /* cancel-dialog-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 051046641287428700C1975E /* cancel-dialog-button.png */; };
 		051046681287428700C1975E /* parchment-dialog.png in Resources */ = {isa = PBXBuildFile; fileRef = 051046651287428700C1975E /* parchment-dialog.png */; };
 		0510466C1287444D00C1975E /* buy-more-dialog-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0510466B1287444D00C1975E /* buy-more-dialog-button.png */; };
 		0510D086127A6B58003DD4B4 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0510D085127A6B58003DD4B4 /* StoreViewController.m */; };
@@ -192,6 +192,7 @@
 		052E1BDA1274A1990060051A /* NotificationsTopLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 052E1BD91274A1990060051A /* NotificationsTopLauncherView.m */; };
 		052E1BEC1274A6060060051A /* notifications-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 052E1BEB1274A6060060051A /* notifications-top-launcher.png */; };
 		053494E0124830B5004A6D9D /* stonehen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 053494DF124830B5004A6D9D /* stonehen.ttf */; };
+		0556DD751287807B003D4253 /* store.png in Resources */ = {isa = PBXBuildFile; fileRef = 0556DD741287807B003D4253 /* store.png */; };
 		055990A2124309F20013C6DD /* TouchAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 055990A1124309F20013C6DD /* TouchAreaView.m */; };
 		05700D1012442E310059964F /* map-navigation-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D0F12442E310059964F /* map-navigation-launcher.png */; };
 		05700D1212442E410059964F /* map-top-launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 05700D1112442E410059964F /* map-top-launcher.png */; };
@@ -281,6 +282,7 @@
 		0506D8D0125BE1DB009BC283 /* SendMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendMessageViewController.xib; sourceTree = "<group>"; };
 		0506E1041269318D003E6C55 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		0506E12B12693F01003E6C55 /* LoadMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMessagesCell.xib; sourceTree = "<group>"; };
+		0507250312879C71001892C8 /* no-thanks-dialog-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no-thanks-dialog-button.png"; sourceTree = "<group>"; };
 		05075B0112669905008FC4B6 /* ContactMessagesTopLauncherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMessagesTopLauncherView.h; sourceTree = "<group>"; };
 		05075B0212669905008FC4B6 /* ContactMessagesTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMessagesTopLauncherView.m; sourceTree = "<group>"; };
 		0508E005126756FA00872A56 /* contact-messages-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact-messages-top-launcher.png"; sourceTree = "<group>"; };
@@ -336,7 +338,6 @@
 		0510218F125ACAE70010680E /* ContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCell.h; sourceTree = "<group>"; };
 		05102190125ACAE70010680E /* ContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCell.m; sourceTree = "<group>"; };
 		0510465F12871B3C00C1975E /* GoldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoldViewController.xib; sourceTree = "<group>"; };
-		051046641287428700C1975E /* cancel-dialog-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-dialog-button.png"; sourceTree = "<group>"; };
 		051046651287428700C1975E /* parchment-dialog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "parchment-dialog.png"; sourceTree = "<group>"; };
 		0510466B1287444D00C1975E /* buy-more-dialog-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-more-dialog-button.png"; sourceTree = "<group>"; };
 		0510D084127A6B58003DD4B4 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
@@ -561,6 +562,7 @@
 		052E1BD91274A1990060051A /* NotificationsTopLauncherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsTopLauncherView.m; sourceTree = "<group>"; };
 		052E1BEB1274A6060060051A /* notifications-top-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notifications-top-launcher.png"; sourceTree = "<group>"; };
 		053494DF124830B5004A6D9D /* stonehen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = stonehen.ttf; sourceTree = "<group>"; };
+		0556DD741287807B003D4253 /* store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = store.png; sourceTree = "<group>"; };
 		055990A0124309F20013C6DD /* TouchAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchAreaView.h; sourceTree = "<group>"; };
 		055990A1124309F20013C6DD /* TouchAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchAreaView.m; sourceTree = "<group>"; };
 		05700D0F12442E310059964F /* map-navigation-launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-navigation-launcher.png"; sourceTree = "<group>"; };
@@ -1134,7 +1136,6 @@
 				05FD1A031263EBC80003EDC4 /* add-contact.png */,
 				050666B6127BBA1C00C04CF6 /* battle.png */,
 				0510466B1287444D00C1975E /* buy-more-dialog-button.png */,
-				051046641287428700C1975E /* cancel-dialog-button.png */,
 				05208F5E1277D80C006C5DAE /* configuration.png */,
 				051DED451252C43D00F3E0F4 /* configuration-navigation-launcher.png */,
 				05208F791277DFFC006C5DAE /* configuration-top-launcher.png */,
@@ -1155,6 +1156,7 @@
 				05700D1112442E410059964F /* map-top-launcher.png */,
 				05700D0F12442E310059964F /* map-navigation-launcher.png */,
 				05FC68EF122B2B6F00878B07 /* main_icon.png */,
+				0507250312879C71001892C8 /* no-thanks-dialog-button.png */,
 				050F33EF125D65C30005607B /* notifications-navigation-launcher.png */,
 				052E1BEB1274A6060060051A /* notifications-top-launcher.png */,
 				051046651287428700C1975E /* parchment-dialog.png */,
@@ -1164,6 +1166,7 @@
 				051130A7126A21EB00A9C996 /* send-message-top-launcher.png */,
 				05FF7063126FB66900CEA060 /* send-shout-top-launcher.png */,
 				050666B7127BBA1C00C04CF6 /* stats.png */,
+				0556DD741287807B003D4253 /* store.png */,
 				050BCD79127C63C7008BA6BC /* store-buy-button.png */,
 				050BCD7A127C63C7008BA6BC /* store-sell-button.png */,
 				0510D0A4127A80F2003DD4B4 /* store-top-launcher.png */,
@@ -1391,9 +1394,10 @@
 				0502FF8C1284F27F00546777 /* shield-2.png in Resources */,
 				0502FF961284F4E100546777 /* InventoryItemCell.xib in Resources */,
 				0510466012871B3C00C1975E /* GoldViewController.xib in Resources */,
-				051046671287428700C1975E /* cancel-dialog-button.png in Resources */,
 				051046681287428700C1975E /* parchment-dialog.png in Resources */,
 				0510466C1287444D00C1975E /* buy-more-dialog-button.png in Resources */,
+				0556DD751287807B003D4253 /* store.png in Resources */,
+				0507250412879C71001892C8 /* no-thanks-dialog-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

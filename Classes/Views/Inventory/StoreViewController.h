@@ -10,10 +10,13 @@
 #import <UIKit/UIKit.h>
 #import "NavigationLauncherView.h"
 #import "StoreTopLauncherView.h"
+#import "GoldViewController.h"
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @class AccountModel;
 @class StoreTopLauncherView;
+@class TouchImageView;
+@class TouchAreaView;
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 typedef enum storeMode {
@@ -22,8 +25,12 @@ typedef enum storeMode {
 } StoreModeType;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface StoreViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NavigationLauncherViewDelegate, LauncherViewDelegate> {
+@interface StoreViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NavigationLauncherViewDelegate, LauncherViewDelegate, GoldViewDelegate> {
     IBOutlet UITableView* itemsView;
+    IBOutlet UILabel* goldLabel;
+    TouchImageView* modeView;
+    TouchAreaView* goldView;
+    TouchAreaView* buyGoldView;    
     UIImage* sellImage;
     UIImage* buyImage;
     UIView* containerView;
@@ -37,6 +44,10 @@ typedef enum storeMode {
 @property (nonatomic, retain) UITableView* itemsView;
 @property (nonatomic, retain) UIImage* sellImage;
 @property (nonatomic, retain) UIImage* buyImage;
+@property (nonatomic, retain) TouchImageView* modeView;
+@property (nonatomic, retain) TouchAreaView* goldView;
+@property (nonatomic, retain) TouchAreaView* buyGoldView;
+@property (nonatomic, retain) UILabel* goldLabel;
 @property (nonatomic, retain) UIView* containerView;
 @property (nonatomic, retain) StoreTopLauncherView* storeTopLauncherView;;
 @property (nonatomic, assign) StoreModeType storeMode;

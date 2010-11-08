@@ -110,7 +110,7 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">cancel-dialog-button.png</string>
+							<string key="NSResourceName">no-thanks-dialog-button.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="614611371">
@@ -861,7 +861,7 @@
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>buy-more-dialog-button.png</string>
-				<string>cancel-dialog-button.png</string>
+				<string>no-thanks-dialog-button.png</string>
 				<string>parchment-dialog.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">

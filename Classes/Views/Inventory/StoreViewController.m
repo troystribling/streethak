@@ -11,6 +11,7 @@
 #import "ViewControllerManager.h"
 #import "StoreTopLauncherView.h"
 #import "TouchImageView.h"
+#import "TouchAreaView.h"
 #import "CellUtils.h"
 #import "StoreItemCell.h"
 #import "NavigationLauncherView.h"
@@ -34,6 +35,10 @@
 @synthesize itemsView;
 @synthesize sellImage;
 @synthesize buyImage;
+@synthesize modeView;
+@synthesize goldView;
+@synthesize buyGoldView;
+@synthesize goldLabel;
 @synthesize containerView;
 @synthesize storeTopLauncherView;
 @synthesize storeMode;
@@ -51,10 +56,24 @@
 //-----------------------------------------------------------------------------------------------------------------------------------
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil inView:(UIView*)_containerView {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        CGFloat viewWidth =  self.view.frame.size.width;
+        CGFloat viewHeight = self.view.frame.size.height;
         self.containerView = _containerView;
         self.buyImage = [UIImage imageNamed:@"store-buy-button.png"];
         self.sellImage = [UIImage imageNamed:@"store-sell-button.png"];
         self.storeMode = StoreModeBuy;
+        self.goldLabel.font = [UIFont fontWithName:kGLOBAL_FONT size:20.0];
+        CGRect goldFrame = CGRectMake(0.0, 0.0969*viewHeight, 0.3125*viewWidth, 0.1406*viewHeight);
+        self.goldView = [TouchAreaView createWithFrame:goldFrame name:@"gold" andDelegate:self];
+        [self.view addSubview:self.goldView];
+        CGRect buyGoldFrame = CGRectMake(0.6641*viewWidth, 0.0969*viewHeight, 0.3281*viewWidth, 0.1406*viewHeight);
+        self.buyGoldView = [TouchAreaView createWithFrame:buyGoldFrame name:@"buy-gold" andDelegate:self];
+        [self.view addSubview:self.buyGoldView];
+        CGRect modeFrame = CGRectMake(0.3312*viewWidth, 0.1250*viewHeight, 0.3123*viewWidth, 0.0885*viewHeight);
+        self.modeView = [TouchImageView createWithFrame:modeFrame name:@"mode" andDelegate:self];
+        self.modeView.contentMode = UIViewContentModeScaleAspectFit; 
+        self.modeView.image = self.buyImage;
+        [self.view addSubview:self.modeView];
         self.view.frame = self.containerView.frame;
     }
     return self;
@@ -96,15 +115,43 @@
     if ([_name isEqualToString:@"back"]) {
         [self.view removeFromSuperview];
         [[ViewControllerManager instance] showInventoryView:self.containerView];
-    } else if ([_name isEqualToString:@"mode"]) {
+    } 
+}
+
+//===================================================================================================================================
+#pragma mark TouchAreaView Delegate
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)viewTouched:(TouchAreaView*)touchedView {
+    if ([touchedView.viewName isEqualToString:@"gold"]) {
+        [[ViewControllerManager instance] showGoldView:self.view];
+    } else if ([touchedView.viewName isEqualToString:@"buy-gold"]) {
+        [[ViewControllerManager instance] showGoldView:self.view];
+    }
+}
+
+//===================================================================================================================================
+#pragma mark TouchImageView Delegate
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)imageTouched:(TouchImageView*)touchedView {
+    if ([touchedView.viewName isEqualToString:@"mode"]) {
         if (self.storeMode == StoreModeBuy) {
             self.storeMode = StoreModeSell;
-            self.storeTopLauncherView.modeLauncher.image = self.sellImage;
+            self.modeView.image = self.sellImage;
         } else {
             self.storeMode = StoreModeBuy;
-            self.storeTopLauncherView.modeLauncher.image = self.buyImage;
+            self.modeView.image = self.buyImage;
         }
     }
+}
+
+//===================================================================================================================================
+#pragma mark GoldViewDelegate 
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+- (void)setGoldValue {
+    self.goldLabel.text = @"999p";
 }
 
 //===================================================================================================================================
@@ -152,7 +199,6 @@
     self.itemsView.separatorColor = [UIColor blackColor];
     [NavigationLauncherView inView:self.view withImageNamed:@"map-navigation-launcher.png" andDelegate:self];
     self.storeTopLauncherView = [StoreTopLauncherView inView:self.view andDelegate:self];
-    self.storeTopLauncherView.modeLauncher.image = self.buyImage;
     [super viewDidLoad];
 }
 
@@ -160,6 +206,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [self loadAccount];
     [self loadItems];
+    [self setGoldValue];
     [self addXMPPClientDelgate];
     [super viewWillAppear:animated];
 }

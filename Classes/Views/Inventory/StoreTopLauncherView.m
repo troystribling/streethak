@@ -21,7 +21,6 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 @synthesize backLauncher;
-@synthesize modeLauncher;
 
 //===================================================================================================================================
 #pragma mark StoreTopLauncherView PrivateAPI
@@ -43,11 +42,6 @@
         CGRect backFrame = CGRectMake(0.0234*viewWidth, 0.0, 0.2109*viewWidth, viewHeight);
         self.backLauncher = [TouchAreaView createWithFrame:backFrame name:@"back" andDelegate:self];
         [self addSubview:self.backLauncher];
-        CGRect modeLauncherFrame = CGRectMake(0.7672*viewWidth, 0.05*viewHeight, 0.2062*viewWidth, 0.6800*viewHeight);
-        self.modeLauncher = [TouchImageView createWithFrame:modeLauncherFrame name:@"mode" andDelegate:self];
-        self.modeLauncher.contentMode = UIViewContentModeScaleToFill; 
-        self.modeLauncher.image = [UIImage imageNamed:@"store-buy-button.png"];
-        [self addSubview:self.modeLauncher];
         [_view addSubview:self];
     }
     return self;
