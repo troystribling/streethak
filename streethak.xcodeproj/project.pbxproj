@@ -1610,7 +1610,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "Street Hak";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF2FEC7B-0EC4-447F-B1E7-A3D7E932696B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "346E253E-BC1C-4FC4-9511-1F0652A76279";
 			};
 			name = Release;
 		};
@@ -1635,7 +1635,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = streethak;
-				SDKROOT = iphonesimulator4.1;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -1661,8 +1661,8 @@
 					"-ObjC",
 				);
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CF2FEC7B-0EC4-447F-B1E7-A3D7E932696B";
-				SDKROOT = iphoneos4.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "346E253E-BC1C-4FC4-9511-1F0652A76279";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
